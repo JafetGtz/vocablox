@@ -1,50 +1,65 @@
-import {useDispatch} from 'react-redux'
-import {useLoginMutation} from '@/services/auth/useLoginMutation'
-import {useRegisterMutation} from '@/services/auth/useRegisterMutation'
-import {setUser} from '@/store/slices/authSlice'
+import { useCallback } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { supabase } from '@/services/supebase'
+import { useLoginMutation } from '@/services/auth/useLoginMutation'
+import { useRegisterMutation } from '@/services/auth/useRegisterMutation'
+import { setUser } from '@/store/slices/authSlice'
+import { RootState } from '@/store/store'
+
+export const useAuth = () => {
+  const user = useSelector((state: RootState) => state.auth.user)
+  const initialized = useSelector((state: RootState) => state.auth.initialized)
+  return { user, initialized }
+}
 
 export const useAuthViewModel = () => {
   const dispatch = useDispatch()
-
   const loginMutation = useLoginMutation()
   const registerMutation = useRegisterMutation()
 
-  const handleLogin = async (email: string, password: string) => {
-    try {
-      const {user} = await loginMutation.mutateAsync({email, password})
-      if (user) dispatch(setUser(user))
-    } catch (error) {
-      console.error('Login error:', error)
-      throw error
-    }
-  }
+  const handleLogin = useCallback(
+    async (email: string, password: string) => {
+      const { data, error } = await loginMutation.mutateAsync({ email, password })
+      if (error) throw error
+      if (data.user) dispatch(setUser(data.user))
+    },
+    [dispatch, loginMutation]
+  )
 
-  const handleGoogle = () => { }
-  const handleFacebook = () => {}
+  const handleGoogle = useCallback(async () => {
+    const { error } = await supabase.auth.signInWithOAuth({ provider: 'google' })
+    if (error) throw error
+  }, [])
 
-  const handleRegister = async (
-    email: string,
-    password: string,
-    fullName: string
-  ) => {
-    try {
-      const {user} = await registerMutation.mutateAsync({
+  const handleFacebook = useCallback(async () => {
+    const { error } = await supabase.auth.signInWithOAuth({ provider: 'facebook' })
+    if (error) throw error
+  }, [])
+
+
+  const handleRegister = useCallback(
+    async (email: string, password: string, fullName: string) => {
+      const registerData = await registerMutation.mutateAsync({
         email,
         password,
-        fullName
+        fullName,
       })
-      if (user) dispatch(setUser(user))
-    } catch (error) {
-      console.error('Register error:', error)
-      throw error
-    }
-  }
+     
+      if (registerData.user) {
+        dispatch(setUser(registerData.user))
+      } else {
+        console.warn('Registro completado: revisa tu correo para confirmar la cuenta')
+      }
+    },
+    [dispatch, registerMutation]
+  )
+
 
   return {
+    handleLogin,
     handleGoogle,
     handleFacebook,
-    handleLogin,
     handleRegister,
-    isLoading: loginMutation.isPending || registerMutation.isPending
+    isLoading: loginMutation.isLoading || registerMutation.isLoading,
   }
 }

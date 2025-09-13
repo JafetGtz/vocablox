@@ -1,0 +1,488 @@
+[
+  {
+    "palabra": "Cardio",
+    "significado": "Ejercicios que elevan la frecuencia cardíaca para mejorar la resistencia.",
+    "ejemplo": "El running es un excelente ejercicio de cardio."
+  },
+  {
+    "palabra": "HIIT",
+    "significado": "Entrenamiento interválico de alta intensidad que alterna esfuerzo y descanso.",
+    "ejemplo": "El HIIT quema calorías en poco tiempo."
+  },
+  {
+    "palabra": "Repetición",
+    "significado": "Ejecución de un movimiento dentro de una serie de entrenamiento.",
+    "ejemplo": "Hizo diez repeticiones de press de banca."
+  },
+  {
+    "palabra": "Serie",
+    "significado": "Conjunto de repeticiones de un mismo ejercicio.",
+    "ejemplo": "Realizó cuatro series de sentadillas."
+  },
+  {
+    "palabra": "Superserie",
+    "significado": "Combinación de dos ejercicios realizados sin descanso.",
+    "ejemplo": "Hizo una superserie de bíceps y tríceps."
+  },
+  {
+    "palabra": "Circuito",
+    "significado": "Entrenamiento que combina varios ejercicios realizados de manera consecutiva.",
+    "ejemplo": "El circuito incluía flexiones, saltos y abdominales."
+  },
+  {
+    "palabra": "CrossFit",
+    "significado": "Programa de entrenamiento de fuerza y acondicionamiento basado en ejercicios variados.",
+    "ejemplo": "El CrossFit mezcla pesas, gimnasia y cardio."
+  },
+  {
+    "palabra": "Calistenia",
+    "significado": "Entrenamiento con el propio peso corporal.",
+    "ejemplo": "La calistenia incluye dominadas y fondos."
+  },
+  {
+    "palabra": "Pliometría",
+    "significado": "Ejercicios que buscan mejorar la potencia mediante saltos y movimientos explosivos.",
+    "ejemplo": "Los box jumps son un ejercicio pliométrico."
+  },
+  {
+    "palabra": "Fuerza máxima",
+    "significado": "Mayor peso que una persona puede levantar en una repetición.",
+    "ejemplo": "Probó su fuerza máxima en peso muerto."
+  },
+  {
+    "palabra": "1RM",
+    "significado": "Peso máximo que se puede levantar en una sola repetición de un ejercicio.",
+    "ejemplo": "Su 1RM en sentadilla era de 120 kilos."
+  },
+  {
+    "palabra": "Resistencia",
+    "significado": "Capacidad física para sostener un esfuerzo prolongado.",
+    "ejemplo": "El maratón exige gran resistencia."
+  },
+  {
+    "palabra": "Velocidad",
+    "significado": "Capacidad de realizar un movimiento en el menor tiempo posible.",
+    "ejemplo": "La velocidad es clave en los 100 metros planos."
+  },
+  {
+    "palabra": "Potencia",
+    "significado": "Capacidad de aplicar fuerza en el menor tiempo posible.",
+    "ejemplo": "El boxeador mostró potencia en sus golpes."
+  },
+  {
+    "palabra": "Flexibilidad",
+    "significado": "Capacidad de mover las articulaciones en todo su rango.",
+    "ejemplo": "El yoga mejora la flexibilidad del cuerpo."
+  },
+  {
+    "palabra": "Hipertrofia",
+    "significado": "Aumento del tamaño de las fibras musculares por entrenamiento.",
+    "ejemplo": "La hipertrofia se logra con entrenamiento de fuerza."
+  },
+  {
+    "palabra": "Definición muscular",
+    "significado": "Estado en el que los músculos se ven marcados por bajo nivel de grasa.",
+    "ejemplo": "Hizo dieta para lograr definición muscular."
+  },
+  {
+    "palabra": "Fondo",
+    "significado": "Capacidad aeróbica para mantener un esfuerzo prolongado.",
+    "ejemplo": "El ciclista tiene mucho fondo físico."
+  },
+  {
+    "palabra": "Agilidad",
+    "significado": "Capacidad de cambiar de dirección rápidamente.",
+    "ejemplo": "La agilidad es esencial en deportes como el tenis."
+  },
+  {
+    "palabra": "Core",
+    "significado": "Zona central del cuerpo: abdominales, lumbares y glúteos.",
+    "ejemplo": "Un core fuerte mejora la postura y el equilibrio."
+  },
+  {
+    "palabra": "Burpee",
+    "significado": "Ejercicio que combina sentadilla, plancha y salto.",
+    "ejemplo": "Los burpees son ideales para quemar calorías."
+  },
+  {
+    "palabra": "Mountain climbers",
+    "significado": "Ejercicio de alta intensidad en posición de plancha alternando piernas.",
+    "ejemplo": "Los mountain climbers fortalecen el core."
+  },
+  {
+    "palabra": "Push-up",
+    "significado": "Ejercicio de flexión de brazos en posición horizontal.",
+    "ejemplo": "Hizo 20 push-ups seguidos."
+  },
+  {
+    "palabra": "Pull-up",
+    "significado": "Ejercicio de tracción levantando el cuerpo en una barra fija.",
+    "ejemplo": "Las pull-ups trabajan la espalda y los brazos."
+  },
+  {
+    "palabra": "Deadlift",
+    "significado": "Ejercicio de levantamiento de peso desde el suelo.",
+    "ejemplo": "El deadlift desarrolla fuerza en la cadena posterior."
+  },
+  {
+    "palabra": "Squat",
+    "significado": "Ejercicio de flexión de rodillas para trabajar piernas y glúteos.",
+    "ejemplo": "Hizo sentadillas con barra para ganar fuerza."
+  },
+  {
+    "palabra": "Bench press",
+    "significado": "Ejercicio de empuje en banco para trabajar pectorales y tríceps.",
+    "ejemplo": "El bench press es básico en rutinas de fuerza."
+  },
+  {
+    "palabra": "Overtraining",
+    "significado": "Fatiga por exceso de entrenamiento sin recuperación adecuada.",
+    "ejemplo": "El overtraining disminuye el rendimiento deportivo."
+  },
+  {
+    "palabra": "Warm-up",
+    "significado": "Ejercicios de calentamiento previos a la actividad física.",
+    "ejemplo": "El warm-up previno lesiones musculares."
+  },
+  {
+    "palabra": "Cooldown",
+    "significado": "Ejercicios de enfriamiento para relajar el cuerpo tras entrenar.",
+    "ejemplo": "El cooldown incluyó estiramientos suaves."
+  },
+  {
+    "palabra": "Aeróbico",
+    "significado": "Ejercicio que utiliza oxígeno para producir energía.",
+    "ejemplo": "El ciclismo es un deporte aeróbico."
+  },
+  {
+    "palabra": "Anaeróbico",
+    "significado": "Ejercicio de alta intensidad que no depende del oxígeno.",
+    "ejemplo": "El sprint es un ejercicio anaeróbico."
+  },
+  {
+    "palabra": "Frecuencia cardíaca",
+    "significado": "Número de latidos del corazón por minuto.",
+    "ejemplo": "El monitor midió la frecuencia cardíaca durante la carrera."
+  },
+  {
+    "palabra": "VO2 máximo",
+    "significado": "Cantidad máxima de oxígeno que el cuerpo puede utilizar en el ejercicio.",
+    "ejemplo": "El atleta mejoró su VO2 máximo con entrenamiento."
+  },
+  {
+    "palabra": "Isométrico",
+    "significado": "Ejercicio en el que los músculos trabajan sin movimiento.",
+    "ejemplo": "La plancha es un ejercicio isométrico."
+  },
+  {
+    "palabra": "Dinámico",
+    "significado": "Ejercicio con movimiento repetido y continuo.",
+    "ejemplo": "Las zancadas son un ejercicio dinámico."
+  },
+  {
+    "palabra": "Balance",
+    "significado": "Capacidad de mantener la estabilidad del cuerpo.",
+    "ejemplo": "El yoga mejora el balance corporal."
+  },
+  {
+    "palabra": "Progresión",
+    "significado": "Incremento gradual de la carga de entrenamiento.",
+    "ejemplo": "La progresión es clave para ganar fuerza."
+  },
+  {
+    "palabra": "Mesociclo",
+    "significado": "Bloque de entrenamiento dentro de una planificación más amplia.",
+    "ejemplo": "El mesociclo se enfocó en hipertrofia."
+  },
+  {
+    "palabra": "Periodización",
+    "significado": "Organización del entrenamiento en fases para optimizar resultados.",
+    "ejemplo": "La periodización ayudó al atleta a llegar en forma a la competencia."
+  },
+  {
+    "palabra": "EPOC",
+    "significado": "Consumo excesivo de oxígeno tras el ejercicio intenso.",
+    "ejemplo": "El HIIT genera mayor EPOC que el cardio moderado."
+  },
+  {
+    "palabra": "Electrolitos",
+    "significado": "Minerales que regulan el equilibrio hídrico y muscular.",
+    "ejemplo": "Las bebidas deportivas reponen electrolitos."
+  },
+  {
+    "palabra": "Deshidratación",
+    "significado": "Pérdida excesiva de líquidos corporales.",
+    "ejemplo": "El calor extremo provocó deshidratación en los corredores."
+  },
+  {
+    "palabra": "Endorfina",
+    "significado": "Hormona que genera sensación de bienestar tras el ejercicio.",
+    "ejemplo": "El running libera endorfinas que mejoran el ánimo."
+  },
+  {
+    "palabra": "Doping",
+    "significado": "Uso de sustancias prohibidas para mejorar el rendimiento deportivo.",
+    "ejemplo": "El atleta fue sancionado por doping."
+  },
+  {
+    "palabra": "Fair play",
+    "significado": "Principio de juego limpio y respeto en el deporte.",
+    "ejemplo": "El fair play fue aplaudido por el público."
+  },
+  {
+    "palabra": "Scrimmage",
+    "significado": "Partido de práctica en deportes de equipo.",
+    "ejemplo": "El scrimmage sirvió para probar la estrategia."
+  },
+  {
+    "palabra": "Draft",
+    "significado": "Proceso de selección de jugadores en ligas profesionales.",
+    "ejemplo": "El draft de la NBA atrae la atención mundial."
+  },
+  {
+    "palabra": "Playoff",
+    "significado": "Etapa eliminatoria en competiciones deportivas.",
+    "ejemplo": "El equipo clasificó a los playoff tras una gran temporada."
+  },
+  {
+    "palabra": "Pliometría",
+    "significado": "Entrenamiento basado en saltos explosivos para mejorar potencia.",
+    "ejemplo": "El entrenador incluyó pliometría en la rutina de fútbol."
+  },
+  {
+    "palabra": "Biomecánica",
+    "significado": "Estudio de los movimientos del cuerpo aplicando principios de física.",
+    "ejemplo": "La biomecánica ayuda a prevenir lesiones en atletas."
+  },
+  {
+    "palabra": "Antropometría",
+    "significado": "Medición del cuerpo humano para evaluar composición física.",
+    "ejemplo": "La antropometría reveló un bajo porcentaje de grasa corporal."
+  },
+  {
+    "palabra": "Somatotipo",
+    "significado": "Clasificación del cuerpo humano en endomorfo, ectomorfo y mesomorfo.",
+    "ejemplo": "Su somatotipo mesomorfo lo favorece para deportes de fuerza."
+  },
+  {
+    "palabra": "Endomorfo",
+    "significado": "Tipo corporal con tendencia a acumular grasa y contextura ancha.",
+    "ejemplo": "Los endomorfos requieren controlar la ingesta calórica."
+  },
+  {
+    "palabra": "Ectomorfo",
+    "significado": "Tipo corporal delgado con dificultad para ganar masa muscular.",
+    "ejemplo": "El ectomorfo suele enfocarse en hipertrofia."
+  },
+  {
+    "palabra": "Mesomorfo",
+    "significado": "Tipo corporal atlético con facilidad para ganar músculo.",
+    "ejemplo": "El mesomorfo responde bien al entrenamiento de fuerza."
+  },
+  {
+    "palabra": "Intervalo",
+    "significado": "Periodo de descanso o esfuerzo en un entrenamiento fraccionado.",
+    "ejemplo": "Los intervalos de carrera mejoran la velocidad."
+  },
+  {
+    "palabra": "Lactato",
+    "significado": "Subproducto del metabolismo anaeróbico relacionado con la fatiga muscular.",
+    "ejemplo": "El umbral de lactato se mejora con entrenamiento."
+  },
+  {
+    "palabra": "Umbral anaeróbico",
+    "significado": "Punto en el que el cuerpo comienza a producir lactato en exceso.",
+    "ejemplo": "Los corredores entrenan para elevar su umbral anaeróbico."
+  },
+  {
+    "palabra": "Macronutrientes",
+    "significado": "Nutrientes que proporcionan energía: carbohidratos, grasas y proteínas.",
+    "ejemplo": "La dieta del atleta equilibró los macronutrientes."
+  },
+  {
+    "palabra": "Micronutrientes",
+    "significado": "Vitaminas y minerales necesarios en pequeñas cantidades.",
+    "ejemplo": "Los micronutrientes fortalecen el sistema inmunológico."
+  },
+  {
+    "palabra": "Isotónico",
+    "significado": "Bebida o solución con concentración similar a la de los fluidos corporales.",
+    "ejemplo": "El deportista tomó una bebida isotónica tras el partido."
+  },
+  {
+    "palabra": "Anabolismo",
+    "significado": "Proceso metabólico que construye tejidos y músculos.",
+    "ejemplo": "El anabolismo se potencia con proteína tras entrenar."
+  },
+  {
+    "palabra": "Catabolismo",
+    "significado": "Proceso de degradación de tejidos para obtener energía.",
+    "ejemplo": "El catabolismo puede ocurrir por exceso de entrenamiento."
+  },
+  {
+    "palabra": "Testosterona",
+    "significado": "Hormona relacionada con la fuerza y el crecimiento muscular.",
+    "ejemplo": "El ejercicio intenso aumenta la testosterona natural."
+  },
+  {
+    "palabra": "Cortisol",
+    "significado": "Hormona del estrés que en exceso favorece la degradación muscular.",
+    "ejemplo": "El sobreentrenamiento eleva el cortisol."
+  },
+  {
+    "palabra": "Rango de movimiento",
+    "significado": "Amplitud que una articulación puede recorrer.",
+    "ejemplo": "El yoga mejora el rango de movimiento."
+  },
+  {
+    "palabra": "Movilidad",
+    "significado": "Capacidad funcional de una articulación para moverse libremente.",
+    "ejemplo": "La movilidad de cadera es esencial para los levantamientos."
+  },
+  {
+    "palabra": "Estiramiento estático",
+    "significado": "Mantener una postura de estiramiento por varios segundos.",
+    "ejemplo": "El estiramiento estático ayuda a relajar los músculos."
+  },
+  {
+    "palabra": "Estiramiento dinámico",
+    "significado": "Movimientos activos que preparan el cuerpo antes del ejercicio.",
+    "ejemplo": "El estiramiento dinámico es ideal para calentar."
+  },
+  {
+    "palabra": "Biomecánica deportiva",
+    "significado": "Aplicación de la biomecánica al rendimiento atlético.",
+    "ejemplo": "La biomecánica deportiva optimiza la técnica de carrera."
+  },
+  {
+    "palabra": "Ergometría",
+    "significado": "Prueba de esfuerzo que mide la capacidad física.",
+    "ejemplo": "El ciclista realizó una ergometría en laboratorio."
+  },
+  {
+    "palabra": "Powerlifting",
+    "significado": "Deporte de fuerza basado en sentadilla, peso muerto y press de banca.",
+    "ejemplo": "El powerlifting requiere técnica y fuerza máxima."
+  },
+  {
+    "palabra": "Strongman",
+    "significado": "Competencia de fuerza extrema con objetos pesados e inusuales.",
+    "ejemplo": "El strongman cargó un auto en la exhibición."
+  },
+  {
+    "palabra": "Bodybuilding",
+    "significado": "Disciplina centrada en desarrollar y exhibir masa muscular.",
+    "ejemplo": "El bodybuilding valora la simetría y definición."
+  },
+  {
+    "palabra": "Endurance",
+    "significado": "Término inglés para referirse a la resistencia física.",
+    "ejemplo": "El triatlón exige gran endurance."
+  },
+  {
+    "palabra": "Sprint",
+    "significado": "Carrera corta a máxima velocidad.",
+    "ejemplo": "El sprint final definió al ganador."
+  },
+  {
+    "palabra": "Interval Training",
+    "significado": "Entrenamiento fraccionado en intervalos de alta y baja intensidad.",
+    "ejemplo": "El interval training mejoró su condición aeróbica."
+  },
+  {
+    "palabra": "Zancada",
+    "significado": "Ejercicio que trabaja piernas con un paso largo hacia adelante.",
+    "ejemplo": "Las zancadas fortalecen cuádriceps y glúteos."
+  },
+  {
+    "palabra": "Tabata",
+    "significado": "Entrenamiento interválico de alta intensidad de 4 minutos.",
+    "ejemplo": "El Tabata incluyó burpees y saltos de cuerda."
+  },
+  {
+    "palabra": "Kettlebell",
+    "significado": "Pesa en forma de bola con asa para entrenamientos dinámicos.",
+    "ejemplo": "El swing con kettlebell es excelente para el core."
+  },
+  {
+    "palabra": "Battle rope",
+    "significado": "Cuerdas pesadas utilizadas para entrenamientos de fuerza y cardio.",
+    "ejemplo": "Las battle ropes elevan rápidamente el pulso."
+  },
+  {
+    "palabra": "Foam roller",
+    "significado": "Cilindro de espuma para masaje y liberación miofascial.",
+    "ejemplo": "El foam roller ayuda a la recuperación muscular."
+  },
+  {
+    "palabra": "Burpee box jump",
+    "significado": "Variación de burpee con salto a una caja o plataforma.",
+    "ejemplo": "El burpee box jump incrementa la explosividad."
+  },
+  {
+    "palabra": "Drop set",
+    "significado": "Método de entrenamiento reduciendo peso tras el fallo muscular.",
+    "ejemplo": "Aplicó un drop set en curl de bíceps."
+  },
+  {
+    "palabra": "Fallo muscular",
+    "significado": "Punto en el que no se puede completar otra repetición correcta.",
+    "ejemplo": "El fallo muscular garantiza un estímulo de hipertrofia."
+  },
+  {
+    "palabra": "Volumen de entrenamiento",
+    "significado": "Cantidad total de trabajo realizado en una sesión o periodo.",
+    "ejemplo": "Aumentó el volumen de entrenamiento en pierna."
+  },
+  {
+    "palabra": "Carga progresiva",
+    "significado": "Incremento gradual de la carga de trabajo para generar adaptación.",
+    "ejemplo": "La carga progresiva es clave para mejorar fuerza."
+  },
+  {
+    "palabra": "Agonista",
+    "significado": "Músculo principal que ejecuta un movimiento.",
+    "ejemplo": "El bíceps es agonista en la flexión de codo."
+  },
+  {
+    "palabra": "Antagonista",
+    "significado": "Músculo que se opone al movimiento del agonista.",
+    "ejemplo": "El tríceps es antagonista del bíceps."
+  },
+  {
+    "palabra": "Sinergista",
+    "significado": "Músculo que ayuda al agonista en un movimiento.",
+    "ejemplo": "Los deltoides actúan como sinergistas en el press militar."
+  },
+  {
+    "palabra": "Estabilizador",
+    "significado": "Músculo que mantiene fija una articulación durante un movimiento.",
+    "ejemplo": "El core actúa como estabilizador en la sentadilla."
+  },
+  {
+    "palabra": "Frecuencia de entrenamiento",
+    "significado": "Número de veces que se entrena un grupo muscular en la semana.",
+    "ejemplo": "Su frecuencia de entrenamiento de pecho es dos veces por semana."
+  },
+  {
+    "palabra": "Periodización inversa",
+    "significado": "Método donde se empieza con cargas altas y luego se reduce intensidad.",
+    "ejemplo": "Usó periodización inversa para ciclismo de ruta."
+  },
+  {
+    "palabra": "Macro ciclo",
+    "significado": "Plan de entrenamiento a largo plazo que incluye varios mesociclos.",
+    "ejemplo": "El macro ciclo cubrió toda la temporada deportiva."
+  },
+  {
+    "palabra": "Velocista",
+    "significado": "Atleta especializado en pruebas de velocidad.",
+    "ejemplo": "El velocista dominó la carrera de 200 metros."
+  },
+  {
+    "palabra": "Fondista",
+    "significado": "Atleta especializado en pruebas de resistencia largas.",
+    "ejemplo": "El fondista entrenaba maratones cada año."
+  }
+
+]

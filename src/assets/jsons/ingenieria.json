@@ -1,0 +1,489 @@
+[
+  {
+    "palabra": "Esfuerzo",
+    "significado": "Magnitud que mide la fuerza interna en un material por unidad de área.",
+    "ejemplo": "El esfuerzo de compresión afectó la columna de concreto."
+  },
+  {
+    "palabra": "Deformación",
+    "significado": "Cambio en la forma o tamaño de un cuerpo debido a una carga.",
+    "ejemplo": "La viga presentó deformación excesiva por el peso."
+  },
+  {
+    "palabra": "Carga axial",
+    "significado": "Fuerza aplicada a lo largo del eje longitudinal de un cuerpo.",
+    "ejemplo": "El puente soporta una carga axial importante en sus pilares."
+  },
+  {
+    "palabra": "Fatiga",
+    "significado": "Fallo progresivo de un material bajo cargas repetidas.",
+    "ejemplo": "El eje del motor se fracturó por fatiga."
+  },
+  {
+    "palabra": "Momento flector",
+    "significado": "Esfuerzo que tiende a doblar una viga o estructura.",
+    "ejemplo": "El cálculo del momento flector es clave en diseño estructural."
+  },
+  {
+    "palabra": "Torsión",
+    "significado": "Deformación causada por un momento que hace girar un cuerpo.",
+    "ejemplo": "El árbol de transmisión trabaja a torsión."
+  },
+  {
+    "palabra": "Coeficiente de seguridad",
+    "significado": "Relación entre la carga máxima soportada y la carga de servicio.",
+    "ejemplo": "Se usó un coeficiente de seguridad de 2.5 en el diseño."
+  },
+  {
+    "palabra": "Soldadura",
+    "significado": "Unión permanente de materiales por fusión localizada.",
+    "ejemplo": "La soldadura debe revisarse para evitar grietas."
+  },
+  {
+    "palabra": "Tolerancia",
+    "significado": "Rango permitido de variación en una dimensión o medida.",
+    "ejemplo": "La pieza fue fabricada con tolerancia de ±0.01 mm."
+  },
+  {
+    "palabra": "Prototipo",
+    "significado": "Modelo inicial para probar un diseño antes de su producción.",
+    "ejemplo": "El prototipo del motor se sometió a pruebas de rendimiento."
+  },
+  {
+    "palabra": "CAD",
+    "significado": "Diseño asistido por computadora para crear planos y modelos.",
+    "ejemplo": "El ingeniero elaboró el plano en CAD."
+  },
+  {
+    "palabra": "CAE",
+    "significado": "Ingeniería asistida por computadora para análisis y simulaciones.",
+    "ejemplo": "El software CAE predijo fallos en la estructura."
+  },
+  {
+    "palabra": "CAM",
+    "significado": "Fabricación asistida por computadora que controla máquinas CNC.",
+    "ejemplo": "El CAM permitió mecanizar piezas automáticamente."
+  },
+  {
+    "palabra": "Control de calidad",
+    "significado": "Conjunto de procesos para asegurar que un producto cumpla estándares.",
+    "ejemplo": "El control de calidad detectó piezas defectuosas."
+  },
+  {
+    "palabra": "Ciclo de vida",
+    "significado": "Etapas de diseño, fabricación, uso y fin de vida de un producto.",
+    "ejemplo": "Analizamos el ciclo de vida del automóvil."
+  },
+  {
+    "palabra": "Proceso isotérmico",
+    "significado": "Transformación termodinámica con temperatura constante.",
+    "ejemplo": "El gas se expandió en un proceso isotérmico."
+  },
+  {
+    "palabra": "Viscosidad",
+    "significado": "Resistencia de un fluido a fluir.",
+    "ejemplo": "El aceite tiene mayor viscosidad que el agua."
+  },
+  {
+    "palabra": "Número de Reynolds",
+    "significado": "Magnitud adimensional que indica el régimen de un flujo.",
+    "ejemplo": "El flujo fue turbulento con un Reynolds alto."
+  },
+  {
+    "palabra": "Conducción",
+    "significado": "Transferencia de calor a través de un material sólido.",
+    "ejemplo": "El metal transmite calor por conducción."
+  },
+  {
+    "palabra": "Convección",
+    "significado": "Transferencia de calor en fluidos por movimiento de partículas.",
+    "ejemplo": "El aire caliente sube por convección."
+  },
+  {
+    "palabra": "Radiación térmica",
+    "significado": "Transferencia de calor mediante ondas electromagnéticas.",
+    "ejemplo": "El Sol calienta la Tierra por radiación."
+  },
+  {
+    "palabra": "Cavitación",
+    "significado": "Formación de burbujas en líquidos por cambios de presión.",
+    "ejemplo": "La cavitación dañó las palas de la bomba."
+  },
+  {
+    "palabra": "Aerodinámica",
+    "significado": "Estudio del movimiento del aire y su interacción con sólidos.",
+    "ejemplo": "El diseño aerodinámico redujo la resistencia del auto."
+  },
+  {
+    "palabra": "Resiliencia",
+    "significado": "Capacidad de un material para absorber energía y recuperar su forma.",
+    "ejemplo": "El acero tiene alta resiliencia frente a impactos."
+  },
+  {
+    "palabra": "Tracción",
+    "significado": "Esfuerzo que tiende a alargar un cuerpo.",
+    "ejemplo": "La cuerda soportó la tracción sin romperse."
+  },
+  {
+    "palabra": "Compresión",
+    "significado": "Esfuerzo que tiende a reducir la longitud de un cuerpo.",
+    "ejemplo": "La columna falló por exceso de compresión."
+  },
+  {
+    "palabra": "Energía potencial",
+    "significado": "Energía acumulada en un cuerpo debido a su posición.",
+    "ejemplo": "El agua en la presa tiene energía potencial."
+  },
+  {
+    "palabra": "Energía cinética",
+    "significado": "Energía que posee un cuerpo en movimiento.",
+    "ejemplo": "La turbina convierte la energía cinética en electricidad."
+  },
+  {
+    "palabra": "Coeficiente de fricción",
+    "significado": "Medida de resistencia entre dos superficies en contacto.",
+    "ejemplo": "El caucho tiene alto coeficiente de fricción."
+  },
+  {
+    "palabra": "Módulo de Young",
+    "significado": "Constante que mide la rigidez de un material.",
+    "ejemplo": "El acero tiene un módulo de Young alto."
+  },
+  {
+    "palabra": "Ensayo destructivo",
+    "significado": "Prueba que lleva un material hasta su fallo para medir resistencia.",
+    "ejemplo": "Se aplicó un ensayo destructivo a la viga."
+  },
+  {
+    "palabra": "Ensayo no destructivo",
+    "significado": "Prueba que examina materiales sin dañarlos.",
+    "ejemplo": "El ultrasonido es un ensayo no destructivo."
+  },
+  {
+    "palabra": "Control estadístico",
+    "significado": "Método para supervisar procesos mediante análisis de datos.",
+    "ejemplo": "Usamos control estadístico en la línea de producción."
+  },
+  {
+    "palabra": "Automatización",
+    "significado": "Uso de sistemas para ejecutar procesos con mínima intervención humana.",
+    "ejemplo": "La planta de ensamblaje está automatizada."
+  },
+  {
+    "palabra": "PLC",
+    "significado": "Controlador lógico programable usado en automatización industrial.",
+    "ejemplo": "El PLC controla la línea de envasado."
+  },
+  {
+    "palabra": "Robótica",
+    "significado": "Rama de la ingeniería que diseña y construye robots.",
+    "ejemplo": "La robótica mejora la producción automotriz."
+  },
+  {
+    "palabra": "Mecatrónica",
+    "significado": "Disciplina que integra mecánica, electrónica e informática.",
+    "ejemplo": "La mecatrónica permitió crear un brazo robotizado."
+  },
+  {
+    "palabra": "Energía renovable",
+    "significado": "Fuente de energía que se regenera naturalmente.",
+    "ejemplo": "La energía solar es una energía renovable."
+  },
+  {
+    "palabra": "Sustentabilidad",
+    "significado": "Principio que busca el equilibrio entre desarrollo y cuidado ambiental.",
+    "ejemplo": "El proyecto aplicó criterios de sustentabilidad."
+  },
+  {
+    "palabra": "Eficiencia energética",
+    "significado": "Uso óptimo de energía para realizar un trabajo con mínimo desperdicio.",
+    "ejemplo": "El motor fue diseñado con alta eficiencia energética."
+  },
+  {
+    "palabra": "Flujo laminar",
+    "significado": "Movimiento ordenado de un fluido en capas paralelas.",
+    "ejemplo": "El agua en la tubería presentó flujo laminar."
+  },
+  {
+    "palabra": "Flujo turbulento",
+    "significado": "Movimiento caótico y desordenado de un fluido.",
+    "ejemplo": "El humo ascendía en flujo turbulento."
+  },
+  {
+    "palabra": "Termodinámica",
+    "significado": "Ciencia que estudia la energía y sus transformaciones.",
+    "ejemplo": "La termodinámica explica el funcionamiento de motores."
+  },
+  {
+    "palabra": "Energía hidráulica",
+    "significado": "Energía generada por el movimiento del agua.",
+    "ejemplo": "La presa produce energía hidráulica."
+  },
+  {
+    "palabra": "Energía eólica",
+    "significado": "Energía obtenida del viento mediante aerogeneradores.",
+    "ejemplo": "El parque eólico abastece a toda la ciudad."
+  },
+  {
+    "palabra": "Circuito eléctrico",
+    "significado": "Conjunto de elementos que permiten el paso de corriente.",
+    "ejemplo": "El circuito eléctrico alimenta la lámpara."
+  },
+  {
+    "palabra": "Resistencia eléctrica",
+    "significado": "Oposición que ofrece un material al paso de la corriente.",
+    "ejemplo": "El cobre tiene baja resistencia eléctrica."
+  },
+  {
+    "palabra": "Transformador",
+    "significado": "Dispositivo que modifica el voltaje de la corriente alterna.",
+    "ejemplo": "El transformador redujo el voltaje para uso doméstico."
+  },
+  {
+    "palabra": "Generador",
+    "significado": "Máquina que convierte energía mecánica en eléctrica.",
+    "ejemplo": "El generador produjo electricidad durante la falla."
+  },
+  {
+    "palabra": "Anisotropía",
+    "significado": "Propiedad de un material cuyas características varían según la dirección.",
+    "ejemplo": "La madera presenta anisotropía en resistencia mecánica."
+  },
+  {
+    "palabra": "Isotropía",
+    "significado": "Propiedad de un material que tiene las mismas características en todas las direcciones.",
+    "ejemplo": "El vidrio se considera un material isotrópico."
+  },
+  {
+    "palabra": "Creep",
+    "significado": "Deformación lenta y progresiva de un material bajo carga constante.",
+    "ejemplo": "Las turbinas a altas temperaturas sufren creep."
+  },
+  {
+    "palabra": "Ductilidad",
+    "significado": "Capacidad de un material para deformarse sin romperse.",
+    "ejemplo": "El cobre tiene gran ductilidad."
+  },
+  {
+    "palabra": "Fragilidad",
+    "significado": "Tendencia de un material a fracturarse sin deformarse.",
+    "ejemplo": "El vidrio es un material frágil."
+  },
+  {
+    "palabra": "Tenacidad",
+    "significado": "Capacidad de un material para absorber energía antes de romperse.",
+    "ejemplo": "El acero estructural tiene alta tenacidad."
+  },
+  {
+    "palabra": "Fractomecánica",
+    "significado": "Disciplina que estudia la propagación de grietas en materiales.",
+    "ejemplo": "La fractomecánica se aplica en diseño aeroespacial."
+  },
+  {
+    "palabra": "Fatiga térmica",
+    "significado": "Daño acumulado en un material por cambios de temperatura repetidos.",
+    "ejemplo": "Los frenos de autos sufren fatiga térmica."
+  },
+  {
+    "palabra": "Aleación",
+    "significado": "Mezcla de metales para mejorar propiedades.",
+    "ejemplo": "El bronce es una aleación de cobre y estaño."
+  },
+  {
+    "palabra": "Superaleación",
+    "significado": "Aleación diseñada para resistir altas temperaturas y esfuerzos extremos.",
+    "ejemplo": "Las turbinas de avión usan superaleaciones de níquel."
+  },
+  {
+    "palabra": "Nanomaterial",
+    "significado": "Material con estructuras a escala nanométrica.",
+    "ejemplo": "Los nanomateriales se emplean en sensores avanzados."
+  },
+  {
+    "palabra": "Compósito",
+    "significado": "Material formado por la combinación de dos o más materiales distintos.",
+    "ejemplo": "La fibra de carbono es un compósito muy resistente."
+  },
+  {
+    "palabra": "Geotecnia",
+    "significado": "Rama de la ingeniería que estudia el comportamiento de suelos y rocas.",
+    "ejemplo": "La geotecnia es esencial para construir cimentaciones."
+  },
+  {
+    "palabra": "Cimentación profunda",
+    "significado": "Estructura que transmite cargas de un edificio a estratos resistentes del suelo.",
+    "ejemplo": "Las torres requieren cimentación profunda con pilotes."
+  },
+  {
+    "palabra": "Licuefacción",
+    "significado": "Fenómeno en que un suelo saturado pierde resistencia por vibraciones.",
+    "ejemplo": "El terremoto provocó licuefacción en el terreno."
+  },
+  {
+    "palabra": "Mecánica de suelos",
+    "significado": "Disciplina que analiza las propiedades de los suelos en ingeniería civil.",
+    "ejemplo": "Un estudio de mecánica de suelos precede la obra."
+  },
+  {
+    "palabra": "Hormigón armado",
+    "significado": "Concreto reforzado con acero para resistir esfuerzos combinados.",
+    "ejemplo": "El puente se construyó con hormigón armado."
+  },
+  {
+    "palabra": "Pretensado",
+    "significado": "Técnica para reforzar concreto aplicando tensión previa en el acero.",
+    "ejemplo": "Las vigas pretensadas soportan mayores cargas."
+  },
+  {
+    "palabra": "Losa de cimentación",
+    "significado": "Placa de concreto que distribuye cargas de una edificación.",
+    "ejemplo": "La bodega se construyó sobre una losa de cimentación."
+  },
+  {
+    "palabra": "Puente colgante",
+    "significado": "Estructura soportada por cables principales y torres.",
+    "ejemplo": "El Golden Gate es un puente colgante."
+  },
+  {
+    "palabra": "Aerodinámica computacional",
+    "significado": "Uso de simulaciones por computadora para estudiar flujos de aire.",
+    "ejemplo": "La aerodinámica computacional optimizó el diseño del ala."
+  },
+  {
+    "palabra": "Resonancia mecánica",
+    "significado": "Fenómeno en que un sistema vibra a gran amplitud en su frecuencia natural.",
+    "ejemplo": "El colapso del puente se debió a resonancia mecánica."
+  },
+  {
+    "palabra": "Acústica arquitectónica",
+    "significado": "Rama que estudia el control del sonido en edificios.",
+    "ejemplo": "El auditorio se diseñó con acústica arquitectónica."
+  },
+  {
+    "palabra": "Aislante acústico",
+    "significado": "Material que reduce la transmisión de sonido.",
+    "ejemplo": "Se instalaron aislantes acústicos en la cabina."
+  },
+  {
+    "palabra": "Vibración forzada",
+    "significado": "Movimiento oscilatorio provocado por una fuerza externa.",
+    "ejemplo": "El motor generó vibración forzada en la estructura."
+  },
+  {
+    "palabra": "Instrumentación",
+    "significado": "Conjunto de dispositivos para medir y controlar variables.",
+    "ejemplo": "La instrumentación registró la presión del reactor."
+  },
+  {
+    "palabra": "Control PID",
+    "significado": "Sistema de control automático que ajusta variables en procesos.",
+    "ejemplo": "El horno industrial mantiene la temperatura con control PID."
+  },
+  {
+    "palabra": "Ingeniería nuclear",
+    "significado": "Rama que aplica principios de la energía nuclear.",
+    "ejemplo": "La ingeniería nuclear estudia reactores de fisión."
+  },
+  {
+    "palabra": "Fisión nuclear",
+    "significado": "Proceso en el que un núcleo atómico se divide liberando energía.",
+    "ejemplo": "Las centrales generan energía mediante fisión nuclear."
+  },
+  {
+    "palabra": "Fusión nuclear",
+    "significado": "Unión de núcleos ligeros para formar uno más pesado, liberando energía.",
+    "ejemplo": "El Sol obtiene su energía por fusión nuclear."
+  },
+  {
+    "palabra": "Reactor nuclear",
+    "significado": "Instalación que controla reacciones nucleares en cadena.",
+    "ejemplo": "El reactor nuclear suministra electricidad a la región."
+  },
+  {
+    "palabra": "Ingeniería de materiales",
+    "significado": "Ciencia que estudia la relación entre estructura y propiedades de materiales.",
+    "ejemplo": "La ingeniería de materiales desarrolló nuevos polímeros."
+  },
+  {
+    "palabra": "Metalurgia",
+    "significado": "Técnicas de extracción y procesamiento de metales.",
+    "ejemplo": "La metalurgia del aluminio requiere altas temperaturas."
+  },
+  {
+    "palabra": "Ingeniería química",
+    "significado": "Rama que transforma materias primas en productos útiles mediante procesos.",
+    "ejemplo": "La ingeniería química produce fertilizantes industriales."
+  },
+  {
+    "palabra": "Destilación fraccionada",
+    "significado": "Separación de mezclas líquidas en componentes por diferencias de ebullición.",
+    "ejemplo": "El petróleo se refina con destilación fraccionada."
+  },
+  {
+    "palabra": "Polimerización",
+    "significado": "Reacción química que forma polímeros a partir de monómeros.",
+    "ejemplo": "El plástico se fabrica mediante polimerización."
+  },
+  {
+    "palabra": "Ingeniería industrial",
+    "significado": "Disciplina que optimiza procesos productivos y de gestión.",
+    "ejemplo": "La ingeniería industrial redujo costos en la fábrica."
+  },
+  {
+    "palabra": "Lean manufacturing",
+    "significado": "Filosofía de producción que elimina desperdicios.",
+    "ejemplo": "La empresa adoptó lean manufacturing para ser más eficiente."
+  },
+  {
+    "palabra": "Cadena de suministro",
+    "significado": "Conjunto de procesos que llevan un producto desde la materia prima al consumidor.",
+    "ejemplo": "La cadena de suministro sufrió retrasos logísticos."
+  },
+  {
+    "palabra": "Logística inversa",
+    "significado": "Gestión del retorno de productos desde el consumidor al fabricante.",
+    "ejemplo": "La logística inversa permitió reciclar electrónicos."
+  },
+  {
+    "palabra": "Ingeniería de software",
+    "significado": "Rama que aplica principios de ingeniería al desarrollo de programas.",
+    "ejemplo": "La ingeniería de software usa metodologías ágiles."
+  },
+  {
+    "palabra": "Metodología ágil",
+    "significado": "Conjunto de prácticas para desarrollar software de forma iterativa.",
+    "ejemplo": "Scrum es una metodología ágil popular."
+  },
+  {
+    "palabra": "Simulación numérica",
+    "significado": "Uso de modelos matemáticos computacionales para predecir comportamientos.",
+    "ejemplo": "La simulación numérica redujo costos de ensayo físico."
+  },
+  {
+    "palabra": "Ingeniería biomédica",
+    "significado": "Rama que aplica tecnología y principios de ingeniería a la salud.",
+    "ejemplo": "La ingeniería biomédica desarrolló prótesis inteligentes."
+  },
+  {
+    "palabra": "Biomecánica",
+    "significado": "Estudio de las fuerzas y movimientos en organismos vivos.",
+    "ejemplo": "La biomecánica analizó la marcha de los atletas."
+  },
+  {
+    "palabra": "Ingeniería de tránsito",
+    "significado": "Rama de la ingeniería civil que organiza el flujo vehicular y peatonal.",
+    "ejemplo": "La ingeniería de tránsito diseñó un nuevo semáforo."
+  },
+  {
+    "palabra": "Geotermia",
+    "significado": "Uso del calor interno de la Tierra para generar energía.",
+    "ejemplo": "El proyecto de geotermia produce electricidad limpia."
+  },
+  {
+    "palabra": "Planta piloto",
+    "significado": "Instalación a escala reducida para probar procesos industriales.",
+    "ejemplo": "La planta piloto evaluó el nuevo catalizador."
+  }
+
+
+]

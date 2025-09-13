@@ -1,0 +1,507 @@
+[
+  {
+    "palabra": "Jurisprudencia",
+    "significado": "Interpretación reiterada de la ley realizada por tribunales.",
+    "ejemplo": "La jurisprudencia de la Suprema Corte sentó precedente."
+  },
+  {
+    "palabra": "Amparo",
+    "significado": "Recurso legal para proteger derechos fundamentales frente a actos de autoridad.",
+    "ejemplo": "El ciudadano interpuso un amparo contra la resolución."
+  },
+  {
+    "palabra": "Constitución",
+    "significado": "Norma suprema que organiza al Estado y garantiza derechos.",
+    "ejemplo": "La Constitución establece el derecho a la educación."
+  },
+  {
+    "palabra": "Decreto",
+    "significado": "Norma dictada por el poder ejecutivo con fuerza de ley en ciertos casos.",
+    "ejemplo": "El presidente firmó un decreto de emergencia."
+  },
+  {
+    "palabra": "Código Civil",
+    "significado": "Conjunto de normas que regulan relaciones privadas entre personas.",
+    "ejemplo": "El contrato se redactó conforme al Código Civil."
+  },
+  {
+    "palabra": "Código Penal",
+    "significado": "Conjunto de normas que establecen delitos y sanciones.",
+    "ejemplo": "El robo está tipificado en el Código Penal."
+  },
+  {
+    "palabra": "Demanda",
+    "significado": "Petición formal presentada ante un juez para iniciar un proceso.",
+    "ejemplo": "Se presentó una demanda por incumplimiento de contrato."
+  },
+  {
+    "palabra": "Querella",
+    "significado": "Denuncia formal presentada por la víctima de un delito.",
+    "ejemplo": "La querella fue interpuesta por difamación."
+  },
+  {
+    "palabra": "Indiciado",
+    "significado": "Persona contra la que existen sospechas fundadas de delito.",
+    "ejemplo": "El indiciado fue citado a declarar."
+  },
+  {
+    "palabra": "Acusado",
+    "significado": "Persona a quien se le imputa formalmente un delito.",
+    "ejemplo": "El acusado compareció ante el tribunal."
+  },
+  {
+    "palabra": "Imputado",
+    "significado": "Persona a la que se le atribuye participación en un hecho delictivo.",
+    "ejemplo": "El imputado fue detenido para investigación."
+  },
+  {
+    "palabra": "Fiscal",
+    "significado": "Representante del Ministerio Público encargado de la acusación.",
+    "ejemplo": "El fiscal presentó las pruebas contra el imputado."
+  },
+  {
+    "palabra": "Juez",
+    "significado": "Autoridad que resuelve conflictos aplicando la ley.",
+    "ejemplo": "El juez dictó sentencia absolutoria."
+  },
+  {
+    "palabra": "Magistrado",
+    "significado": "Juez de tribunales superiores.",
+    "ejemplo": "El magistrado revisó el caso en apelación."
+  },
+  {
+    "palabra": "Abogado",
+    "significado": "Profesional del derecho que asesora y representa legalmente.",
+    "ejemplo": "El abogado defendió a su cliente en juicio."
+  },
+  {
+    "palabra": "Notario",
+    "significado": "Funcionario que da fe pública de actos jurídicos.",
+    "ejemplo": "El notario certificó la compraventa del inmueble."
+  },
+  {
+    "palabra": "Contrato",
+    "significado": "Acuerdo de voluntades que genera obligaciones y derechos.",
+    "ejemplo": "Ambas partes firmaron un contrato laboral."
+  },
+  {
+    "palabra": "Convenio",
+    "significado": "Acuerdo entre dos o más partes para regular derechos y obligaciones.",
+    "ejemplo": "El convenio entre sindicatos fue ratificado."
+  },
+  {
+    "palabra": "Cláusula",
+    "significado": "Disposición particular incluida en un contrato.",
+    "ejemplo": "La cláusula de confidencialidad fue firmada por todos."
+  },
+  {
+    "palabra": "Obligación",
+    "significado": "Vínculo jurídico que obliga a cumplir una prestación.",
+    "ejemplo": "El deudor tiene obligación de pagar al acreedor."
+  },
+  {
+    "palabra": "Derecho subjetivo",
+    "significado": "Facultad que la ley reconoce a una persona.",
+    "ejemplo": "El derecho subjetivo de propiedad está protegido."
+  },
+  {
+    "palabra": "Derecho objetivo",
+    "significado": "Conjunto de normas jurídicas vigentes en un Estado.",
+    "ejemplo": "El derecho objetivo establece las normas penales."
+  },
+  {
+    "palabra": "Prescripción",
+    "significado": "Extinción de derechos o acciones legales por el paso del tiempo.",
+    "ejemplo": "La deuda prescribió después de cinco años."
+  },
+  {
+    "palabra": "Caducidad",
+    "significado": "Pérdida de validez de un derecho por no ejercerse en plazo.",
+    "ejemplo": "La caducidad impidió continuar el juicio."
+  },
+  {
+    "palabra": "Arbitraje",
+    "significado": "Método alternativo de solución de conflictos fuera de tribunales.",
+    "ejemplo": "El contrato incluyó cláusula de arbitraje internacional."
+  },
+  {
+    "palabra": "Mediación",
+    "significado": "Proceso en el que un tercero neutral ayuda a resolver un conflicto.",
+    "ejemplo": "Optaron por la mediación para evitar juicio."
+  },
+  {
+    "palabra": "Conciliación",
+    "significado": "Acuerdo amistoso entre partes en conflicto.",
+    "ejemplo": "La conciliación evitó un proceso judicial prolongado."
+  },
+  {
+    "palabra": "Acta notarial",
+    "significado": "Documento redactado por un notario que da fe de un hecho.",
+    "ejemplo": "El acta notarial certificó la reunión de socios."
+  },
+  {
+    "palabra": "Testamento",
+    "significado": "Acto por el cual una persona dispone sus bienes para después de su muerte.",
+    "ejemplo": "El testamento designó herederos a los hijos."
+  },
+  {
+    "palabra": "Herencia",
+    "significado": "Conjunto de bienes, derechos y obligaciones transmitidos por causa de muerte.",
+    "ejemplo": "La herencia fue repartida entre los hermanos."
+  },
+  {
+    "palabra": "Albacea",
+    "significado": "Persona encargada de cumplir las disposiciones de un testamento.",
+    "ejemplo": "El albacea administró los bienes del difunto."
+  },
+  {
+    "palabra": "Patrimonio",
+    "significado": "Conjunto de bienes y derechos pertenecientes a una persona.",
+    "ejemplo": "El patrimonio familiar incluye inmuebles y acciones."
+  },
+  {
+    "palabra": "Bienes muebles",
+    "significado": "Objetos que pueden trasladarse de un lugar a otro.",
+    "ejemplo": "El coche es un bien mueble."
+  },
+  {
+    "palabra": "Bienes inmuebles",
+    "significado": "Propiedades fijas como terrenos o construcciones.",
+    "ejemplo": "La casa es un bien inmueble."
+  },
+  {
+    "palabra": "Delito",
+    "significado": "Conducta prohibida por la ley y sancionada penalmente.",
+    "ejemplo": "El hurto es un delito menor."
+  },
+  {
+    "palabra": "Falta administrativa",
+    "significado": "Infracción que no constituye delito pero es sancionada por autoridades.",
+    "ejemplo": "Recibió multa por falta administrativa de tránsito."
+  },
+  {
+    "palabra": "Prisión preventiva",
+    "significado": "Medida cautelar que priva de libertad al imputado mientras dura el proceso.",
+    "ejemplo": "El juez dictó prisión preventiva al acusado."
+  },
+  {
+    "palabra": "Sentencia",
+    "significado": "Resolución de un juez o tribunal que decide un litigio.",
+    "ejemplo": "La sentencia fue favorable al demandante."
+  },
+  {
+    "palabra": "Apelación",
+    "significado": "Recurso para impugnar una resolución judicial ante un tribunal superior.",
+    "ejemplo": "El abogado presentó apelación contra el fallo."
+  },
+  {
+    "palabra": "Revocación",
+    "significado": "Dejar sin efecto un acto jurídico o resolución.",
+    "ejemplo": "Se solicitó la revocación del contrato."
+  },
+  {
+    "palabra": "Indulto",
+    "significado": "Perdón otorgado por el poder ejecutivo a un condenado.",
+    "ejemplo": "El presidente concedió un indulto al prisionero."
+  },
+  {
+    "palabra": "Extradición",
+    "significado": "Entrega de una persona acusada o condenada a otro país.",
+    "ejemplo": "El fugitivo fue extraditado a su país de origen."
+  },
+  {
+    "palabra": "Fianza",
+    "significado": "Garantía económica para asegurar el cumplimiento de una obligación.",
+    "ejemplo": "El juez fijó una fianza para otorgar la libertad provisional."
+  },
+  {
+    "palabra": "Perito",
+    "significado": "Experto que emite dictámenes técnicos en un juicio.",
+    "ejemplo": "El perito valuó los daños del accidente."
+  },
+  {
+    "palabra": "Actuario",
+    "significado": "Funcionario judicial encargado de notificar y dar fe de actuaciones.",
+    "ejemplo": "El actuario notificó la resolución a las partes."
+  },
+  {
+    "palabra": "Auto",
+    "significado": "Resolución judicial que decide cuestiones incidentales en un proceso.",
+    "ejemplo": "El juez dictó auto de formal prisión."
+  },
+  {
+    "palabra": "Providencia",
+    "significado": "Resolución judicial de carácter preventivo o provisional.",
+    "ejemplo": "El juez ordenó providencia precautoria de embargo."
+  },
+  {
+    "palabra": "Embargo",
+    "significado": "Retención legal de bienes para garantizar el pago de una deuda.",
+    "ejemplo": "Se decretó embargo sobre la propiedad del deudor."
+  },
+  {
+    "palabra": "Ejecutoria",
+    "significado": "Resolución firme que ya no admite recurso.",
+    "ejemplo": "La ejecutoria de la sentencia la volvió definitiva."
+  },
+  {
+    "palabra": "Acto jurídico",
+    "significado": "Manifestación de voluntad con efectos legales reconocidos por la ley.",
+    "ejemplo": "La compraventa es un acto jurídico bilateral."
+  },
+  {
+    "palabra": "Agravante",
+    "significado": "Circunstancia que aumenta la gravedad de un delito o su pena.",
+    "ejemplo": "El uso de armas fue considerado un agravante."
+  },
+  {
+    "palabra": "Alegato",
+    "significado": "Exposición razonada de un abogado en juicio.",
+    "ejemplo": "El alegato final del defensor convenció al jurado."
+  },
+  {
+    "palabra": "Anulación",
+    "significado": "Declaración de invalidez de un acto jurídico.",
+    "ejemplo": "El tribunal decretó la anulación del contrato."
+  },
+  {
+    "palabra": "Apoderado",
+    "significado": "Persona autorizada legalmente para representar a otra.",
+    "ejemplo": "El apoderado firmó la escritura en nombre del dueño."
+  },
+  {
+    "palabra": "Arraigo",
+    "significado": "Medida cautelar que limita la movilidad del imputado.",
+    "ejemplo": "El juez dictó arraigo domiciliario."
+  },
+  {
+    "palabra": "Audiencia",
+    "significado": "Sesión en la que las partes exponen ante el juez.",
+    "ejemplo": "La audiencia de pruebas se celebró ayer."
+  },
+  {
+    "palabra": "Auto de formal prisión",
+    "significado": "Resolución que confirma la existencia de pruebas contra un imputado.",
+    "ejemplo": "El juez dictó auto de formal prisión al detenido."
+  },
+  {
+    "palabra": "Bien jurídico",
+    "significado": "Valor protegido por el derecho frente a conductas ilícitas.",
+    "ejemplo": "La vida es un bien jurídico tutelado."
+  },
+  {
+    "palabra": "Caución",
+    "significado": "Garantía económica o personal para asegurar una obligación.",
+    "ejemplo": "El juez impuso caución para la libertad provisional."
+  },
+  {
+    "palabra": "Comodato",
+    "significado": "Préstamo gratuito de un bien que debe devolverse.",
+    "ejemplo": "El comodato permitió usar la propiedad sin costo."
+  },
+  {
+    "palabra": "Concubinato",
+    "significado": "Unión de hecho entre dos personas sin matrimonio legal.",
+    "ejemplo": "El concubinato tiene efectos legales en pensiones."
+  },
+  {
+    "palabra": "Constituyente",
+    "significado": "Persona o asamblea encargada de elaborar una Constitución.",
+    "ejemplo": "El Congreso Constituyente redactó la nueva carta magna."
+  },
+  {
+    "palabra": "Contraprestación",
+    "significado": "Pago o beneficio que una parte otorga a otra en un contrato.",
+    "ejemplo": "La renta mensual es la contraprestación en un arrendamiento."
+  },
+  {
+    "palabra": "Cúmulo de penas",
+    "significado": "Suma de sanciones aplicadas a un condenado por varios delitos.",
+    "ejemplo": "El juez dictó cúmulo de penas de 30 años."
+  },
+  {
+    "palabra": "Curador",
+    "significado": "Persona designada para proteger bienes de menores o incapaces.",
+    "ejemplo": "El curador administró la herencia del menor."
+  },
+  {
+    "palabra": "Dación en pago",
+    "significado": "Entrega de un bien como forma de extinguir una deuda.",
+    "ejemplo": "Cedió su coche como dación en pago."
+  },
+  {
+    "palabra": "Despido injustificado",
+    "significado": "Terminación laboral sin causa legal válida.",
+    "ejemplo": "El trabajador demandó por despido injustificado."
+  },
+  {
+    "palabra": "Dictamen pericial",
+    "significado": "Informe emitido por un experto en un juicio.",
+    "ejemplo": "El dictamen pericial confirmó el daño estructural."
+  },
+  {
+    "palabra": "Dolo",
+    "significado": "Intención consciente de cometer un delito o engaño.",
+    "ejemplo": "El fraude se realizó con dolo."
+  },
+  {
+    "palabra": "Due diligence",
+    "significado": "Proceso de revisión legal y financiera en transacciones.",
+    "ejemplo": "La empresa pasó por una due diligence antes de la compra."
+  },
+  {
+    "palabra": "Edicto",
+    "significado": "Anuncio oficial que publica actos o resoluciones judiciales.",
+    "ejemplo": "El edicto fue colocado en el boletín judicial."
+  },
+  {
+    "palabra": "Enriquecimiento ilícito",
+    "significado": "Aumento de patrimonio sin justificación legal.",
+    "ejemplo": "El funcionario fue acusado de enriquecimiento ilícito."
+  },
+  {
+    "palabra": "Escrito inicial",
+    "significado": "Documento con el que se presenta una demanda.",
+    "ejemplo": "El escrito inicial detallaba los hechos y pruebas."
+  },
+  {
+    "palabra": "Exhorto",
+    "significado": "Solicitud formal de un juez a otro para realizar diligencias.",
+    "ejemplo": "Se envió un exhorto al juzgado de otra entidad."
+  },
+  {
+    "palabra": "Fideicomiso",
+    "significado": "Contrato por el que se transmiten bienes a una persona para administrarlos.",
+    "ejemplo": "El fideicomiso garantizó la construcción del proyecto."
+  },
+  {
+    "palabra": "Inapelable",
+    "significado": "Resolución judicial que no admite recurso de apelación.",
+    "ejemplo": "La multa fue declarada inapelable."
+  },
+  {
+    "palabra": "Incidente procesal",
+    "significado": "Cuestión accesoria que se resuelve dentro de un juicio.",
+    "ejemplo": "El abogado promovió un incidente procesal de nulidad."
+  },
+  {
+    "palabra": "Inconstitucionalidad",
+    "significado": "Contradicción de una norma con la Constitución.",
+    "ejemplo": "La Corte declaró la inconstitucionalidad de la ley."
+  },
+  {
+    "palabra": "Inhabilitación",
+    "significado": "Sanción que impide ejercer cargos o derechos.",
+    "ejemplo": "El funcionario recibió inhabilitación por corrupción."
+  },
+  {
+    "palabra": "Interdicto",
+    "significado": "Procedimiento legal para proteger posesiones o derechos.",
+    "ejemplo": "Se presentó un interdicto por despojo de terreno."
+  },
+  {
+    "palabra": "Litis",
+    "significado": "Conflicto de intereses sometido a decisión judicial.",
+    "ejemplo": "La litis giraba en torno a la propiedad del inmueble."
+  },
+  {
+    "palabra": "Mandato",
+    "significado": "Contrato por el cual una persona confiere a otra la representación legal.",
+    "ejemplo": "El mandatario firmó en nombre del propietario."
+  },
+  {
+    "palabra": "Mora",
+    "significado": "Retraso en el cumplimiento de una obligación.",
+    "ejemplo": "El deudor incurrió en mora de pago."
+  },
+  {
+    "palabra": "Nulidad",
+    "significado": "Ineficacia de un acto jurídico por faltar requisitos legales.",
+    "ejemplo": "El matrimonio fue declarado en nulidad."
+  },
+  {
+    "palabra": "Obligación solidaria",
+    "significado": "Compromiso compartido por varias personas para cumplir una deuda.",
+    "ejemplo": "Los socios asumieron obligación solidaria en el préstamo."
+  },
+  {
+    "palabra": "Parentesco",
+    "significado": "Vínculo legal entre personas por consanguinidad o afinidad.",
+    "ejemplo": "El parentesco dio derecho a reclamar herencia."
+  },
+  {
+    "palabra": "Patente",
+    "significado": "Derecho exclusivo para explotar una invención.",
+    "ejemplo": "La empresa registró una patente de software."
+  },
+  {
+    "palabra": "Personería jurídica",
+    "significado": "Capacidad legal de una entidad para ejercer derechos y obligaciones.",
+    "ejemplo": "La asociación obtuvo personería jurídica."
+  },
+  {
+    "palabra": "Plazo legal",
+    "significado": "Tiempo establecido por la ley para ejercer un derecho.",
+    "ejemplo": "El plazo legal venció a los 10 días hábiles."
+  },
+  {
+    "palabra": "Presunción de inocencia",
+    "significado": "Principio que establece que nadie es culpable hasta sentencia firme.",
+    "ejemplo": "Se respetó la presunción de inocencia del acusado."
+  },
+  {
+    "palabra": "Querellante",
+    "significado": "Persona que presenta una querella.",
+    "ejemplo": "El querellante pidió medidas de protección."
+  },
+  {
+    "palabra": "Reconvención",
+    "significado": "Demanda presentada por el demandado contra el actor original.",
+    "ejemplo": "El demandado presentó reconvención por daños."
+  },
+  {
+    "palabra": "Recurso de casación",
+    "significado": "Medio de impugnación ante un tribunal superior por errores de derecho.",
+    "ejemplo": "El abogado interpuso recurso de casación."
+  },
+  {
+    "palabra": "Resolutivo",
+    "significado": "Parte de la sentencia que contiene la decisión final.",
+    "ejemplo": "El resolutivo condenó al pago de daños."
+  },
+  {
+    "palabra": "Secreto profesional",
+    "significado": "Deber de confidencialidad de abogados sobre información de clientes.",
+    "ejemplo": "El abogado invocó el secreto profesional."
+  },
+  {
+    "palabra": "Subrogación",
+    "significado": "Sustitución de una persona o cosa por otra en una relación jurídica.",
+    "ejemplo": "El banco ejerció subrogación en el crédito hipotecario."
+  },
+  {
+    "palabra": "Transacción",
+    "significado": "Acuerdo en el que las partes hacen concesiones para evitar o terminar un juicio.",
+    "ejemplo": "Se llegó a una transacción extrajudicial."
+  },
+  {
+    "palabra": "Usufructo",
+    "significado": "Derecho a disfrutar bienes ajenos sin ser dueño.",
+    "ejemplo": "El usufructo vitalicio fue otorgado a la viuda."
+  },
+  {
+    "palabra": "Validez",
+    "significado": "Reconocimiento legal de eficacia de un acto jurídico.",
+    "ejemplo": "El contrato carecía de validez por falta de firma."
+  },
+  {
+    "palabra": "Vicio oculto",
+    "significado": "Defecto no evidente en un bien que afecta su uso.",
+    "ejemplo": "La casa tenía un vicio oculto en la estructura."
+  },
+  {
+    "palabra": "Zócalo procesal",
+    "significado": "Base normativa que sustenta un procedimiento judicial.",
+    "ejemplo": "El abogado fundamentó su escrito en el zócalo procesal."
+  }
+]

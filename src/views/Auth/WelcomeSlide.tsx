@@ -22,23 +22,25 @@ const WelcomeSliderScreen = () => {
   const navigation = useNavigation()
   const flatListRef = useRef<FlatList>(null)
 
-  const goToNext = () => {
-    if (currentIndex < slides.length - 1 && flatListRef.current) {
-      flatListRef.current.scrollToOffset({
-        offset: (currentIndex + 1) * width,
-        animated: true,
-      })
-    }
-  }
 
-  const goToPrev = () => {
-    if (currentIndex > 0 && flatListRef.current) {
-      flatListRef.current.scrollToOffset({
-        offset: (currentIndex - 1) * width,
-        animated: true,
-      })
+    const goToNext = () => {
+        if (currentIndex < slides.length - 1 && flatListRef.current) {
+            flatListRef.current.scrollToOffset({
+                offset: (currentIndex + 1) * width,
+                animated: true,
+            })
+        }
     }
-  }
+
+    const goToPrev = () => {
+        if (currentIndex > 0 && flatListRef.current) {
+            flatListRef.current.scrollToOffset({
+                offset: (currentIndex - 1) * width,
+                animated: true,
+            })
+        }
+    }
+
 
   return (
     <SafeAreaView style={styles.container}>
@@ -127,7 +129,7 @@ const WelcomeSliderScreen = () => {
         <Animatable.View animation="fadeInUp" delay={1000}>
           <TouchableOpacity
             style={styles.button}
-            onPress={() => navigation.navigate('AuthLanding')}
+            onPress={() => navigation.navigate('Login')}
           >
             <Text style={styles.buttonText}>Empezar</Text>
           </TouchableOpacity>

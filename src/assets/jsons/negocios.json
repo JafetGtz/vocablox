@@ -1,0 +1,508 @@
+[
+  {
+    "palabra": "Activo",
+    "significado": "Bien o recurso que posee una empresa y que tiene valor económico.",
+    "ejemplo": "El edificio de oficinas es un activo importante de la compañía."
+  },
+  {
+    "palabra": "Pasivo",
+    "significado": "Obligación financiera o deuda de una empresa.",
+    "ejemplo": "El préstamo bancario figura como pasivo en el balance."
+  },
+  {
+    "palabra": "Capital",
+    "significado": "Dinero o bienes invertidos en un negocio para generar ingresos.",
+    "ejemplo": "El capital inicial permitió abrir la nueva sucursal."
+  },
+  {
+    "palabra": "Inversión",
+    "significado": "Colocación de recursos en un proyecto con la expectativa de generar ganancias.",
+    "ejemplo": "La empresa hizo una inversión en maquinaria moderna."
+  },
+  {
+    "palabra": "Rentabilidad",
+    "significado": "Capacidad de un negocio para generar beneficios en relación a su inversión.",
+    "ejemplo": "El proyecto mostró una alta rentabilidad en su primer año."
+  },
+  {
+    "palabra": "Utilidad",
+    "significado": "Beneficio neto que obtiene una empresa después de restar gastos.",
+    "ejemplo": "Las utilidades del trimestre superaron las expectativas."
+  },
+  {
+    "palabra": "Pérdida",
+    "significado": "Resultado negativo cuando los gastos superan los ingresos.",
+    "ejemplo": "La empresa reportó pérdidas debido a la crisis económica."
+  },
+  {
+    "palabra": "Liquidez",
+    "significado": "Capacidad de convertir activos en efectivo rápidamente.",
+    "ejemplo": "La liquidez de la compañía le permitió cubrir sus deudas a corto plazo."
+  },
+  {
+    "palabra": "Flujo de caja",
+    "significado": "Movimiento de entradas y salidas de dinero en un negocio.",
+    "ejemplo": "El flujo de caja negativo obligó a buscar financiamiento."
+  },
+  {
+    "palabra": "Balance",
+    "significado": "Estado financiero que muestra activos, pasivos y patrimonio de una empresa.",
+    "ejemplo": "El balance anual fue presentado a los accionistas."
+  },
+  {
+    "palabra": "Mercado",
+    "significado": "Conjunto de compradores y vendedores de un producto o servicio.",
+    "ejemplo": "El mercado digital ha crecido exponencialmente."
+  },
+  {
+    "palabra": "Demanda",
+    "significado": "Cantidad de un producto que los consumidores están dispuestos a comprar.",
+    "ejemplo": "La demanda de dispositivos móviles sigue aumentando."
+  },
+  {
+    "palabra": "Oferta",
+    "significado": "Cantidad de un bien o servicio disponible en el mercado.",
+    "ejemplo": "La oferta de viviendas no cubre la necesidad actual."
+  },
+  {
+    "palabra": "Competencia",
+    "significado": "Empresas que ofrecen productos o servicios similares en el mismo mercado.",
+    "ejemplo": "La competencia obligó a reducir los precios."
+  },
+  {
+    "palabra": "Cliente",
+    "significado": "Persona o empresa que compra bienes o servicios.",
+    "ejemplo": "El cliente siempre debe estar en el centro de la estrategia."
+  },
+  {
+    "palabra": "Proveedor",
+    "significado": "Persona o empresa que suministra bienes o servicios a otra.",
+    "ejemplo": "El proveedor de materias primas entregó el pedido a tiempo."
+  },
+  {
+    "palabra": "Marketing",
+    "significado": "Conjunto de técnicas para promover y vender productos o servicios.",
+    "ejemplo": "El marketing digital es clave para llegar a nuevos clientes."
+  },
+  {
+    "palabra": "Publicidad",
+    "significado": "Acciones de comunicación pagadas para dar a conocer productos o servicios.",
+    "ejemplo": "La publicidad en redes sociales aumentó las ventas."
+  },
+  {
+    "palabra": "Marca",
+    "significado": "Nombre, símbolo o diseño que distingue a un producto o empresa.",
+    "ejemplo": "La marca se posicionó como líder en innovación."
+  },
+  {
+    "palabra": "Estrategia",
+    "significado": "Plan de acción diseñado para alcanzar objetivos de negocio.",
+    "ejemplo": "La estrategia de expansión internacional fue exitosa."
+  },
+  {
+    "palabra": "Plan de negocios",
+    "significado": "Documento que describe los objetivos, estrategias y proyecciones de una empresa.",
+    "ejemplo": "El plan de negocios convenció a los inversionistas."
+  },
+  {
+    "palabra": "Emprendimiento",
+    "significado": "Iniciativa de crear y desarrollar un nuevo negocio.",
+    "ejemplo": "El emprendimiento juvenil es apoyado por incubadoras."
+  },
+  {
+    "palabra": "Startup",
+    "significado": "Empresa emergente con gran potencial de crecimiento.",
+    "ejemplo": "La startup desarrolló una aplicación innovadora."
+  },
+  {
+    "palabra": "Escalabilidad",
+    "significado": "Capacidad de un negocio para crecer sin aumentar proporcionalmente sus costos.",
+    "ejemplo": "El modelo digital permite mayor escalabilidad."
+  },
+  {
+    "palabra": "Innovación",
+    "significado": "Introducción de nuevos productos, servicios o procesos en un mercado.",
+    "ejemplo": "La innovación es esencial para mantenerse competitivo."
+  },
+  {
+    "palabra": "Sociedad",
+    "significado": "Asociación de personas para desarrollar un negocio con fines de lucro.",
+    "ejemplo": "Crearon una sociedad anónima para operar en bolsa."
+  },
+  {
+    "palabra": "Acción",
+    "significado": "Título que representa una parte del capital de una empresa.",
+    "ejemplo": "Las acciones de la compañía subieron en la bolsa."
+  },
+  {
+    "palabra": "Accionista",
+    "significado": "Persona que posee acciones de una empresa.",
+    "ejemplo": "Los accionistas aprobaron el reparto de dividendos."
+  },
+  {
+    "palabra": "Dividendo",
+    "significado": "Parte de las utilidades distribuidas a los accionistas.",
+    "ejemplo": "La empresa anunció un dividendo trimestral."
+  },
+  {
+    "palabra": "Bolsa de valores",
+    "significado": "Mercado organizado donde se compran y venden acciones y otros títulos.",
+    "ejemplo": "La empresa cotiza en la bolsa de valores de Nueva York."
+  },
+  {
+    "palabra": "Fusión",
+    "significado": "Unión de dos o más empresas en una sola entidad.",
+    "ejemplo": "La fusión de bancos generó un gigante financiero."
+  },
+  {
+    "palabra": "Adquisición",
+    "significado": "Compra de una empresa por parte de otra.",
+    "ejemplo": "La multinacional realizó la adquisición de su competidora."
+  },
+  {
+    "palabra": "Franquicia",
+    "significado": "Modelo de negocio en el que una empresa concede derechos de marca a otra.",
+    "ejemplo": "Abrió una franquicia de comida rápida en su ciudad."
+  },
+  {
+    "palabra": "Alianza",
+    "significado": "Acuerdo entre empresas para alcanzar objetivos comunes.",
+    "ejemplo": "La alianza estratégica permitió reducir costos."
+  },
+  {
+    "palabra": "Benchmarking",
+    "significado": "Proceso de comparar prácticas con las de líderes del mercado.",
+    "ejemplo": "La empresa realizó benchmarking con compañías internacionales."
+  },
+  {
+    "palabra": "Outsourcing",
+    "significado": "Contratación de servicios externos para realizar tareas específicas.",
+    "ejemplo": "La empresa optó por outsourcing en contabilidad."
+  },
+  {
+    "palabra": "E-commerce",
+    "significado": "Comercio de bienes y servicios a través de internet.",
+    "ejemplo": "El e-commerce creció significativamente durante la pandemia."
+  },
+  {
+    "palabra": "Marketplace",
+    "significado": "Plataforma digital donde diferentes vendedores ofrecen productos.",
+    "ejemplo": "Amazon es el marketplace más grande del mundo."
+  },
+  {
+    "palabra": "Negociación",
+    "significado": "Proceso de diálogo para llegar a un acuerdo entre partes.",
+    "ejemplo": "La negociación con proveedores resultó favorable."
+  },
+  {
+    "palabra": "Contrato",
+    "significado": "Acuerdo legal vinculante entre dos o más partes.",
+    "ejemplo": "Firmaron un contrato de suministro por cinco años."
+  },
+  {
+    "palabra": "Patente",
+    "significado": "Derecho exclusivo de explotación de una invención.",
+    "ejemplo": "La patente protege el nuevo medicamento."
+  },
+  {
+    "palabra": "Licencia",
+    "significado": "Permiso legal para usar una marca, patente o software.",
+    "ejemplo": "La empresa obtuvo una licencia para distribuir el producto."
+  },
+  {
+    "palabra": "Consultoría",
+    "significado": "Servicio profesional que asesora a empresas en áreas específicas.",
+    "ejemplo": "La consultoría financiera ayudó a mejorar la gestión."
+  },
+  {
+    "palabra": "Logística",
+    "significado": "Gestión del transporte, almacenamiento y distribución de productos.",
+    "ejemplo": "La logística eficiente redujo los tiempos de entrega."
+  },
+  {
+    "palabra": "Cadena de suministro",
+    "significado": "Conjunto de procesos para producir y entregar un producto al consumidor.",
+    "ejemplo": "La pandemia afectó la cadena de suministro global."
+  },
+  {
+    "palabra": "Capital humano",
+    "significado": "Conjunto de conocimientos, habilidades y experiencias de los trabajadores.",
+    "ejemplo": "El capital humano es el mayor recurso de la empresa."
+  },
+  {
+    "palabra": "Responsabilidad social",
+    "significado": "Compromiso de una empresa con el bienestar social y ambiental.",
+    "ejemplo": "La compañía impulsa proyectos de responsabilidad social."
+  },
+  {
+    "palabra": "Economía de escala",
+    "significado": "Reducción de costos unitarios al aumentar la producción.",
+    "ejemplo": "Las grandes fábricas aprovechan la economía de escala."
+  },
+  {
+    "palabra": "Planificación estratégica",
+    "significado": "Proceso de definir metas y acciones a largo plazo para la empresa.",
+    "ejemplo": "La planificación estratégica guiará el crecimiento de la organización."
+  },
+  {
+    "palabra": "Arancel",
+    "significado": "Impuesto aplicado a productos importados o exportados.",
+    "ejemplo": "El gobierno aumentó el arancel a los productos electrónicos."
+  },
+  {
+    "palabra": "Aval",
+    "significado": "Garantía que respalda el cumplimiento de una obligación financiera.",
+    "ejemplo": "El banco solicitó un aval para otorgar el crédito."
+  },
+  {
+    "palabra": "Balance general",
+    "significado": "Estado financiero que muestra activos, pasivos y patrimonio de la empresa en una fecha determinada.",
+    "ejemplo": "El balance general reflejó estabilidad financiera."
+  },
+  {
+    "palabra": "Bonificación",
+    "significado": "Pago adicional otorgado a empleados o clientes.",
+    "ejemplo": "Los trabajadores recibieron una bonificación por productividad."
+  },
+  {
+    "palabra": "Broker",
+    "significado": "Intermediario en operaciones financieras o de seguros.",
+    "ejemplo": "El broker gestionó la compra de acciones en la bolsa."
+  },
+  {
+    "palabra": "Cash flow",
+    "significado": "Flujo de entradas y salidas de efectivo en una empresa.",
+    "ejemplo": "El cash flow positivo permitió nuevas inversiones."
+  },
+  {
+    "palabra": "Cláusula",
+    "significado": "Condición establecida en un contrato.",
+    "ejemplo": "La cláusula de confidencialidad fue firmada por ambas partes."
+  },
+  {
+    "palabra": "Colusión",
+    "significado": "Acuerdo secreto entre empresas para manipular precios o mercados.",
+    "ejemplo": "La colusión entre competidores fue sancionada por la autoridad."
+  },
+  {
+    "palabra": "Comisión",
+    "significado": "Porcentaje de ganancia que recibe un intermediario por una operación.",
+    "ejemplo": "El agente cobró una comisión del 5% por la venta."
+  },
+  {
+    "palabra": "Competitividad",
+    "significado": "Capacidad de una empresa o país para destacar en el mercado.",
+    "ejemplo": "La innovación aumentó la competitividad del sector."
+  },
+  {
+    "palabra": "Consorcio",
+    "significado": "Unión de varias empresas para desarrollar un proyecto conjunto.",
+    "ejemplo": "El consorcio ganó la licitación de la autopista."
+  },
+  {
+    "palabra": "Contabilidad",
+    "significado": "Disciplina que registra y analiza las operaciones económicas de una empresa.",
+    "ejemplo": "La contabilidad permitió identificar los costos reales."
+  },
+  {
+    "palabra": "Costo fijo",
+    "significado": "Gasto que permanece constante independientemente del nivel de producción.",
+    "ejemplo": "El alquiler es un costo fijo mensual."
+  },
+  {
+    "palabra": "Costo variable",
+    "significado": "Gasto que cambia según el volumen de producción.",
+    "ejemplo": "La materia prima es un costo variable."
+  },
+  {
+    "palabra": "Crediticio",
+    "significado": "Relacionado con préstamos o créditos financieros.",
+    "ejemplo": "El historial crediticio influyó en la aprobación del préstamo."
+  },
+  {
+    "palabra": "Crowdfunding",
+    "significado": "Financiamiento colectivo mediante aportaciones de muchas personas.",
+    "ejemplo": "El proyecto se lanzó gracias al crowdfunding en línea."
+  },
+  {
+    "palabra": "Cuenta corriente",
+    "significado": "Cuenta bancaria que permite depósitos, retiros y transferencias.",
+    "ejemplo": "La empresa maneja pagos desde su cuenta corriente."
+  },
+  {
+    "palabra": "Depreciación",
+    "significado": "Pérdida de valor de un activo con el tiempo.",
+    "ejemplo": "La depreciación del vehículo se registró en los estados financieros."
+  },
+  {
+    "palabra": "Diversificación",
+    "significado": "Estrategia de invertir en diferentes sectores para reducir riesgos.",
+    "ejemplo": "La diversificación de productos incrementó las ventas."
+  },
+  {
+    "palabra": "Downsizing",
+    "significado": "Reducción del tamaño de una empresa mediante recorte de personal o recursos.",
+    "ejemplo": "El downsizing afectó a varios departamentos."
+  },
+  {
+    "palabra": "Dumping",
+    "significado": "Práctica de vender productos por debajo de su costo para eliminar competidores.",
+    "ejemplo": "El dumping fue denunciado ante la organización internacional."
+  },
+  {
+    "palabra": "Economía circular",
+    "significado": "Modelo de producción que promueve la reutilización y reciclaje de recursos.",
+    "ejemplo": "La empresa adoptó la economía circular para reducir desechos."
+  },
+  {
+    "palabra": "Endeudamiento",
+    "significado": "Nivel de deudas que posee una empresa o persona.",
+    "ejemplo": "El alto endeudamiento afectó su calificación crediticia."
+  },
+  {
+    "palabra": "Estudio de mercado",
+    "significado": "Investigación sobre consumidores, competencia y tendencias en un sector.",
+    "ejemplo": "El estudio de mercado reveló nuevas oportunidades."
+  },
+  {
+    "palabra": "Exportación",
+    "significado": "Venta de bienes o servicios a otro país.",
+    "ejemplo": "La exportación de café generó divisas para el país."
+  },
+  {
+    "palabra": "Importación",
+    "significado": "Compra de bienes o servicios provenientes del extranjero.",
+    "ejemplo": "La importación de maquinaria redujo costos de producción."
+  },
+  {
+    "palabra": "Fideicomiso",
+    "significado": "Contrato mediante el cual se ceden bienes a un tercero para su administración.",
+    "ejemplo": "El fideicomiso inmobiliario financió la construcción del edificio."
+  },
+  {
+    "palabra": "Fintech",
+    "significado": "Empresa que combina finanzas y tecnología para ofrecer servicios innovadores.",
+    "ejemplo": "Las fintech están revolucionando los pagos digitales."
+  },
+  {
+    "palabra": "Globalización",
+    "significado": "Proceso de integración económica, social y cultural entre países.",
+    "ejemplo": "La globalización facilitó la expansión de empresas multinacionales."
+  },
+  {
+    "palabra": "Holding",
+    "significado": "Empresa que posee acciones de otras compañías para controlarlas.",
+    "ejemplo": "El holding maneja inversiones en energía y telecomunicaciones."
+  },
+  {
+    "palabra": "Joint venture",
+    "significado": "Acuerdo entre dos empresas para desarrollar un proyecto común.",
+    "ejemplo": "Formaron un joint venture para producir autos eléctricos."
+  },
+  {
+    "palabra": "KPI",
+    "significado": "Indicador clave de rendimiento utilizado para medir el éxito empresarial.",
+    "ejemplo": "El KPI de ventas superó la meta trimestral."
+  },
+  {
+    "palabra": "Leasing",
+    "significado": "Contrato de arrendamiento financiero con opción de compra.",
+    "ejemplo": "La empresa adquirió maquinaria a través de leasing."
+  },
+  {
+    "palabra": "Microcrédito",
+    "significado": "Préstamo de bajo monto otorgado a pequeños emprendedores.",
+    "ejemplo": "El microcrédito permitió iniciar un negocio familiar."
+  },
+  {
+    "palabra": "Monopolio",
+    "significado": "Situación en la que una sola empresa controla todo un mercado.",
+    "ejemplo": "El monopolio energético fue regulado por el Estado."
+  },
+  {
+    "palabra": "Oligopolio",
+    "significado": "Mercado dominado por pocas empresas grandes.",
+    "ejemplo": "El sector de telecomunicaciones es un oligopolio."
+  },
+  {
+    "palabra": "Pasarela de pagos",
+    "significado": "Sistema que procesa pagos electrónicos entre clientes y negocios.",
+    "ejemplo": "La tienda online integró una nueva pasarela de pagos."
+  },
+  {
+    "palabra": "Patrocinio",
+    "significado": "Apoyo económico a eventos o proyectos a cambio de publicidad.",
+    "ejemplo": "El patrocinio deportivo aumentó la visibilidad de la marca."
+  },
+  {
+    "palabra": "Plan de marketing",
+    "significado": "Documento que detalla acciones para promocionar productos o servicios.",
+    "ejemplo": "El plan de marketing incluyó campañas en redes sociales."
+  },
+  {
+    "palabra": "Posicionamiento",
+    "significado": "Lugar que ocupa una marca en la mente del consumidor.",
+    "ejemplo": "El posicionamiento premium atrajo a clientes exclusivos."
+  },
+  {
+    "palabra": "Presupuesto",
+    "significado": "Estimación de ingresos y gastos para un periodo determinado.",
+    "ejemplo": "El presupuesto anual fue aprobado por la junta directiva."
+  },
+  {
+    "palabra": "Retorno de inversión",
+    "significado": "Indicador que mide la ganancia obtenida en relación con la inversión realizada.",
+    "ejemplo": "El retorno de inversión del proyecto fue del 20%."
+  },
+  {
+    "palabra": "Segmentación",
+    "significado": "División del mercado en grupos con características similares.",
+    "ejemplo": "La segmentación de clientes permitió campañas más efectivas."
+  },
+  {
+    "palabra": "Sinergia",
+    "significado": "Beneficio adicional obtenido al combinar recursos o empresas.",
+    "ejemplo": "La fusión generó sinergias en logística y distribución."
+  },
+  {
+    "palabra": "Stakeholder",
+    "significado": "Persona o grupo con interés en el desempeño de una empresa.",
+    "ejemplo": "Los stakeholders influyen en las decisiones estratégicas."
+  },
+  {
+    "palabra": "Stock",
+    "significado": "Inventario disponible de productos para la venta.",
+    "ejemplo": "El stock de calzado se agotó rápidamente."
+  },
+  {
+    "palabra": "Subsidio",
+    "significado": "Ayuda económica otorgada por el Estado a empresas o personas.",
+    "ejemplo": "El subsidio agrícola apoyó a pequeños productores."
+  },
+  {
+    "palabra": "Tasa de interés",
+    "significado": "Porcentaje que cobra una institución por prestar dinero.",
+    "ejemplo": "La tasa de interés hipotecaria bajó este año."
+  },
+  {
+    "palabra": "Ticket promedio",
+    "significado": "Monto medio que gasta un cliente en cada compra.",
+    "ejemplo": "El ticket promedio en línea es más alto que en tiendas físicas."
+  },
+  {
+    "palabra": "Trader",
+    "significado": "Persona que compra y vende activos financieros en mercados bursátiles.",
+    "ejemplo": "El trader obtuvo ganancias especulando con divisas."
+  },
+  {
+    "palabra": "Valuación",
+    "significado": "Estimación del valor económico de una empresa o activo.",
+    "ejemplo": "La valuación de la startup superó los 10 millones de dólares."
+  },
+  {
+    "palabra": "Venture capital",
+    "significado": "Capital de riesgo invertido en startups con alto potencial de crecimiento.",
+    "ejemplo": "El venture capital financió la expansión internacional."
+  }
+
+]

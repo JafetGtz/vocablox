@@ -29,6 +29,7 @@
 		8FCD622688EA4D749A3CA617 /* Poppins-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7B688B15B7494E27842C5E24 /* Poppins-SemiBoldItalic.ttf */; };
 		3F0C1672899C4F32AAA13F18 /* Poppins-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FEEAF8356E8F48D388EEB46E /* Poppins-Thin.ttf */; };
 		79EDC3308EAB44F2A54F7D71 /* Poppins-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C27703EB9AB44DBAA03BEBC6 /* Poppins-ThinItalic.ttf */; };
+		ED7E2564209A46969173C0F2 /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = FD1A20E852D740EE83BD1EF8 /* Config.xcconfig */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		7B688B15B7494E27842C5E24 /* Poppins-SemiBoldItalic.ttf */ = {isa = PBXFileReference; name = "Poppins-SemiBoldItalic.ttf"; path = "../assets/fonts/Poppins-SemiBoldItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		FEEAF8356E8F48D388EEB46E /* Poppins-Thin.ttf */ = {isa = PBXFileReference; name = "Poppins-Thin.ttf"; path = "../assets/fonts/Poppins-Thin.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		C27703EB9AB44DBAA03BEBC6 /* Poppins-ThinItalic.ttf */ = {isa = PBXFileReference; name = "Poppins-ThinItalic.ttf"; path = "../assets/fonts/Poppins-ThinItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		FD1A20E852D740EE83BD1EF8 /* Config.xcconfig */ = {isa = PBXFileReference; name = "Config.xcconfig"; path = "Config.xcconfig"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = text.xcconfig; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				FD1A20E852D740EE83BD1EF8 /* Config.xcconfig */,
 				13B07FAE1A68108700A75B9A /* Awesome */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				83CBBA001A601CBA00E9B192 /* Products */,
@@ -246,6 +249,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED7E2564209A46969173C0F2 /* Config.xcconfig in Resources */,
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				1C56F925EE084DC7AB38805F /* Poppins-Black.ttf in Resources */,
@@ -492,6 +496,7 @@
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
+			baseConfigurationReference = FD1A20E852D740EE83BD1EF8 /* Config.xcconfig */;
 		};
 		83CBBA211A601CBA00E9B192 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -558,6 +563,7 @@
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
+			baseConfigurationReference = FD1A20E852D740EE83BD1EF8 /* Config.xcconfig */;
 		};
 /* End XCBuildConfiguration section */
 

@@ -1,0 +1,504 @@
+[
+  {
+    "palabra": "Algoritmo",
+    "significado": "Conjunto de instrucciones ordenadas para resolver un problema.",
+    "ejemplo": "El algoritmo de búsqueda encuentra datos en segundos."
+  },
+  {
+    "palabra": "Compilador",
+    "significado": "Programa que traduce código fuente a lenguaje máquina.",
+    "ejemplo": "El compilador convirtió el programa en un ejecutable."
+  },
+  {
+    "palabra": "Intérprete",
+    "significado": "Programa que ejecuta el código fuente línea por línea.",
+    "ejemplo": "Python usa un intérprete en lugar de compilador."
+  },
+  {
+    "palabra": "Variable",
+    "significado": "Espacio en memoria donde se guarda un valor que puede cambiar.",
+    "ejemplo": "La variable 'x' almacenó el número ingresado."
+  },
+  {
+    "palabra": "Constante",
+    "significado": "Valor fijo en el código que no puede modificarse.",
+    "ejemplo": "La constante PI vale 3.1416."
+  },
+  {
+    "palabra": "Framework",
+    "significado": "Conjunto de librerías y herramientas para desarrollar software.",
+    "ejemplo": "React es un framework para interfaces web."
+  },
+  {
+    "palabra": "Librería",
+    "significado": "Colección de funciones o recursos listos para usar en programación.",
+    "ejemplo": "Usamos una librería para gráficos en 3D."
+  },
+  {
+    "palabra": "API",
+    "significado": "Interfaz que permite que programas distintos se comuniquen.",
+    "ejemplo": "La API de Google Maps muestra ubicaciones en la app."
+  },
+  {
+    "palabra": "Depuración",
+    "significado": "Proceso de identificar y corregir errores en un programa.",
+    "ejemplo": "La depuración reveló un error en la función."
+  },
+  {
+    "palabra": "Bug",
+    "significado": "Error o falla en un software.",
+    "ejemplo": "El bug impedía que la aplicación iniciara."
+  },
+  {
+    "palabra": "Parche",
+    "significado": "Actualización que corrige errores en un programa.",
+    "ejemplo": "El parche solucionó el fallo de seguridad."
+  },
+  {
+    "palabra": "Repositorio",
+    "significado": "Lugar donde se almacenan y gestionan proyectos de código.",
+    "ejemplo": "El repositorio de GitHub contenía todo el proyecto."
+  },
+  {
+    "palabra": "Commit",
+    "significado": "Registro de cambios en un repositorio de control de versiones.",
+    "ejemplo": "Hicimos un commit tras corregir el error."
+  },
+  {
+    "palabra": "Branch",
+    "significado": "Rama de desarrollo independiente en un repositorio.",
+    "ejemplo": "Creamos un branch para la nueva funcionalidad."
+  },
+  {
+    "palabra": "Merge",
+    "significado": "Unión de ramas de desarrollo en un repositorio.",
+    "ejemplo": "Hicimos un merge de la rama al proyecto principal."
+  },
+  {
+    "palabra": "Pull request",
+    "significado": "Solicitud de integración de cambios en un repositorio.",
+    "ejemplo": "El pull request fue revisado antes de aprobarse."
+  },
+  {
+    "palabra": "Compilación",
+    "significado": "Proceso de convertir código en un archivo ejecutable.",
+    "ejemplo": "La compilación tardó varios minutos."
+  },
+  {
+    "palabra": "CPU",
+    "significado": "Unidad central de procesamiento que ejecuta instrucciones.",
+    "ejemplo": "El CPU es considerado el cerebro de la computadora."
+  },
+  {
+    "palabra": "RAM",
+    "significado": "Memoria de acceso aleatorio usada para almacenar datos temporales.",
+    "ejemplo": "La computadora tenía 16 GB de RAM."
+  },
+  {
+    "palabra": "ROM",
+    "significado": "Memoria de solo lectura donde se almacenan datos permanentes.",
+    "ejemplo": "El BIOS está grabado en la ROM."
+  },
+  {
+    "palabra": "Firmware",
+    "significado": "Programa básico que controla dispositivos electrónicos.",
+    "ejemplo": "Se actualizó el firmware del router."
+  },
+  {
+    "palabra": "Disco duro",
+    "significado": "Dispositivo de almacenamiento permanente de datos.",
+    "ejemplo": "El disco duro tenía capacidad de 1 TB."
+  },
+  {
+    "palabra": "SSD",
+    "significado": "Unidad de estado sólido, más rápida que un disco duro tradicional.",
+    "ejemplo": "Instalamos un SSD para acelerar el sistema."
+  },
+  {
+    "palabra": "Placa base",
+    "significado": "Tarjeta principal que conecta todos los componentes de la computadora.",
+    "ejemplo": "La placa base soporta varios tipos de procesadores."
+  },
+  {
+    "palabra": "Tarjeta gráfica",
+    "significado": "Dispositivo que procesa imágenes y gráficos.",
+    "ejemplo": "La tarjeta gráfica es esencial para juegos de alto rendimiento."
+  },
+  {
+    "palabra": "Overclocking",
+    "significado": "Aumento de la velocidad de un procesador más allá de su capacidad oficial.",
+    "ejemplo": "El overclocking mejoró el rendimiento del CPU."
+  },
+  {
+    "palabra": "BIOS",
+    "significado": "Sistema básico de entrada y salida que inicia la computadora.",
+    "ejemplo": "El BIOS configuró el arranque del sistema."
+  },
+  {
+    "palabra": "Sistema operativo",
+    "significado": "Programa que administra hardware y software.",
+    "ejemplo": "Windows y Linux son sistemas operativos populares."
+  },
+  {
+    "palabra": "Interfaz gráfica",
+    "significado": "Modo visual de interactuar con un programa.",
+    "ejemplo": "El sistema tiene una interfaz gráfica amigable."
+  },
+  {
+    "palabra": "Shell",
+    "significado": "Interfaz de línea de comandos para interactuar con el sistema.",
+    "ejemplo": "Usamos el shell para ejecutar scripts."
+  },
+  {
+    "palabra": "Script",
+    "significado": "Archivo con instrucciones que se ejecutan automáticamente.",
+    "ejemplo": "El script automatizó la copia de archivos."
+  },
+  {
+    "palabra": "Lenguaje de programación",
+    "significado": "Sistema de símbolos y reglas para escribir programas.",
+    "ejemplo": "JavaScript es un lenguaje de programación muy usado."
+  },
+  {
+    "palabra": "Backend",
+    "significado": "Parte del software que gestiona la lógica y base de datos.",
+    "ejemplo": "El backend procesa las peticiones del usuario."
+  },
+  {
+    "palabra": "Frontend",
+    "significado": "Parte del software con la que interactúa el usuario.",
+    "ejemplo": "El frontend muestra la interfaz gráfica."
+  },
+  {
+    "palabra": "Base de datos",
+    "significado": "Sistema que organiza y almacena información estructurada.",
+    "ejemplo": "La base de datos guardaba los registros de clientes."
+  },
+  {
+    "palabra": "SQL",
+    "significado": "Lenguaje usado para gestionar bases de datos relacionales.",
+    "ejemplo": "Escribió una consulta SQL para obtener resultados."
+  },
+  {
+    "palabra": "NoSQL",
+    "significado": "Tipo de base de datos no relacional.",
+    "ejemplo": "MongoDB es un sistema NoSQL."
+  },
+  {
+    "palabra": "Nube",
+    "significado": "Infraestructura que permite almacenar y ejecutar datos en internet.",
+    "ejemplo": "Las fotos se guardaron en la nube."
+  },
+  {
+    "palabra": "Virtualización",
+    "significado": "Técnica que permite ejecutar sistemas operativos simulados.",
+    "ejemplo": "Usamos virtualización para probar Linux dentro de Windows."
+  },
+  {
+    "palabra": "Contenedor",
+    "significado": "Entorno ligero que aísla aplicaciones y sus dependencias.",
+    "ejemplo": "Docker ejecuta aplicaciones en contenedores."
+  },
+  {
+    "palabra": "Kernel",
+    "significado": "Núcleo del sistema operativo que gestiona los recursos.",
+    "ejemplo": "El kernel Linux es de código abierto."
+  },
+  {
+    "palabra": "Driver",
+    "significado": "Programa que permite la comunicación entre hardware y sistema operativo.",
+    "ejemplo": "El mouse no funcionaba por falta de driver."
+  },
+  {
+    "palabra": "Open source",
+    "significado": "Software cuyo código fuente es abierto y modificable.",
+    "ejemplo": "Linux es un sistema operativo open source."
+  },
+  {
+    "palabra": "Propietario",
+    "significado": "Software cerrado que pertenece a una empresa o autor.",
+    "ejemplo": "Windows es un software propietario."
+  },
+  {
+    "palabra": "Malware",
+    "significado": "Programa malicioso diseñado para dañar sistemas.",
+    "ejemplo": "El antivirus detectó un malware en la computadora."
+  },
+  {
+    "palabra": "Spyware",
+    "significado": "Software que espía la actividad del usuario.",
+    "ejemplo": "El spyware robó contraseñas del navegador."
+  },
+  {
+    "palabra": "Firewall",
+    "significado": "Sistema que controla el tráfico de red y bloquea accesos no autorizados.",
+    "ejemplo": "El firewall impidió la conexión sospechosa."
+  },
+  {
+    "palabra": "Protocolo",
+    "significado": "Conjunto de reglas que permiten la comunicación entre computadoras.",
+    "ejemplo": "HTTP es un protocolo usado en la web."
+  },
+  {
+    "palabra": "IP",
+    "significado": "Número que identifica a cada dispositivo en una red.",
+    "ejemplo": "La dirección IP del servidor cambió."
+  },
+  {
+    "palabra": "DNS",
+    "significado": "Sistema que traduce nombres de dominio a direcciones IP.",
+    "ejemplo": "El DNS resolvió la dirección de la página web."
+  },
+  {
+    "palabra": "Machine Learning",
+    "significado": "Rama de la inteligencia artificial que entrena algoritmos con datos para hacer predicciones.",
+    "ejemplo": "El sistema usa machine learning para recomendar productos."
+  },
+  {
+    "palabra": "Red neuronal",
+    "significado": "Modelo de IA inspirado en el cerebro humano, con nodos interconectados.",
+    "ejemplo": "La red neuronal clasificó las imágenes con precisión."
+  },
+  {
+    "palabra": "Big Data",
+    "significado": "Conjunto de datos tan grande que requiere herramientas especiales para analizarlos.",
+    "ejemplo": "La empresa usa big data para estudiar tendencias de mercado."
+  },
+  {
+    "palabra": "Blockchain",
+    "significado": "Base de datos distribuida que garantiza seguridad e inmutabilidad.",
+    "ejemplo": "El blockchain respalda las transacciones de criptomonedas."
+  },
+  {
+    "palabra": "Criptomoneda",
+    "significado": "Moneda digital que usa criptografía para transacciones seguras.",
+    "ejemplo": "Bitcoin es la criptomoneda más famosa."
+  },
+  {
+    "palabra": "Hash",
+    "significado": "Función que convierte datos en una cadena alfanumérica fija.",
+    "ejemplo": "Las contraseñas se almacenan como hash en el sistema."
+  },
+  {
+    "palabra": "Token",
+    "significado": "Representación digital de un valor dentro de una blockchain.",
+    "ejemplo": "El token daba acceso a servicios exclusivos."
+  },
+  {
+    "palabra": "IoT",
+    "significado": "Red de objetos físicos conectados a internet para intercambiar datos.",
+    "ejemplo": "El refrigerador IoT envía alertas cuando falta comida."
+  },
+  {
+    "palabra": "Edge computing",
+    "significado": "Procesamiento de datos en el lugar donde se generan en vez de en la nube.",
+    "ejemplo": "El edge computing reduce la latencia en vehículos autónomos."
+  },
+  {
+    "palabra": "Latencia",
+    "significado": "Tiempo que tarda un dato en viajar de un punto a otro en la red.",
+    "ejemplo": "La latencia baja es crucial para videojuegos en línea."
+  },
+  {
+    "palabra": "Ancho de banda",
+    "significado": "Cantidad de datos que pueden transmitirse en una red en un tiempo dado.",
+    "ejemplo": "El streaming necesita un gran ancho de banda."
+  },
+  {
+    "palabra": "VPN",
+    "significado": "Red privada virtual que cifra y protege la conexión a internet.",
+    "ejemplo": "Usamos una VPN para acceder a la red de la empresa."
+  },
+  {
+    "palabra": "Phishing",
+    "significado": "Fraude en línea para robar datos mediante engaños.",
+    "ejemplo": "Un correo falso intentó hacer phishing con su cuenta bancaria."
+  },
+  {
+    "palabra": "Ransomware",
+    "significado": "Malware que bloquea archivos y exige rescate para liberarlos.",
+    "ejemplo": "El ransomware infectó a varias empresas."
+  },
+  {
+    "palabra": "Trojan",
+    "significado": "Malware que se disfraza de software legítimo.",
+    "ejemplo": "El troyano permitió acceso remoto al atacante."
+  },
+  {
+    "palabra": "Exploit",
+    "significado": "Código que aprovecha una vulnerabilidad en un sistema.",
+    "ejemplo": "El exploit permitió acceder sin contraseña."
+  },
+  {
+    "palabra": "Pentesting",
+    "significado": "Prueba de seguridad para detectar vulnerabilidades en sistemas.",
+    "ejemplo": "El pentesting encontró un fallo en el servidor."
+  },
+  {
+    "palabra": "DevOps",
+    "significado": "Metodología que integra desarrollo y operaciones para entregar software más rápido.",
+    "ejemplo": "El equipo adoptó DevOps para mejorar la entrega continua."
+  },
+  {
+    "palabra": "CI/CD",
+    "significado": "Integración y entrega continua de software.",
+    "ejemplo": "El pipeline de CI/CD automatiza pruebas y despliegues."
+  },
+  {
+    "palabra": "Microservicios",
+    "significado": "Arquitectura de software que divide aplicaciones en servicios pequeños e independientes.",
+    "ejemplo": "El sistema de pagos está basado en microservicios."
+  },
+  {
+    "palabra": "Monolito",
+    "significado": "Aplicación construida como un bloque único de software.",
+    "ejemplo": "El sistema antiguo era un monolito difícil de escalar."
+  },
+  {
+    "palabra": "API REST",
+    "significado": "Estilo de arquitectura para diseñar servicios web.",
+    "ejemplo": "La app consulta datos a través de una API REST."
+  },
+  {
+    "palabra": "GraphQL",
+    "significado": "Lenguaje de consultas para APIs que permite pedir datos específicos.",
+    "ejemplo": "GraphQL optimizó las consultas de la app."
+  },
+  {
+    "palabra": "JSON",
+    "significado": "Formato ligero de intercambio de datos legibles por humanos y máquinas.",
+    "ejemplo": "Los datos se enviaron en formato JSON."
+  },
+  {
+    "palabra": "XML",
+    "significado": "Lenguaje de marcado usado para estructurar datos.",
+    "ejemplo": "Los servicios antiguos usan XML en vez de JSON."
+  },
+  {
+    "palabra": "SDK",
+    "significado": "Conjunto de herramientas para desarrollar software en una plataforma específica.",
+    "ejemplo": "El SDK de Android incluye emuladores y librerías."
+  },
+  {
+    "palabra": "IDE",
+    "significado": "Entorno de desarrollo integrado que reúne editor, depurador y compilador.",
+    "ejemplo": "Visual Studio Code es un IDE popular."
+  },
+  {
+    "palabra": "Repositorio remoto",
+    "significado": "Versión alojada en la nube de un repositorio de código.",
+    "ejemplo": "El repositorio remoto estaba en GitHub."
+  },
+  {
+    "palabra": "CI Pipeline",
+    "significado": "Flujo automatizado de integración de código y pruebas.",
+    "ejemplo": "El CI Pipeline detectó un error en el build."
+  },
+  {
+    "palabra": "Containerización",
+    "significado": "Uso de contenedores para empaquetar aplicaciones y sus dependencias.",
+    "ejemplo": "Docker facilita la containerización de proyectos."
+  },
+  {
+    "palabra": "Orquestación",
+    "significado": "Automatización de la gestión de múltiples contenedores.",
+    "ejemplo": "Kubernetes se usa para la orquestación en producción."
+  },
+  {
+    "palabra": "Servidor",
+    "significado": "Computadora que provee servicios a otros dispositivos en red.",
+    "ejemplo": "El servidor aloja la base de datos de la empresa."
+  },
+  {
+    "palabra": "Cliente",
+    "significado": "Dispositivo o software que solicita servicios a un servidor.",
+    "ejemplo": "El navegador actúa como cliente en la web."
+  },
+  {
+    "palabra": "Cloud computing",
+    "significado": "Uso de servidores remotos para almacenar, procesar y gestionar datos.",
+    "ejemplo": "La empresa migró a cloud computing para escalar rápido."
+  },
+  {
+    "palabra": "Servidor dedicado",
+    "significado": "Máquina física asignada exclusivamente a un cliente o aplicación.",
+    "ejemplo": "El hosting premium incluye un servidor dedicado."
+  },
+  {
+    "palabra": "Servidor compartido",
+    "significado": "Máquina cuyos recursos son usados por varios clientes.",
+    "ejemplo": "Los sitios pequeños suelen usar servidor compartido."
+  },
+  {
+    "palabra": "Servidor virtual",
+    "significado": "Máquina virtual que funciona como un servidor independiente.",
+    "ejemplo": "Contrataron un servidor virtual para pruebas."
+  },
+  {
+    "palabra": "Load Balancer",
+    "significado": "Sistema que distribuye la carga entre varios servidores.",
+    "ejemplo": "El load balancer evitó la caída del sitio web."
+  },
+  {
+    "palabra": "Cache",
+    "significado": "Memoria intermedia que guarda datos de uso frecuente.",
+    "ejemplo": "El navegador usa cache para cargar más rápido."
+  },
+  {
+    "palabra": "Cola de mensajes",
+    "significado": "Sistema que gestiona la comunicación asíncrona entre servicios.",
+    "ejemplo": "RabbitMQ maneja colas de mensajes en microservicios."
+  },
+  {
+    "palabra": "Criptografía",
+    "significado": "Ciencia que protege la información mediante códigos y cifrado.",
+    "ejemplo": "La criptografía asegura transacciones en línea."
+  },
+  {
+    "palabra": "Clave pública",
+    "significado": "Parte de un sistema de cifrado usada para encriptar información.",
+    "ejemplo": "El mensaje fue cifrado con la clave pública."
+  },
+  {
+    "palabra": "Clave privada",
+    "significado": "Parte de un sistema de cifrado usada para descifrar información.",
+    "ejemplo": "El acceso se otorgó con la clave privada."
+  },
+  {
+    "palabra": "Servidor proxy",
+    "significado": "Intermediario entre el usuario e internet que filtra tráfico.",
+    "ejemplo": "El proxy bloqueó el acceso a ciertas páginas."
+  },
+  {
+    "palabra": "Router",
+    "significado": "Dispositivo que conecta distintas redes y dirige el tráfico de datos.",
+    "ejemplo": "El router asignó IPs a todos los dispositivos."
+  },
+  {
+    "palabra": "Switch",
+    "significado": "Dispositivo que conecta varios equipos en una red local.",
+    "ejemplo": "El switch permitió la conexión de 20 computadoras."
+  },
+  {
+    "palabra": "LAN",
+    "significado": "Red de área local que conecta dispositivos en un espacio reducido.",
+    "ejemplo": "La oficina tiene una LAN para compartir archivos."
+  },
+  {
+    "palabra": "WAN",
+    "significado": "Red de área amplia que conecta diferentes ubicaciones.",
+    "ejemplo": "Internet es la WAN más grande."
+  },
+  {
+    "palabra": "Bash",
+    "significado": "Intérprete de comandos usado en sistemas Unix/Linux.",
+    "ejemplo": "El script en Bash automatizó copias de seguridad."
+  },
+  {
+    "palabra": "Shell Script",
+    "significado": "Programa escrito en un intérprete de comandos para automatización.",
+    "ejemplo": "El shell script instaló todas las dependencias."
+  }
+
+
+]

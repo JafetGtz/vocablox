@@ -1,0 +1,588 @@
+[
+  {
+    "palabra": "Anemia",
+    "significado": "Disminución de la cantidad de glóbulos rojos o hemoglobina en la sangre.",
+    "ejemplo": "La paciente fue diagnosticada con anemia por falta de hierro."
+  },
+  {
+    "palabra": "Hipertensión",
+    "significado": "Elevación persistente de la presión arterial por encima de lo normal.",
+    "ejemplo": "El médico recetó un tratamiento para controlar la hipertensión."
+  },
+  {
+    "palabra": "Hipotensión",
+    "significado": "Presión arterial anormalmente baja.",
+    "ejemplo": "El mareo fue causado por un episodio de hipotensión."
+  },
+  {
+    "palabra": "Diabetes",
+    "significado": "Enfermedad crónica caracterizada por niveles altos de glucosa en sangre.",
+    "ejemplo": "El paciente necesita insulina para controlar su diabetes."
+  },
+  {
+    "palabra": "Fiebre",
+    "significado": "Elevación temporal de la temperatura corporal por encima de lo normal.",
+    "ejemplo": "La fiebre es un síntoma común en infecciones virales."
+  },
+  {
+    "palabra": "Infección",
+    "significado": "Entrada y multiplicación de microorganismos patógenos en el organismo.",
+    "ejemplo": "La herida presentó signos de infección."
+  },
+  {
+    "palabra": "Antibiótico",
+    "significado": "Medicamento que elimina o inhibe el crecimiento de bacterias.",
+    "ejemplo": "El médico recetó un antibiótico para tratar la neumonía."
+  },
+  {
+    "palabra": "Virus",
+    "significado": "Microorganismo que solo puede multiplicarse dentro de células vivas.",
+    "ejemplo": "La gripe es causada por un virus."
+  },
+  {
+    "palabra": "Bacteria",
+    "significado": "Microorganismo unicelular que puede ser beneficioso o causar enfermedades.",
+    "ejemplo": "La bacteria causó una infección intestinal."
+  },
+  {
+    "palabra": "Inflamación",
+    "significado": "Respuesta del cuerpo a una lesión o infección, caracterizada por enrojecimiento, calor y dolor.",
+    "ejemplo": "El esguince provocó inflamación en el tobillo."
+  },
+  {
+    "palabra": "Hemorragia",
+    "significado": "Salida abundante de sangre por rotura de vasos sanguíneos.",
+    "ejemplo": "El accidente causó una hemorragia interna."
+  },
+  {
+    "palabra": "Coágulo",
+    "significado": "Masa semisólida de sangre formada por la coagulación.",
+    "ejemplo": "El coágulo bloqueó la arteria coronaria."
+  },
+  {
+    "palabra": "Accidente cerebrovascular",
+    "significado": "Interrupción del flujo sanguíneo en el cerebro que causa daño neuronal.",
+    "ejemplo": "El paciente sufrió un accidente cerebrovascular isquémico."
+  },
+  {
+    "palabra": "Infarto",
+    "significado": "Muerte de tejido por falta de irrigación sanguínea.",
+    "ejemplo": "El dolor de pecho era signo de infarto de miocardio."
+  },
+  {
+    "palabra": "Arritmia",
+    "significado": "Alteración del ritmo normal del corazón.",
+    "ejemplo": "El electrocardiograma mostró una arritmia ventricular."
+  },
+  {
+    "palabra": "Asma",
+    "significado": "Enfermedad crónica que causa inflamación y estrechamiento de las vías respiratorias.",
+    "ejemplo": "El polvo desencadenó un ataque de asma."
+  },
+  {
+    "palabra": "Neumonía",
+    "significado": "Infección que inflama los sacos de aire de los pulmones.",
+    "ejemplo": "La neumonía fue tratada con antibióticos."
+  },
+  {
+    "palabra": "Bronquitis",
+    "significado": "Inflamación de los bronquios generalmente causada por infección o irritación.",
+    "ejemplo": "El fumador presentaba bronquitis crónica."
+  },
+  {
+    "palabra": "Epilepsia",
+    "significado": "Trastorno neurológico caracterizado por crisis convulsivas recurrentes.",
+    "ejemplo": "El tratamiento redujo la frecuencia de ataques de epilepsia."
+  },
+  {
+    "palabra": "Migraña",
+    "significado": "Dolor de cabeza intenso y recurrente, a menudo acompañado de náuseas y sensibilidad a la luz.",
+    "ejemplo": "El estrés le provocó una migraña severa."
+  },
+  {
+    "palabra": "Fractura",
+    "significado": "Ruptura total o parcial de un hueso.",
+    "ejemplo": "El accidente resultó en una fractura de fémur."
+  },
+  {
+    "palabra": "Luxación",
+    "significado": "Desplazamiento anormal de un hueso en una articulación.",
+    "ejemplo": "El jugador sufrió una luxación en el hombro."
+  },
+  {
+    "palabra": "Esguince",
+    "significado": "Lesión de un ligamento causada por torsión o estiramiento.",
+    "ejemplo": "El esguince de tobillo le impidió caminar."
+  },
+  {
+    "palabra": "Úlcera",
+    "significado": "Lesión abierta en piel o mucosa que no cicatriza fácilmente.",
+    "ejemplo": "El paciente fue tratado por úlcera gástrica."
+  },
+  {
+    "palabra": "Colesterol",
+    "significado": "Lípido presente en la sangre necesario para funciones celulares, pero dañino en exceso.",
+    "ejemplo": "La dieta alta en grasas elevó el colesterol."
+  },
+  {
+    "palabra": "Obesidad",
+    "significado": "Acumulación excesiva de grasa corporal que afecta la salud.",
+    "ejemplo": "La obesidad aumenta el riesgo de diabetes tipo 2."
+  },
+  {
+    "palabra": "Deshidratación",
+    "significado": "Pérdida excesiva de líquidos corporales.",
+    "ejemplo": "La deshidratación se trató con sueros intravenosos."
+  },
+  {
+    "palabra": "Hipotiroidismo",
+    "significado": "Disfunción de la glándula tiroides que produce menos hormonas de lo normal.",
+    "ejemplo": "El hipotiroidismo provoca cansancio y aumento de peso."
+  },
+  {
+    "palabra": "Hipertiroidismo",
+    "significado": "Exceso de producción de hormonas tiroideas.",
+    "ejemplo": "El hipertiroidismo acelera el metabolismo del paciente."
+  },
+  {
+    "palabra": "Insomnio",
+    "significado": "Dificultad para conciliar o mantener el sueño.",
+    "ejemplo": "El estrés le causó insomnio prolongado."
+  },
+  {
+    "palabra": "Depresión",
+    "significado": "Trastorno del estado de ánimo caracterizado por tristeza persistente y pérdida de interés.",
+    "ejemplo": "El tratamiento psicológico ayudó con la depresión."
+  },
+  {
+    "palabra": "Ansiedad",
+    "significado": "Estado emocional de inquietud y preocupación excesiva.",
+    "ejemplo": "La ansiedad le provocaba palpitaciones."
+  },
+  {
+    "palabra": "Dermatitis",
+    "significado": "Inflamación de la piel causada por alergias o irritantes.",
+    "ejemplo": "El jabón provocó dermatitis en las manos."
+  },
+  {
+    "palabra": "Psoriasis",
+    "significado": "Enfermedad crónica que causa descamación de la piel.",
+    "ejemplo": "La psoriasis empeora en épocas de estrés."
+  },
+  {
+    "palabra": "Varicela",
+    "significado": "Infección viral que provoca erupción cutánea con ampollas.",
+    "ejemplo": "El niño presentó varicela con fiebre y sarpullido."
+  },
+  {
+    "palabra": "Sarampión",
+    "significado": "Enfermedad viral altamente contagiosa caracterizada por fiebre y erupción.",
+    "ejemplo": "El sarampión puede prevenirse con vacunación."
+  },
+  {
+    "palabra": "Vacuna",
+    "significado": "Preparación biológica que estimula la inmunidad contra una enfermedad.",
+    "ejemplo": "La vacuna contra la influenza se aplica cada año."
+  },
+  {
+    "palabra": "Alergia",
+    "significado": "Reacción exagerada del sistema inmune frente a sustancias inofensivas.",
+    "ejemplo": "El polen le causaba alergia estacional."
+  },
+  {
+    "palabra": "Anafilaxia",
+    "significado": "Reacción alérgica grave y potencialmente mortal.",
+    "ejemplo": "La picadura de abeja provocó anafilaxia."
+  },
+  {
+    "palabra": "Asfixia",
+    "significado": "Falta de oxígeno en el cuerpo que puede causar la muerte.",
+    "ejemplo": "La obstrucción de las vías respiratorias produjo asfixia."
+  },
+  {
+    "palabra": "Gastritis",
+    "significado": "Inflamación del revestimiento del estómago.",
+    "ejemplo": "El exceso de alcohol provocó gastritis aguda."
+  },
+  {
+    "palabra": "Cáncer",
+    "significado": "Enfermedad caracterizada por el crecimiento descontrolado de células anormales.",
+    "ejemplo": "El cáncer de pulmón es frecuente en fumadores."
+  },
+  {
+    "palabra": "Leucemia",
+    "significado": "Cáncer de los tejidos que producen sangre, como la médula ósea.",
+    "ejemplo": "La leucemia requiere tratamiento con quimioterapia."
+  },
+  {
+    "palabra": "Dengue",
+    "significado": "Enfermedad viral transmitida por mosquitos que causa fiebre alta y dolor muscular.",
+    "ejemplo": "El dengue se propaga en zonas tropicales."
+  },
+  {
+    "palabra": "Malaria",
+    "significado": "Enfermedad infecciosa transmitida por mosquitos, causada por parásitos Plasmodium.",
+    "ejemplo": "La malaria es endémica en varias regiones de África."
+  },
+  {
+    "palabra": "Tuberculosis",
+    "significado": "Enfermedad infecciosa causada por la bacteria Mycobacterium tuberculosis.",
+    "ejemplo": "El paciente tosía sangre debido a la tuberculosis."
+  },
+  {
+    "palabra": "Hepatitis",
+    "significado": "Inflamación del hígado causada por virus, alcohol u otras sustancias.",
+    "ejemplo": "La hepatitis B puede transmitirse por vía sexual."
+  },
+  {
+    "palabra": "Cirrosis",
+    "significado": "Daño crónico e irreversible del hígado con cicatrización del tejido.",
+    "ejemplo": "El consumo excesivo de alcohol causó cirrosis hepática."
+  },
+  {
+    "palabra": "Apnea",
+    "significado": "Interrupción temporal de la respiración durante el sueño.",
+    "ejemplo": "El paciente presentó apnea del sueño severa."
+  },
+  {
+    "palabra": "Hipoxia",
+    "significado": "Disminución de oxígeno en los tejidos del cuerpo.",
+    "ejemplo": "La altura extrema provocó hipoxia en los montañistas."
+  },
+  {
+    "palabra": "Hiperglucemia",
+    "significado": "Aumento anormal de glucosa en sangre.",
+    "ejemplo": "El mal control de la diabetes causó hiperglucemia."
+  },
+  {
+    "palabra": "Hipoglucemia",
+    "significado": "Disminución anormal de glucosa en sangre.",
+    "ejemplo": "El mareo fue un signo de hipoglucemia."
+  },
+  {
+    "palabra": "Anorexia",
+    "significado": "Pérdida del apetito o trastorno alimenticio con restricción extrema de alimentos.",
+    "ejemplo": "La anorexia puede causar desnutrición severa."
+  },
+  {
+    "palabra": "Bulimia",
+    "significado": "Trastorno alimenticio con atracones seguidos de conductas purgativas.",
+    "ejemplo": "La bulimia afecta la salud dental y digestiva."
+  },
+  {
+    "palabra": "Desnutrición",
+    "significado": "Deficiencia grave de nutrientes esenciales en el organismo.",
+    "ejemplo": "La desnutrición infantil sigue siendo un problema en zonas rurales."
+  },
+  {
+    "palabra": "Lupus",
+    "significado": "Enfermedad autoinmune crónica que afecta diversos órganos.",
+    "ejemplo": "El lupus puede dañar riñones, piel y articulaciones."
+  },
+  {
+    "palabra": "Esclerosis múltiple",
+    "significado": "Enfermedad autoinmune que daña la mielina de las neuronas.",
+    "ejemplo": "La esclerosis múltiple puede causar pérdida de movilidad."
+  },
+  {
+    "palabra": "Parkinson",
+    "significado": "Trastorno neurodegenerativo que afecta el movimiento.",
+    "ejemplo": "El Parkinson provoca temblores y rigidez muscular."
+  },
+  {
+    "palabra": "Alzheimer",
+    "significado": "Enfermedad neurodegenerativa que causa pérdida progresiva de memoria.",
+    "ejemplo": "El Alzheimer afecta principalmente a adultos mayores."
+  },
+  {
+    "palabra": "Glaucoma",
+    "significado": "Daño en el nervio óptico por aumento de la presión ocular.",
+    "ejemplo": "El glaucoma puede llevar a la ceguera si no se trata."
+  },
+  {
+    "palabra": "Catarata",
+    "significado": "Opacidad del cristalino del ojo que reduce la visión.",
+    "ejemplo": "El paciente fue operado para retirar la catarata."
+  },
+  {
+    "palabra": "Otitis",
+    "significado": "Inflamación del oído causada por infección.",
+    "ejemplo": "El dolor de oído se debió a una otitis media."
+  },
+  {
+    "palabra": "Sinusitis",
+    "significado": "Inflamación de los senos paranasales.",
+    "ejemplo": "La sinusitis causaba dolor de cabeza y congestión nasal."
+  },
+  {
+    "palabra": "Amigdalitis",
+    "significado": "Inflamación de las amígdalas, usualmente por infección.",
+    "ejemplo": "La amigdalitis bacteriana fue tratada con antibióticos."
+  },
+  {
+    "palabra": "Faringitis",
+    "significado": "Inflamación de la faringe, común en infecciones virales.",
+    "ejemplo": "La faringitis le causaba dolor al tragar."
+  },
+  {
+    "palabra": "Gingivitis",
+    "significado": "Inflamación de las encías por acumulación de placa bacteriana.",
+    "ejemplo": "El sangrado al cepillarse es signo de gingivitis."
+  },
+  {
+    "palabra": "Caries",
+    "significado": "Destrucción del esmalte dental causada por bacterias.",
+    "ejemplo": "El dentista trató la caries con un empaste."
+  },
+  {
+    "palabra": "Anestesia",
+    "significado": "Pérdida temporal de la sensibilidad mediante fármacos.",
+    "ejemplo": "La cirugía se realizó bajo anestesia general."
+  },
+  {
+    "palabra": "Analgesia",
+    "significado": "Disminución o ausencia de dolor sin pérdida de conciencia.",
+    "ejemplo": "El medicamento proporcionó analgesia efectiva."
+  },
+  {
+    "palabra": "Sedación",
+    "significado": "Administración de fármacos para relajar o inducir sueño.",
+    "ejemplo": "El paciente fue sometido a sedación antes del procedimiento."
+  },
+  {
+    "palabra": "Reanimación",
+    "significado": "Procedimientos para restaurar la respiración o circulación.",
+    "ejemplo": "El equipo aplicó reanimación cardiopulmonar de inmediato."
+  },
+  {
+    "palabra": "Intubación",
+    "significado": "Inserción de un tubo en la tráquea para asegurar la respiración.",
+    "ejemplo": "El anestesiólogo realizó la intubación durante la cirugía."
+  },
+  {
+    "palabra": "Biopsia",
+    "significado": "Extracción de tejido para su análisis en laboratorio.",
+    "ejemplo": "La biopsia confirmó el diagnóstico de cáncer."
+  },
+  {
+    "palabra": "Quimioterapia",
+    "significado": "Tratamiento contra el cáncer con medicamentos que destruyen células malignas.",
+    "ejemplo": "El paciente recibió seis ciclos de quimioterapia."
+  },
+  {
+    "palabra": "Radioterapia",
+    "significado": "Tratamiento de tumores con radiación controlada.",
+    "ejemplo": "La radioterapia redujo el tamaño del tumor."
+  },
+  {
+    "palabra": "Inmunoterapia",
+    "significado": "Tratamiento que estimula el sistema inmune para combatir enfermedades.",
+    "ejemplo": "La inmunoterapia es prometedora en cáncer avanzado."
+  },
+  {
+    "palabra": "Profilaxis",
+    "significado": "Medidas preventivas para evitar enfermedades.",
+    "ejemplo": "El uso de vacunas es una forma de profilaxis."
+  },
+  {
+    "palabra": "Síndrome",
+    "significado": "Conjunto de signos y síntomas que caracterizan una enfermedad.",
+    "ejemplo": "El síndrome de Down se asocia a una alteración cromosómica."
+  },
+  {
+    "palabra": "Sepsis",
+    "significado": "Respuesta inflamatoria grave a una infección generalizada.",
+    "ejemplo": "La sepsis requiere tratamiento inmediato en cuidados intensivos."
+  },
+  {
+    "palabra": "Shock",
+    "significado": "Estado crítico por insuficiente irrigación sanguínea a los órganos.",
+    "ejemplo": "El shock hipovolémico fue causado por hemorragia."
+  },
+  {
+    "palabra": "Edema",
+    "significado": "Acumulación anormal de líquido en los tejidos.",
+    "ejemplo": "El edema en las piernas fue causado por insuficiencia cardíaca."
+  },
+  {
+    "palabra": "Ascitis",
+    "significado": "Acumulación de líquido en la cavidad abdominal.",
+    "ejemplo": "La cirrosis avanzada causó ascitis."
+  },
+  {
+    "palabra": "Taquicardia",
+    "significado": "Aumento anormal de la frecuencia cardíaca.",
+    "ejemplo": "El esfuerzo físico intenso provocó taquicardia."
+  },
+  {
+    "palabra": "Bradicardia",
+    "significado": "Disminución anormal de la frecuencia cardíaca.",
+    "ejemplo": "El atleta presentó bradicardia sin síntomas."
+  },
+  {
+    "palabra": "Trombosis",
+    "significado": "Formación de un coágulo en el interior de un vaso sanguíneo.",
+    "ejemplo": "La trombosis venosa profunda afectó la pierna izquierda."
+  },
+  {
+    "palabra": "Embolia",
+    "significado": "Obstrucción de un vaso sanguíneo por un coágulo u otra sustancia.",
+    "ejemplo": "El paciente sufrió una embolia pulmonar."
+  },
+  {
+    "palabra": "Insuficiencia cardíaca",
+    "significado": "Incapacidad del corazón para bombear sangre adecuadamente.",
+    "ejemplo": "El cansancio fue signo de insuficiencia cardíaca."
+  },
+  {
+    "palabra": "Cardiomegalia",
+    "significado": "Agrandamiento anormal del corazón.",
+    "ejemplo": "La radiografía mostró cardiomegalia evidente."
+  },
+  {
+    "palabra": "Nefritis",
+    "significado": "Inflamación de los riñones.",
+    "ejemplo": "La nefritis aguda requería tratamiento inmediato."
+  },
+  {
+    "palabra": "Cálculo renal",
+    "significado": "Masa dura formada por sales minerales en los riñones.",
+    "ejemplo": "El paciente expulsó un cálculo renal doloroso."
+  },
+  {
+    "palabra": "Insuficiencia renal",
+    "significado": "Pérdida parcial o total de la función de los riñones.",
+    "ejemplo": "La insuficiencia renal obligó al paciente a recibir diálisis."
+  },
+  {
+    "palabra": "Diálisis",
+    "significado": "Procedimiento que elimina desechos de la sangre cuando los riñones fallan.",
+    "ejemplo": "El paciente asiste tres veces por semana a diálisis."
+  },
+  {
+    "palabra": "Hemofilia",
+    "significado": "Trastorno hereditario que afecta la coagulación sanguínea.",
+    "ejemplo": "La hemofilia aumenta el riesgo de sangrados prolongados."
+  },
+  {
+    "palabra": "Anemia falciforme",
+    "significado": "Enfermedad genética en la que los glóbulos rojos tienen forma anormal.",
+    "ejemplo": "La anemia falciforme provoca dolor y fatiga."
+  },
+  {
+    "palabra": "Esclerosis lateral amiotrófica",
+    "significado": "Enfermedad neurodegenerativa que afecta las neuronas motoras.",
+    "ejemplo": "La esclerosis lateral amiotrófica limita la movilidad progresivamente."
+  },
+  {
+    "palabra": "Poliomielitis",
+    "significado": "Enfermedad viral que afecta el sistema nervioso y puede causar parálisis.",
+    "ejemplo": "La poliomielitis se previene con vacuna."
+  },
+  {
+    "palabra": "Tétanos",
+    "significado": "Enfermedad infecciosa causada por una toxina bacteriana que afecta los músculos.",
+    "ejemplo": "El tétanos puede prevenirse con vacunación."
+  },
+  {
+    "palabra": "Eclampsia",
+    "significado": "Complicación grave del embarazo caracterizada por convulsiones y presión arterial alta.",
+    "ejemplo": "La paciente embarazada fue hospitalizada por eclampsia."
+  },
+  {
+    "palabra": "Preclampsia",
+    "significado": "Complicación del embarazo con hipertensión y proteínas en la orina.",
+    "ejemplo": "La preclampsia requiere control médico estricto."
+  },
+  {
+    "palabra": "Anemia perniciosa",
+    "significado": "Tipo de anemia causada por deficiencia de vitamina B12.",
+    "ejemplo": "La anemia perniciosa se trató con inyecciones de cobalamina."
+  },
+  {
+    "palabra": "Espondilitis",
+    "significado": "Inflamación crónica de las vértebras.",
+    "ejemplo": "La espondilitis anquilosante limita la movilidad de la columna."
+  },
+  {
+    "palabra": "Artritis",
+    "significado": "Inflamación de una o más articulaciones.",
+    "ejemplo": "La artritis reumatoide afecta manos y rodillas."
+  },
+  {
+    "palabra": "Artrosis",
+    "significado": "Desgaste del cartílago articular que causa dolor y rigidez.",
+    "ejemplo": "La artrosis es frecuente en personas mayores."
+  },
+  {
+    "palabra": "Escoliosis",
+    "significado": "Desviación lateral anormal de la columna vertebral.",
+    "ejemplo": "La escoliosis severa requiere corrección quirúrgica."
+  },
+  {
+    "palabra": "Osteoporosis",
+    "significado": "Disminución de la densidad ósea que aumenta el riesgo de fracturas.",
+    "ejemplo": "La osteoporosis es más común en mujeres posmenopáusicas."
+  },
+  {
+    "palabra": "Fibromialgia",
+    "significado": "Trastorno caracterizado por dolor musculoesquelético generalizado.",
+    "ejemplo": "La fibromialgia afecta la calidad de vida del paciente."
+  },
+  {
+    "palabra": "Colitis",
+    "significado": "Inflamación del colon.",
+    "ejemplo": "La colitis ulcerosa causa diarrea con sangre."
+  },
+  {
+    "palabra": "Pancreatitis",
+    "significado": "Inflamación del páncreas, aguda o crónica.",
+    "ejemplo": "El alcoholismo es una causa común de pancreatitis."
+  },
+  {
+    "palabra": "Apendicitis",
+    "significado": "Inflamación del apéndice que requiere cirugía urgente.",
+    "ejemplo": "La apendicitis se manifestó con dolor abdominal intenso."
+  },
+  {
+    "palabra": "Peritonitis",
+    "significado": "Inflamación del peritoneo, membrana que recubre la cavidad abdominal.",
+    "ejemplo": "La peritonitis es una emergencia quirúrgica."
+  },
+  {
+    "palabra": "Gota",
+    "significado": "Enfermedad por acumulación de ácido úrico en las articulaciones.",
+    "ejemplo": "La gota causó dolor intenso en el dedo gordo del pie."
+  },
+  {
+    "palabra": "Hernia",
+    "significado": "Protrusión de un órgano a través de una abertura en la pared muscular.",
+    "ejemplo": "El paciente fue operado por una hernia inguinal."
+  },
+  {
+    "palabra": "Celiaquía",
+    "significado": "Trastorno autoinmune por intolerancia al gluten.",
+    "ejemplo": "La celiaquía obliga a llevar una dieta libre de gluten."
+  },
+  {
+    "palabra": "Esquizofrenia",
+    "significado": "Trastorno mental grave que altera la percepción de la realidad.",
+    "ejemplo": "La esquizofrenia puede provocar alucinaciones auditivas."
+  },
+  {
+    "palabra": "Bipolaridad",
+    "significado": "Trastorno del estado de ánimo con episodios de manía y depresión.",
+    "ejemplo": "El paciente con bipolaridad alternaba entre euforia y tristeza profunda."
+  },
+  {
+    "palabra": "Anemia ferropénica",
+    "significado": "Anemia causada por deficiencia de hierro.",
+    "ejemplo": "La anemia ferropénica mejoró con suplementos de hierro."
+  },
+  {
+    "palabra": "Esófago de Barrett",
+    "significado": "Condición en la que el revestimiento del esófago cambia por reflujo crónico.",
+    "ejemplo": "El esófago de Barrett aumenta el riesgo de cáncer esofágico."
+  }
+
+]

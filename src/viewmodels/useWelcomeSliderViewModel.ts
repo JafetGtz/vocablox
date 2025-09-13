@@ -4,7 +4,6 @@ import { useState } from 'react'
 
 export const useWelcomeSliderViewModel = () => {
     const [currentIndex, setCurrentIndex] = useState(0)
-
     const slides = [
         {
             id: '1',

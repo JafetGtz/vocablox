@@ -1,0 +1,494 @@
+[
+  {
+    "palabra": "Itinerario",
+    "significado": "Plan detallado de un viaje con destinos y horarios.",
+    "ejemplo": "El itinerario incluía visitas a tres ciudades en cinco días."
+  },
+  {
+    "palabra": "Check-in",
+    "significado": "Registro de entrada en un hotel o vuelo.",
+    "ejemplo": "El check-in del vuelo debe hacerse dos horas antes de la salida."
+  },
+  {
+    "palabra": "Check-out",
+    "significado": "Proceso de salida en un hotel.",
+    "ejemplo": "El check-out se realiza antes del mediodía."
+  },
+  {
+    "palabra": "Escala",
+    "significado": "Parada intermedia en un viaje aéreo.",
+    "ejemplo": "El vuelo a Roma tiene una escala en París."
+  },
+  {
+    "palabra": "Jet lag",
+    "significado": "Trastorno temporal del sueño causado por cambios de huso horario.",
+    "ejemplo": "El jet lag le duró dos días después de volar a Japón."
+  },
+  {
+    "palabra": "Backpacking",
+    "significado": "Forma de viajar económica con mochila.",
+    "ejemplo": "Decidieron hacer backpacking por Sudamérica."
+  },
+  {
+    "palabra": "Hostal",
+    "significado": "Alojamiento económico de habitaciones compartidas.",
+    "ejemplo": "El hostal estaba lleno de viajeros jóvenes."
+  },
+  {
+    "palabra": "Resort",
+    "significado": "Complejo turístico con servicios recreativos y de alojamiento.",
+    "ejemplo": "El resort incluía spa, piscinas y restaurantes."
+  },
+  {
+    "palabra": "All inclusive",
+    "significado": "Servicio turístico donde todo está incluido en el precio.",
+    "ejemplo": "El hotel ofrece paquetes all inclusive."
+  },
+  {
+    "palabra": "Excursión",
+    "significado": "Viaje corto con fines turísticos o educativos.",
+    "ejemplo": "Hicimos una excursión a las pirámides."
+  },
+  {
+    "palabra": "Tour guiado",
+    "significado": "Recorrido acompañado por un guía turístico.",
+    "ejemplo": "El tour guiado explicó la historia del lugar."
+  },
+  {
+    "palabra": "Crucero",
+    "significado": "Viaje turístico en un barco con diversas escalas.",
+    "ejemplo": "El crucero recorrió el Caribe durante una semana."
+  },
+  {
+    "palabra": "Safari",
+    "significado": "Expedición para observar fauna salvaje, especialmente en África.",
+    "ejemplo": "En el safari vieron leones y elefantes."
+  },
+  {
+    "palabra": "Souvenir",
+    "significado": "Objeto comprado como recuerdo de un viaje.",
+    "ejemplo": "Compró un souvenir en el mercado local."
+  },
+  {
+    "palabra": "Pasaporte",
+    "significado": "Documento oficial para viajar al extranjero.",
+    "ejemplo": "El pasaporte es obligatorio para entrar al país."
+  },
+  {
+    "palabra": "Visa",
+    "significado": "Autorización legal para entrar o permanecer en un país.",
+    "ejemplo": "Necesitó visa para viajar a Estados Unidos."
+  },
+  {
+    "palabra": "Seguro de viaje",
+    "significado": "Póliza que cubre incidentes médicos o imprevistos en un viaje.",
+    "ejemplo": "El seguro de viaje cubrió su tratamiento por enfermedad."
+  },
+  {
+    "palabra": "Guía turística",
+    "significado": "Libro o persona que informa sobre lugares de interés.",
+    "ejemplo": "La guía turística incluía mapas y recomendaciones."
+  },
+  {
+    "palabra": "Turismo sostenible",
+    "significado": "Práctica de viajar minimizando el impacto ambiental y cultural.",
+    "ejemplo": "Eligieron turismo sostenible para proteger la selva."
+  },
+  {
+    "palabra": "Turismo de aventura",
+    "significado": "Viajes que incluyen actividades de riesgo controlado.",
+    "ejemplo": "Hicieron turismo de aventura con rafting y escalada."
+  },
+  {
+    "palabra": "Ruta gastronómica",
+    "significado": "Recorrido turístico centrado en la comida local.",
+    "ejemplo": "La ruta gastronómica incluyó catas de vinos."
+  },
+  {
+    "palabra": "Mapa",
+    "significado": "Representación gráfica de una región usada en viajes.",
+    "ejemplo": "El mapa les ayudó a encontrar el sendero."
+  },
+  {
+    "palabra": "Glamping",
+    "significado": "Estilo de camping con comodidades de lujo.",
+    "ejemplo": "El glamping combinaba naturaleza y confort."
+  },
+  {
+    "palabra": "Caravana",
+    "significado": "Vehículo habilitado como casa rodante para viajes.",
+    "ejemplo": "Alquilamos una caravana para recorrer la costa."
+  },
+  {
+    "palabra": "Trekking",
+    "significado": "Senderismo de larga distancia en entornos naturales.",
+    "ejemplo": "El trekking en los Andes fue agotador pero hermoso."
+  },
+  {
+    "palabra": "Interrail",
+    "significado": "Billete especial para viajar en tren por Europa.",
+    "ejemplo": "Con el interrail recorrieron ocho países."
+  },
+  {
+    "palabra": "Overbooking",
+    "significado": "Práctica de vender más plazas de las disponibles en vuelos u hoteles.",
+    "ejemplo": "Sufrieron un overbooking en su vuelo de regreso."
+  },
+  {
+    "palabra": "Escapada",
+    "significado": "Viaje corto de pocos días para descansar o conocer un lugar.",
+    "ejemplo": "Hicimos una escapada de fin de semana al campo."
+  },
+  {
+    "palabra": "Low cost",
+    "significado": "Modelo de viaje económico con precios reducidos.",
+    "ejemplo": "Viajamos en una aerolínea low cost."
+  },
+  {
+    "palabra": "Voucher",
+    "significado": "Documento que certifica un servicio turístico contratado.",
+    "ejemplo": "Presentó el voucher en el hotel."
+  },
+  {
+    "palabra": "Check-in online",
+    "significado": "Proceso digital de registro previo al vuelo.",
+    "ejemplo": "El check-in online facilitó el embarque."
+  },
+  {
+    "palabra": "Duty free",
+    "significado": "Tienda libre de impuestos en aeropuertos internacionales.",
+    "ejemplo": "Compró perfumes en la tienda duty free."
+  },
+  {
+    "palabra": "Transfer",
+    "significado": "Servicio de transporte entre aeropuerto y hotel.",
+    "ejemplo": "El transfer los llevó directamente al resort."
+  },
+  {
+    "palabra": "Temporada alta",
+    "significado": "Periodo del año con mayor afluencia turística.",
+    "ejemplo": "En temporada alta los precios son más caros."
+  },
+  {
+    "palabra": "Temporada baja",
+    "significado": "Época con menos turistas y precios reducidos.",
+    "ejemplo": "Viajaron en temporada baja para ahorrar dinero."
+  },
+  {
+    "palabra": "Escapada urbana",
+    "significado": "Viaje breve a una ciudad para recorrerla.",
+    "ejemplo": "La escapada urbana a Madrid fue inolvidable."
+  },
+  {
+    "palabra": "Pensión completa",
+    "significado": "Alojamiento que incluye desayuno, comida y cena.",
+    "ejemplo": "Reservamos una pensión completa en la playa."
+  },
+  {
+    "palabra": "Media pensión",
+    "significado": "Alojamiento que incluye desayuno y otra comida.",
+    "ejemplo": "Optamos por media pensión en el hotel."
+  },
+  {
+    "palabra": "Mochilero",
+    "significado": "Viajero que recorre lugares de manera económica con mochila.",
+    "ejemplo": "El mochilero cruzó varios países en autobús."
+  },
+  {
+    "palabra": "Renta de coche",
+    "significado": "Servicio para alquilar un vehículo durante un viaje.",
+    "ejemplo": "La renta de coche nos permitió recorrer la isla."
+  },
+  {
+    "palabra": "Pase turístico",
+    "significado": "Tarjeta que incluye acceso a varias atracciones y transportes.",
+    "ejemplo": "El pase turístico de Londres incluía museos y metro."
+  },
+  {
+    "palabra": "Escaleo",
+    "significado": "Cambio de avión durante un viaje con conexiones.",
+    "ejemplo": "El escaleo fue en Ámsterdam antes de llegar a Berlín."
+  },
+  {
+    "palabra": "Travel hacking",
+    "significado": "Estrategias para conseguir vuelos y viajes baratos.",
+    "ejemplo": "El travel hacking le permitió volar gratis con millas."
+  },
+  {
+    "palabra": "Couchsurfing",
+    "significado": "Plataforma de hospitalidad donde viajeros se alojan gratis en casas locales.",
+    "ejemplo": "Encontró alojamiento con couchsurfing en Berlín."
+  },
+  {
+    "palabra": "Workaway",
+    "significado": "Programa donde se trabaja a cambio de hospedaje y comida.",
+    "ejemplo": "Hizo voluntariado con Workaway en una granja en Italia."
+  },
+  {
+    "palabra": "Nomadismo digital",
+    "significado": "Estilo de vida que combina viajes y trabajo remoto.",
+    "ejemplo": "El nomadismo digital permite vivir en distintos países."
+  },
+  {
+    "palabra": "Ruta panorámica",
+    "significado": "Recorrido diseñado para apreciar paisajes naturales.",
+    "ejemplo": "La ruta panorámica por la costa fue impresionante."
+  },
+  {
+    "palabra": "Experiencia local",
+    "significado": "Actividad auténtica relacionada con la cultura del lugar.",
+    "ejemplo": "Participamos en una experiencia local de cocina japonesa."
+  },
+  {
+    "palabra": "Turismo cultural",
+    "significado": "Viajes centrados en conocer el arte, historia y tradiciones de un lugar.",
+    "ejemplo": "El turismo cultural en Roma incluye visitas al Coliseo y al Vaticano."
+  },
+  {
+    "palabra": "Tarifa flexible",
+    "significado": "Boleto o reserva que permite cambios sin costo alto.",
+    "ejemplo": "Compramos una tarifa flexible por si cambiábamos las fechas."
+  },
+  {
+    "palabra": "Tarifa no reembolsable",
+    "significado": "Reserva más barata que no permite devoluciones de dinero.",
+    "ejemplo": "El hotel ofrecía descuento con tarifa no reembolsable."
+  },
+  {
+    "palabra": "Conexión",
+    "significado": "Cambio de avión necesario para llegar al destino final.",
+    "ejemplo": "La conexión en Bogotá fue de solo 40 minutos."
+  },
+  {
+    "palabra": "Migración",
+    "significado": "Área del aeropuerto donde revisan pasaportes y visados.",
+    "ejemplo": "Pasamos una hora en migración al llegar a Canadá."
+  },
+  {
+    "palabra": "Aduana",
+    "significado": "Dependencia que controla entrada de mercancías y equipaje.",
+    "ejemplo": "Declaramos en aduana el alcohol que llevábamos."
+  },
+  {
+    "palabra": "Impuesto de salida",
+    "significado": "Cargo adicional que algunos países cobran al salir.",
+    "ejemplo": "En República Dominicana pagamos impuesto de salida."
+  },
+  {
+    "palabra": "Tasa turística",
+    "significado": "Impuesto que se cobra en algunos hoteles o destinos.",
+    "ejemplo": "En Barcelona nos cobraron una tasa turística por noche."
+  },
+  {
+    "palabra": "Tarjeta de turista",
+    "significado": "Documento requerido en ciertos países para visitantes.",
+    "ejemplo": "En Cuba nos pidieron tarjeta de turista."
+  },
+  {
+    "palabra": "Equipaje documentado",
+    "significado": "Maleta que se entrega en mostrador y va en la bodega del avión.",
+    "ejemplo": "El equipaje documentado tenía límite de 23 kilos."
+  },
+  {
+    "palabra": "Equipaje de mano",
+    "significado": "Maleta pequeña que el pasajero lleva en cabina.",
+    "ejemplo": "El equipaje de mano debe caber en el compartimiento superior."
+  },
+  {
+    "palabra": "Exceso de equipaje",
+    "significado": "Cuando el peso de la maleta sobrepasa el permitido.",
+    "ejemplo": "Pagamos por exceso de equipaje al volver de compras."
+  },
+  {
+    "palabra": "Puerta de embarque",
+    "significado": "Acceso en el aeropuerto desde donde se aborda el avión.",
+    "ejemplo": "Nuestro vuelo salió por la puerta de embarque 22."
+  },
+  {
+    "palabra": "Sala VIP",
+    "significado": "Área especial en el aeropuerto con comodidades exclusivas.",
+    "ejemplo": "Entramos a la sala VIP con la tarjeta de crédito."
+  },
+  {
+    "palabra": "Sala de última espera",
+    "significado": "Zona en la terminal donde los pasajeros esperan antes de abordar.",
+    "ejemplo": "Esperamos en la sala de última espera una hora."
+  },
+  {
+    "palabra": "Puente aéreo",
+    "significado": "Ruta frecuente entre dos ciudades con muchos vuelos diarios.",
+    "ejemplo": "El puente aéreo Ciudad de México–Monterrey es muy usado."
+  },
+  {
+    "palabra": "Pensión alimenticia hotelera",
+    "significado": "Modalidad de hospedaje que define qué comidas incluye.",
+    "ejemplo": "Contratamos media pensión en el hotel."
+  },
+  {
+    "palabra": "Habitación estándar",
+    "significado": "Tipo básico de habitación de hotel.",
+    "ejemplo": "Reservamos una habitación estándar con cama doble."
+  },
+  {
+    "palabra": "Habitación superior",
+    "significado": "Categoría más amplia o con mejores vistas.",
+    "ejemplo": "La habitación superior tenía vista al mar."
+  },
+  {
+    "palabra": "Habitación doble",
+    "significado": "Cuarto con dos camas individuales o una matrimonial.",
+    "ejemplo": "El paquete incluía una habitación doble."
+  },
+  {
+    "palabra": "Habitación triple",
+    "significado": "Habitación pensada para tres personas.",
+    "ejemplo": "Los amigos compartieron una habitación triple."
+  },
+  {
+    "palabra": "Depósito en garantía",
+    "significado": "Cantidad de dinero retenida en el hotel por posibles daños.",
+    "ejemplo": "El hotel pidió un depósito en garantía con tarjeta."
+  },
+  {
+    "palabra": "Consigna de equipaje",
+    "significado": "Servicio para guardar maletas en el hotel o estación.",
+    "ejemplo": "Dejamos las mochilas en la consigna de equipaje."
+  },
+  {
+    "palabra": "Traslado",
+    "significado": "Servicio de transporte entre aeropuerto, hotel o terminal.",
+    "ejemplo": "El paquete incluía traslado al hotel."
+  },
+  {
+    "palabra": "Excursión opcional",
+    "significado": "Actividad adicional no incluida en el paquete.",
+    "ejemplo": "Pagamos una excursión opcional a las cataratas."
+  },
+  {
+    "palabra": "Guía local",
+    "significado": "Persona del lugar que acompaña y explica el recorrido.",
+    "ejemplo": "El guía local nos enseñó leyendas mayas."
+  },
+  {
+    "palabra": "Propina sugerida",
+    "significado": "Cantidad de dinero recomendada para guías o camareros.",
+    "ejemplo": "El tour indicaba una propina sugerida al conductor."
+  },
+  {
+    "palabra": "Seguro médico internacional",
+    "significado": "Cobertura de salud válida en otros países.",
+    "ejemplo": "El seguro médico internacional fue obligatorio para entrar."
+  },
+  {
+    "palabra": "Asistencia en viaje",
+    "significado": "Servicio que apoya en emergencias como pérdida de documentos o vuelos.",
+    "ejemplo": "La asistencia en viaje nos ayudó con un pasaporte robado."
+  },
+  {
+    "palabra": "Cancelación gratuita",
+    "significado": "Opción de anular una reserva sin penalización.",
+    "ejemplo": "El hotel ofrecía cancelación gratuita hasta 48 horas antes."
+  },
+  {
+    "palabra": "Reembolso parcial",
+    "significado": "Devolución de una parte del dinero al cancelar.",
+    "ejemplo": "La aerolínea ofreció un reembolso parcial por retraso."
+  },
+  {
+    "palabra": "Vuelo chárter",
+    "significado": "Vuelo especial contratado por una agencia o grupo.",
+    "ejemplo": "El vuelo chárter llevó a todos los turistas al Caribe."
+  },
+  {
+    "palabra": "Vuelo directo",
+    "significado": "Vuelo que llega al destino sin paradas intermedias.",
+    "ejemplo": "Prefirieron un vuelo directo a Cancún."
+  },
+  {
+    "palabra": "Vuelo con escala",
+    "significado": "Trayecto que requiere detenerse en otra ciudad antes del destino final.",
+    "ejemplo": "El vuelo con escala tardó 3 horas más."
+  },
+  {
+    "palabra": "Retraso",
+    "significado": "Demora en la salida o llegada de un vuelo.",
+    "ejemplo": "El retraso del vuelo fue de dos horas."
+  },
+  {
+    "palabra": "Cancelación",
+    "significado": "Suspensión de un vuelo o reserva.",
+    "ejemplo": "Hubo cancelación por mal clima."
+  },
+  {
+    "palabra": "Vuelo sobrevendido",
+    "significado": "Cuando la aerolínea vende más boletos que asientos disponibles.",
+    "ejemplo": "El vuelo estaba sobrevendido y ofrecieron compensación."
+  },
+  {
+    "palabra": "Compensación",
+    "significado": "Pago o beneficio ofrecido por retrasos o problemas.",
+    "ejemplo": "La aerolínea ofreció compensación en vales."
+  },
+  {
+    "palabra": "Puerta cerrada",
+    "significado": "Momento en que ya no permiten abordar el avión.",
+    "ejemplo": "Llegaron cuando la puerta cerrada ya estaba anunciada."
+  },
+  {
+    "palabra": "Carta de confirmación",
+    "significado": "Documento que certifica una reserva en hotel o agencia.",
+    "ejemplo": "Mostró la carta de confirmación al llegar al hotel."
+  },
+  {
+    "palabra": "Recargo",
+    "significado": "Costo adicional aplicado por servicios extra o cambios.",
+    "ejemplo": "Hubo un recargo por exceso de equipaje."
+  },
+  {
+    "palabra": "Habitación con vista",
+    "significado": "Cuarto de hotel que ofrece panorámica especial (mar, ciudad, montaña).",
+    "ejemplo": "Pagaron más por una habitación con vista al mar."
+  },
+  {
+    "palabra": "Habitación comunicada",
+    "significado": "Cuartos de hotel unidos por una puerta interior.",
+    "ejemplo": "Las familias pidieron habitaciones comunicadas."
+  },
+  {
+    "palabra": "Habitación contigua",
+    "significado": "Habitaciones de hotel ubicadas una al lado de la otra.",
+    "ejemplo": "Las habitaciones contiguas eran ideales para el grupo."
+  },
+  {
+    "palabra": "Cargos ocultos",
+    "significado": "Pagos extra no claros al momento de reservar.",
+    "ejemplo": "El hotel tenía cargos ocultos por estacionamiento."
+  },
+  {
+    "palabra": "Tarifa dinámica",
+    "significado": "Precio que cambia constantemente según la demanda.",
+    "ejemplo": "La tarifa dinámica hizo que el boleto subiera de precio en horas."
+  },
+  {
+    "palabra": "Temporada media",
+    "significado": "Época intermedia entre temporada alta y baja.",
+    "ejemplo": "La temporada media ofrece buen clima y precios razonables."
+  },
+  {
+    "palabra": "Turismo rural",
+    "significado": "Viajes para conocer pueblos y comunidades pequeñas.",
+    "ejemplo": "Hicimos turismo rural en Oaxaca."
+  },
+  {
+    "palabra": "Turismo religioso",
+    "significado": "Viajes con fines de peregrinación o fe.",
+    "ejemplo": "El turismo religioso atrae millones a la Basílica de Guadalupe."
+  },
+  {
+    "palabra": "Turismo médico",
+    "significado": "Viajes para recibir tratamientos de salud.",
+    "ejemplo": "Muchos extranjeros hacen turismo médico en México por costos más bajos."
+  }
+
+
+]

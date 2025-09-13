@@ -1,0 +1,740 @@
+[
+  {
+    "palabra": "Estética",
+    "significado": "Disciplina filosófica que estudia la belleza y el arte.",
+    "ejemplo": "La estética barroca se caracteriza por la abundancia de ornamentos."
+  },
+  {
+    "palabra": "Patrimonio",
+    "significado": "Conjunto de bienes culturales, materiales e inmateriales de una sociedad.",
+    "ejemplo": "El flamenco es considerado patrimonio cultural de la humanidad."
+  },
+  {
+    "palabra": "Museo",
+    "significado": "Institución que conserva y exhibe objetos de valor histórico, artístico o científico.",
+    "ejemplo": "El museo alberga una colección de arte moderno."
+  },
+  {
+    "palabra": "Galería",
+    "significado": "Espacio destinado a la exposición de obras de arte.",
+    "ejemplo": "La galería presentó una muestra de artistas emergentes."
+  },
+  {
+    "palabra": "Escultura",
+    "significado": "Arte de crear figuras tridimensionales mediante tallado o modelado.",
+    "ejemplo": "La escultura de mármol representaba a un dios griego."
+  },
+  {
+    "palabra": "Pintura",
+    "significado": "Arte de representar imágenes con pigmentos sobre una superficie.",
+    "ejemplo": "La pintura al óleo fue popular durante el Renacimiento."
+  },
+  {
+    "palabra": "Grabado",
+    "significado": "Técnica de impresión que consiste en tallar una superficie para reproducir imágenes.",
+    "ejemplo": "El grabado en cobre fue muy usado en el siglo XVI."
+  },
+  {
+    "palabra": "Fresco",
+    "significado": "Técnica pictórica sobre muros con pigmentos diluidos en agua.",
+    "ejemplo": "La Capilla Sixtina es un ejemplo de pintura al fresco."
+  },
+  {
+    "palabra": "Muralismo",
+    "significado": "Movimiento artístico que utiliza muros como soporte principal.",
+    "ejemplo": "Diego Rivera es uno de los grandes exponentes del muralismo."
+  },
+  {
+    "palabra": "Iconografía",
+    "significado": "Estudio de símbolos e imágenes en el arte.",
+    "ejemplo": "La iconografía religiosa medieval tenía gran carga simbólica."
+  },
+  {
+    "palabra": "Simbolismo",
+    "significado": "Movimiento artístico y literario que usa símbolos para expresar ideas.",
+    "ejemplo": "El simbolismo influyó en la poesía francesa del siglo XIX."
+  },
+  {
+    "palabra": "Surrealismo",
+    "significado": "Movimiento artístico que explora lo irracional y los sueños.",
+    "ejemplo": "Salvador Dalí fue una figura clave del surrealismo."
+  },
+  {
+    "palabra": "Cubismo",
+    "significado": "Corriente artística que representa objetos desde múltiples perspectivas.",
+    "ejemplo": "Picasso revolucionó la pintura con el cubismo."
+  },
+  {
+    "palabra": "Impresionismo",
+    "significado": "Movimiento pictórico que buscaba captar la luz y el momento.",
+    "ejemplo": "Monet fue uno de los fundadores del impresionismo."
+  },
+  {
+    "palabra": "Renaissance",
+    "significado": "Periodo cultural de los siglos XV y XVI que recuperó valores de la antigüedad clásica.",
+    "ejemplo": "Leonardo da Vinci es un genio del Renacimiento."
+  },
+  {
+    "palabra": "Barroco",
+    "significado": "Estilo artístico caracterizado por la ornamentación y el dramatismo.",
+    "ejemplo": "Las iglesias barrocas muestran gran riqueza decorativa."
+  },
+  {
+    "palabra": "Neoclasicismo",
+    "significado": "Movimiento artístico inspirado en el arte clásico grecorromano.",
+    "ejemplo": "El neoclasicismo se refleja en edificios públicos del siglo XVIII."
+  },
+  {
+    "palabra": "Romanticismo",
+    "significado": "Movimiento cultural que exaltaba la emoción y la naturaleza.",
+    "ejemplo": "El romanticismo influyó en música, pintura y literatura."
+  },
+  {
+    "palabra": "Realismo",
+    "significado": "Movimiento artístico que representa la realidad de manera objetiva.",
+    "ejemplo": "El realismo mostró la vida cotidiana sin idealización."
+  },
+  {
+    "palabra": "Expresionismo",
+    "significado": "Movimiento que refleja emociones intensas a través del arte.",
+    "ejemplo": "El expresionismo alemán dejó huella en el cine."
+  },
+  {
+    "palabra": "Abstracto",
+    "significado": "Arte que no representa objetos reconocibles, sino formas y colores.",
+    "ejemplo": "Kandinsky fue pionero en el arte abstracto."
+  },
+  {
+    "palabra": "Minimalismo",
+    "significado": "Tendencia artística que reduce elementos al mínimo esencial.",
+    "ejemplo": "El minimalismo busca la simplicidad en el diseño."
+  },
+  {
+    "palabra": "Pop art",
+    "significado": "Movimiento artístico inspirado en la cultura popular y la publicidad.",
+    "ejemplo": "Andy Warhol destacó en el pop art con sus latas de sopa Campbell."
+  },
+  {
+    "palabra": "Dadaísmo",
+    "significado": "Movimiento artístico que rompió con las normas establecidas y buscó lo absurdo.",
+    "ejemplo": "El dadaísmo surgió como respuesta a la Primera Guerra Mundial."
+  },
+  {
+    "palabra": "Arte digital",
+    "significado": "Creación de obras artísticas mediante herramientas digitales.",
+    "ejemplo": "El arte digital se ha popularizado con los NFTs."
+  },
+  {
+    "palabra": "Performance",
+    "significado": "Manifestación artística en la que el cuerpo del artista es el medio de expresión.",
+    "ejemplo": "La performance se presentó en un espacio público."
+  },
+  {
+    "palabra": "Happening",
+    "significado": "Evento artístico espontáneo que involucra al público.",
+    "ejemplo": "El happening integró música, danza y pintura en vivo."
+  },
+  {
+    "palabra": "Estilo gótico",
+    "significado": "Movimiento artístico medieval caracterizado por arcos apuntados y vitrales.",
+    "ejemplo": "La catedral de Notre Dame es un ícono del estilo gótico."
+  },
+  {
+    "palabra": "Arte rupestre",
+    "significado": "Manifestaciones gráficas realizadas en rocas o cuevas en la prehistoria.",
+    "ejemplo": "Las pinturas de Altamira son arte rupestre."
+  },
+  {
+    "palabra": "Mitología",
+    "significado": "Conjunto de relatos tradicionales que explican fenómenos naturales y culturales.",
+    "ejemplo": "La mitología griega está llena de héroes y dioses."
+  },
+  {
+    "palabra": "Filosofía",
+    "significado": "Disciplina que busca comprender la existencia, el conocimiento y la moral.",
+    "ejemplo": "La filosofía clásica influyó en el pensamiento occidental."
+  },
+  {
+    "palabra": "Literatura",
+    "significado": "Arte de la expresión escrita o hablada con fines estéticos.",
+    "ejemplo": "La literatura del Siglo de Oro español es reconocida mundialmente."
+  },
+  {
+    "palabra": "Poesía",
+    "significado": "Expresión literaria que utiliza recursos estéticos y rítmicos.",
+    "ejemplo": "La poesía de Neruda es apreciada en todo el mundo."
+  },
+  {
+    "palabra": "Novela",
+    "significado": "Obra literaria narrativa extensa con personajes y trama compleja.",
+    "ejemplo": "Don Quijote de la Mancha es una novela universal."
+  },
+  {
+    "palabra": "Teatro",
+    "significado": "Arte escénico que representa historias frente a un público.",
+    "ejemplo": "El teatro griego sentó las bases de la dramaturgia."
+  },
+  {
+    "palabra": "Cine",
+    "significado": "Arte de contar historias mediante imágenes en movimiento.",
+    "ejemplo": "El cine es considerado el séptimo arte."
+  },
+  {
+    "palabra": "Fotografía",
+    "significado": "Técnica y arte de capturar imágenes con luz.",
+    "ejemplo": "La fotografía documental muestra realidades sociales."
+  },
+  {
+    "palabra": "Arquitectura",
+    "significado": "Arte y técnica de diseñar y construir edificios.",
+    "ejemplo": "La arquitectura moderna apuesta por líneas simples y funcionales."
+  },
+  {
+    "palabra": "Danza",
+    "significado": "Expresión artística mediante movimientos corporales rítmicos.",
+    "ejemplo": "La danza contemporánea combina técnicas clásicas e innovadoras."
+  },
+  {
+    "palabra": "Música",
+    "significado": "Arte de organizar sonidos y silencios de manera estética.",
+    "ejemplo": "La música barroca fue compuesta por Bach y Händel."
+  },
+  {
+    "palabra": "Ópera",
+    "significado": "Género musical y teatral que combina canto, música y drama.",
+    "ejemplo": "La ópera Carmen es una de las más representadas."
+  },
+  {
+    "palabra": "Folclore",
+    "significado": "Conjunto de tradiciones, costumbres y expresiones culturales de un pueblo.",
+    "ejemplo": "El folclore mexicano incluye danzas y trajes típicos."
+  },
+  {
+    "palabra": "Artesanía",
+    "significado": "Objetos elaborados manualmente con valor cultural y artístico.",
+    "ejemplo": "La artesanía indígena refleja tradiciones ancestrales."
+  },
+  {
+    "palabra": "Humanidades",
+    "significado": "Conjunto de disciplinas que estudian al ser humano y su cultura.",
+    "ejemplo": "Las humanidades incluyen historia, filosofía y literatura."
+  },
+  {
+    "palabra": "Historia del arte",
+    "significado": "Disciplina que estudia la evolución de las manifestaciones artísticas.",
+    "ejemplo": "La historia del arte permite comprender movimientos como el Renacimiento."
+  },
+  {
+    "palabra": "Iconoclasia",
+    "significado": "Rechazo o destrucción de imágenes religiosas o culturales.",
+    "ejemplo": "La iconoclasia se dio en varias etapas del Imperio Bizantino."
+  },
+  {
+    "palabra": "Taller",
+    "significado": "Espacio donde se crean o enseñan técnicas artísticas.",
+    "ejemplo": "El taller de cerámica imparte clases a la comunidad."
+  },
+  {
+    "palabra": "Bienal",
+    "significado": "Exposición internacional de arte que se celebra cada dos años.",
+    "ejemplo": "La Bienal de Venecia reúne a artistas de todo el mundo."
+  },
+  {
+    "palabra": "Crítica de arte",
+    "significado": "Análisis y valoración de obras y movimientos artísticos.",
+    "ejemplo": "La crítica de arte influyó en la fama del pintor."
+  },
+  {
+    "palabra": "Estilo románico",
+    "significado": "Movimiento artístico medieval caracterizado por arcos semicirculares y muros gruesos.",
+    "ejemplo": "La iglesia románica tiene frescos en el ábside."
+  },
+  {
+    "palabra": "Impreso",
+    "significado": "Obra cultural reproducida mediante impresión.",
+    "ejemplo": "El impreso del siglo XVI es una pieza de colección."
+  },
+  {
+    "palabra": "Manuscrito",
+    "significado": "Texto escrito a mano, generalmente antiguo.",
+    "ejemplo": "El manuscrito fue conservado en la biblioteca nacional."
+  },
+  {
+    "palabra": "Codex",
+    "significado": "Libro manuscrito antiguo con valor histórico o cultural.",
+    "ejemplo": "El Códice Florentino describe la cultura mexica."
+  },
+  {
+    "palabra": "Mitología nórdica",
+    "significado": "Conjunto de relatos sobre dioses y héroes escandinavos.",
+    "ejemplo": "Thor es un dios importante en la mitología nórdica."
+  },
+  {
+    "palabra": "Mitología egipcia",
+    "significado": "Sistema de creencias religiosas del antiguo Egipto.",
+    "ejemplo": "Ra era adorado en la mitología egipcia."
+  },
+  {
+    "palabra": "Mitología maya",
+    "significado": "Relatos sagrados y cosmovisión de la civilización maya.",
+    "ejemplo": "El Popol Vuh recoge la mitología maya."
+  },
+  {
+    "palabra": "Retablo",
+    "significado": "Conjunto de pinturas o esculturas que decoran el altar.",
+    "ejemplo": "El retablo barroco estaba cubierto de oro."
+  },
+  {
+    "palabra": "Vitral",
+    "significado": "Ventana decorada con vidrios de colores ensamblados en plomo.",
+    "ejemplo": "Los vitrales de la catedral proyectaban luces multicolores."
+  },
+  {
+    "palabra": "Icono",
+    "significado": "Imagen sagrada venerada en la tradición cristiana ortodoxa.",
+    "ejemplo": "El icono bizantino fue restaurado por especialistas."
+  },
+  {
+    "palabra": "Sarcasmo literario",
+    "significado": "Recurso estilístico que utiliza la ironía mordaz.",
+    "ejemplo": "El sarcasmo literario es común en la sátira."
+  },
+  {
+    "palabra": "Ensayo",
+    "significado": "Obra escrita en prosa donde se reflexiona sobre un tema.",
+    "ejemplo": "Octavio Paz escribió ensayos sobre identidad mexicana."
+  },
+  {
+    "palabra": "Crónica",
+    "significado": "Relato histórico narrado en orden cronológico.",
+    "ejemplo": "La crónica medieval describe batallas y viajes."
+  },
+  {
+    "palabra": "Épica",
+    "significado": "Género literario que narra hazañas heroicas.",
+    "ejemplo": "La Ilíada es una obra épica fundamental."
+  },
+  {
+    "palabra": "Tragedia",
+    "significado": "Género teatral en el que los personajes enfrentan un destino fatal.",
+    "ejemplo": "Las tragedias de Sófocles se representan aún hoy."
+  },
+  {
+    "palabra": "Comedia",
+    "significado": "Género teatral que busca entretener con situaciones humorísticas.",
+    "ejemplo": "Las comedias de Molière critican costumbres sociales."
+  },
+  {
+    "palabra": "Coro",
+    "significado": "Conjunto de voces que cantan coordinadamente.",
+    "ejemplo": "El coro interpretó música sacra en la iglesia."
+  },
+  {
+    "palabra": "Sinfonía",
+    "significado": "Composición musical extensa para orquesta.",
+    "ejemplo": "Beethoven compuso nueve sinfonías."
+  },
+  {
+    "palabra": "Concierto",
+    "significado": "Obra musical en la que un solista dialoga con la orquesta.",
+    "ejemplo": "El concierto para violín de Tchaikovsky es célebre."
+  },
+  {
+    "palabra": "Ballet",
+    "significado": "Danza teatral con técnica y coreografía elaborada.",
+    "ejemplo": "El Lago de los Cisnes es un clásico del ballet."
+  },
+  {
+    "palabra": "Coreografía",
+    "significado": "Diseño y secuencia de movimientos en la danza.",
+    "ejemplo": "La coreografía integró elementos de danza moderna."
+  },
+  {
+    "palabra": "Escenografía",
+    "significado": "Decorados y ambientación de un espectáculo teatral.",
+    "ejemplo": "La escenografía recreaba una ciudad antigua."
+  },
+  {
+    "palabra": "Guion",
+    "significado": "Texto que contiene diálogos y acciones de una obra teatral o cinematográfica.",
+    "ejemplo": "El guion de la película fue premiado por su originalidad."
+  },
+  {
+    "palabra": "Storyboard",
+    "significado": "Serie de ilustraciones que representan escenas de una obra audiovisual.",
+    "ejemplo": "El storyboard ayudó a planificar la animación."
+  },
+  {
+    "palabra": "Cinematografía",
+    "significado": "Arte y técnica de filmar y proyectar películas.",
+    "ejemplo": "La cinematografía mexicana ha sido reconocida en festivales."
+  },
+  {
+    "palabra": "Documental",
+    "significado": "Producción audiovisual basada en hechos reales.",
+    "ejemplo": "El documental mostró la biodiversidad de la selva."
+  },
+  {
+    "palabra": "Festival",
+    "significado": "Evento cultural que reúne diversas manifestaciones artísticas.",
+    "ejemplo": "El festival de cine de Cannes premia películas destacadas."
+  },
+  {
+    "palabra": "Carnaval",
+    "significado": "Celebración popular con disfraces, música y desfiles.",
+    "ejemplo": "El carnaval de Río es famoso en todo el mundo."
+  },
+  {
+    "palabra": "Ritual",
+    "significado": "Conjunto de prácticas culturales o religiosas realizadas de forma ceremonial.",
+    "ejemplo": "El ritual azteca incluía danzas y ofrendas."
+  },
+  {
+    "palabra": "Tradición oral",
+    "significado": "Conjunto de relatos y conocimientos transmitidos de forma hablada.",
+    "ejemplo": "La tradición oral conserva mitos ancestrales."
+  },
+  {
+    "palabra": "Lengua",
+    "significado": "Sistema de comunicación propio de una comunidad.",
+    "ejemplo": "El quechua es una lengua originaria de Sudamérica."
+  },
+  {
+    "palabra": "Dialectos",
+    "significado": "Variaciones de una lengua en diferentes regiones.",
+    "ejemplo": "El español tiene múltiples dialectos según el país."
+  },
+  {
+    "palabra": "Antropología",
+    "significado": "Ciencia que estudia al ser humano en sus aspectos culturales y sociales.",
+    "ejemplo": "La antropología analiza costumbres de comunidades indígenas."
+  },
+  {
+    "palabra": "Arqueología",
+    "significado": "Ciencia que estudia sociedades antiguas a través de restos materiales.",
+    "ejemplo": "La arqueología reveló templos enterrados bajo la arena."
+  },
+  {
+    "palabra": "Etnografía",
+    "significado": "Descripción detallada de costumbres y vida de un pueblo.",
+    "ejemplo": "La etnografía documentó danzas tradicionales africanas."
+  },
+  {
+    "palabra": "Folletín",
+    "significado": "Narración literaria publicada por entregas en periódicos.",
+    "ejemplo": "Los folletines fueron populares en el siglo XIX."
+  },
+  {
+    "palabra": "Ópera bufa",
+    "significado": "Género operístico cómico originado en Italia.",
+    "ejemplo": "La ópera bufa ridiculizaba situaciones sociales."
+  },
+  {
+    "palabra": "Sátira",
+    "significado": "Obra que critica con humor aspectos sociales o políticos.",
+    "ejemplo": "La sátira literaria es común en revistas culturales."
+  },
+  {
+    "palabra": "Censura",
+    "significado": "Control o prohibición de obras culturales por motivos políticos o religiosos.",
+    "ejemplo": "La censura limitó la difusión de ciertos libros."
+  },
+  {
+    "palabra": "Coleccionismo",
+    "significado": "Afición por reunir objetos con valor cultural o artístico.",
+    "ejemplo": "El coleccionismo de monedas es muy apreciado."
+  },
+  {
+    "palabra": "Bien cultural",
+    "significado": "Objeto o manifestación con valor histórico, artístico o simbólico.",
+    "ejemplo": "El códice es un bien cultural protegido por la UNESCO."
+  },
+  {
+    "palabra": "Lenguaje simbólico",
+    "significado": "Uso de signos y símbolos en la expresión cultural.",
+    "ejemplo": "El lenguaje simbólico en la pintura medieval representaba conceptos religiosos."
+  },
+  {
+    "palabra": "Conservación",
+    "significado": "Acciones para preservar obras y bienes culturales.",
+    "ejemplo": "La conservación del patrimonio arqueológico es prioritaria."
+  },
+  {
+    "palabra": "Restauración",
+    "significado": "Proceso de reparar y mantener objetos de valor cultural.",
+    "ejemplo": "El cuadro fue sometido a restauración para recuperar sus colores."
+  },
+  {
+    "palabra": "Legado",
+    "significado": "Herencia cultural transmitida de una generación a otra.",
+    "ejemplo": "El legado maya sigue presente en la arquitectura."
+  },
+  {
+    "palabra": "Interculturalidad",
+    "significado": "Relación e interacción respetuosa entre diferentes culturas.",
+    "ejemplo": "La interculturalidad enriquece la educación."
+  },
+  {
+    "palabra": "Identidad cultural",
+    "significado": "Conjunto de valores y tradiciones que distinguen a un grupo.",
+    "ejemplo": "La identidad cultural se refleja en la música regional."
+  },
+  {
+    "palabra": "Cosmovisión",
+    "significado": "Forma de interpretar el mundo propia de una cultura.",
+    "ejemplo": "La cosmovisión andina integra naturaleza y espiritualidad."
+  },
+  {
+    "palabra": "Sincretismo",
+    "significado": "Fusión de elementos culturales o religiosos diferentes.",
+    "ejemplo": "El sincretismo se observa en festividades latinoamericanas."
+  },
+  {
+    "palabra": "Gótico",
+    "significado": "Estilo artístico medieval caracterizado por verticalidad, arcos apuntados y vitrales.",
+    "ejemplo": "La catedral gótica impresionaba por su altura y luminosidad."
+  },
+  {
+    "palabra": "Chiaroscuro",
+    "significado": "Técnica pictórica basada en el contraste de luces y sombras.",
+    "ejemplo": "Caravaggio dominaba el chiaroscuro en sus obras."
+  },
+  {
+    "palabra": "Impasto",
+    "significado": "Técnica de pintura que aplica gruesas capas de pigmento.",
+    "ejemplo": "Van Gogh utilizaba impasto para dar textura a sus cuadros."
+  },
+  {
+    "palabra": "Sfumato",
+    "significado": "Difuminado suave de contornos y colores en pintura.",
+    "ejemplo": "Leonardo da Vinci empleó sfumato en la Mona Lisa."
+  },
+  {
+    "palabra": "Tripartito",
+    "significado": "Estructura artística dividida en tres partes, común en retablos.",
+    "ejemplo": "El retablo tripartito mostraba escenas bíblicas."
+  },
+  {
+    "palabra": "Anamorfosis",
+    "significado": "Imagen distorsionada que requiere un ángulo o espejo para verse correctamente.",
+    "ejemplo": "La anamorfosis del cuadro escondía un cráneo."
+  },
+  {
+    "palabra": "Tenebrismo",
+    "significado": "Estilo pictórico con contrastes dramáticos de luz y sombra.",
+    "ejemplo": "El tenebrismo de Ribera intensificaba el dramatismo."
+  },
+  {
+    "palabra": "Altorrelieve",
+    "significado": "Escultura donde las figuras sobresalen significativamente del fondo.",
+    "ejemplo": "El altorrelieve representaba escenas de batalla."
+  },
+  {
+    "palabra": "Bajorrelieve",
+    "significado": "Escultura en la que las figuras apenas se elevan del fondo.",
+    "ejemplo": "El bajorrelieve adornaba las columnas del templo."
+  },
+  {
+    "palabra": "Contrapposto",
+    "significado": "Postura escultórica en la que el peso recae en una pierna y el cuerpo se equilibra.",
+    "ejemplo": "El contrapposto del David de Miguel Ángel le da naturalidad."
+  },
+  {
+    "palabra": "Díptico",
+    "significado": "Obra artística compuesta por dos paneles unidos.",
+    "ejemplo": "El díptico medieval se cerraba como libro de devoción."
+  },
+  {
+    "palabra": "Políptico",
+    "significado": "Obra compuesta por múltiples paneles plegables.",
+    "ejemplo": "El políptico de Gante es una joya del arte flamenco."
+  },
+  {
+    "palabra": "Fresco buono",
+    "significado": "Técnica mural pintada sobre yeso húmedo.",
+    "ejemplo": "Los frescos buono se conservan por siglos."
+  },
+  {
+    "palabra": "Palimpsesto",
+    "significado": "Manuscrito reutilizado borrando el texto original.",
+    "ejemplo": "El palimpsesto revelaba escrituras antiguas ocultas."
+  },
+  {
+    "palabra": "Iconostasis",
+    "significado": "Muro de íconos que separa el altar en iglesias ortodoxas.",
+    "ejemplo": "El iconostasis estaba cubierto de imágenes sagradas."
+  },
+  {
+    "palabra": "Estofado",
+    "significado": "Técnica escultórica que combina oro y pintura para simular telas ricas.",
+    "ejemplo": "La virgen tallada tenía mantos decorados con estofado."
+  },
+  {
+    "palabra": "Colofón",
+    "significado": "Nota final de un libro o manuscrito con información de su impresión.",
+    "ejemplo": "El colofón revelaba el año de impresión del códice."
+  },
+  {
+    "palabra": "Xilografía",
+    "significado": "Técnica de grabado sobre madera.",
+    "ejemplo": "La xilografía fue fundamental en los primeros impresos."
+  },
+  {
+    "palabra": "Litografía",
+    "significado": "Impresión realizada sobre una piedra plana.",
+    "ejemplo": "La litografía permitió reproducir obras con detalle."
+  },
+  {
+    "palabra": "Acuarela",
+    "significado": "Técnica pictórica con pigmentos diluidos en agua.",
+    "ejemplo": "Las acuarelas reflejaban paisajes etéreos."
+  },
+  {
+    "palabra": "Temple",
+    "significado": "Técnica pictórica con pigmentos mezclados en yema de huevo.",
+    "ejemplo": "El temple fue popular antes del óleo."
+  },
+  {
+    "palabra": "Vanitas",
+    "significado": "Género pictórico que recuerda la fugacidad de la vida.",
+    "ejemplo": "La vanitas mostraba calaveras y relojes de arena."
+  },
+  {
+    "palabra": "Alquimia",
+    "significado": "Práctica esotérica medieval relacionada con la transmutación y simbolismo artístico.",
+    "ejemplo": "La alquimia influyó en la iconografía renacentista."
+  },
+  {
+    "palabra": "Ornamento",
+    "significado": "Elemento decorativo usado en arquitectura o arte.",
+    "ejemplo": "El ornamento barroco era excesivamente recargado."
+  },
+  {
+    "palabra": "Arcano",
+    "significado": "Símbolo o concepto enigmático con valor místico o artístico.",
+    "ejemplo": "El arcano en la poesía simbolizaba lo oculto."
+  },
+  {
+    "palabra": "Mecenazgo",
+    "significado": "Apoyo económico a artistas por parte de nobles o instituciones.",
+    "ejemplo": "El mecenazgo de los Médici impulsó el Renacimiento."
+  },
+  {
+    "palabra": "Ecléctico",
+    "significado": "Estilo que combina elementos de diferentes corrientes.",
+    "ejemplo": "El arte ecléctico fusionaba lo clásico y lo moderno."
+  },
+  {
+    "palabra": "Esteta",
+    "significado": "Persona que aprecia intensamente la belleza artística.",
+    "ejemplo": "El poeta era un verdadero esteta de la palabra."
+  },
+  {
+    "palabra": "Rococó",
+    "significado": "Estilo artístico del siglo XVIII con formas ligeras y ornamentales.",
+    "ejemplo": "El rococó francés se caracterizó por la delicadeza."
+  },
+  {
+    "palabra": "Retablo mayor",
+    "significado": "Estructura central en los altares de iglesias, de gran tamaño y detalle.",
+    "ejemplo": "El retablo mayor estaba recubierto en pan de oro."
+  },
+  {
+    "palabra": "Vanguardia",
+    "significado": "Movimientos artísticos que rompen con lo tradicional.",
+    "ejemplo": "Las vanguardias del siglo XX transformaron la poesía y la pintura."
+  },
+  {
+    "palabra": "Trompe-l'œil",
+    "significado": "Técnica pictórica que crea ilusión de tridimensionalidad.",
+    "ejemplo": "El trompe-l'œil hacía parecer reales las columnas pintadas."
+  },
+  {
+    "palabra": "Esgrafiado",
+    "significado": "Decoración mural hecha rascando capas de revoque de distintos colores.",
+    "ejemplo": "El esgrafiado adornaba las fachadas renacentistas."
+  },
+  {
+    "palabra": "Canecillo",
+    "significado": "Elemento arquitectónico que sostiene cornisas en templos románicos.",
+    "ejemplo": "El canecillo estaba tallado con motivos animales."
+  },
+  {
+    "palabra": "Capitel",
+    "significado": "Parte superior de una columna, decorada en distintos estilos.",
+    "ejemplo": "El capitel corintio se distingue por sus hojas de acanto."
+  },
+  {
+    "palabra": "Iconoclasmo",
+    "significado": "Destrucción deliberada de imágenes religiosas o artísticas.",
+    "ejemplo": "El iconoclasmo bizantino marcó siglos de conflicto cultural."
+  },
+  {
+    "palabra": "Exvoto",
+    "significado": "Objeto ofrecido a lo divino como muestra de gratitud.",
+    "ejemplo": "Los exvotos colgaban en las paredes de la ermita."
+  },
+  {
+    "palabra": "Manierismo",
+    "significado": "Estilo artístico que exagera formas y colores para expresar tensión.",
+    "ejemplo": "El manierismo sucedió al Renacimiento."
+  },
+  {
+    "palabra": "Futurismo",
+    "significado": "Movimiento artístico que glorificaba la velocidad y la modernidad.",
+    "ejemplo": "El futurismo exaltaba la máquina y la energía urbana."
+  },
+  {
+    "palabra": "Cenotafio",
+    "significado": "Monumento funerario sin restos humanos.",
+    "ejemplo": "El cenotafio fue erigido en honor a los héroes caídos."
+  },
+  {
+    "palabra": "Grotesco",
+    "significado": "Decoración con figuras fantásticas, humanas y vegetales mezcladas.",
+    "ejemplo": "El grotesco adornaba palacios renacentistas."
+  },
+  {
+    "palabra": "Memento mori",
+    "significado": "Expresión artística que recuerda la inevitabilidad de la muerte.",
+    "ejemplo": "El memento mori era común en pinturas barrocas."
+  },
+  {
+    "palabra": "Estuco",
+    "significado": "Material de recubrimiento para muros y decoración.",
+    "ejemplo": "Las paredes estaban decoradas con estuco pintado."
+  },
+  {
+    "palabra": "Cenáculo",
+    "significado": "Grupo selecto de artistas o intelectuales.",
+    "ejemplo": "El cenáculo literario se reunía cada semana."
+  },
+  {
+    "palabra": "Catarsis",
+    "significado": "Liberación emocional producida por el arte.",
+    "ejemplo": "La tragedia griega buscaba la catarsis del espectador."
+  },
+  {
+    "palabra": "Sinestesia",
+    "significado": "Figura literaria o sensación que mezcla sentidos distintos.",
+    "ejemplo": "El poeta usó sinestesia para describir colores sonoros."
+  },
+  {
+    "palabra": "Arcadismo",
+    "significado": "Estilo poético que idealiza la naturaleza y la vida pastoril.",
+    "ejemplo": "El arcadismo influyó en la poesía bucólica."
+  },
+  {
+    "palabra": "Pentimento",
+    "significado": "Modificación o arrepentimiento visible en una pintura.",
+    "ejemplo": "El pentimento reveló un dibujo oculto bajo la pintura final."
+  },
+  {
+    "palabra": "Cromatismo",
+    "significado": "Uso expresivo de los colores en una obra artística.",
+    "ejemplo": "El cromatismo vibrante daba vida al cuadro."
+  }
+
+
+
+]

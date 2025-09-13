@@ -1,0 +1,590 @@
+[
+  {
+    "palabra": "Átomo",
+    "significado": "Unidad más pequeña de un elemento químico que conserva sus propiedades.",
+    "ejemplo": "El átomo de oxígeno se combina con el de hidrógeno para formar agua."
+  },
+  {
+    "palabra": "Molécula",
+    "significado": "Conjunto de átomos unidos químicamente.",
+    "ejemplo": "La molécula de dióxido de carbono está compuesta por un átomo de carbono y dos de oxígeno."
+  },
+  {
+    "palabra": "Energía",
+    "significado": "Capacidad de un sistema para realizar trabajo.",
+    "ejemplo": "La energía solar se utiliza para generar electricidad."
+  },
+  {
+    "palabra": "Masa",
+    "significado": "Cantidad de materia que posee un cuerpo.",
+    "ejemplo": "La masa de la Tierra es de aproximadamente 5.97 × 10^24 kg."
+  },
+  {
+    "palabra": "Fuerza",
+    "significado": "Magnitud que modifica el movimiento o la forma de un cuerpo.",
+    "ejemplo": "La gravedad ejerce una fuerza que atrae los objetos hacia la Tierra."
+  },
+  {
+    "palabra": "Velocidad",
+    "significado": "Relación entre el desplazamiento y el tiempo empleado.",
+    "ejemplo": "El coche se desplazaba a una velocidad de 100 km/h."
+  },
+  {
+    "palabra": "Aceleración",
+    "significado": "Cambio de velocidad de un objeto por unidad de tiempo.",
+    "ejemplo": "La aceleración de un objeto en caída libre es constante."
+  },
+  {
+    "palabra": "Gravedad",
+    "significado": "Fuerza de atracción entre cuerpos con masa.",
+    "ejemplo": "La gravedad mantiene a los planetas en órbita alrededor del Sol."
+  },
+  {
+    "palabra": "Presión",
+    "significado": "Fuerza ejercida sobre una superficie por unidad de área.",
+    "ejemplo": "La presión atmosférica disminuye con la altitud."
+  },
+  {
+    "palabra": "Temperatura",
+    "significado": "Medida del grado de calor de un cuerpo.",
+    "ejemplo": "El agua hierve a una temperatura de 100 °C a nivel del mar."
+  },
+  {
+    "palabra": "Entropía",
+    "significado": "Magnitud que mide el desorden de un sistema.",
+    "ejemplo": "La entropía siempre aumenta en procesos espontáneos."
+  },
+  {
+    "palabra": "Electricidad",
+    "significado": "Fenómeno físico producido por el movimiento de cargas eléctricas.",
+    "ejemplo": "La electricidad alimenta los aparatos electrónicos."
+  },
+  {
+    "palabra": "Magnetismo",
+    "significado": "Fuerza de atracción o repulsión entre materiales debido a sus campos magnéticos.",
+    "ejemplo": "El imán mostró magnetismo al atraer clavos de hierro."
+  },
+  {
+    "palabra": "Óptica",
+    "significado": "Rama de la física que estudia la luz y sus fenómenos.",
+    "ejemplo": "La óptica explica cómo se forman los arcoíris."
+  },
+  {
+    "palabra": "Sonido",
+    "significado": "Vibración que se propaga en un medio material en forma de ondas.",
+    "ejemplo": "El sonido viaja más rápido en el agua que en el aire."
+  },
+  {
+    "palabra": "Fotón",
+    "significado": "Partícula elemental que representa la unidad de la luz.",
+    "ejemplo": "El láser emite millones de fotones alineados."
+  },
+  {
+    "palabra": "Neutrón",
+    "significado": "Partícula subatómica sin carga eléctrica presente en el núcleo.",
+    "ejemplo": "El neutrón contribuye a la masa atómica."
+  },
+  {
+    "palabra": "Protón",
+    "significado": "Partícula subatómica con carga positiva.",
+    "ejemplo": "El núcleo del hidrógeno contiene un solo protón."
+  },
+  {
+    "palabra": "Electrón",
+    "significado": "Partícula subatómica con carga negativa.",
+    "ejemplo": "El movimiento de electrones produce corriente eléctrica."
+  },
+  {
+    "palabra": "Ion",
+    "significado": "Átomo o molécula con carga eléctrica por ganancia o pérdida de electrones.",
+    "ejemplo": "El sodio se convierte en ion positivo al perder un electrón."
+  },
+  {
+    "palabra": "Isótopo",
+    "significado": "Átomo de un mismo elemento con distinto número de neutrones.",
+    "ejemplo": "El carbono-14 es un isótopo usado en datación arqueológica."
+  },
+  {
+    "palabra": "Fotosíntesis",
+    "significado": "Proceso por el cual las plantas producen energía a partir de luz solar.",
+    "ejemplo": "La fotosíntesis libera oxígeno al ambiente."
+  },
+  {
+    "palabra": "Clorofila",
+    "significado": "Pigmento verde de las plantas que participa en la fotosíntesis.",
+    "ejemplo": "La clorofila absorbe energía lumínica."
+  },
+  {
+    "palabra": "ADN",
+    "significado": "Molécula que contiene la información genética de los seres vivos.",
+    "ejemplo": "El ADN determina las características hereditarias."
+  },
+  {
+    "palabra": "ARN",
+    "significado": "Molécula que participa en la síntesis de proteínas.",
+    "ejemplo": "El ARN mensajero transporta la información genética."
+  },
+  {
+    "palabra": "Mutación",
+    "significado": "Cambio en la secuencia del material genético.",
+    "ejemplo": "La mutación en un gen puede causar enfermedades."
+  },
+  {
+    "palabra": "Célula",
+    "significado": "Unidad básica de la vida en todos los organismos.",
+    "ejemplo": "El cuerpo humano está formado por billones de células."
+  },
+  {
+    "palabra": "Tejido",
+    "significado": "Conjunto de células similares que cumplen una función específica.",
+    "ejemplo": "El tejido muscular permite el movimiento del cuerpo."
+  },
+  {
+    "palabra": "Órgano",
+    "significado": "Estructura formada por varios tejidos que cumplen funciones vitales.",
+    "ejemplo": "El corazón es un órgano esencial para la circulación."
+  },
+  {
+    "palabra": "Ecosistema",
+    "significado": "Conjunto de organismos y el medio en el que interactúan.",
+    "ejemplo": "El ecosistema amazónico alberga gran biodiversidad."
+  },
+  {
+    "palabra": "Evolución",
+    "significado": "Proceso de cambio en las especies a lo largo del tiempo.",
+    "ejemplo": "La evolución explica la diversidad de la vida en la Tierra."
+  },
+  {
+    "palabra": "Teoría de la relatividad",
+    "significado": "Modelo físico que describe la gravedad y la relación entre espacio y tiempo.",
+    "ejemplo": "La teoría de la relatividad fue formulada por Einstein."
+  },
+  {
+    "palabra": "Mecánica cuántica",
+    "significado": "Rama de la física que estudia fenómenos a nivel subatómico.",
+    "ejemplo": "La mecánica cuántica describe el comportamiento del electrón."
+  },
+  {
+    "palabra": "Big Bang",
+    "significado": "Teoría que explica el origen del universo a partir de una gran explosión.",
+    "ejemplo": "El Big Bang ocurrió hace unos 13.8 mil millones de años."
+  },
+  {
+    "palabra": "Materia oscura",
+    "significado": "Forma de materia que no emite luz y cuya presencia se infiere por efectos gravitatorios.",
+    "ejemplo": "La materia oscura representa gran parte del universo."
+  },
+  {
+    "palabra": "Energía oscura",
+    "significado": "Forma de energía que acelera la expansión del universo.",
+    "ejemplo": "La energía oscura constituye alrededor del 70% del cosmos."
+  },
+  {
+    "palabra": "Ciclo del agua",
+    "significado": "Proceso de circulación del agua entre océanos, atmósfera y tierra.",
+    "ejemplo": "La evaporación es parte del ciclo del agua."
+  },
+  {
+    "palabra": "Placa tectónica",
+    "significado": "Fragmento rígido de la litosfera que se desplaza sobre el manto terrestre.",
+    "ejemplo": "El choque de placas tectónicas causó un terremoto."
+  },
+  {
+    "palabra": "Fósil",
+    "significado": "Restos conservados de organismos antiguos en rocas.",
+    "ejemplo": "El fósil hallado pertenece a un dinosaurio herbívoro."
+  },
+  {
+    "palabra": "Mineral",
+    "significado": "Sustancia natural, inorgánica y sólida con composición definida.",
+    "ejemplo": "El cuarzo es un mineral usado en joyería."
+  },
+  {
+    "palabra": "Reacción química",
+    "significado": "Proceso en el que unas sustancias se transforman en otras distintas.",
+    "ejemplo": "La combustión es una reacción química que libera energía."
+  },
+  {
+    "palabra": "Catalizador",
+    "significado": "Sustancia que acelera una reacción química sin consumirse.",
+    "ejemplo": "El platino actúa como catalizador en automóviles."
+  },
+  {
+    "palabra": "Solvente",
+    "significado": "Sustancia que disuelve a otra para formar una solución.",
+    "ejemplo": "El agua es el solvente universal."
+  },
+  {
+    "palabra": "Soluto",
+    "significado": "Sustancia disuelta en un solvente para formar una solución.",
+    "ejemplo": "La sal es el soluto en una solución salina."
+  },
+  {
+    "palabra": "pH",
+    "significado": "Medida de la acidez o alcalinidad de una solución.",
+    "ejemplo": "El pH del jugo gástrico es muy bajo."
+  },
+  {
+    "palabra": "Fotosfera",
+    "significado": "Capa visible de la superficie del Sol.",
+    "ejemplo": "Las manchas solares se observan en la fotosfera."
+  },
+  {
+    "palabra": "Cromosoma",
+    "significado": "Estructura que contiene el material genético en forma de ADN.",
+    "ejemplo": "Los humanos tienen 46 cromosomas en cada célula."
+  },
+  {
+    "palabra": "Enzima",
+    "significado": "Proteína que acelera reacciones bioquímicas en el organismo.",
+    "ejemplo": "La amilasa es una enzima que descompone el almidón."
+  },
+  {
+    "palabra": "Ecosfera",
+    "significado": "Región del planeta donde existen condiciones adecuadas para la vida.",
+    "ejemplo": "La ecosfera terrestre incluye aire, agua y suelo habitables."
+  },
+  {
+    "palabra": "Homeostasis",
+    "significado": "Capacidad de los seres vivos para mantener un equilibrio interno estable.",
+    "ejemplo": "La homeostasis regula la temperatura corporal."
+  },
+  {
+    "palabra": "Metabolismo",
+    "significado": "Conjunto de reacciones químicas que ocurren en los organismos para obtener energía.",
+    "ejemplo": "El metabolismo basal mantiene funciones vitales en reposo."
+  },
+  {
+    "palabra": "Mitocondria",
+    "significado": "Organelo celular encargado de producir energía en forma de ATP.",
+    "ejemplo": "La mitocondria es conocida como la central energética de la célula."
+  },
+  {
+    "palabra": "Citosol",
+    "significado": "Líquido interno de la célula donde ocurren muchas reacciones bioquímicas.",
+    "ejemplo": "Las enzimas se encuentran disueltas en el citosol."
+  },
+  {
+    "palabra": "Endoplasma",
+    "significado": "Parte interna y densa del citoplasma celular.",
+    "ejemplo": "El endoplasma rodea al núcleo celular."
+  },
+  {
+    "palabra": "Exocitosis",
+    "significado": "Proceso celular de expulsión de sustancias hacia el exterior.",
+    "ejemplo": "La exocitosis libera neurotransmisores en las sinapsis."
+  },
+  {
+    "palabra": "Osmosis",
+    "significado": "Movimiento de agua a través de una membrana semipermeable.",
+    "ejemplo": "Las plantas absorben agua por ósmosis."
+  },
+  {
+    "palabra": "Difusión",
+    "significado": "Movimiento de partículas desde una zona de mayor concentración a otra de menor.",
+    "ejemplo": "El oxígeno entra en los pulmones por difusión."
+  },
+  {
+    "palabra": "Tectónica de placas",
+    "significado": "Teoría que explica el movimiento de las placas litosféricas.",
+    "ejemplo": "La tectónica de placas origina terremotos y volcanes."
+  },
+  {
+    "palabra": "Epicentro",
+    "significado": "Punto en la superficie de la Tierra situado sobre el foco de un terremoto.",
+    "ejemplo": "El epicentro del sismo se localizó en la costa."
+  },
+  {
+    "palabra": "Magma",
+    "significado": "Roca fundida ubicada bajo la superficie terrestre.",
+    "ejemplo": "El magma emergió durante la erupción volcánica."
+  },
+  {
+    "palabra": "Lava",
+    "significado": "Magma expulsado a la superficie durante una erupción volcánica.",
+    "ejemplo": "La lava cubrió varios kilómetros de terreno."
+  },
+  {
+    "palabra": "Cráter",
+    "significado": "Depresión en la cima de un volcán por donde sale el magma.",
+    "ejemplo": "El cráter del volcán estaba activo."
+  },
+  {
+    "palabra": "Cometa",
+    "significado": "Cuerpo celeste compuesto de hielo y polvo que desarrolla cola al acercarse al Sol.",
+    "ejemplo": "El cometa Halley es visible cada 76 años."
+  },
+  {
+    "palabra": "Asteroide",
+    "significado": "Cuerpo rocoso pequeño que orbita alrededor del Sol.",
+    "ejemplo": "El cinturón de asteroides se encuentra entre Marte y Júpiter."
+  },
+  {
+    "palabra": "Meteoro",
+    "significado": "Fenómeno luminoso producido cuando un meteoroide entra en la atmósfera.",
+    "ejemplo": "El meteoro iluminó el cielo nocturno."
+  },
+  {
+    "palabra": "Galaxia",
+    "significado": "Conjunto masivo de estrellas, gas y polvo unidos por gravedad.",
+    "ejemplo": "La Vía Láctea es la galaxia donde vivimos."
+  },
+  {
+    "palabra": "Supernova",
+    "significado": "Explosión estelar que libera gran cantidad de energía.",
+    "ejemplo": "Una supernova puede dar origen a un agujero negro."
+  },
+  {
+    "palabra": "Agujero negro",
+    "significado": "Región del espacio con gravedad tan intensa que nada puede escapar.",
+    "ejemplo": "El agujero negro Sagitario A* está en el centro de la galaxia."
+  },
+  {
+    "palabra": "Exoplaneta",
+    "significado": "Planeta que orbita una estrella fuera del sistema solar.",
+    "ejemplo": "El exoplaneta Kepler-22b podría tener agua líquida."
+  },
+  {
+    "palabra": "Nanotecnología",
+    "significado": "Manipulación de la materia a escala nanométrica.",
+    "ejemplo": "La nanotecnología se aplica en medicina y electrónica."
+  },
+  {
+    "palabra": "Biotecnología",
+    "significado": "Uso de organismos vivos para desarrollar productos útiles.",
+    "ejemplo": "La biotecnología produce insulina recombinante."
+  },
+  {
+    "palabra": "Genoma",
+    "significado": "Conjunto completo de material genético de un organismo.",
+    "ejemplo": "El proyecto Genoma Humano secuenció todo el ADN humano."
+  },
+  {
+    "palabra": "Proteína",
+    "significado": "Molécula formada por aminoácidos esencial para procesos biológicos.",
+    "ejemplo": "La hemoglobina es una proteína que transporta oxígeno."
+  },
+  {
+    "palabra": "Aminoácido",
+    "significado": "Unidad básica que forma las proteínas.",
+    "ejemplo": "El triptófano es un aminoácido esencial en la dieta."
+  },
+  {
+    "palabra": "Hormona",
+    "significado": "Sustancia química que regula funciones en el organismo.",
+    "ejemplo": "La insulina es una hormona que controla la glucosa."
+  },
+  {
+    "palabra": "Neuronas",
+    "significado": "Células del sistema nervioso encargadas de transmitir información.",
+    "ejemplo": "Las neuronas se comunican mediante impulsos eléctricos."
+  },
+  {
+    "palabra": "Sinapsis",
+    "significado": "Conexión entre neuronas donde se transmite información.",
+    "ejemplo": "La sinapsis se realiza mediante neurotransmisores."
+  },
+  {
+    "palabra": "Corteza cerebral",
+    "significado": "Capa externa del cerebro encargada de funciones superiores.",
+    "ejemplo": "La corteza cerebral interviene en el pensamiento lógico."
+  },
+  {
+    "palabra": "Reflejo",
+    "significado": "Respuesta involuntaria y rápida a un estímulo.",
+    "ejemplo": "El reflejo rotuliano se prueba golpeando la rodilla."
+  },
+  {
+    "palabra": "Anticuerpo",
+    "significado": "Proteína producida por el sistema inmune para neutralizar patógenos.",
+    "ejemplo": "Los anticuerpos protegen contra infecciones."
+  },
+  {
+    "palabra": "Vacunación",
+    "significado": "Proceso de inmunización mediante la administración de una vacuna.",
+    "ejemplo": "La vacunación redujo la incidencia de polio en el mundo."
+  },
+  {
+    "palabra": "Plasma",
+    "significado": "Estado de la materia en el que los átomos están ionizados.",
+    "ejemplo": "El Sol está compuesto principalmente de plasma."
+  },
+  {
+    "palabra": "Quásar",
+    "significado": "Objeto astronómico extremadamente luminoso alimentado por agujeros negros supermasivos.",
+    "ejemplo": "Los quásares se encuentran en galaxias lejanas."
+  },
+  {
+    "palabra": "Cinturón de Van Allen",
+    "significado": "Región del campo magnético terrestre que atrapa partículas cargadas.",
+    "ejemplo": "Los satélites deben evitar permanecer en el cinturón de Van Allen."
+  },
+  {
+    "palabra": "Hidrosfera",
+    "significado": "Conjunto de aguas que cubren la Tierra.",
+    "ejemplo": "La hidrosfera incluye océanos, ríos y lagos."
+  },
+  {
+    "palabra": "Atmósfera",
+    "significado": "Capa de gases que rodea un planeta.",
+    "ejemplo": "La atmósfera terrestre contiene oxígeno y nitrógeno."
+  },
+  {
+    "palabra": "Biodiversidad",
+    "significado": "Variedad de especies vivas en un ecosistema.",
+    "ejemplo": "La selva amazónica tiene gran biodiversidad."
+  },
+  {
+    "palabra": "Taxonomía",
+    "significado": "Ciencia que clasifica a los organismos vivos.",
+    "ejemplo": "La taxonomía organiza especies en reinos, géneros y familias."
+  },
+  {
+    "palabra": "Embriología",
+    "significado": "Estudio del desarrollo de los embriones desde la fecundación.",
+    "ejemplo": "La embriología investiga anomalías congénitas."
+  },
+  {
+    "palabra": "Zoología",
+    "significado": "Rama de la biología que estudia a los animales.",
+    "ejemplo": "La zoología analiza la conducta de los mamíferos."
+  },
+  {
+    "palabra": "Botánica",
+    "significado": "Rama de la biología que estudia a las plantas.",
+    "ejemplo": "La botánica investiga especies medicinales."
+  },
+  {
+    "palabra": "Ecología",
+    "significado": "Ciencia que estudia las relaciones entre organismos y su entorno.",
+    "ejemplo": "La ecología analiza los efectos del cambio climático."
+  },
+  {
+    "palabra": "Geología",
+    "significado": "Ciencia que estudia la composición y evolución de la Tierra.",
+    "ejemplo": "La geología ayuda a comprender los terremotos."
+  },
+  {
+    "palabra": "Astronomía",
+    "significado": "Ciencia que estudia los cuerpos celestes y el universo.",
+    "ejemplo": "La astronomía moderna se apoya en telescopios espaciales."
+  },
+  {
+    "palabra": "Astrobiología",
+    "significado": "Estudio del origen, evolución y posibilidad de vida en el universo.",
+    "ejemplo": "La astrobiología busca vida en exoplanetas."
+  },
+  {
+    "palabra": "Geotermia",
+    "significado": "Energía obtenida del calor interno de la Tierra.",
+    "ejemplo": "La geotermia se utiliza en plantas de energía renovable."
+  },
+  {
+    "palabra": "Climatología",
+    "significado": "Estudio científico de los climas y sus variaciones.",
+    "ejemplo": "La climatología analiza los efectos del calentamiento global."
+  },
+  {
+    "palabra": "Radiación",
+    "significado": "Emisión y propagación de energía en forma de ondas o partículas.",
+    "ejemplo": "El Sol emite radiación ultravioleta."
+  },
+  {
+    "palabra": "Isómero",
+    "significado": "Moléculas con la misma fórmula química pero diferente estructura.",
+    "ejemplo": "La glucosa y la fructosa son isómeros."
+  },
+  {
+    "palabra": "Polímero",
+    "significado": "Sustancia formada por la repetición de pequeñas unidades llamadas monómeros.",
+    "ejemplo": "El plástico es un polímero sintético."
+  },
+  {
+    "palabra": "Cristal",
+    "significado": "Sólido con estructura interna ordenada y simétrica.",
+    "ejemplo": "La sal forma cristales cúbicos."
+  },
+  {
+    "palabra": "Superconductor",
+    "significado": "Material que conduce electricidad sin resistencia a bajas temperaturas.",
+    "ejemplo": "El superconductor permitió levitar al imán."
+  },
+  {
+    "palabra": "Placa solar",
+    "significado": "Dispositivo que transforma la energía solar en electricidad.",
+    "ejemplo": "Las placas solares abastecen de energía a la vivienda."
+  },
+  {
+    "palabra": "Corriente alterna",
+    "significado": "Tipo de corriente eléctrica que cambia de dirección periódicamente.",
+    "ejemplo": "Los hogares utilizan corriente alterna para sus aparatos."
+  },
+  {
+    "palabra": "Corriente continua",
+    "significado": "Flujo de cargas eléctricas en una sola dirección.",
+    "ejemplo": "Las baterías producen corriente continua."
+  },
+  {
+    "palabra": "Fotosíntesis oxigénica",
+    "significado": "Proceso fotosintético que libera oxígeno como subproducto.",
+    "ejemplo": "Las plantas realizan fotosíntesis oxigénica durante el día."
+  },
+  {
+    "palabra": "Energía cinética",
+    "significado": "Energía que posee un cuerpo debido a su movimiento.",
+    "ejemplo": "La energía cinética de la pelota aumentó al rodar."
+  },
+  {
+    "palabra": "Energía potencial",
+    "significado": "Energía almacenada en un cuerpo debido a su posición.",
+    "ejemplo": "Una roca en lo alto de una montaña tiene energía potencial."
+  },
+  {
+    "palabra": "Inercia",
+    "significado": "Propiedad de los cuerpos de mantener su estado de movimiento o reposo.",
+    "ejemplo": "La inercia explica por qué un objeto en movimiento sigue avanzando."
+  },
+  {
+    "palabra": "Campo magnético",
+    "significado": "Región del espacio donde actúan fuerzas magnéticas.",
+    "ejemplo": "La Tierra genera un campo magnético que protege del viento solar."
+  },
+  {
+    "palabra": "Reflexión",
+    "significado": "Fenómeno por el cual una onda rebota en una superficie.",
+    "ejemplo": "El espejo produce reflexión de la luz."
+  },
+  {
+    "palabra": "Refracción",
+    "significado": "Cambio de dirección de una onda al pasar de un medio a otro.",
+    "ejemplo": "El lápiz parece doblarse en el agua por la refracción."
+  },
+  {
+    "palabra": "Difracción",
+    "significado": "Desviación de una onda al rodear un obstáculo o pasar por una rendija.",
+    "ejemplo": "La difracción explica los patrones de luz y sombra."
+  },
+  {
+    "palabra": "Interferencia",
+    "significado": "Superposición de ondas que produce aumentos o disminuciones de intensidad.",
+    "ejemplo": "La interferencia de ondas genera franjas claras y oscuras."
+  },
+  {
+    "palabra": "Mutagénico",
+    "significado": "Agente físico o químico que causa mutaciones en el ADN.",
+    "ejemplo": "La radiación ultravioleta es mutagénica."
+  },
+  {
+    "palabra": "Bioluminiscencia",
+    "significado": "Producción de luz por organismos vivos.",
+    "ejemplo": "Las luciérnagas muestran bioluminiscencia en la oscuridad."
+  },
+  {
+    "palabra": "Energía renovable",
+    "significado": "Fuente de energía que se regenera de manera natural y sostenible.",
+    "ejemplo": "La energía eólica es una forma de energía renovable."
+  }
+
+
+
+]

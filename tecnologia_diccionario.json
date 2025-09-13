@@ -1,0 +1,502 @@
+[
+  {
+    "palabra": "Tabla DUAL",
+    "significado": "La tabla DUAL es una tabla especial de una sola columna presente de manera predeterminada en todas las instalaciones de bases de datos de Oracle.",
+    "fuente": "https://es.wikipedia.org/wiki/Tabla_DUAL"
+  },
+  {
+    "palabra": "OpenNIC",
+    "significado": "OpenNIC es un proyecto de DNS raíz y de registro de nombres de dominio (NIC) de carácter público y gratuito que es una alternativa a las DNS de la ICANN.\nProporciona una lista completa de DNS que permiten nuevos TLDs además de soportar los DNS que suministra la ICANN.",
+    "fuente": "https://es.wikipedia.org/wiki/OpenNIC"
+  },
+  {
+    "palabra": "OGAS",
+    "significado": "OGAS fue un proyecto soviético para crear una red de información de nivel nacional.",
+    "fuente": "https://es.wikipedia.org/wiki/OGAS"
+  },
+  {
+    "palabra": "Crystal Reports",
+    "significado": "Crystal Reports es una aplicación de inteligencia empresarial utilizada para diseñar y generar informes desde una amplia gama de fuentes de datos.",
+    "fuente": "https://es.wikipedia.org/wiki/Crystal_Reports"
+  },
+  {
+    "palabra": "ACK",
+    "significado": "Un ACK, en comunicaciones entre computadores, es un mensaje que el destino de la comunicación envía al origen de esta para confirmar la recepción de un mensaje.",
+    "fuente": "https://es.wikipedia.org/wiki/ACK"
+  },
+  {
+    "palabra": "Cable activo",
+    "significado": "Los cables activos son cables de cobre hechos para la transmisión de datos.",
+    "fuente": "https://es.wikipedia.org/wiki/Cable_activo"
+  },
+  {
+    "palabra": "Coeficiente de reflexión",
+    "significado": "El coeficiente de reflexión es utilizado en física y en Ingeniería cuando se consideran medios con discontinuidades en propagación de ondas.",
+    "fuente": "https://es.wikipedia.org/wiki/Coeficiente_de_reflexi%C3%B3n"
+  },
+  {
+    "palabra": "HbbTV",
+    "significado": "HbbTV o Hybrid Broadcast Broadband TV es una plataforma de emisión de contenidos bajo demanda combinando los servicios de radiodifusión (broadcast) y banda ancha (broadband).",
+    "fuente": "https://es.wikipedia.org/wiki/HbbTV"
+  },
+  {
+    "palabra": "Clasificador (matemáticas)",
+    "significado": "El término clasificador se utiliza en referencia al algoritmo utilizado para asignar un elemento entrante no etiquetado en una categoría concreta conocida.",
+    "fuente": "https://es.wikipedia.org/wiki/Clasificador_(matem%C3%A1ticas)"
+  },
+  {
+    "palabra": "Kad",
+    "significado": "KAD es un protocolo pensado para ser desplegado sobre redes P2P basado en una red estructurada y que usa como método de ordenamiento y búsqueda las DHT.",
+    "fuente": "https://es.wikipedia.org/wiki/Kad"
+  },
+  {
+    "palabra": "Inteligencia artificial no alineada",
+    "significado": "La inteligencia artificial no alineada es un concepto dentro del campo de la inteligencia artificial (IA) que hace referencia a sistemas cuyas metas, comportamientos o procesos de toma de decisiones no están en consonancia con los valores, intereses o intenciones humanas.",
+    "fuente": "https://es.wikipedia.org/wiki/Inteligencia_artificial_no_alineada"
+  },
+  {
+    "palabra": "Clúster de alto rendimiento",
+    "significado": "Un clúster de alto rendimiento es un conjunto de ordenadores que está diseñado para dar altas prestaciones en cuanto a capacidad de cálculo.",
+    "fuente": "https://es.wikipedia.org/wiki/Cl%C3%BAster_de_alto_rendimiento"
+  },
+  {
+    "palabra": "Gold Apollo AR924",
+    "significado": "El Gold Apollo AR924 es un buscapersonas alfanumérico unidireccional en formato barra que se vende bajo la marca de la empresa taiwanesa Gold Apollo.",
+    "fuente": "https://es.wikipedia.org/wiki/Gold_Apollo_AR924"
+  },
+  {
+    "palabra": "Mapa ontológico",
+    "significado": "Un mapa ontológico es una representación estructurada del conocimiento sobre un tema o dominio, que describe entidades, conceptos y las relaciones entre ellos.",
+    "fuente": "https://es.wikipedia.org/wiki/Mapa_ontol%C3%B3gico"
+  },
+  {
+    "palabra": "Ambiente inteligente",
+    "significado": "Los ambientes inteligentes son espacios que usan la tecnología de sistemas embebidos así como otras tecnologías de la información y la comunicación, para crear ambientes interactivos que acerquen la computación al mundo físico y a los problemas cotidianos.",
+    "fuente": "https://es.wikipedia.org/wiki/Ambiente_inteligente"
+  },
+  {
+    "palabra": "CycL",
+    "significado": "CycL En ciencias de la computación e inteligencia artificial, CycL es un lenguaje ontológico usado por el proyecto de inteligencia artificial de Doug Lenat conocido como Cyc.",
+    "fuente": "https://es.wikipedia.org/wiki/CycL"
+  },
+  {
+    "palabra": "Oráculo (informática)",
+    "significado": "Un oráculo en informática es un principio heurístico mediante el cual podemos determinar la naturaleza del test (true/false).",
+    "fuente": "https://es.wikipedia.org/wiki/Or%C3%A1culo_(inform%C3%A1tica)"
+  },
+  {
+    "palabra": "Amazon Aurora",
+    "significado": "Amazon Aurora es un servicio de base de datos relacional desarrollado y ofrecido por Amazon Web Services que fue lanzado en octubre de 2014.",
+    "fuente": "https://es.wikipedia.org/wiki/Amazon_Aurora"
+  },
+  {
+    "palabra": "Operadores de búsqueda",
+    "significado": "Los operadores de búsqueda, también conocidos cómo operadores booleanos, son palabras o símbolos que se emplean como nexos entre los términos de una búsqueda con tal de establecer una determinada relación conceptual entre los mismos.",
+    "fuente": "https://es.wikipedia.org/wiki/Operadores_de_b%C3%BAsqueda"
+  },
+  {
+    "palabra": "Diagrama de red informática",
+    "significado": "Un diagrama de red informática es un esquema que representa los nodos y las conexiones entre nodos en una red informática o, más generalmente, cualquier red de telecomunicaciones.",
+    "fuente": "https://es.wikipedia.org/wiki/Diagrama_de_red_inform%C3%A1tica"
+  },
+  {
+    "palabra": "AIML",
+    "significado": "El AIML, o Artificial Intelligence Mark-up Language es un lenguaje de marcado basado en XML.",
+    "fuente": "https://es.wikipedia.org/wiki/AIML"
+  },
+  {
+    "palabra": "Arquitectura de rendimiento de red",
+    "significado": "La arquitectura de rendimiento de una red describe la forma en la que los usuarios, aplicaciones, dispositivos y redes logran cumplir con los requerimientos de rendimiento que fueron establecidos en el momento en el que se estaba planificando la red.",
+    "fuente": "https://es.wikipedia.org/wiki/Arquitectura_de_rendimiento_de_red"
+  },
+  {
+    "palabra": "Cell rate margin",
+    "significado": "CRM, es un término en el área del análisis de redes de área local, que hace referencia a la diferencia de la capacidad real y la agregada por una celda a una velocidad predefinida.",
+    "fuente": "https://es.wikipedia.org/wiki/Cell_rate_margin"
+  },
+  {
+    "palabra": "Mindat.org",
+    "significado": "Mindat.org es una base de datos de mineralogía de uso público y gratuito creada por Jolyon Ralph en el año año 2000.",
+    "fuente": "https://es.wikipedia.org/wiki/Mindat.org"
+  },
+  {
+    "palabra": "Fuera de línea",
+    "significado": "En telecomunicaciones, la locución adverbial fuera de línea tiene los siguientes significados:Referente a una operación o a una unidad funcional, cuando no está bajo control directo del sistema al cual está asociada.",
+    "fuente": "https://es.wikipedia.org/wiki/Fuera_de_l%C3%ADnea"
+  },
+  {
+    "palabra": "3 Italia",
+    "significado": "H3G S.p.A., más conocida como 3 Italia, era una empresa de telecomunicaciones italiana del grupo CK Hutchison Holdings Limited, que ofrecía servicios de telefonía móvil.",
+    "fuente": "https://es.wikipedia.org/wiki/3_Italia"
+  },
+  {
+    "palabra": "Congestión de red",
+    "significado": "La congestión de red es el fenómeno producido cuando a la red, o parte de ella, se le ofrece más tráfico del que puede cursar.",
+    "fuente": "https://es.wikipedia.org/wiki/Congesti%C3%B3n_de_red"
+  },
+  {
+    "palabra": "G.9970",
+    "significado": "La G.9970 Es una Recomendación desarrollada por ITU-T que describe la arquitectura de transporte genérica para redes de casa y sus interfaces a la red de acceso de un proveedor.",
+    "fuente": "https://es.wikipedia.org/wiki/G.9970"
+  },
+  {
+    "palabra": "Inteligencia empresarial",
+    "significado": "Se denomina inteligencia empresarial, inteligencia de negocios, inteligencia comercial o BI, al conjunto de estrategias, aplicaciones, datos, productos, tecnologías y arquitectura técnicas, los cuales están enfocados a la administración y creación de conocimiento sobre el medio, a través del análisis de los datos existentes en una organización o empresa.",
+    "fuente": "https://es.wikipedia.org/wiki/Inteligencia_empresarial"
+  },
+  {
+    "palabra": "MRTG",
+    "significado": "MRTG es una herramienta, escrita en C y Perl por Tobias Oetiker y Dave Rand, que se utiliza para supervisar la carga de tráfico de interfaces de red.",
+    "fuente": "https://es.wikipedia.org/wiki/MRTG"
+  },
+  {
+    "palabra": "CI/CD",
+    "significado": "En ingeniería de software, IC/EC, ICEC, CI/CD, o CICD generalmente refiere a las prácticas combinadas de integración continua y entrega continua.",
+    "fuente": "https://es.wikipedia.org/wiki/CI%2FCD"
+  },
+  {
+    "palabra": "Atamiri",
+    "significado": "Atamiri o ATAMIRI MT-System es un software de traducción multilingüe desarrollado por IGRAL, un grupo de investigación en ingeniería del lenguaje, bajo la conducción del científico e investigador boliviano Iván Guzmán de Rojas.",
+    "fuente": "https://es.wikipedia.org/wiki/Atamiri"
+  },
+  {
+    "palabra": "Fichero OBB",
+    "significado": "Opaque binary blob (OBB) en inglés es un término usado en ingeniería de redes y ciencias de la computación para referirse a una pieza importante de los datos, que se parece a la basura binaria desde fuera, por entidades que no saben lo que denota que blob o lleve, pero tiene sentido para las entidades que tienen funciones de permisos de acceso y de acceso a los mismos.",
+    "fuente": "https://es.wikipedia.org/wiki/Fichero_OBB"
+  },
+  {
+    "palabra": "Dolor simulado en inteligencia artificial",
+    "significado": "La relación entre la inteligencia artificial (IA) y el dolor simulado ha comenzado a generar un campo emergente de investigación que combina neurociencia, filosofía, robótica e ingeniería computacional.",
+    "fuente": "https://es.wikipedia.org/wiki/Dolor_simulado_en_inteligencia_artificial"
+  },
+  {
+    "palabra": "Movie Gen",
+    "significado": "Movie Gen es un modelo de inteligencia artificial desarrollada por Meta que permite crear videos a partir de descripciones textuales.",
+    "fuente": "https://es.wikipedia.org/wiki/Movie_Gen"
+  },
+  {
+    "palabra": "NetStumbler",
+    "significado": "NetStumbler es un programa para Windows que permite detectar redes inalámbricas (WLAN) usando estándares 802.11a, 802.11b y 802.11g.",
+    "fuente": "https://es.wikipedia.org/wiki/NetStumbler"
+  },
+  {
+    "palabra": "PostGIS",
+    "significado": "PostGIS convierte al sistema de administración de bases de datos PostgreSQL en una base de datos espacial mediante la adición de tres características: tipos de datos espaciales, índices espaciales y funciones que operan sobre ellos.",
+    "fuente": "https://es.wikipedia.org/wiki/PostGIS"
+  },
+  {
+    "palabra": "Auge de la inteligencia artificial",
+    "significado": "El auge de la inteligencia artificial es un período continuo de rápido progreso en el campo de la inteligencia artificial (IA).",
+    "fuente": "https://es.wikipedia.org/wiki/Auge_de_la_inteligencia_artificial"
+  },
+  {
+    "palabra": "Instituto de Investigación en Inteligencia Artificial",
+    "significado": "El Instituto de Investigación en Inteligencia Artificial (IIIA-CSIC) es un centro de investigación del Consejo Superior de Investigaciones Científicas (CSIC), radicado en el Campus de Bellaterra de la Universidad Autónoma de Barcelona (UAB) y centrado en el ámbito de la inteligencia artificial (IA), siendo centro de referencia en España en este campo.",
+    "fuente": "https://es.wikipedia.org/wiki/Instituto_de_Investigaci%C3%B3n_en_Inteligencia_Artificial"
+  },
+  {
+    "palabra": "Fragmentación IP",
+    "significado": "La fragmentación IP es un mecanismo que permite separar un paquete IP entre varios bloques de datos, si su tamaño sobrepasa la unidad máxima de transferencia del canal.",
+    "fuente": "https://es.wikipedia.org/wiki/Fragmentaci%C3%B3n_IP"
+  },
+  {
+    "palabra": "Metaheurística",
+    "significado": "Una metaheurística es un método heurístico para resolver un tipo de problema computacional general, usando los parámetros dados por el usuario sobre unos procedimientos genéricos y abstractos de una manera que se espera eficiente.",
+    "fuente": "https://es.wikipedia.org/wiki/Metaheur%C3%ADstica"
+  },
+  {
+    "palabra": "Número IMO",
+    "significado": "El número IMO de la Organización Marítima Internacional es el número que se asigna a todos los buques para su identificación.",
+    "fuente": "https://es.wikipedia.org/wiki/N%C3%BAmero_IMO"
+  },
+  {
+    "palabra": "ARCNET",
+    "significado": "ARCNET, siglas de Attached Resource Computer NETwork, fue una arquitectura de red de área local que utiliza la técnica de acceso de paso de testigo, como Token Ring.",
+    "fuente": "https://es.wikipedia.org/wiki/ARCNET"
+  },
+  {
+    "palabra": "Mycroft (software)",
+    "significado": "Mycroft es un asistente virtual y navegador de conocimientos de software libre y de código abierto para sistemas operativos basados en Linux que usa el lenguaje natural para recibir las órdenes a ejecutar.",
+    "fuente": "https://es.wikipedia.org/wiki/Mycroft_(software)"
+  },
+  {
+    "palabra": "Aprendizaje autosupervisado",
+    "significado": "El aprendizaje autosupervisado es un paradigma del aprendizaje automático y sus métodos correspondientes para procesar datos no etiquetados con el fin de obtener representaciones útiles que puedan ayudar en tareas de aprendizaje posteriores.",
+    "fuente": "https://es.wikipedia.org/wiki/Aprendizaje_autosupervisado"
+  },
+  {
+    "palabra": "Servidor de CouchBase",
+    "significado": "Servidor de Couchbase, originalmente conocido como Membase, es un proyecto de código abierto, un paquete de software distribuido multi-modelo orientado a base de datos documental y que está optimizado para aplicaciones interactivas.",
+    "fuente": "https://es.wikipedia.org/wiki/Servidor_de_CouchBase"
+  },
+  {
+    "palabra": "Linear probing",
+    "significado": "Linear probing es un esquema de programación informática para resolver colisiones en tablas hash, estructuras de datos para mantener una colección de pares clave-valor y buscar el valor asociado a una clave determinada.",
+    "fuente": "https://es.wikipedia.org/wiki/Linear_probing"
+  },
+  {
+    "palabra": "Poedit",
+    "significado": "Poedit es un editor shareware y multiplataforma de catálogos de Gettext usado en el proceso de localización de idiomas.",
+    "fuente": "https://es.wikipedia.org/wiki/Poedit"
+  },
+  {
+    "palabra": "MultiMedQA",
+    "significado": "MultiMedQA es un importante modelo del lenguaje (LLM) para fines médicos que combina HealthSearchQA y seis conjuntos de datos actuales de respuesta a preguntas abiertas publicada el 26 de diciembre de 2022 por Google Research y Deepmind.",
+    "fuente": "https://es.wikipedia.org/wiki/MultiMedQA"
+  },
+  {
+    "palabra": "Adaptación hipermedia",
+    "significado": "Los sistemas de adaptación hipermedia, además de proporcionar información, intentan adaptarse a las características del usuario de manera que el trabajo a realizar por el computador sea menos pesado y más rápido, y que también aprenda mejor.",
+    "fuente": "https://es.wikipedia.org/wiki/Adaptaci%C3%B3n_hipermedia"
+  },
+  {
+    "palabra": "Aplicación de base de datos",
+    "significado": "Una aplicación de base de datos es un programa de ordenador cuyo propósito es insertar y consultar información de una base de datos.",
+    "fuente": "https://es.wikipedia.org/wiki/Aplicaci%C3%B3n_de_base_de_datos"
+  },
+  {
+    "palabra": "Historias de usuario",
+    "significado": "Una historia de usuario es una representación de un requisito escrito en una o dos frases utilizando el lenguaje común del usuario.",
+    "fuente": "https://es.wikipedia.org/wiki/Historias_de_usuario"
+  },
+  {
+    "palabra": "Gestión del rendimiento",
+    "significado": "Gestión del rendimiento o Corporate Performance Management (CPM) es un término que describe herramientas informáticas para gestionar el rendimiento de una empresa basándose en metodologías, métricas, procesos y sistemas necesarios para monitorizar.",
+    "fuente": "https://es.wikipedia.org/wiki/Gesti%C3%B3n_del_rendimiento"
+  },
+  {
+    "palabra": "Arte de inteligencia artificial",
+    "significado": "El arte de inteligencia artificial, también referido como Arte de IA (IA art), se refiere a cualquier obra de arte generada mediante el uso de inteligencia artificial.",
+    "fuente": "https://es.wikipedia.org/wiki/Arte_de_inteligencia_artificial"
+  },
+  {
+    "palabra": "Aprendizaje automático antagónico",
+    "significado": "El aprendizaje automático antagónico (AAA) es el estudio de los ataques contra algoritmos de aprendizaje automático (AA) y de los mecanismos de defensa contra tales ataques.",
+    "fuente": "https://es.wikipedia.org/wiki/Aprendizaje_autom%C3%A1tico_antag%C3%B3nico"
+  },
+  {
+    "palabra": "Neo4j",
+    "significado": "Neo4j  es un software libre de Base de datos orientada a grafos, implementado en Java.",
+    "fuente": "https://es.wikipedia.org/wiki/Neo4j"
+  },
+  {
+    "palabra": "Aqua Data Studio",
+    "significado": "Aqua Data Studio es una herramienta para tareas de administración, diseño y consulta de bases de datos múltiples de AquaFold.",
+    "fuente": "https://es.wikipedia.org/wiki/Aqua_Data_Studio"
+  },
+  {
+    "palabra": "NIPRNet",
+    "significado": "NIPRNet es una red informática destinada al intercambio de información no clasificada pero sensible entre diferentes usuarios autorizados vía Internet.",
+    "fuente": "https://es.wikipedia.org/wiki/NIPRNet"
+  },
+  {
+    "palabra": "Ecforia",
+    "significado": "Ecforia es un término introducido por el biólogo alemán Richard Semon a principios del siglo XX en el contexto de su teoría biológica de la memoria.",
+    "fuente": "https://es.wikipedia.org/wiki/Ecforia"
+  },
+  {
+    "palabra": "Ei Compendex",
+    "significado": "Ei Compendex es una base de datos bibliográfica de ingeniería publicada por Elsevier. Indexa literatura científica relacionada con materiales de ingeniería.\nA partir de 1884,fue compilado a mano bajo el título original Engineering Index .El nombre \"Compendex\" proviene del acrónimo inglés COMP uterized EN gineering in DEX positions.",
+    "fuente": "https://es.wikipedia.org/wiki/Ei_Compendex"
+  },
+  {
+    "palabra": "Spatial Corp",
+    "significado": "Spatial Corporation fue fundada en 1986, con su principal producto: ACIS, el primer modelador de sólidos en 3D comercial.",
+    "fuente": "https://es.wikipedia.org/wiki/Spatial_Corp"
+  },
+  {
+    "palabra": "Inteligencia artificial en la educación",
+    "significado": "Inteligencia artificial en la educación es la aplicación de la inteligencia artificial en entornos educativos.",
+    "fuente": "https://es.wikipedia.org/wiki/Inteligencia_artificial_en_la_educaci%C3%B3n"
+  },
+  {
+    "palabra": "OpenSSH",
+    "significado": "OpenSSH es un conjunto de aplicaciones que permiten realizar comunicaciones cifradas a través de una red, usando el protocolo SSH.",
+    "fuente": "https://es.wikipedia.org/wiki/OpenSSH"
+  },
+  {
+    "palabra": "RAISE",
+    "significado": "RAISE, acrónimo inglés de Rigorous Approach to Industrial Software Engineering, en español «Enfoque Riguroso para Ingeniería de Software Industrial», fue desarrollado como parte del proyecto europeo ESPRIT II LaCoS de los años 1990, dirigido por Dines Bjørner.",
+    "fuente": "https://es.wikipedia.org/wiki/RAISE"
+  },
+  {
+    "palabra": "Conferencia Europea de Administraciones de Correos y Telecomunicaciones",
+    "significado": "La Conferencia Europea de Administraciones de Correos y Telecomunicaciones es un organismo internacional que agrupa a las entidades responsables en la administración pública de cada país europeo de las políticas y la regulación de las comunicaciones, tanto postales como de telecomunicaciones.",
+    "fuente": "https://es.wikipedia.org/wiki/Conferencia_Europea_de_Administraciones_de_Correos_y_Telecomunicaciones"
+  },
+  {
+    "palabra": "Comunicación multimodal",
+    "significado": "La comunicación multimodal es una forma de interacción hombre-máquina que utiliza múltiples modos (códigos) de \"entrada/salida\".",
+    "fuente": "https://es.wikipedia.org/wiki/Comunicaci%C3%B3n_multimodal"
+  },
+  {
+    "palabra": "Métrica del software",
+    "significado": "En el campo de la ingeniería del software, una métrica es un estándar de medida de un grado en el que un sistema o proceso de software posee alguna propiedad.",
+    "fuente": "https://es.wikipedia.org/wiki/M%C3%A9trica_del_software"
+  },
+  {
+    "palabra": "Adaptador de host",
+    "significado": "En hardware, un adaptador de host, controlador de host o adaptador de bus del host (HBA), \nconecta un sistema servidor (computadora) a una red de computadoras y dispositivos o unidades de almacenamiento.",
+    "fuente": "https://es.wikipedia.org/wiki/Adaptador_de_host"
+  },
+  {
+    "palabra": "Mobile ad hoc network",
+    "significado": "Las Mobile ad hoc network en algunas ocasiones denominada también como malla de nodos móviles, se trata de una red de dispositivos conectados por wireless y que poseen propiedades de auto-configuración, además de poseer cierta movilidad.",
+    "fuente": "https://es.wikipedia.org/wiki/Mobile_ad_hoc_network"
+  },
+  {
+    "palabra": "Livebox",
+    "significado": "El Livebox de Orange España es un router Wi-Fi disponible para los clientes de los servicios de banda ancha de este operador tanto por ADSL como por FTTH.",
+    "fuente": "https://es.wikipedia.org/wiki/Livebox"
+  },
+  {
+    "palabra": "Autenticación",
+    "significado": "La autenticación o autentificación es el acto o proceso de confirmar que algo es quien dice ser.",
+    "fuente": "https://es.wikipedia.org/wiki/Autenticaci%C3%B3n"
+  },
+  {
+    "palabra": "Banda ultraancha",
+    "significado": "El término banda ultraancha o BUA se usa para hacer referencia a cualquier tecnología de radio que usa un ancho de banda mayor de 500 MHz o del 25 % de la frecuencia central, de acuerdo con la Comisión Federal de Comunicaciones estadounidense.",
+    "fuente": "https://es.wikipedia.org/wiki/Banda_ultraancha"
+  },
+  {
+    "palabra": "Apache DB Project",
+    "significado": "Apache DB es el proyecto responsable de la creación de soluciones de bases de datos en la Apache Software Foundation.",
+    "fuente": "https://es.wikipedia.org/wiki/Apache_DB_Project"
+  },
+  {
+    "palabra": "Computación afectiva",
+    "significado": "La computación afectiva es una rama del estudio y desarrollo de la inteligencia artificial que hace referencia al diseño de sistemas y dispositivos que pueden reconocer, interpretar y procesar emociones humanas.",
+    "fuente": "https://es.wikipedia.org/wiki/Computaci%C3%B3n_afectiva"
+  },
+  {
+    "palabra": "E.164",
+    "significado": "E.164 es una recomendación de la Unión Internacional de Telecomunicaciones (UIT) que asigna a cada país un código numérico usado para las llamadas telefónicas internacionales.",
+    "fuente": "https://es.wikipedia.org/wiki/E.164"
+  },
+  {
+    "palabra": "Diagrama de contexto de sistema",
+    "significado": "Un Diagrama de Contexto de Sistema (DCS) en Ingeniería de software e Ingeniería de sistemas es un diagrama que define los límites entre el sistema, o parte del sistema, y su ambiente, mostrando las entidades que interactúan con él.",
+    "fuente": "https://es.wikipedia.org/wiki/Diagrama_de_contexto_de_sistema"
+  },
+  {
+    "palabra": "Loopback",
+    "significado": "El dispositivo de red loopback es una interfaz de red virtual.",
+    "fuente": "https://es.wikipedia.org/wiki/Loopback"
+  },
+  {
+    "palabra": "Complejidad esencial",
+    "significado": "La complejidad esencial se refiere a una situación donde todas las soluciones razonables a un problema deben ser complicadas porque las soluciones \"simples\" no resolverían adecuadamente el problema.",
+    "fuente": "https://es.wikipedia.org/wiki/Complejidad_esencial"
+  },
+  {
+    "palabra": "CDPD",
+    "significado": "CDPD es el acrónimo de \"Cellular Digital Packet Data\" es una tecnología de transmisión de datos en terminales TDMA.",
+    "fuente": "https://es.wikipedia.org/wiki/CDPD"
+  },
+  {
+    "palabra": "Base de Datos Nacional de Subvenciones",
+    "significado": "La Base de Datos Nacional de Subvenciones (BDNS) es un sistema de información instrumental, creado por la Ley General de Subvenciones en 2003, que permite conocer la forma en que se gestiona una de las herramientas más importantes empleadas por las Administraciones públicas de España para el fomento de sus políticas públicas: las subvenciones y ayudas públicas.",
+    "fuente": "https://es.wikipedia.org/wiki/Base_de_Datos_Nacional_de_Subvenciones"
+  },
+  {
+    "palabra": "Centro de Investigación en TIC",
+    "significado": "El Centro de Investigación en TIC, más conocido como CITIC, es un centro de investigación situado en La Coruña, Galicia, España, que investiga las tecnologías de la información y, especializado en inteligencia artificial perteneciente a la Universidad de La Coruña (UDC).",
+    "fuente": "https://es.wikipedia.org/wiki/Centro_de_Investigaci%C3%B3n_en_TIC"
+  },
+  {
+    "palabra": "Dirección General de Digitalización e Inteligencia Artificial",
+    "significado": "La Dirección General de Digitalización e Inteligencia Artificial (DGDIA) fue un órgano directivo del Gobierno de España, integrado en el Ministerio para la Transformación Digital y de la Función Pública, a través de la Secretaría de Estado de Digitalización e Inteligencia Artificial, que gestionó las políticas gubernamentales relacionadas con la inteligencia artificial y otras tecnologías, la transformación digital de la economía y la sociedad, así como asuntos de ciberseguridad.",
+    "fuente": "https://es.wikipedia.org/wiki/Direcci%C3%B3n_General_de_Digitalizaci%C3%B3n_e_Inteligencia_Artificial"
+  },
+  {
+    "palabra": "Partición (base de datos)",
+    "significado": "Una partición es una división de una base de datos lógica o sus elementos constituyentes en partes independientes.",
+    "fuente": "https://es.wikipedia.org/wiki/Partici%C3%B3n_(base_de_datos)"
+  },
+  {
+    "palabra": "Aircrack-ng",
+    "significado": "Aircrack-ng es una suite de software de seguridad inalámbrica.",
+    "fuente": "https://es.wikipedia.org/wiki/Aircrack-ng"
+  },
+  {
+    "palabra": "Detección de contenido realizado con IA",
+    "significado": "Los algoritmos de detección de contenido realizado por inteligencia artificial (IA) pretenden detectar si un texto, o incluso una imagen de vídeo o un audio han sido producidos por seres humanos o por inteligencia artificial.",
+    "fuente": "https://es.wikipedia.org/wiki/Detecci%C3%B3n_de_contenido_realizado_con_IA"
+  },
+  {
+    "palabra": "SWEBOK",
+    "significado": "SWEBOK, Software Engineering Body of Knowledge, es un documento creado por la Software Engineering Coordinating Committee, promovido por el IEEE Computer Society, que se define como una guía al conocimiento presente en el área de la Ingeniería del Software.",
+    "fuente": "https://es.wikipedia.org/wiki/SWEBOK"
+  },
+  {
+    "palabra": "Main distribution frame",
+    "significado": "En telefonía, un main distribution frame es una estructura de distribución de señales para conectar equipo de redes y telecomunicaciones a los cables y equipos que corresponden al proveedor de servicios de telefonía, Internet, entre otros.",
+    "fuente": "https://es.wikipedia.org/wiki/Main_distribution_frame"
+  },
+  {
+    "palabra": "JustWatch",
+    "significado": "JustWatch es una página web que facilita información sobre la oferta de películas y programas de televisión en diversas plataformas de streaming legales en línea como es el caso de Netflix, HBO Max, Amazon Prime Video, Hulu, Apple TV y Disney+, entre muchas otras.",
+    "fuente": "https://es.wikipedia.org/wiki/JustWatch"
+  },
+  {
+    "palabra": "Diffusing Update Algorithm",
+    "significado": "DUAL es un algoritmo para la actualización de rutas usado por el protocolo de enrutamiento EIGRP, gracias al cual se logra su excepcional y rápida convergencia de red.\nEste algoritmo utiliza la tabla de vecinos y la tabla de topología para desarrollar la tabla de enrutamiento en el router EIGRP.",
+    "fuente": "https://es.wikipedia.org/wiki/Diffusing_Update_Algorithm"
+  },
+  {
+    "palabra": "Enlace de datos",
+    "significado": "En telecomunicaciones, un enlace de datos es el medio de conexión entre dos lugares con el propósito de transmitir y recibir información.",
+    "fuente": "https://es.wikipedia.org/wiki/Enlace_de_datos"
+  },
+  {
+    "palabra": "Búsqueda mediante ejemplo",
+    "significado": "La búsqueda mediante ejemplo es una lengua de consulta de bases de datos relacionados similar al lenguaje de consulta estructurado (SQL).",
+    "fuente": "https://es.wikipedia.org/wiki/B%C3%BAsqueda_mediante_ejemplo"
+  },
+  {
+    "palabra": "Ingeniería del software basada en búsqueda",
+    "significado": "Ingeniería del Software Basada en Búsqueda (ISBB), proviene del término originario inglés Search-Based Software Engineering (SBSE).",
+    "fuente": "https://es.wikipedia.org/wiki/Ingenier%C3%ADa_del_software_basada_en_b%C3%BAsqueda"
+  },
+  {
+    "palabra": "Conciencia artificial",
+    "significado": "Conciencia Artificial, también conocida como Conciencia de Máquina (MC), Conciencia Sintética o Conciencia Digital, es un campo relacionado con la inteligencia artificial y la robótica cognitiva.",
+    "fuente": "https://es.wikipedia.org/wiki/Conciencia_artificial"
+  },
+  {
+    "palabra": "Neural Designer",
+    "significado": "Neural Designer es un programa informático de Machine Learning basado en la técnica de las redes neuronales.\nHa sido desarrollado a partir de la librería de código abierto OpenNN y contiene una interfaz gráfica de usuario, que simplifica la entrada de datos y la interpretación de resultados.",
+    "fuente": "https://es.wikipedia.org/wiki/Neural_Designer"
+  },
+  {
+    "palabra": "Cliente pesado",
+    "significado": "Se denomina cliente pesado al programa \"cliente\" de una arquitectura cliente-servidor cuando la mayor carga de cómputo está desplazada hacia la computadora que ejecuta dicho programa.",
+    "fuente": "https://es.wikipedia.org/wiki/Cliente_pesado"
+  },
+  {
+    "palabra": "Planificación de sistemas informáticos",
+    "significado": "Una planificación de sistemas informáticos, también conocido como Plan Director de Sistemas, Plan de Sistemas de información o Plan Estratégico de Sistemas, facilita a una organización una correcta determinación del estado actual de los sistemas informáticos, de los requisitos que la organización les demanda para identificar un estado futuro de dichos sistemas alineados con los objetivos de la organización.",
+    "fuente": "https://es.wikipedia.org/wiki/Planificaci%C3%B3n_de_sistemas_inform%C3%A1ticos"
+  },
+  {
+    "palabra": "LDPC",
+    "significado": "La comprobación de paridad de baja densidad o LDPC es una clase de códigos de corrección de error lineal que permiten transmitir un mensaje por un canal de comunicaciones ruidoso.",
+    "fuente": "https://es.wikipedia.org/wiki/LDPC"
+  },
+  {
+    "palabra": "Karen Hao",
+    "significado": "Karen Hao es una periodista estadounidense especializada en tecnología, reconocida por su cobertura de la inteligencia artificial (IA), la ética tecnológica y la desinformación.",
+    "fuente": "https://es.wikipedia.org/wiki/Karen_Hao"
+  },
+  {
+    "palabra": "Mathematica",
+    "significado": "Mathematica es un programa utilizado en áreas científicas, de ingeniería, matemática y áreas computacionales.",
+    "fuente": "https://es.wikipedia.org/wiki/Mathematica"
+  },
+  {
+    "palabra": "NewSQL",
+    "significado": "NewSQL es una clase de sistemas modernos de gestión de bases de datos relacionales que tratan de conseguir el mismo rendimiento escalable de sistemas NoSQL para el procesamiento de transacciones en línea (lectura-escritura), manteniendo durante las cargas de trabajo las garantías ACID de un sistema de base de datos tradicional.",
+    "fuente": "https://es.wikipedia.org/wiki/NewSQL"
+  }
+]

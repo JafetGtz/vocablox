@@ -1,0 +1,504 @@
+[
+  {
+    "palabra": "Mise en place",
+    "significado": "Preparación y organización de ingredientes antes de cocinar.",
+    "ejemplo": "El chef siempre hace su mise en place antes del servicio."
+  },
+  {
+    "palabra": "Brunoise",
+    "significado": "Corte de verduras en cubos muy pequeños y regulares.",
+    "ejemplo": "La zanahoria se picó en brunoise para la sopa."
+  },
+  {
+    "palabra": "Juliana",
+    "significado": "Corte de verduras en tiras finas y alargadas.",
+    "ejemplo": "La cebolla en juliana fue usada en la ensalada."
+  },
+  {
+    "palabra": "Concassé",
+    "significado": "Técnica de pelar, despepitar y picar tomates en cubos.",
+    "ejemplo": "El tomate concassé es la base de muchas salsas."
+  },
+  {
+    "palabra": "Glasear",
+    "significado": "Dar brillo a un alimento con azúcar, miel o salsa reducida.",
+    "ejemplo": "Las zanahorias fueron glaseadas con mantequilla y azúcar."
+  },
+  {
+    "palabra": "Emulsionar",
+    "significado": "Mezclar dos líquidos que normalmente no se unen, como aceite y vinagre.",
+    "ejemplo": "La vinagreta se logra al emulsionar aceite y vinagre."
+  },
+  {
+    "palabra": "Sofrito",
+    "significado": "Base de cocina hecha con cebolla, tomate y ajo rehogados.",
+    "ejemplo": "El arroz empezó con un sofrito bien hecho."
+  },
+  {
+    "palabra": "Rehogar",
+    "significado": "Cocinar ligeramente un alimento en grasa a baja temperatura.",
+    "ejemplo": "Se rehoga la cebolla antes de añadir la carne."
+  },
+  {
+    "palabra": "Confitar",
+    "significado": "Cocinar lentamente en grasa o en almíbar.",
+    "ejemplo": "El pato fue confitado en su propia grasa."
+  },
+  {
+    "palabra": "Marinar",
+    "significado": "Dejar un alimento en líquido aromático antes de cocinar.",
+    "ejemplo": "La carne se marinó en vino y especias."
+  },
+  {
+    "palabra": "Reducir",
+    "significado": "Cocer un líquido para concentrar su sabor.",
+    "ejemplo": "El vino se redujo para espesar la salsa."
+  },
+  {
+    "palabra": "Desglasar",
+    "significado": "Añadir líquido a un sartén para recuperar jugos caramelizados.",
+    "ejemplo": "Se desglasó con vino tinto para la salsa."
+  },
+  {
+    "palabra": "Saltear",
+    "significado": "Cocinar a fuego vivo con poco aceite y removiendo rápido.",
+    "ejemplo": "Las verduras se saltearon en wok."
+  },
+  {
+    "palabra": "Pochar",
+    "significado": "Cocer un alimento suavemente en líquido o grasa a baja temperatura.",
+    "ejemplo": "Los huevos se cocinaron escalfados o pochados."
+  },
+  {
+    "palabra": "Ahumar",
+    "significado": "Dar sabor a un alimento exponiéndolo al humo.",
+    "ejemplo": "El salmón fue ahumado con maderas aromáticas."
+  },
+  {
+    "palabra": "Fermentar",
+    "significado": "Transformación química por acción de bacterias o levaduras.",
+    "ejemplo": "El pan se fermenta gracias a la levadura."
+  },
+  {
+    "palabra": "Macerar",
+    "significado": "Dejar reposar alimentos en líquidos aromatizados.",
+    "ejemplo": "Las fresas se maceraron en vino tinto."
+  },
+  {
+    "palabra": "Carpaccio",
+    "significado": "Plato de carne o pescado crudo cortado en láminas finas.",
+    "ejemplo": "El carpaccio de res fue servido con aceite de oliva."
+  },
+  {
+    "palabra": "Tartar",
+    "significado": "Preparación de carne o pescado crudo picado y aderezado.",
+    "ejemplo": "El tartar de atún tenía aguacate y especias."
+  },
+  {
+    "palabra": "Escabeche",
+    "significado": "Técnica de conservación en vinagre, aceite y especias.",
+    "ejemplo": "El pollo en escabeche se dejó reposar 24 horas."
+  },
+  {
+    "palabra": "Blanquear",
+    "significado": "Hervir brevemente un alimento para suavizarlo o quitar impurezas.",
+    "ejemplo": "Las almendras se blanquearon para retirarles la piel."
+  },
+  {
+    "palabra": "Clarificar",
+    "significado": "Eliminar impurezas de un líquido para hacerlo transparente.",
+    "ejemplo": "El consomé fue clarificado con clara de huevo."
+  },
+  {
+    "palabra": "Deshuesar",
+    "significado": "Retirar los huesos de una pieza de carne o ave.",
+    "ejemplo": "El pollo fue deshuesado antes de rellenarlo."
+  },
+  {
+    "palabra": "Filetear",
+    "significado": "Cortar un alimento en láminas finas.",
+    "ejemplo": "El pescado se fileteó para hacerlo a la plancha."
+  },
+  {
+    "palabra": "Atemperar",
+    "significado": "Llevar un alimento a temperatura ambiente antes de usarlo.",
+    "ejemplo": "El vino debe atemperarse antes de servirlo."
+  },
+  {
+    "palabra": "Coulis",
+    "significado": "Salsa espesa hecha de frutas o verduras trituradas.",
+    "ejemplo": "El postre se acompañó con coulis de frambuesa."
+  },
+  {
+    "palabra": "Gastrique",
+    "significado": "Salsa agridulce hecha con caramelo y vinagre.",
+    "ejemplo": "El pato se sirvió con gastrique de naranja."
+  },
+  {
+    "palabra": "Roux",
+    "significado": "Mezcla cocida de harina y mantequilla usada como base de salsas.",
+    "ejemplo": "La bechamel empieza con un roux claro."
+  },
+  {
+    "palabra": "Bechamel",
+    "significado": "Salsa blanca hecha con leche, mantequilla y harina.",
+    "ejemplo": "La lasaña llevaba bechamel en cada capa."
+  },
+  {
+    "palabra": "Velouté",
+    "significado": "Salsa francesa elaborada con roux y caldo.",
+    "ejemplo": "El pescado se sirvió con salsa velouté."
+  },
+  {
+    "palabra": "Demiglace",
+    "significado": "Salsa espesa hecha con caldo reducido y vino.",
+    "ejemplo": "La carne se bañó en salsa demiglace."
+  },
+  {
+    "palabra": "Consomé",
+    "significado": "Caldo claro concentrado, usualmente de carne.",
+    "ejemplo": "El consomé se sirvió como entrada ligera."
+  },
+  {
+    "palabra": "Gazpacho",
+    "significado": "Sopa fría de verduras, típica de España.",
+    "ejemplo": "El gazpacho se preparó con tomate y pepino."
+  },
+  {
+    "palabra": "Ratatouille",
+    "significado": "Plato de verduras guisadas, originario de Francia.",
+    "ejemplo": "La ratatouille se sirvió como acompañamiento."
+  },
+  {
+    "palabra": "Mole",
+    "significado": "Salsa mexicana hecha con chiles, especias y chocolate.",
+    "ejemplo": "El mole poblano acompañó al guajolote."
+  },
+  {
+    "palabra": "Tamizar",
+    "significado": "Pasar ingredientes secos por colador para airearlos.",
+    "ejemplo": "La harina fue tamizada antes de usarla."
+  },
+  {
+    "palabra": "Napar",
+    "significado": "Cubrir un alimento con una capa fina de salsa.",
+    "ejemplo": "La pechuga fue napada con salsa de champiñones."
+  },
+  {
+    "palabra": "Montar claras",
+    "significado": "Batir claras de huevo hasta que espumen y se vuelvan firmes.",
+    "ejemplo": "Las claras montadas dieron volumen al soufflé."
+  },
+  {
+    "palabra": "Soufflé",
+    "significado": "Preparación ligera y esponjosa hecha con claras montadas.",
+    "ejemplo": "El soufflé de queso se infló en el horno."
+  },
+  {
+    "palabra": "Fumet",
+    "significado": "Caldo concentrado hecho con pescado o mariscos.",
+    "ejemplo": "El risotto se preparó con fumet de camarón."
+  },
+  {
+    "palabra": "Degustación",
+    "significado": "Cata organizada para probar distintos platos o bebidas.",
+    "ejemplo": "Asistimos a una degustación de vinos."
+  },
+  {
+    "palabra": "Maridaje",
+    "significado": "Combinación de bebidas y comidas que se complementan.",
+    "ejemplo": "El maridaje de vino tinto con carnes fue perfecto."
+  },
+  {
+    "palabra": "Crudité",
+    "significado": "Plato de verduras crudas servidas como aperitivo.",
+    "ejemplo": "La mesa incluía crudités con aderezos."
+  },
+  {
+    "palabra": "Gourmet",
+    "significado": "Comida de alta calidad y presentación refinada.",
+    "ejemplo": "El restaurante ofrecía menús gourmet."
+  },
+  {
+    "palabra": "Deglasear",
+    "significado": "Disolver jugos caramelizados del sartén con líquido.",
+    "ejemplo": "Se deglaseó con vino blanco para la salsa."
+  },
+  {
+    "palabra": "Foie gras",
+    "significado": "Hígado graso de pato o ganso usado en alta cocina.",
+    "ejemplo": "El foie gras se sirvió con pan brioche."
+  },
+  {
+    "palabra": "Cata",
+    "significado": "Prueba sensorial de alimentos o bebidas.",
+    "ejemplo": "La cata de quesos incluyó cinco variedades."
+  },
+  {
+    "palabra": "Crudismo",
+    "significado": "Dieta basada en consumir alimentos crudos.",
+    "ejemplo": "El crudismo promueve frutas, verduras y semillas sin cocción."
+  },
+  {
+    "palabra": "Trinchado",
+    "significado": "Acción de cortar carnes cocidas en piezas finas.",
+    "ejemplo": "El mesero trinchó el pavo frente a los comensales."
+  },
+  {
+    "palabra": "Encamisar",
+    "significado": "Cubrir un molde con una capa para dar forma a un plato.",
+    "ejemplo": "Encamisaron el molde con chocolate para el postre."
+  },
+  {
+    "palabra": "Al dente",
+    "significado": "Punto de cocción de la pasta en el que queda firme al morderse.",
+    "ejemplo": "La pasta debe servirse al dente."
+  },
+  {
+    "palabra": "Baño María",
+    "significado": "Técnica de cocción suave colocando un recipiente dentro de otro con agua caliente.",
+    "ejemplo": "El flan se cocinó a baño María."
+  },
+  {
+    "palabra": "Acanalar",
+    "significado": "Hacer cortes decorativos en frutas o verduras.",
+    "ejemplo": "El pepino fue acanalado antes de servirse."
+  },
+  {
+    "palabra": "Almíbar",
+    "significado": "Mezcla de agua y azúcar cocida hasta formar jarabe.",
+    "ejemplo": "El pastel se humedeció con almíbar."
+  },
+  {
+    "palabra": "Aspic",
+    "significado": "Plato elaborado con caldo gelatinoso.",
+    "ejemplo": "El aspic de verduras se sirvió frío."
+  },
+  {
+    "palabra": "Bain-marie inverso",
+    "significado": "Baño María con agua y hielo para enfriar rápidamente.",
+    "ejemplo": "El chocolate se templó en un bain-marie inverso."
+  },
+  {
+    "palabra": "Coulant",
+    "significado": "Pastel de chocolate con centro líquido.",
+    "ejemplo": "El coulant se sirvió tibio con helado."
+  },
+  {
+    "palabra": "Croûton",
+    "significado": "Trozos pequeños de pan tostado usados como acompañamiento.",
+    "ejemplo": "La sopa se decoró con croûtons."
+  },
+  {
+    "palabra": "Crêpe",
+    "significado": "Tortita delgada hecha con masa líquida en sartén.",
+    "ejemplo": "Las crêpes pueden ser dulces o saladas."
+  },
+  {
+    "palabra": "Crudo",
+    "significado": "Preparación sin cocción o mínima intervención.",
+    "ejemplo": "El ceviche es un plato servido crudo."
+  },
+  {
+    "palabra": "Dorar",
+    "significado": "Cocinar hasta obtener color tostado en la superficie.",
+    "ejemplo": "Se doró la carne antes de guisarla."
+  },
+  {
+    "palabra": "Escaldar",
+    "significado": "Sumergir un alimento en agua hirviendo unos segundos.",
+    "ejemplo": "Los jitomates se escaldaron para pelarlos."
+  },
+  {
+    "palabra": "Ganache",
+    "significado": "Mezcla de chocolate y crema usada en repostería.",
+    "ejemplo": "El pastel fue cubierto con ganache."
+  },
+  {
+    "palabra": "Gratinar",
+    "significado": "Dorar la superficie de un plato en horno fuerte.",
+    "ejemplo": "La pasta se gratinó con queso rallado."
+  },
+  {
+    "palabra": "Leudar",
+    "significado": "Proceso de fermentación de la masa de pan.",
+    "ejemplo": "La masa debe reposar para leudar."
+  },
+  {
+    "palabra": "Mantecar",
+    "significado": "Añadir mantequilla o grasa a una preparación para suavizarla.",
+    "ejemplo": "Se mantecó el risotto antes de servirlo."
+  },
+  {
+    "palabra": "Merengue",
+    "significado": "Preparación aireada de claras batidas y azúcar.",
+    "ejemplo": "El pastel se decoró con merengue italiano."
+  },
+  {
+    "palabra": "Néctar",
+    "significado": "Jugo espeso obtenido de frutas.",
+    "ejemplo": "Se sirvió néctar de durazno natural."
+  },
+  {
+    "palabra": "Panificación",
+    "significado": "Proceso completo de elaboración de pan.",
+    "ejemplo": "La panificación requiere amasado y fermentación."
+  },
+  {
+    "palabra": "Pastelera",
+    "significado": "Crema dulce hecha con leche, huevo y azúcar.",
+    "ejemplo": "El hojaldre estaba relleno de crema pastelera."
+  },
+  {
+    "palabra": "Pectina",
+    "significado": "Fibra natural usada como gelificante en mermeladas.",
+    "ejemplo": "La pectina ayuda a espesar la confitura."
+  },
+  {
+    "palabra": "Pesto",
+    "significado": "Salsa italiana de albahaca, ajo, piñones, queso y aceite.",
+    "ejemplo": "Los espaguetis se sirvieron con pesto."
+  },
+  {
+    "palabra": "Quenelle",
+    "significado": "Porción ovalada de alimento formada con cucharas.",
+    "ejemplo": "El helado se sirvió en forma de quenelle."
+  },
+  {
+    "palabra": "Rebozar",
+    "significado": "Cubrir un alimento con harina o pan antes de freírlo.",
+    "ejemplo": "Los camarones se rebozaron en pan molido."
+  },
+  {
+    "palabra": "Rellenar",
+    "significado": "Introducir un preparado dentro de otro alimento.",
+    "ejemplo": "El pavo se rellenó con frutas secas."
+  },
+  {
+    "palabra": "Reposar",
+    "significado": "Dejar que un alimento se asiente para mejorar textura o sabor.",
+    "ejemplo": "La masa debe reposar media hora."
+  },
+  {
+    "palabra": "Sorbete",
+    "significado": "Postre helado ligero a base de frutas y agua.",
+    "ejemplo": "El sorbete de limón fue refrescante."
+  },
+  {
+    "palabra": "Tempura",
+    "significado": "Técnica japonesa de freír con rebozado ligero.",
+    "ejemplo": "Las verduras en tempura quedaron crujientes."
+  },
+  {
+    "palabra": "Terroir",
+    "significado": "Conjunto de condiciones geográficas que influyen en un producto agrícola.",
+    "ejemplo": "El terroir es clave en la calidad del vino."
+  },
+  {
+    "palabra": "Toque umami",
+    "significado": "Quinto sabor básico asociado a lo sabroso.",
+    "ejemplo": "El queso parmesano aporta un toque umami."
+  },
+  {
+    "palabra": "Trinchar",
+    "significado": "Cortar carne cocida en porciones para servir.",
+    "ejemplo": "El pavo se trincha en la mesa."
+  },
+  {
+    "palabra": "Velar",
+    "significado": "Cubrir con fina capa de gelatina o glaseado.",
+    "ejemplo": "El pastel se veló con mermelada de albaricoque."
+  },
+  {
+    "palabra": "Zumo",
+    "significado": "Jugo natural obtenido de frutas o verduras.",
+    "ejemplo": "Tomamos zumo de naranja recién exprimido."
+  },
+  {
+    "palabra": "Ahumado en frío",
+    "significado": "Técnica de ahumar sin aplicar calor directo.",
+    "ejemplo": "El salmón se preparó con ahumado en frío."
+  },
+  {
+    "palabra": "Ahumado en caliente",
+    "significado": "Ahumado que además cocina el alimento.",
+    "ejemplo": "El pollo se hizo con ahumado en caliente."
+  },
+  {
+    "palabra": "Clarificar mantequilla",
+    "significado": "Separar sólidos de la grasa pura de la mantequilla.",
+    "ejemplo": "Se clarificó la mantequilla para preparar ghee."
+  },
+  {
+    "palabra": "Degustación vertical",
+    "significado": "Cata de vinos de diferentes años pero misma bodega.",
+    "ejemplo": "La degustación vertical mostró evolución del vino."
+  },
+  {
+    "palabra": "Degustación horizontal",
+    "significado": "Cata de vinos del mismo año pero distintas bodegas.",
+    "ejemplo": "La degustación horizontal comparó estilos de Rioja."
+  },
+  {
+    "palabra": "Esferificación",
+    "significado": "Técnica de cocina molecular que encapsula líquidos en esferas.",
+    "ejemplo": "Prepararon esferificación de aceitunas como aperitivo."
+  },
+  {
+    "palabra": "Gelificación",
+    "significado": "Proceso de convertir líquidos en gel.",
+    "ejemplo": "La gelificación con agar agar fue rápida."
+  },
+  {
+    "palabra": "Liofilización",
+    "significado": "Técnica de secado en frío para conservar alimentos.",
+    "ejemplo": "El café soluble se obtiene por liofilización."
+  },
+  {
+    "palabra": "Nitrogenado",
+    "significado": "Uso de nitrógeno líquido en cocina para enfriar o dar textura.",
+    "ejemplo": "El helado nitrogenado se preparó al instante."
+  },
+  {
+    "palabra": "Osmosis inversa culinaria",
+    "significado": "Método para concentrar líquidos retirando agua.",
+    "ejemplo": "Se usó ósmosis inversa para intensificar sabores."
+  },
+  {
+    "palabra": "Sous-vide",
+    "significado": "Cocción al vacío a baja temperatura y controlada.",
+    "ejemplo": "El filete sous-vide quedó tierno y jugoso."
+  },
+  {
+    "palabra": "Tapenade",
+    "significado": "Pasta provenzal hecha con aceitunas, alcaparras y anchoas.",
+    "ejemplo": "La tapenade se sirvió con pan tostado."
+  },
+  {
+    "palabra": "Tempé",
+    "significado": "Producto fermentado de soya originario de Indonesia.",
+    "ejemplo": "El tempé se usó como sustituto de carne."
+  },
+  {
+    "palabra": "Togarashi",
+    "significado": "Mezcla japonesa de especias picantes.",
+    "ejemplo": "El ramen se condimentó con togarashi."
+  },
+  {
+    "palabra": "Xató",
+    "significado": "Plato catalán de ensalada con salsa a base de ñoras y almendras.",
+    "ejemplo": "Probamos un xató en Sitges durante el viaje."
+  },
+  {
+    "palabra": "Yuba",
+    "significado": "Piel de soya que se forma al hervir leche de soya.",
+    "ejemplo": "El yuba se usó en un rollo vegetariano."
+  },
+  {
+    "palabra": "Zaatar",
+    "significado": "Mezcla de especias del Medio Oriente con tomillo, ajonjolí y zumaque.",
+    "ejemplo": "El pan se acompañó con aceite de oliva y zaatar."
+  }
+
+
+]
