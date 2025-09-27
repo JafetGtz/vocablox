@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text, StyleSheet, TouchableOpacity, ScrollView } from 'react-native'
+import { View, Text, StyleSheet, TouchableOpacity, ScrollView, Image } from 'react-native'
 import { useWizardViewModel } from '@/viewmodels/useWizardViewModel'
 import { DEFAULT_BACKGROUNDS } from '@/types/wizard'
 import WizardButton from '@/components/WizardButton'
@@ -10,11 +10,11 @@ const StepBackground: React.FC = () => {
   const handleBackgroundSelect = (backgroundId: string) => {
     const selected = DEFAULT_BACKGROUNDS.find(bg => bg.id === backgroundId)
     if (selected) {
-      actions.setBackground(selected.value)
+      actions.setBackground(selected.id)
     }
   }
 
-  const selectedBackground = DEFAULT_BACKGROUNDS.find(bg => bg.value === data.background)
+  const selectedBackground = DEFAULT_BACKGROUNDS.find(bg => bg.id === data.background)
 
   return (
     <View style={styles.container}>
@@ -36,12 +36,20 @@ const StepBackground: React.FC = () => {
               ]}
               onPress={() => handleBackgroundSelect(background.id)}
             >
-              <View
-                style={[
-                  styles.backgroundPreview,
-                  { backgroundColor: background.preview }
-                ]}
-              />
+              {background.type === 'image' ? (
+                <Image
+                  source={background.preview}
+                  style={styles.backgroundPreview}
+                  resizeMode="cover"
+                />
+              ) : (
+                <View
+                  style={[
+                    styles.backgroundPreview,
+                    { backgroundColor: background.preview }
+                  ]}
+                />
+              )}
               <Text style={styles.backgroundName}>{background.name}</Text>
               {selectedBackground?.id === background.id && (
                 <View style={styles.checkmark}>

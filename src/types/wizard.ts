@@ -63,11 +63,11 @@ export const DEFAULT_CATEGORIES: Category[] = [
 ]
 
 export const DEFAULT_BACKGROUNDS: BackgroundOption[] = [
-  { id: 'gradient1', name: 'Azul Océano', type: 'color', value: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)', preview: '#667eea' },
-  { id: 'gradient2', name: 'Atardecer', type: 'color', value: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)', preview: '#f093fb' },
-  { id: 'gradient3', name: 'Bosque', type: 'color', value: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)', preview: '#4facfe' },
-  { id: 'gradient4', name: 'Primavera', type: 'color', value: 'linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)', preview: '#43e97b' },
-  { id: 'gradient5', name: 'Noche', type: 'color', value: 'linear-gradient(135deg, #fa709a 0%, #fee140 100%)', preview: '#fa709a' },
+  { id: 'amarillo', name: 'Amarillo', type: 'image', value: require('@/assets/wallpapers/amarillo.png'), preview: require('@/assets/wallpapers/amarillo.png') },
+  { id: 'azul', name: 'Azul', type: 'image', value: require('@/assets/wallpapers/azul.png'), preview: require('@/assets/wallpapers/azul.png') },
+  { id: 'naranja', name: 'Naranja', type: 'image', value: require('@/assets/wallpapers/naranja.png'), preview: require('@/assets/wallpapers/naranja.png') },
+  { id: 'negro', name: 'Negro', type: 'image', value: require('@/assets/wallpapers/negro.png'), preview: require('@/assets/wallpapers/negro.png') },
+  { id: 'verde', name: 'Verde', type: 'image', value: require('@/assets/wallpapers/verde.png'), preview: require('@/assets/wallpapers/verde.png') },
 ]
 
 export const DEFAULT_DIFFICULTY_LEVELS: DifficultyLevel[] = [

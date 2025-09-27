@@ -6,6 +6,7 @@ export interface SettingsState {
     data: Partial<UserSettings>
     loading: boolean
     error: string | null
+    customBackgrounds: Array<{id: string, name: string, type: 'image', value: any, preview: any}>
     wizard: {
         currentStep: number
         totalSteps: number
@@ -17,7 +18,7 @@ export interface SettingsState {
 
 const initialState: SettingsState = {
     data: {
-        background: '',
+        background: 'azul',
         nickname: '',
         motivational: '',
         categories: [],
@@ -30,9 +31,26 @@ const initialState: SettingsState = {
         daily_words: 2,
         words_per_burst: 2,
         wizard_completed: false,
+        // Text customization settings
+        text_colors: {
+            word: '#FFFFFF',
+            meaning: '#E0E0E0',
+            example: '#CCCCCC'
+        },
+        text_sizes: {
+            word: 'large',
+            meaning: 'medium',
+            example: 'small'
+        },
+        text_visibility: {
+            word: true,
+            meaning: true,
+            example: true
+        }
     },
     loading: false,
     error: null,
+    customBackgrounds: [],
     wizard: {
         currentStep: 0,
         totalSteps: 8,
@@ -58,6 +76,8 @@ const settingsSlice = createSlice({
             state.wizard.isCompleted = action.payload.wizard_completed || false
             state.loading = false
             state.error = null
+            // Preserve customBackgrounds when loading from server (they're stored locally only)
+            // Don't overwrite customBackgrounds that were loaded from AsyncStorage
         },
         loadFailure: (state, action: PayloadAction<string>) => {
             state.loading = false
@@ -71,6 +91,8 @@ const settingsSlice = createSlice({
             state.data = action.payload
             state.loading = false
             state.error = null
+            // Preserve customBackgrounds when saving to server (they're stored locally only)
+            // Don't overwrite customBackgrounds that were loaded from AsyncStorage
         },
         saveFailure: (state, action: PayloadAction<string>) => {
             state.loading = false
@@ -80,6 +102,7 @@ const settingsSlice = createSlice({
             state.data = initialState.data
             state.loading = false
             state.error = null
+            state.customBackgrounds = []
             state.wizard = initialState.wizard
         },
         // Wizard actions
@@ -119,6 +142,8 @@ const settingsSlice = createSlice({
             state.data = action.payload
             state.wizard.saving = false
             state.wizard.saveError = null
+            // Preserve customBackgrounds when saving wizard to server (they're stored locally only)
+            // Don't overwrite customBackgrounds that were loaded from AsyncStorage
         },
         wizardSaveFailure: (state, action: PayloadAction<string>) => {
             state.wizard.saving = false
@@ -176,6 +201,50 @@ const settingsSlice = createSlice({
             if (timezone !== undefined) state.data.timezone = timezone
             if (motivational !== undefined) state.data.motivational = motivational
         },
+        // Custom background actions
+        addCustomBackground: (state, action: PayloadAction<{id: string, name: string, type: 'image', value: any, preview: any}>) => {
+            state.customBackgrounds.push(action.payload)
+        },
+        removeCustomBackground: (state, action: PayloadAction<string>) => {
+            state.customBackgrounds = state.customBackgrounds.filter(bg => bg.id !== action.payload)
+        },
+        setCustomBackgrounds: (state, action: PayloadAction<Array<{id: string, name: string, type: 'image', value: any, preview: any}>>) => {
+            state.customBackgrounds = action.payload
+        },
+        // Text customization actions
+        updateTextColor: (state, action: PayloadAction<{element: 'word' | 'meaning' | 'example', color: string}>) => {
+            const { element, color } = action.payload
+            if (!state.data.text_colors) {
+                state.data.text_colors = {
+                    word: '#FFFFFF',
+                    meaning: '#E0E0E0',
+                    example: '#CCCCCC'
+                }
+            }
+            state.data.text_colors[element] = color
+        },
+        updateTextSize: (state, action: PayloadAction<{element: 'word' | 'meaning' | 'example', size: 'small' | 'medium' | 'large'}>) => {
+            const { element, size } = action.payload
+            if (!state.data.text_sizes) {
+                state.data.text_sizes = {
+                    word: 'large',
+                    meaning: 'medium',
+                    example: 'small'
+                }
+            }
+            state.data.text_sizes[element] = size
+        },
+        updateTextVisibility: (state, action: PayloadAction<{element: 'word' | 'meaning' | 'example', visible: boolean}>) => {
+            const { element, visible } = action.payload
+            if (!state.data.text_visibility) {
+                state.data.text_visibility = {
+                    word: true,
+                    meaning: true,
+                    example: true
+                }
+            }
+            state.data.text_visibility[element] = visible
+        },
     },
 })
 
@@ -204,6 +273,14 @@ export const {
     updateBurstsAndTimes,
     updateStreakGoal,
     updateProfile,
+    // Custom background actions
+    addCustomBackground,
+    removeCustomBackground,
+    setCustomBackgrounds,
+    // Text customization actions
+    updateTextColor,
+    updateTextSize,
+    updateTextVisibility,
 } = settingsSlice.actions
 
 export default settingsSlice.reducer

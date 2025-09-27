@@ -1,97 +1,14 @@
-Saving to Supabase: {
-  "user_id": "82bd8df9-8f42-44f9-94c6-de3c71b55624",
-  "background": "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)",
-  "categories": [
-    "technology",
-    "science",
-    "food"
-  ],
-  "sessions_per_day": 1,
-  "daily_words": 5,
-  "session_duration": 15,
-  "reminder_days": [
-    "monday",
-    "tuesday",
-    "wednesday",
-    "thursday",
-    "friday"
-  ],
-  "reminder_windows": {
-    "morning": "08:00",
-    "afternoon": "14:00",
-    "evening": "20:00"
-  },
-  "difficulty_level": "normal",
-  "spaced_repetition_intervals": [
-    1,
-    3,
-    7,
-    15,
-    30
-  ],
-  "nickname": "",
-  "timezone": "America/Mexico_City",
-  "motivational": "¡Cada palabra me acerca a mis objetivos!",
-  "wizard_completed": true
-}
-settingsServices.ts:77 Supabase error: {}
-anonymous @ console.js:654
-overrideMethod @ backend.js:17416
-reactConsoleErrorHandler @ ExceptionsManager.js:182
-anonymous @ setUpDeveloperTools.js:40
-registerError @ LogBox.js:231
-anonymous @ LogBox.js:80
-?anon_0_ @ settingsServices.ts:77
-asyncGeneratorStep @ asyncToGenerator.js:3
-_next @ asyncToGenerator.js:17
-Show 8 more frames
-Show less
-settingsServices.ts:88 Error in upsertSettings: Error: Database error: undefined
-    at ?anon_0_ (http://10.0.2.2:8081/index.bundle//&platform=android&dev=true&lazy=true&minify=false&app=com.awesome&modulesOnly=false&runModule=true&excludeSource=true&sourcePaths=url-server:159047:26)
-    at next (native)
-    at asyncGeneratorStep (http://10.0.2.2:8081/index.bundle//&platform=android&dev=true&lazy=true&minify=false&app=com.awesome&modulesOnly=false&runModule=true&excludeSource=true&sourcePaths=url-server:22476:19)
-    at _next (http://10.0.2.2:8081/index.bundle//&platform=android&dev=true&lazy=true&minify=false&app=com.awesome&modulesOnly=false&runModule=true&excludeSource=true&sourcePaths=url-server:22490:29)
-    at tryCallOne (address at InternalBytecode.js:1:1180)
-    at anonymous (address at InternalBytecode.js:1:1874)
-anonymous @ console.js:654
-overrideMethod @ backend.js:17416
-reactConsoleErrorHandler @ ExceptionsManager.js:182
-anonymous @ setUpDeveloperTools.js:40
-registerError @ LogBox.js:231
-anonymous @ LogBox.js:80
-?anon_0_ @ settingsServices.ts:88
-asyncGeneratorStep @ asyncToGenerator.js:3
-_next @ asyncToGenerator.js:17
-Show 8 more frames
-Show less
-useWizardViewModel.ts:150 Error in saveAndComplete: Error: Database error: undefined
-    at ?anon_0_ (http://10.0.2.2:8081/index.bundle//&platform=android&dev=true&lazy=true&minify=false&app=com.awesome&modulesOnly=false&runModule=true&excludeSource=true&sourcePaths=url-server:159047:26)
-    at next (native)
-    at asyncGeneratorStep (http://10.0.2.2:8081/index.bundle//&platform=android&dev=true&lazy=true&minify=false&app=com.awesome&modulesOnly=false&runModule=true&excludeSource=true&sourcePaths=url-server:22476:19)
-    at _next (http://10.0.2.2:8081/index.bundle//&platform=android&dev=true&lazy=true&minify=false&app=com.awesome&modulesOnly=false&runModule=true&excludeSource=true&sourcePaths=url-server:22490:29)
-    at tryCallOne (address at InternalBytecode.js:1:1180)
-    at anonymous (address at InternalBytecode.js:1:1874)
-anonymous @ console.js:654
-overrideMethod @ backend.js:17416
-reactConsoleErrorHandler @ ExceptionsManager.js:182
-anonymous @ setUpDeveloperTools.js:40
-registerError @ LogBox.js:231
-anonymous @ LogBox.js:80
-?anon_0_ @ useWizardViewModel.ts:150
-asyncGeneratorStep @ asyncToGenerator.js:3
-_throw @ asyncToGenerator.js:20
-Show 8 more frames
-Show less
-useWizardViewModel.ts:151 Error type: object
-anonymous @ console.js:654
-overrideMethod @ backend.js:17416
-reactConsoleErrorHandler @ ExceptionsManager.js:182
-anonymous @ setUpDeveloperTools.js:40
-registerError @ LogBox.js:231
-anonymous @ LogBox.js:80
-?anon_0_ @ useWizardViewModel.ts:151
-asyncGeneratorStep @ asyncToGenerator.js:3
-_throw @ asyncToGenerator.js:20
-Show 8 more frames
-Show less
-useWizardViewModel.ts:152 Error details: {}
+corrijamos el munu antes del focus
+
+
+
+recuerda debemos seleccionar las categorias que solo seleccionamos en nustro wizard no todas las categorias
+
+corrige el scroll porque no se logran ver las categorias correctamente en el menu hazlo mas pequeño la seleccion para que se vean todas las categorias
+
+el botón de seleccionar todas no funciona 
+
+
+y el buscador de palabras debe buscar en las categorias que el usuario selecciono en el wizard que son las mismas que se muestran en el home
+
+cambia el diseño de esa pantalla  Utiliza morados, rosas y verdes enérgico

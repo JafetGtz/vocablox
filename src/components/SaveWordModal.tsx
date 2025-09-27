@@ -14,7 +14,8 @@ import {
 import Icon from 'react-native-vector-icons/Feather'
 import { useAppDispatch, useAppSelector } from '@/store/hooks'
 import { selectCollectionsWithCount } from '@/features/notes/models/selectors'
-import { addNote } from '@/features/notes/models/notesSlice'
+import { addNote, addCollection } from '@/features/notes/models/notesSlice'
+import CreateCollectionModal from './CreateCollectionModal'
 
 const { height: SCREEN_HEIGHT } = Dimensions.get('window')
 const MODAL_HEIGHT = SCREEN_HEIGHT * 0.6
@@ -92,6 +93,15 @@ export default function SaveWordModal({ visible, onClose, word, significado, eje
     closeModal()
   }
 
+  const handleCreateCollection = (name: string, color: string, emoji: string) => {
+    const newCollection = dispatch(addCollection({
+      name,
+      color,
+      emoji
+    }))
+    setShowCreateCollection(false)
+  }
+
   return (
     <Modal
       visible={visible}
@@ -132,7 +142,9 @@ export default function SaveWordModal({ visible, onClose, word, significado, eje
                     style={styles.collectionItem}
                     onPress={() => handleSaveToCollection(collection.id)}
                   >
-                    <View style={[styles.colorIndicator, { backgroundColor: collection.color }]} />
+                    <View style={[styles.colorIndicator, { backgroundColor: collection.color }]}>
+                      <Text style={styles.emojiIndicator}>{collection.emoji}</Text>
+                    </View>
                     <View style={styles.collectionInfo}>
                       <Text style={styles.collectionName}>{collection.name}</Text>
                       <Text style={styles.collectionCount}>{collection.count} palabras</Text>
@@ -156,6 +168,12 @@ export default function SaveWordModal({ visible, onClose, word, significado, eje
           </TouchableWithoutFeedback>
         </View>
       </TouchableWithoutFeedback>
+
+      <CreateCollectionModal
+        visible={showCreateCollection}
+        onClose={() => setShowCreateCollection(false)}
+        onSave={handleCreateCollection}
+      />
     </Modal>
   )
 }
@@ -221,10 +239,15 @@ const styles = StyleSheet.create({
     marginBottom: 12,
   },
   colorIndicator: {
-    width: 12,
-    height: 12,
-    borderRadius: 6,
+    width: 32,
+    height: 32,
+    borderRadius: 16,
     marginRight: 12,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  emojiIndicator: {
+    fontSize: 16,
   },
   collectionInfo: {
     flex: 1,

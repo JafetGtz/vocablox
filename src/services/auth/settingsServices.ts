@@ -22,6 +22,22 @@ export interface UserSettings {
     daily_words: number
     words_per_burst: number
     wizard_completed: boolean
+    // Text customization settings (stored locally)
+    text_colors?: {
+        word: string
+        meaning: string
+        example: string
+    }
+    text_sizes?: {
+        word: 'small' | 'medium' | 'large'
+        meaning: 'small' | 'medium' | 'large'
+        example: 'small' | 'medium' | 'large'
+    }
+    text_visibility?: {
+        word: boolean
+        meaning: boolean
+        example: boolean
+    }
 }
 
 export async function fetchSettings(user_id: string): Promise<UserSettings> {

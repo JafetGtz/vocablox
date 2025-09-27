@@ -4,9 +4,9 @@ module.exports = {
     [
       'module-resolver',
       {
-        root: ['./src'],       // dónde busca imports “absolutos”
+        root: ['./src'], // dónde busca imports “absolutos”
         alias: {
-          '@': './src',         // '@' → carpeta src
+          '@': './src',   // '@' → carpeta src
         },
         extensions: [
           '.js',
@@ -16,5 +16,7 @@ module.exports = {
         ],
       },
     ],
+    // Plugin de worklets (para Reanimated u otros casos)
+    'react-native-reanimated/plugin',
   ],
 };

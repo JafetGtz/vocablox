@@ -33,6 +33,10 @@
 	</dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string/>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Esta aplicación necesita acceso a tu galería de fotos para seleccionar fondos personalizados.</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Esta aplicación necesita acceso a la cámara para tomar fotos y usarlas como fondos personalizados.</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIRequiredDeviceCapabilities</key>

@@ -1,17 +1,31 @@
 
 
+Cambios solicitados
 
-ok primero dame la logica para guardar una nota contemplado usar redux persistente,
- aun no se guardará en supabase pero debe estar abierto a que un futuro si se guardará (no crees archivos de supabase ya los tenemos)
-  se puede guardar la palabra en una coleccion la coleccion es otro objeto de redux o nose que se puede crear (decide la mejor opcion ahi),
- tambien creamos la coleccion con nombre color y emoji y la nota se relaciona con esa coleccion, 
-al final tenemos metodos crud para notas y colecciones
+Registro de categorías
 
-  crea esa estrucutura 
+Archivo: src/views/Wizard/steps/StepCategories.tsx
 
-  usa una carpeta nueva que se llama features para meter ahi /notes y usar controller model view components 
-  no crearemos interfazes por ahora solo la logica de negocio 
-  
-  debes ver que ya existe una estrucutra de redux pero ahora debemos persistir está informacion, haz esos ajustes sin afectar lo que ya tenemos 
+Ajustar la validación para que el usuario seleccione como mínimo 1 categoría (actualmente el mínimo es 3).
 
-  
+Sección “Mis Palabras”
+
+Actualmente se encuentra en el menú lateral del Home.
+
+Debe moverse a la pantalla de Configuración y renombrarse a “Configuración de mis palabras”.
+
+Al ingresar, se debe mostrar una opción para activar/desactivar si las palabras creadas por el usuario aparecen en el Home (esta lógica ya existe, solo hay que verificarla).
+
+Además, agregar un control de frecuencia de aparición con @react-native-community/slider, con tres niveles:
+
+Normal
+
+Alto
+
+Muy alto
+
+La frecuencia seleccionada definirá qué tan seguido aparecerán las palabras creadas por el usuario en el Home (dentro de home/index).
+
+Importante: este algoritmo de frecuencia solo aplica a las palabras creadas por el usuario.
+
+Las palabras que provienen de las categorías seleccionadas no se ven afectadas por esta configuración.
