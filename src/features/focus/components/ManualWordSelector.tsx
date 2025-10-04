@@ -1,4 +1,4 @@
-import React, { useState, memo } from 'react';
+import React, { useState, memo, useEffect } from 'react';
 import {
   View,
   Text,
@@ -8,6 +8,8 @@ import {
   FlatList,
   ScrollView,
 } from 'react-native';
+import { useSelector } from 'react-redux';
+import { RootState } from '../../../store/store';
 import { wordDataService } from '../services/wordDataService';
 import { FocusWordItem } from '../types';
 
@@ -25,6 +27,19 @@ const ManualWordSelector: React.FC<ManualWordSelectorProps> = memo(({
   const [searchQuery, setSearchQuery] = useState('');
   const [searchResults, setSearchResults] = useState<FocusWordItem[]>([]);
   const [isSearching, setIsSearching] = useState(false);
+
+  // Get user words from Redux store
+  const userWords = useSelector((state: RootState) => state.userWords.words);
+  const userWordsEnabled = useSelector((state: RootState) => state.userWords.isEnabled);
+
+  // Update wordDataService with user words when component mounts or words change
+  useEffect(() => {
+    if (userWordsEnabled) {
+      wordDataService.setUserWords(userWords);
+    } else {
+      wordDataService.setUserWords([]);
+    }
+  }, [userWords, userWordsEnabled]);
 
   const handleSearch = (query: string) => {
     setSearchQuery(query);
@@ -186,7 +201,7 @@ const ManualWordSelector: React.FC<ManualWordSelectorProps> = memo(({
             nestedScrollEnabled
           >
             <View style={styles.selectedWordsGrid}>
-              {selectedWords.map(renderSelectedWord)}
+              {selectedWords.map(word => renderSelectedWord(word))}
             </View>
           </ScrollView>
         ) : (
@@ -376,8 +391,8 @@ const styles = StyleSheet.create({
   },
   emptyContainer: {
     alignItems: 'center',
-    padding: 32,
-    backgroundColor: '#F8F9FA',
+    
+    backgroundColor: 'white',
     borderRadius: 8,
   },
   emptyText: {

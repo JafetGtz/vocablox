@@ -1,0 +1,1214 @@
+# PLAN DE IMPLEMENTACIÓN - NOTIFICACIONES NATIVAS CON KOTLIN
+# =============================================================
+
+## ÍNDICE
+## ======
+1. DATOS DEL WIZARD (De dónde provienen)
+2. ARQUITECTURA DE ARCHIVOS
+3. FASES DE IMPLEMENTACIÓN
+4. ORDEN DE CREACIÓN DE ARCHIVOS
+5. FLUJO DE DATOS COMPLETO
+
+
+## 1. DATOS DEL WIZARD - ORIGEN Y UBICACIÓN
+## ==========================================
+
+### 1.1. Valores capturados en el Wizard (Redux)
+
+**Ubicación en Redux:**
+- Slice: `src/store/slices/settingsSlice.ts`
+- State path: `state.settings.data`
+
+**Valores disponibles:**
+
+```typescript
+interface UserSettings {
+  // Paso 2: StepNameMotivation
+  nickname: string                    // Ej: "María"
+  motivational: string                // Ej: "Cada día una palabra nueva"
+
+  // Paso 3: StepCategories
+  categories: string[]                // Ej: ["technology", "business", "science"]
+
+  // Paso 4: StepWeeklyTarget
+  weekly_words_target: 10 | 30 | 40 | 50    // Ej: 30
+  daily_words: number                 // CALCULADO: ceil(30/7) = 5
+
+  // Paso 5: StepBurstsAndTimes
+  bursts_per_day: 1 | 2 | 3          // Ej: 2
+  active_windows: TimeWindowId[]      // Ej: ["morning", "evening"]
+  window_times: {
+    morning?: string                  // Ej: "08:00"
+    afternoon?: string                // Ej: "14:00"
+    evening?: string                  // Ej: "20:00"
+  }
+  words_per_burst: number             // CALCULADO: ceil(daily_words / bursts_per_day) = 3
+
+  // Paso 6: StepStreakGoal (NO se usa en notificaciones)
+  streak_goal_days: number            // Solo para gamificación
+
+  // Control
+  wizard_completed: boolean           // true cuando completa wizard
+}
+```
+
+### 1.2. Cómo leer estos datos en React Native
+
+```typescript
+// En cualquier componente/hook
+import { useSelector } from 'react-redux'
+import { RootState } from '@/store/store'
+
+const settings = useSelector((state: RootState) => state.settings.data)
+
+// Usar los valores:
+const nickname = settings.nickname              // "María"
+const categories = settings.categories          // ["technology", "business"]
+const activeWindows = settings.active_windows   // ["morning", "evening"]
+const windowTimes = settings.window_times       // { morning: "08:00", evening: "20:00" }
+const wordsPerBurst = settings.words_per_burst  // 3
+```
+
+
+## 2. ARQUITECTURA DE ARCHIVOS
+## =============================
+
+### 2.1. Archivos Android (Kotlin)
+
+```
+android/app/src/main/java/com/awesome/
+├── notifications/
+│   ├── NotificationModule.kt          # Bridge React Native -> Kotlin
+│   ├── NotificationScheduler.kt       # Gestión de AlarmManager
+│   ├── NotificationReceiver.kt        # Recibe alarmas y muestra notificaciones
+│   ├── NotificationHelper.kt          # Crea las notificaciones visuales
+│   ├── WordsDataStore.kt              # Almacena palabras en SharedPreferences
+│   └── BootReceiver.kt                # Reprograma al reiniciar dispositivo
+└── MainApplication.kt                  # Registrar módulo (MODIFICAR)
+
+android/app/src/main/
+└── AndroidManifest.xml                 # Permisos y receivers (MODIFICAR)
+
+android/app/
+└── build.gradle                        # Dependencias Gson (MODIFICAR)
+```
+
+### 2.2. Archivos React Native (TypeScript)
+
+```
+src/
+├── services/
+│   └── notificationService.ts         # Bridge tipado para Kotlin
+└── hooks/
+    └── useNotifications.ts            # Hook para programar notificaciones
+```
+
+
+## 3. FASES DE IMPLEMENTACIÓN
+## ===========================
+
+### FASE 1: Configuración base Android
+### FASE 2: Módulos Kotlin nativos
+### FASE 3: Bridge React Native
+### FASE 4: Integración con Wizard
+### FASE 5: Testing y validación
+
+
+## 4. ORDEN DE CREACIÓN DE ARCHIVOS
+## =================================
+
+### FASE 1: CONFIGURACIÓN BASE ANDROID (3 archivos)
+
+#### Archivo 1.1: android/app/src/main/AndroidManifest.xml
+**QUÉ HACE:** Declara permisos y receivers
+**AGREGAR DENTRO DE `<manifest>`:**
+
+```xml
+<!-- Permisos necesarios -->
+<uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+<uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+<uses-permission android:name="android.permission.USE_EXACT_ALARM" />
+<uses-permission android:name="android.permission.WAKE_LOCK" />
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+<uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
+```
+
+**AGREGAR DENTRO DE `<application>`:**
+
+```xml
+<!-- Receiver para notificaciones programadas -->
+<receiver
+    android:name=".notifications.NotificationReceiver"
+    android:enabled="true"
+    android:exported="false">
+    <intent-filter>
+        <action android:name="com.awesome.SHOW_NOTIFICATION" />
+    </intent-filter>
+</receiver>
+
+<!-- Receiver para reinicio de dispositivo -->
+<receiver
+    android:name=".notifications.BootReceiver"
+    android:enabled="true"
+    android:exported="true">
+    <intent-filter>
+        <action android:name="android.intent.action.BOOT_COMPLETED" />
+        <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+    </intent-filter>
+</receiver>
+```
+
+---
+
+#### Archivo 1.2: android/app/build.gradle
+**QUÉ HACE:** Agrega dependencia Gson para JSON
+**AGREGAR EN `dependencies {}`:**
+
+```gradle
+// Gson para serialización JSON de palabras
+implementation 'com.google.code.gson:gson:2.10.1'
+```
+
+---
+
+#### Archivo 1.3: Crear carpeta notifications
+**EJECUTAR EN TERMINAL:**
+
+```bash
+mkdir -p android/app/src/main/java/com/awesome/notifications
+```
+
+**NOTA:** Cambiar `com/awesome` por el package name de tu app
+
+
+---
+
+### FASE 2: MÓDULOS KOTLIN NATIVOS (6 archivos)
+
+#### Archivo 2.1: WordsDataStore.kt
+**UBICACIÓN:** `android/app/src/main/java/com/awesome/notifications/WordsDataStore.kt`
+**QUÉ HACE:** Almacena palabras y configuración en SharedPreferences
+**DATOS QUE GUARDA:**
+- Lista de palabras (word, meaning, category)
+- Categorías seleccionadas
+- Words per burst
+- Nickname
+
+**CREAR ARCHIVO:**
+
+```kotlin
+package com.awesome.notifications
+
+import android.content.Context
+import android.content.SharedPreferences
+import com.google.gson.Gson
+import com.google.gson.reflect.TypeToken
+
+data class WordData(
+    val id: String,
+    val word: String,
+    val meaning: String,
+    val category: String
+)
+
+class WordsDataStore(context: Context) {
+
+    private val prefs: SharedPreferences = context.getSharedPreferences(
+        "words_storage",
+        Context.MODE_PRIVATE
+    )
+    private val gson = Gson()
+
+    fun saveWords(words: List<WordData>) {
+        val json = gson.toJson(words)
+        prefs.edit().putString("all_words", json).apply()
+    }
+
+    fun getAllWords(): List<WordData> {
+        val json = prefs.getString("all_words", "[]") ?: "[]"
+        val type = object : TypeToken<List<WordData>>() {}.type
+        return gson.fromJson(json, type)
+    }
+
+    fun getWordsByCategories(categories: List<String>): List<WordData> {
+        return getAllWords().filter { word ->
+            categories.contains(word.category)
+        }
+    }
+
+    fun saveCategories(categories: List<String>) {
+        val json = gson.toJson(categories)
+        prefs.edit().putString("categories", json).apply()
+    }
+
+    fun saveWordsPerBurst(count: Int) {
+        prefs.edit().putInt("words_per_burst", count).apply()
+    }
+
+    fun saveNickname(nickname: String) {
+        prefs.edit().putString("nickname", nickname).apply()
+    }
+
+    fun getNickname(): String {
+        return prefs.getString("nickname", "Usuario") ?: "Usuario"
+    }
+
+    fun getWordsPerBurst(): Int {
+        return prefs.getInt("words_per_burst", 2)
+    }
+}
+```
+
+---
+
+#### Archivo 2.2: NotificationHelper.kt
+**UBICACIÓN:** `android/app/src/main/java/com/awesome/notifications/NotificationHelper.kt`
+**QUÉ HACE:** Crea las notificaciones visuales con palabra + significado
+**DATOS QUE USA:**
+- nickname (del wizard)
+- word + meaning (de la base de datos)
+- window (morning/afternoon/evening)
+
+**CREAR ARCHIVO:**
+
+```kotlin
+package com.awesome.notifications
+
+import android.app.NotificationChannel
+import android.app.NotificationManager
+import android.app.PendingIntent
+import android.content.Context
+import android.content.Intent
+import android.os.Build
+import androidx.core.app.NotificationCompat
+import com.awesome.MainActivity
+import com.awesome.R
+
+object NotificationHelper {
+
+    private const val CHANNEL_ID = "daily_study_channel"
+    private const val CHANNEL_NAME = "Estudio Diario"
+    private const val CHANNEL_DESCRIPTION = "Notificaciones para aprender palabras diarias"
+
+    fun createNotificationChannel(context: Context) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            val importance = NotificationManager.IMPORTANCE_HIGH
+            val channel = NotificationChannel(CHANNEL_ID, CHANNEL_NAME, importance).apply {
+                description = CHANNEL_DESCRIPTION
+                enableLights(true)
+                enableVibration(true)
+            }
+
+            val notificationManager = context.getSystemService(Context.NOTIFICATION_SERVICE)
+                as NotificationManager
+            notificationManager.createNotificationChannel(channel)
+        }
+    }
+
+    fun showNotification(
+        context: Context,
+        notificationId: Int,
+        window: String,
+        nickname: String,
+        word: String,
+        meaning: String,
+        allWords: List<WordData>
+    ) {
+        createNotificationChannel(context)
+
+        val intent = Intent(context, MainActivity::class.java).apply {
+            flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TOP
+            putExtra("notification_data", true)
+            putExtra("window", window)
+            putExtra("words_json", wordsToJson(allWords))
+        }
+
+        val pendingIntent = PendingIntent.getActivity(
+            context,
+            notificationId,
+            intent,
+            PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
+        )
+
+        // Título personalizado según ventana
+        val title = when (window) {
+            "morning" -> "¡Buenos días, $nickname! 🌅"
+            "afternoon" -> "¡Buenas tardes, $nickname! ☀️"
+            "evening" -> "¡Buenas noches, $nickname! 🌙"
+            else -> "¡Hola, $nickname! 👋"
+        }
+
+        // Cuerpo: palabra = significado
+        val body = "📚 $word = $meaning"
+
+        val notification = NotificationCompat.Builder(context, CHANNEL_ID)
+            .setSmallIcon(R.drawable.ic_notification)
+            .setContentTitle(title)
+            .setContentText(body)
+            .setPriority(NotificationCompat.PRIORITY_HIGH)
+            .setCategory(NotificationCompat.CATEGORY_REMINDER)
+            .setAutoCancel(true)
+            .setContentIntent(pendingIntent)
+            .setVisibility(NotificationCompat.VISIBILITY_PUBLIC)
+            .build()
+
+        val notificationManager = context.getSystemService(Context.NOTIFICATION_SERVICE)
+            as NotificationManager
+        notificationManager.notify(notificationId, notification)
+    }
+
+    private fun wordsToJson(words: List<WordData>): String {
+        return words.joinToString(separator = ",", prefix = "[", postfix = "]") { word ->
+            """{"id":"${word.id}","word":"${word.word}","meaning":"${word.meaning}","category":"${word.category}"}"""
+        }
+    }
+}
+```
+
+**NOTA:** Debes crear el ícono `ic_notification.xml` en `android/app/src/main/res/drawable/`
+
+---
+
+#### Archivo 2.3: NotificationScheduler.kt
+**UBICACIÓN:** `android/app/src/main/java/com/awesome/notifications/NotificationScheduler.kt`
+**QUÉ HACE:** Programa alarmas exactas con AlarmManager
+**DATOS QUE USA:**
+- active_windows (del wizard)
+- window_times (del wizard: "08:00", "14:00", "20:00")
+- categories (del wizard)
+- words_per_burst (calculado en wizard)
+- nickname (del wizard)
+
+**CREAR ARCHIVO:**
+
+```kotlin
+package com.awesome.notifications
+
+import android.app.AlarmManager
+import android.app.PendingIntent
+import android.content.Context
+import android.content.Intent
+import android.os.Build
+import android.util.Log
+import java.util.*
+
+class NotificationScheduler(private val context: Context) {
+
+    private val alarmManager = context.getSystemService(Context.ALARM_SERVICE) as AlarmManager
+    private val TAG = "NotificationScheduler"
+
+    fun scheduleExactAlarm(
+        notificationId: Int,
+        window: String,
+        hour: Int,
+        minute: Int,
+        categories: List<String>,
+        wordsPerBurst: Int,
+        nickname: String
+    ) {
+        val calendar = Calendar.getInstance().apply {
+            set(Calendar.HOUR_OF_DAY, hour)
+            set(Calendar.MINUTE, minute)
+            set(Calendar.SECOND, 0)
+            set(Calendar.MILLISECOND, 0)
+
+            // Si la hora ya pasó hoy, programar para mañana
+            if (timeInMillis <= System.currentTimeMillis()) {
+                add(Calendar.DAY_OF_YEAR, 1)
+            }
+        }
+
+        val intent = Intent(context, NotificationReceiver::class.java).apply {
+            action = "com.awesome.SHOW_NOTIFICATION"
+            putExtra("notification_id", notificationId)
+            putExtra("window", window)
+            putExtra("hour", hour)
+            putExtra("minute", minute)
+            putExtra("categories", categories.toTypedArray())
+            putExtra("words_per_burst", wordsPerBurst)
+            putExtra("nickname", nickname)
+        }
+
+        val pendingIntent = PendingIntent.getBroadcast(
+            context,
+            notificationId,
+            intent,
+            PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
+        )
+
+        // setExactAndAllowWhileIdle ignora Doze mode y optimización de batería
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            alarmManager.setExactAndAllowWhileIdle(
+                AlarmManager.RTC_WAKEUP,
+                calendar.timeInMillis,
+                pendingIntent
+            )
+        } else {
+            alarmManager.setExact(
+                AlarmManager.RTC_WAKEUP,
+                calendar.timeInMillis,
+                pendingIntent
+            )
+        }
+
+        Log.d(TAG, "Scheduled exact alarm for $window at $hour:$minute (ID: $notificationId)")
+    }
+
+    fun cancelAllNotifications() {
+        val windows = listOf("morning", "afternoon", "evening")
+
+        windows.forEach { window ->
+            val notificationId = window.hashCode()
+            val intent = Intent(context, NotificationReceiver::class.java)
+            val pendingIntent = PendingIntent.getBroadcast(
+                context,
+                notificationId,
+                intent,
+                PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
+            )
+            alarmManager.cancel(pendingIntent)
+            pendingIntent.cancel()
+            Log.d(TAG, "Cancelled alarm for $window (ID: $notificationId)")
+        }
+    }
+}
+```
+
+---
+
+#### Archivo 2.4: NotificationReceiver.kt
+**UBICACIÓN:** `android/app/src/main/java/com/awesome/notifications/NotificationReceiver.kt`
+**QUÉ HACE:** Recibe la alarma, selecciona palabras y muestra notificación
+**FLUJO:**
+1. Recibe alarma de AlarmManager
+2. Lee palabras de SharedPreferences filtradas por categories
+3. Selecciona N palabras aleatorias (words_per_burst)
+4. Muestra notificación con primera palabra
+5. Reprograma alarma para mañana
+
+**CREAR ARCHIVO:**
+
+```kotlin
+package com.awesome.notifications
+
+import android.app.AlarmManager
+import android.app.PendingIntent
+import android.content.BroadcastReceiver
+import android.content.Context
+import android.content.Intent
+import android.os.Build
+import android.util.Log
+import java.util.*
+
+class NotificationReceiver : BroadcastReceiver() {
+
+    private val TAG = "NotificationReceiver"
+
+    override fun onReceive(context: Context, intent: Intent) {
+        Log.d(TAG, "onReceive triggered: ${intent.action}")
+
+        when (intent.action) {
+            "com.awesome.SHOW_NOTIFICATION" -> {
+                handleShowNotification(context, intent)
+            }
+        }
+    }
+
+    private fun handleShowNotification(context: Context, intent: Intent) {
+        val notificationId = intent.getIntExtra("notification_id", 0)
+        val window = intent.getStringExtra("window") ?: "morning"
+        val hour = intent.getIntExtra("hour", 8)
+        val minute = intent.getIntExtra("minute", 0)
+        val categories = intent.getStringArrayExtra("categories")?.toList() ?: emptyList()
+        val wordsPerBurst = intent.getIntExtra("words_per_burst", 2)
+        val nickname = intent.getStringExtra("nickname") ?: "Usuario"
+
+        Log.d(TAG, "Showing notification for window: $window at $hour:$minute")
+
+        // Obtener palabras del almacenamiento local
+        val wordsStore = WordsDataStore(context)
+        val availableWords = wordsStore.getWordsByCategories(categories)
+
+        // Seleccionar palabras aleatorias
+        val selectedWords = availableWords
+            .shuffled()
+            .take(wordsPerBurst)
+
+        if (selectedWords.isEmpty()) {
+            Log.w(TAG, "No words available for categories: $categories")
+            NotificationHelper.showNotification(
+                context = context,
+                notificationId = notificationId,
+                window = window,
+                nickname = nickname,
+                word = "vocabulary",
+                meaning = "vocabulario",
+                allWords = emptyList()
+            )
+        } else {
+            val firstWord = selectedWords[0]
+            NotificationHelper.showNotification(
+                context = context,
+                notificationId = notificationId,
+                window = window,
+                nickname = nickname,
+                word = firstWord.word,
+                meaning = firstWord.meaning,
+                allWords = selectedWords
+            )
+        }
+
+        // RE-PROGRAMAR la alarma para mañana
+        reprogramAlarmForTomorrow(context, intent, notificationId, hour, minute)
+    }
+
+    private fun reprogramAlarmForTomorrow(
+        context: Context,
+        originalIntent: Intent,
+        notificationId: Int,
+        hour: Int,
+        minute: Int
+    ) {
+        val calendar = Calendar.getInstance().apply {
+            add(Calendar.DAY_OF_YEAR, 1)
+            set(Calendar.HOUR_OF_DAY, hour)
+            set(Calendar.MINUTE, minute)
+            set(Calendar.SECOND, 0)
+            set(Calendar.MILLISECOND, 0)
+        }
+
+        val newIntent = Intent(originalIntent)
+
+        val pendingIntent = PendingIntent.getBroadcast(
+            context,
+            notificationId,
+            newIntent,
+            PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
+        )
+
+        val alarmManager = context.getSystemService(Context.ALARM_SERVICE) as AlarmManager
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            alarmManager.setExactAndAllowWhileIdle(
+                AlarmManager.RTC_WAKEUP,
+                calendar.timeInMillis,
+                pendingIntent
+            )
+        } else {
+            alarmManager.setExact(
+                AlarmManager.RTC_WAKEUP,
+                calendar.timeInMillis,
+                pendingIntent
+            )
+        }
+
+        Log.d(TAG, "Rescheduled alarm for tomorrow at $hour:$minute")
+    }
+}
+```
+
+---
+
+#### Archivo 2.5: BootReceiver.kt
+**UBICACIÓN:** `android/app/src/main/java/com/awesome/notifications/BootReceiver.kt`
+**QUÉ HACE:** Reprograma alarmas cuando el dispositivo se reinicia
+**PENDIENTE:** Requiere leer configuración guardada y reprogramar
+
+**CREAR ARCHIVO:**
+
+```kotlin
+package com.awesome.notifications
+
+import android.content.BroadcastReceiver
+import android.content.Context
+import android.content.Intent
+import android.util.Log
+
+class BootReceiver : BroadcastReceiver() {
+
+    private val TAG = "BootReceiver"
+
+    override fun onReceive(context: Context, intent: Intent) {
+        if (intent.action == Intent.ACTION_BOOT_COMPLETED ||
+            intent.action == "android.intent.action.QUICKBOOT_POWERON") {
+
+            Log.d(TAG, "Device booted, rescheduling notifications")
+
+            // TODO: Leer configuración guardada y reprogramar alarmas
+            // Esto se implementará en una fase posterior
+        }
+    }
+}
+```
+
+---
+
+#### Archivo 2.6: NotificationModule.kt
+**UBICACIÓN:** `android/app/src/main/java/com/awesome/notifications/NotificationModule.kt`
+**QUÉ HACE:** Bridge entre React Native y Kotlin
+**MÉTODOS EXPUESTOS A JS:**
+- scheduleNotifications(settings)
+- cancelAllNotifications()
+- saveWords(words)
+- requestIgnoreBatteryOptimization()
+- checkExactAlarmPermission()
+- requestExactAlarmPermission()
+
+**DATOS QUE RECIBE DE REACT NATIVE:**
+```javascript
+settings = {
+  categories: ["technology", "business"],
+  active_windows: ["morning", "evening"],
+  window_times: { morning: "08:00", evening: "20:00" },
+  words_per_burst: 3,
+  nickname: "María"
+}
+```
+
+**CREAR ARCHIVO:**
+
+```kotlin
+package com.awesome.notifications
+
+import android.content.Intent
+import android.net.Uri
+import android.os.Build
+import android.provider.Settings
+import com.facebook.react.bridge.*
+
+class NotificationModule(reactContext: ReactApplicationContext) :
+    ReactContextBaseJavaModule(reactContext) {
+
+    private val scheduler = NotificationScheduler(reactContext)
+    private val wordsStore = WordsDataStore(reactContext)
+
+    override fun getName(): String = "NotificationModule"
+
+    @ReactMethod
+    fun scheduleNotifications(settings: ReadableMap, promise: Promise) {
+        try {
+            scheduler.cancelAllNotifications()
+
+            val categories = settings.getArray("categories")?.toArrayList() as? List<String>
+                ?: emptyList()
+            val activeWindows = settings.getArray("active_windows")?.toArrayList() as? List<String>
+                ?: emptyList()
+            val windowTimes = settings.getMap("window_times")
+            val wordsPerBurst = settings.getInt("words_per_burst")
+            val nickname = settings.getString("nickname") ?: "Usuario"
+
+            wordsStore.saveCategories(categories)
+            wordsStore.saveWordsPerBurst(wordsPerBurst)
+            wordsStore.saveNickname(nickname)
+
+            var scheduledCount = 0
+            activeWindows.forEach { window ->
+                val timeStr = windowTimes?.getString(window)
+                if (timeStr != null) {
+                    val (hour, minute) = timeStr.split(":").map { it.toInt() }
+                    val notificationId = window.hashCode()
+
+                    scheduler.scheduleExactAlarm(
+                        notificationId = notificationId,
+                        window = window,
+                        hour = hour,
+                        minute = minute,
+                        categories = categories,
+                        wordsPerBurst = wordsPerBurst,
+                        nickname = nickname
+                    )
+
+                    scheduledCount++
+                }
+            }
+
+            promise.resolve("Scheduled $scheduledCount notifications")
+        } catch (e: Exception) {
+            promise.reject("SCHEDULE_ERROR", e.message, e)
+        }
+    }
+
+    @ReactMethod
+    fun cancelAllNotifications(promise: Promise) {
+        try {
+            scheduler.cancelAllNotifications()
+            promise.resolve("All notifications cancelled")
+        } catch (e: Exception) {
+            promise.reject("CANCEL_ERROR", e.message, e)
+        }
+    }
+
+    @ReactMethod
+    fun requestIgnoreBatteryOptimization(promise: Promise) {
+        try {
+            val activity = currentActivity
+            if (activity == null) {
+                promise.reject("NO_ACTIVITY", "Activity not available")
+                return
+            }
+
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                val packageName = reactApplicationContext.packageName
+                val intent = Intent().apply {
+                    action = Settings.ACTION_REQUEST_IGNORE_BATTERY_OPTIMIZATIONS
+                    data = Uri.parse("package:$packageName")
+                }
+                activity.startActivity(intent)
+                promise.resolve("Battery optimization dialog opened")
+            } else {
+                promise.resolve("Not needed for this Android version")
+            }
+        } catch (e: Exception) {
+            promise.reject("BATTERY_OPT_ERROR", e.message, e)
+        }
+    }
+
+    @ReactMethod
+    fun checkExactAlarmPermission(promise: Promise) {
+        try {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+                val alarmManager = reactApplicationContext
+                    .getSystemService(android.content.Context.ALARM_SERVICE) as android.app.AlarmManager
+                val canSchedule = alarmManager.canScheduleExactAlarms()
+                promise.resolve(canSchedule)
+            } else {
+                promise.resolve(true)
+            }
+        } catch (e: Exception) {
+            promise.reject("PERMISSION_CHECK_ERROR", e.message, e)
+        }
+    }
+
+    @ReactMethod
+    fun requestExactAlarmPermission(promise: Promise) {
+        try {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+                val intent = Intent(Settings.ACTION_REQUEST_SCHEDULE_EXACT_ALARM)
+                intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
+                reactApplicationContext.startActivity(intent)
+                promise.resolve("Permission dialog opened")
+            } else {
+                promise.resolve("Not needed for this Android version")
+            }
+        } catch (e: Exception) {
+            promise.reject("PERMISSION_ERROR", e.message, e)
+        }
+    }
+
+    @ReactMethod
+    fun saveWords(wordsArray: ReadableArray, promise: Promise) {
+        try {
+            val words = mutableListOf<WordData>()
+            for (i in 0 until wordsArray.size()) {
+                val wordMap = wordsArray.getMap(i)
+                if (wordMap != null) {
+                    words.add(WordData(
+                        id = wordMap.getString("id") ?: "",
+                        word = wordMap.getString("word") ?: "",
+                        meaning = wordMap.getString("meaning") ?: "",
+                        category = wordMap.getString("category") ?: ""
+                    ))
+                }
+            }
+            wordsStore.saveWords(words)
+            promise.resolve("Saved ${words.size} words")
+        } catch (e: Exception) {
+            promise.reject("SAVE_WORDS_ERROR", e.message, e)
+        }
+    }
+}
+```
+
+---
+
+### FASE 3: REGISTRAR MÓDULO EN REACT NATIVE
+
+#### Archivo 3.1: MainApplication.kt
+**UBICACIÓN:** `android/app/src/main/java/com/awesome/MainApplication.kt`
+**QUÉ HACE:** Registra NotificationModule para que React Native lo reconozca
+**MODIFICAR:**
+
+```kotlin
+package com.awesome
+
+import android.app.Application
+import com.facebook.react.PackageList
+import com.facebook.react.ReactApplication
+import com.facebook.react.ReactHost
+import com.facebook.react.ReactNativeHost
+import com.facebook.react.ReactPackage
+import com.facebook.react.defaults.DefaultNewArchitectureEntryPoint.load
+import com.facebook.react.defaults.DefaultReactHost.getDefaultReactHost
+import com.facebook.react.defaults.DefaultReactNativeHost
+import com.facebook.soloader.SoLoader
+import com.awesome.notifications.NotificationModule      // AGREGAR
+import com.awesome.notifications.NotificationHelper     // AGREGAR
+import com.facebook.react.bridge.ReactApplicationContext // AGREGAR
+
+class MainApplication : Application(), ReactApplication {
+
+    override val reactNativeHost: ReactNativeHost =
+        object : DefaultReactNativeHost(this) {
+            override fun getPackages(): List<ReactPackage> =
+                PackageList(this).packages.apply {
+                    // AGREGAR el paquete de notificaciones
+                    add(object : ReactPackage {
+                        override fun createNativeModules(reactContext: ReactApplicationContext) =
+                            listOf(NotificationModule(reactContext))
+
+                        override fun createViewManagers(reactContext: ReactApplicationContext) =
+                            emptyList<com.facebook.react.uimanager.ViewManager<*, *>>()
+                    })
+                }
+
+            override fun getJSMainModuleName(): String = "index"
+            override fun getUseDeveloperSupport(): Boolean = BuildConfig.DEBUG
+            override val isNewArchEnabled: Boolean = BuildConfig.IS_NEW_ARCHITECTURE_ENABLED
+            override val isHermesEnabled: Boolean = BuildConfig.IS_HERMES_ENABLED
+        }
+
+    override val reactHost: ReactHost
+        get() = getDefaultReactHost(applicationContext, reactNativeHost)
+
+    override fun onCreate() {
+        super.onCreate()
+        SoLoader.init(this, false)
+        if (BuildConfig.IS_NEW_ARCHITECTURE_ENABLED) {
+            load()
+        }
+
+        // AGREGAR: Crear canal de notificaciones
+        NotificationHelper.createNotificationChannel(this)
+    }
+}
+```
+
+---
+
+### FASE 4: BRIDGE REACT NATIVE (TYPESCRIPT)
+
+#### Archivo 4.1: src/services/notificationService.ts
+**QUÉ HACE:** Tipado TypeScript del módulo nativo
+**CREAR ARCHIVO:**
+
+```typescript
+import { NativeModules } from 'react-native'
+
+interface NotificationModuleInterface {
+  scheduleNotifications(settings: {
+    categories: string[]
+    active_windows: string[]
+    window_times: {
+      morning?: string
+      afternoon?: string
+      evening?: string
+    }
+    words_per_burst: number
+    nickname: string
+  }): Promise<string>
+
+  cancelAllNotifications(): Promise<string>
+  requestIgnoreBatteryOptimization(): Promise<string>
+  checkExactAlarmPermission(): Promise<boolean>
+  requestExactAlarmPermission(): Promise<string>
+  saveWords(words: Array<{
+    id: string
+    word: string
+    meaning: string
+    category: string
+  }>): Promise<string>
+}
+
+const { NotificationModule } = NativeModules
+export default NotificationModule as NotificationModuleInterface
+```
+
+---
+
+#### Archivo 4.2: src/hooks/useNotifications.ts
+**QUÉ HACE:** Hook para programar notificaciones desde React Native
+**DATOS QUE LEE:** Todos los del wizard desde Redux
+**CREAR ARCHIVO:**
+
+```typescript
+import { useEffect } from 'react'
+import { useSelector } from 'react-redux'
+import { RootState } from '@/store/store'
+import NotificationModule from '@/services/notificationService'
+import { supabase } from '@/services/supebase'
+
+export function useNotifications() {
+  const settings = useSelector((state: RootState) => state.settings.data)
+  const wizardCompleted = settings.wizard_completed
+
+  useEffect(() => {
+    if (wizardCompleted) {
+      setupNotifications()
+    }
+  }, [wizardCompleted])
+
+  const setupNotifications = async () => {
+    try {
+      console.log('Setting up notifications with settings:', settings)
+
+      // 1. Verificar permisos de alarmas exactas (Android 12+)
+      const canSchedule = await NotificationModule.checkExactAlarmPermission()
+      if (!canSchedule) {
+        console.log('Requesting exact alarm permission...')
+        await NotificationModule.requestExactAlarmPermission()
+        return
+      }
+
+      // 2. Solicitar ignorar optimización de batería
+      await NotificationModule.requestIgnoreBatteryOptimization()
+
+      // 3. Obtener palabras de Supabase filtradas por categorías
+      const { data: words, error } = await supabase
+        .from('words')
+        .select('*')
+        .in('category', settings.categories || [])
+        .limit(100)
+
+      if (error) {
+        console.error('Error fetching words:', error)
+        return
+      }
+
+      // 4. Guardar palabras en almacenamiento nativo
+      if (words && words.length > 0) {
+        await NotificationModule.saveWords(words)
+        console.log(`Saved ${words.length} words to native storage`)
+      }
+
+      // 5. Programar notificaciones con configuración del wizard
+      const result = await NotificationModule.scheduleNotifications({
+        categories: settings.categories || [],
+        active_windows: settings.active_windows || ['morning'],
+        window_times: settings.window_times || { morning: '08:00' },
+        words_per_burst: settings.words_per_burst || 2,
+        nickname: settings.nickname || 'Usuario'
+      })
+
+      console.log('Notifications scheduled:', result)
+    } catch (error) {
+      console.error('Error setting up notifications:', error)
+    }
+  }
+
+  return {
+    setupNotifications
+  }
+}
+```
+
+---
+
+### FASE 5: INTEGRACIÓN CON WIZARD
+
+#### Archivo 5.1: Llamar setupNotifications al completar wizard
+**UBICACIÓN:** `src/viewmodels/useWizardViewModel.ts`
+**MODIFICAR la función `saveAndComplete`:**
+
+```typescript
+import { useNotifications } from '@/hooks/useNotifications'
+
+export const useWizardViewModel = () => {
+  // ... código existente
+
+  const { setupNotifications } = useNotifications()
+
+  const saveAndComplete = useCallback(async () => {
+    const currentUser = userRef.current
+    const currentData = dataRef.current
+
+    if (!currentUser) {
+      console.log('No user found')
+      return false
+    }
+
+    try {
+      dispatch(wizardSaveStart())
+
+      const settingsToSave = {
+        ...currentData,
+        user_id: currentUser.id,
+        wizard_completed: true
+      }
+
+      console.log('Saving settings:', JSON.stringify(settingsToSave, null, 2))
+
+      const result = await upsertSettings(settingsToSave as any)
+      console.log('Settings saved successfully:', result)
+
+      dispatch(completeWizard())
+      dispatch(wizardSaveSuccess(result))
+
+      // AGREGAR: Programar notificaciones
+      await setupNotifications()
+
+      navigation.dispatch(
+        CommonActions.reset({
+          index: 0,
+          routes: [{ name: 'Main' }],
+        })
+      )
+
+      return true
+    } catch (error) {
+      // ... manejo de errores existente
+    }
+  }, [dispatch, navigation, setupNotifications])
+
+  // ... resto del código
+}
+```
+
+---
+
+## 5. FLUJO DE DATOS COMPLETO
+## ===========================
+
+### Paso 1: Usuario completa el Wizard
+```
+StepNameMotivation → nickname: "María"
+StepCategories → categories: ["technology", "business"]
+StepWeeklyTarget → weekly_words_target: 30 → daily_words: 5
+StepBurstsAndTimes → bursts_per_day: 2, active_windows: ["morning", "evening"]
+                   → window_times: { morning: "08:00", evening: "20:00" }
+                   → words_per_burst: 3
+```
+
+### Paso 2: Datos se guardan en Redux
+```
+Redux Store (state.settings.data)
+├── nickname: "María"
+├── categories: ["technology", "business"]
+├── weekly_words_target: 30
+├── daily_words: 5
+├── bursts_per_day: 2
+├── active_windows: ["morning", "evening"]
+├── window_times: { morning: "08:00", evening: "20:00" }
+├── words_per_burst: 3
+└── wizard_completed: true
+```
+
+### Paso 3: Guardar en Supabase
+```
+upsertSettings(settings) → tabla user_settings
+```
+
+### Paso 4: useNotifications() se ejecuta automáticamente
+```typescript
+// Detecta wizard_completed === true
+useEffect(() => {
+  if (wizardCompleted) {
+    setupNotifications()
+  }
+}, [wizardCompleted])
+```
+
+### Paso 5: setupNotifications() ejecuta
+```
+1. Verificar permisos → checkExactAlarmPermission()
+2. Solicitar batería → requestIgnoreBatteryOptimization()
+3. Obtener palabras de Supabase filtradas por categories
+4. Guardar palabras en Kotlin → saveWords(words)
+5. Programar notificaciones → scheduleNotifications({
+     categories: ["technology", "business"],
+     active_windows: ["morning", "evening"],
+     window_times: { morning: "08:00", evening: "20:00" },
+     words_per_burst: 3,
+     nickname: "María"
+   })
+```
+
+### Paso 6: NotificationModule.kt recibe datos
+```kotlin
+scheduleNotifications(settings) {
+  // Cancelar notificaciones anteriores
+  // Para cada ventana activa:
+  //   - Programar alarma exacta con AlarmManager
+  //   - ID único por ventana
+  //   - Guardar configuración en SharedPreferences
+}
+```
+
+### Paso 7: AlarmManager programa alarmas
+```
+Alarma 1: ID = "morning".hashCode()
+  - Hora: 08:00 AM
+  - Datos: categories, words_per_burst, nickname
+
+Alarma 2: ID = "evening".hashCode()
+  - Hora: 20:00 PM (8:00 PM)
+  - Datos: categories, words_per_burst, nickname
+```
+
+### Paso 8: A las 08:00 AM, AlarmManager dispara NotificationReceiver
+```kotlin
+NotificationReceiver.onReceive() {
+  1. Lee palabras de SharedPreferences
+  2. Filtra por categories: ["technology", "business"]
+  3. Selecciona 3 palabras aleatorias (words_per_burst)
+  4. Toma la primera palabra: { word: "achievement", meaning: "logro" }
+  5. Muestra notificación:
+     Título: "¡Buenos días, María! 🌅"
+     Cuerpo: "📚 achievement = logro"
+  6. Reprograma alarma para mañana a las 08:00 AM
+}
+```
+
+### Paso 9: Usuario toca la notificación
+```
+Intent abre MainActivity con extras:
+- notification_data: true
+- window: "morning"
+- words_json: [{"word":"achievement","meaning":"logro"}, ...]
+
+React Native puede leer estos datos y navegar a pantalla de estudio
+```
+
+---
+
+## 6. RESUMEN DE IMPLEMENTACIÓN
+## =============================
+
+### Archivos a crear (total: 11)
+
+**Android Kotlin (6 archivos):**
+1. ✅ WordsDataStore.kt
+2. ✅ NotificationHelper.kt
+3. ✅ NotificationScheduler.kt
+4. ✅ NotificationReceiver.kt
+5. ✅ BootReceiver.kt
+6. ✅ NotificationModule.kt
+
+**Android modificar (3 archivos):**
+7. ✅ AndroidManifest.xml
+8. ✅ build.gradle
+9. ✅ MainApplication.kt
+
+**React Native TypeScript (2 archivos):**
+10. ✅ src/services/notificationService.ts
+11. ✅ src/hooks/useNotifications.ts
+
+**React Native modificar (1 archivo):**
+12. ✅ src/viewmodels/useWizardViewModel.ts
+
+### Características finales:
+- ✅ Notificaciones EXACTAS con AlarmManager
+- ✅ Funciona con app cerrada/muerta
+- ✅ Ignora optimización de batería y Doze mode
+- ✅ Muestra palabra + significado
+- ✅ Filtra por categorías del wizard
+- ✅ Usa nickname del wizard
+- ✅ Respeta horarios del wizard
+- ✅ Se reprograma automáticamente cada día
+- ✅ Persiste al reiniciar dispositivo
+
+### Datos del wizard utilizados:
+1. ✅ nickname → Título de notificación
+2. ✅ categories → Filtrar palabras
+3. ✅ active_windows → Cuántas notificaciones/día
+4. ✅ window_times → Horarios exactos
+5. ✅ words_per_burst → Cuántas palabras mostrar

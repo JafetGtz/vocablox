@@ -1,12 +1,13 @@
 import React, { useState, useEffect, useRef, } from 'react'
-import { View, Text, StyleSheet, TouchableOpacity, SafeAreaView, Animated, StatusBar, PanResponder, ScrollView, Pressable, ImageBackground } from 'react-native'
+import { View, Text, StyleSheet, TouchableOpacity, Animated, StatusBar, PanResponder, ScrollView, Pressable, ImageBackground } from 'react-native'
+import { SafeAreaView } from 'react-native-safe-area-context'
 import Icon from 'react-native-vector-icons/Feather'
 import Iconicos from 'react-native-vector-icons/Ionicons'
 
 import { useNavigation } from '@react-navigation/native'
 import { NativeStackNavigationProp } from '@react-navigation/native-stack'
 import { useAppSelector, useAppDispatch } from '@/store/hooks'
-import { selectEnabledUserWords } from '@/features/userWords/selectors'
+import { selectEnabledUserWords, selectUserWordsFrequency } from '@/features/userWords/selectors'
 import Speech from '@mhpdev/react-native-speech'
 import SaveWordModal from '@/components/SaveWordModal'
 import NotesModal from '@/components/NotesModal'
@@ -149,6 +150,7 @@ export default function HomeScreen() {
     return DEFAULT_BACKGROUNDS[1]?.value // fallback to azul
   }
   const userWords = useAppSelector(selectEnabledUserWords)
+  const userWordsFrequency = useAppSelector(selectUserWordsFrequency)
   const [currentWordIndex, setCurrentWordIndex] = useState(0)
   const [words, setWords] = useState<Word[]>([])
   const [progress, setProgress] = useState(0)
@@ -177,31 +179,28 @@ export default function HomeScreen() {
     if (!w) return [];
     const q: string[] = [];
     q.push(w.palabra);
-    q.push('Significado:');
     q.push(w.significado);
-    if (w.ejemplo) {
-      q.push('Ejemplo:');
-      q.push(w.ejemplo);
-    }
     return q;
   };
 
 
   const speakSequence = async () => {
-    console.log('speakSequence')
+    console.log('speakSequence called')
     if (!currentWord || isSpeaking) return;
+
+    setIsSpeaking(true);
+
     try {
-      setIsSpeaking(true);
-      await Speech.stop();                // corta cualquier lectura previa
+      await Speech.stop();
 
+      // Create the full text to speak with natural pause
+      const textToSpeak = `${currentWord.palabra}. ${currentWord.significado}`;
+      console.log('Speaking full text:', textToSpeak);
 
-      utterQueueRef.current = buildUtterQueue(currentWord);
+      await Speech.speak(textToSpeak);
 
-      while (utterQueueRef.current.length > 0) {
-        const next = utterQueueRef.current.shift()!;
-        await Speech.speak(next);
-        await delay(650);                 // PAUSA corta entre partes
-      }
+    } catch (error) {
+      console.error('Error in speakSequence:', error);
     } finally {
       setIsSpeaking(false);
     }
@@ -261,7 +260,7 @@ export default function HomeScreen() {
 
   useEffect(() => {
     loadWords()
-  }, [data.categories, userWords])
+  }, [data.categories, userWords, userWordsFrequency])
 
   useEffect(() => {
     loadCustomBackgrounds()
@@ -319,15 +318,43 @@ export default function HomeScreen() {
         }
       }
 
-      // Add user words if they exist and are enabled
-      if (userWords.length > 0) {
+      // Create word array with frequency-based insertion of user words
+      if (userWords.length > 0 && allWords.length > 0) {
+        const formattedUserWords: Word[] = userWords.map(userWord => ({
+          palabra: userWord.palabra,
+          significado: userWord.significado,
+          ejemplo: userWord.ejemplo
+        }))
+
+        // Calculate frequency interval based on user setting
+        // 1: Normal (every 10 words), 2: Alto (every 5 words), 3: Muy alto (every 2 words)
+        const frequencyInterval = userWordsFrequency === 1 ? 10 : userWordsFrequency === 2 ? 5 : 2
+
+        // Insert user words at specified intervals
+        const finalWords: Word[] = []
+        let userWordIndex = 0
+
+        for (let i = 0; i < allWords.length; i++) {
+          finalWords.push(allWords[i])
+
+          // Insert a user word at the specified interval
+          if ((i + 1) % frequencyInterval === 0 && formattedUserWords.length > 0) {
+            finalWords.push(formattedUserWords[userWordIndex % formattedUserWords.length])
+            userWordIndex++
+          }
+        }
+
+        allWords = finalWords
+        console.log(`Inserted user words every ${frequencyInterval} words. Total words: ${allWords.length}`)
+      } else if (userWords.length > 0) {
+        // If no category words, just add user words
         const formattedUserWords: Word[] = userWords.map(userWord => ({
           palabra: userWord.palabra,
           significado: userWord.significado,
           ejemplo: userWord.ejemplo
         }))
         allWords = [...allWords, ...formattedUserWords]
-        console.log(`Added ${userWords.length} user words`)
+        console.log(`Added ${userWords.length} user words (no category words available)`)
       }
 
       if (allWords.length === 0) {
@@ -405,7 +432,7 @@ export default function HomeScreen() {
         style={styles.container}
         resizeMode="cover"
       >
-        <SafeAreaView style={styles.overlay}>
+        <SafeAreaView style={styles.overlay} edges={['top', 'left', 'right']}>
           <Text style={styles.loadingText}>
             {words.length === 0 && data.categories?.length === 0
               ? 'No hay categorías seleccionadas. Completa tu configuración en el wizard.'
@@ -422,8 +449,8 @@ export default function HomeScreen() {
       style={styles.container}
       resizeMode="cover"
     >
-      <SafeAreaView style={styles.overlay}>
-        <StatusBar barStyle="dark-content" backgroundColor="transparent" translucent />
+      <StatusBar barStyle="dark-content" backgroundColor="transparent" translucent />
+      <SafeAreaView style={styles.overlay} edges={['top', 'left', 'right']}>
 
       {/* Header */}
       <View style={styles.header}>

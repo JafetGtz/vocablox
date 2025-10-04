@@ -4,6 +4,7 @@ import { useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { useAppDispatch, useAppSelector } from '@/store/hooks';
 import { AppStackParamList } from '@/navigation/AppStackNavigator';
+import { audioService } from '@/services/audioService';
 
 import {
   initGame,
@@ -43,6 +44,26 @@ export default function QuizScreen() {
   const [isAnswering, setIsAnswering] = useState(false);
   const [feedbackState, setFeedbackState] = useState<'none' | 'correct' | 'incorrect'>('none');
 
+  // Initialize game audio
+  const initializeGameAudio = useCallback(async () => {
+    try {
+      await audioService.initialize();
+      await audioService.loadGameTrack('quiz');
+      await audioService.play();
+    } catch (error) {
+      console.error('Failed to initialize quiz audio:', error);
+    }
+  }, []);
+
+  // Stop game audio
+  const stopGameAudio = useCallback(async () => {
+    try {
+      await audioService.stop();
+    } catch (error) {
+      console.error('Failed to stop quiz audio:', error);
+    }
+  }, []);
+
   // Initialize game on mount
   useEffect(() => {
     if (status === 'idle') {
@@ -54,6 +75,22 @@ export default function QuizScreen() {
       }));
     }
   }, [dispatch, status, userSettings]);
+
+  // Handle audio based on game status
+  useEffect(() => {
+    if (status === 'running') {
+      initializeGameAudio();
+    } else if (status === 'finished') {
+      stopGameAudio();
+    }
+
+    // Cleanup on unmount
+    return () => {
+      if (status === 'finished' || status === 'idle') {
+        stopGameAudio();
+      }
+    };
+  }, [status, initializeGameAudio, stopGameAudio]);
 
   // Handle countdown
   useCountdown({
@@ -97,9 +134,30 @@ export default function QuizScreen() {
   }, [dispatch, userSettings]);
 
   // Handle exit
-  const handleExit = useCallback(() => {
+  const handleExit = useCallback(async () => {
+    await stopGameAudio();
     navigation.goBack();
-  }, [navigation]);
+  }, [navigation, stopGameAudio]);
+
+  // Handle back button in header
+  const handleBackPress = useCallback(() => {
+    if (status === 'running') {
+      Alert.alert(
+        'Salir del Quiz',
+        '¿Estás seguro de que quieres salir? Se perderá el progreso actual.',
+        [
+          { text: 'Cancelar', style: 'cancel' },
+          {
+            text: 'Salir',
+            style: 'destructive',
+            onPress: handleExit
+          }
+        ]
+      );
+    } else {
+      handleExit();
+    }
+  }, [status, handleExit]);
 
   // Handle back button
   useEffect(() => {
@@ -110,7 +168,14 @@ export default function QuizScreen() {
           '¿Estás seguro de que quieres salir? Se perderá el progreso actual.',
           [
             { text: 'Cancelar', style: 'cancel' },
-            { text: 'Salir', style: 'destructive', onPress: () => navigation.goBack() }
+            {
+              text: 'Salir',
+              style: 'destructive',
+              onPress: async () => {
+                await stopGameAudio();
+                navigation.goBack();
+              }
+            }
           ]
         );
         return true;
@@ -120,7 +185,7 @@ export default function QuizScreen() {
 
     const backHandler = BackHandler.addEventListener('hardwareBackPress', backAction);
     return () => backHandler.remove();
-  }, [status, navigation]);
+  }, [status, navigation, stopGameAudio]);
 
   if (status === 'idle') {
     return <View style={styles.container} />;
@@ -133,6 +198,7 @@ export default function QuizScreen() {
         progress={progress}
         timeLeft={timeLeft}
         score={score}
+        onBackPress={handleBackPress}
       />
 
       <View style={styles.content}>

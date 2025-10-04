@@ -1,4 +1,5 @@
 import { FocusWordItem } from '../types';
+import { UserWord } from '../../userWords/userWordsSlice';
 
 interface WordData {
   palabra: string;
@@ -25,6 +26,7 @@ export type CategoryId = typeof AVAILABLE_CATEGORIES[number]['id'];
 class WordDataService {
   private categoryData: Record<string, FocusWordItem[]> = {};
   private allWords: FocusWordItem[] = [];
+  private userWords: FocusWordItem[] = [];
 
   constructor() {
     this.loadCategoryData();
@@ -46,6 +48,10 @@ class WordDataService {
   }
 
   getCategoryWords(categoryId: string): FocusWordItem[] {
+    // Special handling for user words category
+    if (categoryId === 'mis-palabras') {
+      return this.userWords;
+    }
     return this.categoryData[categoryId] || [];
   }
 
@@ -58,14 +64,28 @@ class WordDataService {
   }
 
   getAllWords(): FocusWordItem[] {
-    return this.allWords;
+    return [...this.allWords, ...this.userWords];
+  }
+
+  setUserWords(userWords: UserWord[]): void {
+    this.userWords = userWords.map(word => ({
+      id: `user_${word.id}`,
+      word: word.palabra,
+      meaning: word.significado,
+      category: 'Mis Palabras',
+    }));
+  }
+
+  getUserWords(): FocusWordItem[] {
+    return this.userWords;
   }
 
   searchWords(query: string): FocusWordItem[] {
     if (!query.trim()) return [];
 
     const lowerQuery = query.toLowerCase().trim();
-    return this.allWords.filter(word =>
+    const allWordsIncludingUser = this.getAllWords();
+    return allWordsIncludingUser.filter(word =>
       word.word.toLowerCase().includes(lowerQuery) ||
       word.meaning.toLowerCase().includes(lowerQuery)
     );
@@ -77,17 +97,28 @@ class WordDataService {
     const lowerQuery = query.toLowerCase().trim();
     const wordsInCategories = this.getMultipleCategoryWords(categoryIds);
 
-    return wordsInCategories.filter(word =>
+    // Include user words in search
+    const allSearchableWords = [...wordsInCategories, ...this.userWords];
+
+    return allSearchableWords.filter(word =>
       word.word.toLowerCase().includes(lowerQuery) ||
       word.meaning.toLowerCase().includes(lowerQuery)
     );
   }
 
   getWordsByIds(wordIds: string[]): FocusWordItem[] {
-    return this.allWords.filter(word => wordIds.includes(word.id));
+    const allWordsIncludingUser = this.getAllWords();
+    return allWordsIncludingUser.filter(word => wordIds.includes(word.id));
   }
 
   getCategoryStats(categoryId: string): { total: number; category: string } {
+    // Special handling for user words category
+    if (categoryId === 'mis-palabras') {
+      return {
+        total: this.userWords.length,
+        category: 'Mis Palabras',
+      };
+    }
     const category = AVAILABLE_CATEGORIES.find(cat => cat.id === categoryId);
     return {
       total: this.getCategoryWords(categoryId).length,

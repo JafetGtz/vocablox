@@ -116,6 +116,9 @@ dependencies {
     } else {
         implementation jscFlavor
     }
+
+    // Gson para serialización JSON de palabras
+    implementation 'com.google.code.gson:gson:2.10.1'
 }
 apply from: project(':react-native-config').projectDir.getPath() + "/dotenv.gradle"
 apply from: "../../node_modules/react-native-vector-icons/fonts.gradle"

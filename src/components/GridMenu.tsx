@@ -14,7 +14,6 @@ import {
 import Icon from 'react-native-vector-icons/Feather'
 import { useAppSelector } from '@/store/hooks'
 import { selectCollectionsWithCount, selectPersonalNotesCount } from '@/features/notes/models/selectors'
-import { selectUserWordsCount } from '@/features/userWords/selectors'
 import { useNavigation } from '@react-navigation/native'
 import type { NativeStackNavigationProp } from '@react-navigation/native-stack'
 import type { AppStackParamList } from '@/navigation/AppStackNavigator'
@@ -41,7 +40,6 @@ export default function GridMenu({ visible, onClose }: GridMenuProps) {
   const navigation = useNavigation<NavigationProp>()
   const collections = useAppSelector(selectCollectionsWithCount)
   const notesCount = useAppSelector(selectPersonalNotesCount)
-  const userWordsCount = useAppSelector(selectUserWordsCount)
   const fadeAnim = useRef(new Animated.Value(0)).current
   const scaleAnim = useRef(new Animated.Value(0.8)).current
 
@@ -109,10 +107,6 @@ export default function GridMenu({ visible, onClose }: GridMenuProps) {
     navigation.navigate('MemoScreen')
   }
 
-  const handleUserWordsPress = () => {
-    onClose()
-    navigation.navigate('UserWords')
-  }
 
   const handleFocusPress = () => {
     onClose()
@@ -120,14 +114,6 @@ export default function GridMenu({ visible, onClose }: GridMenuProps) {
   }
 
   const gridItems: GridMenuItem[] = [
-    {
-      id: 'userWords',
-      title: 'Mis Palabras',
-      subtitle: `${userWordsCount} palabras propias`,
-      icon: 'book-open',
-      color: '#34C759',
-      onPress: handleUserWordsPress,
-    },
     {
       id: 'collections',
       title: 'Colecciones',

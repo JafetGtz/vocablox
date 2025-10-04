@@ -1,31 +1,49 @@
 
 
-Cambios solicitados
 
-Registro de categorías
 
-Archivo: src/views/Wizard/steps/StepCategories.tsx
+Problemas detectados
 
-Ajustar la validación para que el usuario seleccione como mínimo 1 categoría (actualmente el mínimo es 3).
+Falta de botón de regreso
 
-Sección “Mis Palabras”
+Pantallas como QuizScreen y HangmanScreen no tienen botón de back.
 
-Actualmente se encuentra en el menú lateral del Home.
+Esto afecta la navegación del usuario.
 
-Debe moverse a la pantalla de Configuración y renombrarse a “Configuración de mis palabras”.
+StatusBar y header mal posicionados
 
-Al ingresar, se debe mostrar una opción para activar/desactivar si las palabras creadas por el usuario aparecen en el Home (esta lógica ya existe, solo hay que verificarla).
+El StatusBar no respeta el límite superior de la pantalla.
 
-Además, agregar un control de frecuencia de aparición con @react-native-community/slider, con tres niveles:
+Actualmente, el header se superpone sobre la cámara frontal y los íconos del sistema (WiFi, batería, hora, etc.), lo cual no debe ocurrir.
 
-Normal
+Color del StatusBar
 
-Alto
+El color del StatusBar no se adapta correctamente:
 
-Muy alto
+En el Home (index), donde hay imágenes dinámicas, el StatusBar debería aproximarse al color dominante de la imagen, pero siempre respetando el límite de la pantalla.
 
-La frecuencia seleccionada definirá qué tan seguido aparecerán las palabras creadas por el usuario en el Home (dentro de home/index).
+En otras pantallas, el StatusBar debería tomar el color principal de la vista.
 
-Importante: este algoritmo de frecuencia solo aplica a las palabras creadas por el usuario.
+Encimamiento de headers
 
-Las palabras que provienen de las categorías seleccionadas no se ven afectadas por esta configuración.
+Ejemplo claro en: src/views/collections/index.tsx.
+
+El header se corta y los botones no son visibles correctamente.
+
+Requisitos de corrección
+
+Botón de regreso obligatorio
+
+Todas las pantallas deben incluir un back button en su header, salvo que explícitamente se decida lo contrario (ej. Home principal).
+
+StatusBar seguro
+
+El StatusBar debe tomar el color de la pantalla (o imagen en Home), pero sin sobrepasar ni invadir el área del sistema.
+
+Usar react-native-safe-area-context o estilos con SafeAreaView para garantizar que el header quede debajo del StatusBar del sistema.
+
+Headers consistentes
+
+Ningún header debe “encimarse” sobre el área reservada al sistema.
+
+Los botones del header deben ser visibles y bien alineados en todas las pantallas.

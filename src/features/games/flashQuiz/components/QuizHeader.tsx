@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import Icon from 'react-native-vector-icons/Feather';
 
 interface QuizHeaderProps {
@@ -10,13 +10,15 @@ interface QuizHeaderProps {
   };
   timeLeft: number;
   score: number;
+  onBackPress?: () => void;
 }
 
 export default function QuizHeader({
   category,
   progress,
   timeLeft,
-  score
+  score,
+  onBackPress
 }: QuizHeaderProps) {
   const getTimeColor = () => {
     if (timeLeft <= 3) return '#dc3545';
@@ -31,6 +33,14 @@ export default function QuizHeader({
   return (
     <View style={styles.container}>
       <View style={styles.topRow}>
+        <TouchableOpacity
+          style={styles.backButton}
+          onPress={onBackPress}
+          activeOpacity={0.7}
+        >
+          <Icon name="arrow-left" size={20} color="#666" />
+        </TouchableOpacity>
+
         <View style={styles.categoryContainer}>
           {category && (
             <>
@@ -86,6 +96,13 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
     marginBottom: 12,
+  },
+  backButton: {
+    padding: 8,
+    borderRadius: 20,
+    backgroundColor: '#f8f9fa',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   categoryContainer: {
     flexDirection: 'row',

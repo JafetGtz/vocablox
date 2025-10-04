@@ -1,9 +1,8 @@
 import { useCallback } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
+import { useSelector } from 'react-redux'
 import { supabase } from '@/services/supebase'
 import { useLoginMutation } from '@/services/auth/useLoginMutation'
 import { useRegisterMutation } from '@/services/auth/useRegisterMutation'
-import { setUser } from '@/store/slices/authSlice'
 import { RootState } from '@/store/store'
 
 export const useAuth = () => {
@@ -13,17 +12,17 @@ export const useAuth = () => {
 }
 
 export const useAuthViewModel = () => {
-  const dispatch = useDispatch()
   const loginMutation = useLoginMutation()
   const registerMutation = useRegisterMutation()
 
   const handleLogin = useCallback(
     async (email: string, password: string) => {
-      const { data, error } = await loginMutation.mutateAsync({ email, password })
-      if (error) throw error
-      if (data.user) dispatch(setUser(data.user))
+      const data = await loginMutation.mutateAsync({ email, password })
+      // No need to manually set user here - AuthListener will handle it automatically
+      // when the auth state changes
+      console.log('Login successful, AuthListener will handle user state')
     },
-    [dispatch, loginMutation]
+    [loginMutation]
   )
 
   const handleGoogle = useCallback(async () => {
@@ -44,14 +43,12 @@ export const useAuthViewModel = () => {
         password,
         fullName,
       })
-     
-      if (registerData.user) {
-        dispatch(setUser(registerData.user))
-      } else {
-        console.warn('Registro completado: revisa tu correo para confirmar la cuenta')
-      }
+
+      // AuthListener will handle user state automatically
+      // Registration might require email confirmation
+      console.log('Registration completed, check email if confirmation required')
     },
-    [dispatch, registerMutation]
+    [registerMutation]
   )
 
 

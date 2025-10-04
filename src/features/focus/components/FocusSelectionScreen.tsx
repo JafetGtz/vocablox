@@ -1,4 +1,4 @@
-import React, { useState, memo } from 'react';
+import React, { useState, memo, useEffect } from 'react';
 import {
   View,
   Text,
@@ -11,7 +11,7 @@ import { useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { AppStackParamList } from '../../../navigation/AppStackNavigator';
 import { RootState } from '../../../store/store';
-import { mapWizardCategoriesToFocus } from '../services/wordDataService';
+import { mapWizardCategoriesToFocus, wordDataService } from '../services/wordDataService';
 import CategorySelector from './CategorySelector';
 import ManualWordSelector from './ManualWordSelector';
 
@@ -21,8 +21,21 @@ const FocusSelectionScreen: React.FC = memo(() => {
   const navigation = useNavigation<NavigationProp>();
   const settings = useSelector((state: RootState) => state.settings.data);
 
+  // Get user words from Redux store
+  const userWords = useSelector((state: RootState) => state.userWords.words);
+  const userWordsEnabled = useSelector((state: RootState) => state.userWords.isEnabled);
+
   // Selection mode
   const [selectionMode, setSelectionMode] = useState<'category' | 'manual'>('category');
+
+  // Update wordDataService with user words when component mounts or words change
+  useEffect(() => {
+    if (userWordsEnabled) {
+      wordDataService.setUserWords(userWords);
+    } else {
+      wordDataService.setUserWords([]);
+    }
+  }, [userWords, userWordsEnabled]);
 
   // Category selection
   const [selectedCategories, setSelectedCategories] = useState<string[]>([]);

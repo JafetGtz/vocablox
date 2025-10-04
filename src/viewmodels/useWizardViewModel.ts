@@ -21,6 +21,8 @@ import {
 } from '@/store/slices/settingsSlice'
 import { upsertSettings } from '@/services/auth/settingsServices'
 import { useAuth } from './useAuthViewModel'
+import NotificationModule from '@/services/notificationService'
+import { supabase } from '@/services/supebase'
 
 export const useWizardViewModel = () => {
   const dispatch = useDispatch()
@@ -124,42 +126,83 @@ export const useWizardViewModel = () => {
   const saveAndComplete = useCallback(async () => {
     const currentUser = userRef.current
     const currentData = dataRef.current
-    
+
     if (!currentUser) {
       console.log('No user found')
       return false
     }
-    
+
     try {
       dispatch(wizardSaveStart())
-      
+
       const settingsToSave = {
         ...currentData,
         user_id: currentUser.id,
         wizard_completed: true
       }
-      
+
       console.log('Saving settings:', JSON.stringify(settingsToSave, null, 2))
-      
+
       const result = await upsertSettings(settingsToSave as any)
       console.log('Settings saved successfully:', result)
-      
+
       dispatch(completeWizard())
       dispatch(wizardSaveSuccess(result))
-      
+
+      // Programar notificaciones después de completar wizard
+      try {
+        console.log('Setting up notifications...')
+
+        // Verificar permisos
+        const canSchedule = await NotificationModule.checkExactAlarmPermission()
+        if (!canSchedule) {
+          console.log('Requesting exact alarm permission...')
+          await NotificationModule.requestExactAlarmPermission()
+        }
+
+        // Solicitar ignorar optimización de batería
+        await NotificationModule.requestIgnoreBatteryOptimization()
+
+        // Obtener palabras de Supabase
+        const { data: words, error: wordsError } = await supabase
+          .from('words')
+          .select('*')
+          .in('category', result.categories || [])
+          .limit(100)
+
+        if (!wordsError && words && words.length > 0) {
+          await NotificationModule.saveWords(words)
+          console.log(`Saved ${words.length} words to native storage`)
+        }
+
+        // Programar notificaciones
+        const notifResult = await NotificationModule.scheduleNotifications({
+          categories: result.categories || [],
+          active_windows: result.active_windows || ['morning'],
+          window_times: result.window_times || { morning: '08:00' },
+          words_per_burst: result.words_per_burst || 2,
+          nickname: result.nickname || 'Usuario'
+        })
+
+        console.log('Notifications scheduled:', notifResult)
+      } catch (notifError) {
+        console.error('Error setting up notifications:', notifError)
+        // No bloqueamos el flujo si fallan las notificaciones
+      }
+
       navigation.dispatch(
         CommonActions.reset({
           index: 0,
           routes: [{ name: 'Main' }],
         })
       )
-      
+
       return true
     } catch (error) {
       console.error('Error in saveAndComplete:', error)
       console.error('Error type:', typeof error)
       console.error('Error details:', JSON.stringify(error, null, 2))
-      
+
       let errorMessage = 'Error saving settings'
       if (error instanceof Error) {
         errorMessage = error.message
@@ -168,7 +211,7 @@ export const useWizardViewModel = () => {
       } else if (error && typeof error === 'object' && 'message' in error) {
         errorMessage = String(error.message)
       }
-      
+
       dispatch(wizardSaveFailure(errorMessage))
       return false
     }

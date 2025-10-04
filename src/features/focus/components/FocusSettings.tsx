@@ -31,7 +31,7 @@ const FocusSettings: React.FC<FocusSettingsProps> = memo(({
     { id: 'none', name: 'Sin animación', icon: '🚫', description: 'Fondo estático' },
   ];
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container}>
       <Text style={styles.sectionTitle}>Configuración de la Sesión</Text>
 
       {/* Word Order Setting */}
@@ -138,28 +138,8 @@ const FocusSettings: React.FC<FocusSettingsProps> = memo(({
       )}
 
       {/* Session Info */}
-      <View style={styles.infoContainer}>
-        <Text style={styles.infoTitle}>Información de la Sesión</Text>
-        <View style={styles.infoGrid}>
-          <View style={styles.infoItem}>
-            <Text style={styles.infoLabel}>Countdown</Text>
-            <Text style={styles.infoValue}>5 segundos</Text>
-          </View>
-          <View style={styles.infoItem}>
-            <Text style={styles.infoLabel}>Por palabra</Text>
-            <Text style={styles.infoValue}>10 segundos</Text>
-          </View>
-          <View style={styles.infoItem}>
-            <Text style={styles.infoLabel}>Música</Text>
-            <Text style={styles.infoValue}>Ambiente</Text>
-          </View>
-          <View style={styles.infoItem}>
-            <Text style={styles.infoLabel}>Pausable</Text>
-            <Text style={styles.infoValue}>Sí</Text>
-          </View>
-        </View>
-      </View>
-    </View>
+     
+    </ScrollView>
   );
 });
 

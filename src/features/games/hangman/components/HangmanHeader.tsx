@@ -1,5 +1,6 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import Icon from 'react-native-vector-icons/Feather';
 
 interface HangmanHeaderProps {
   category: string;
@@ -7,20 +8,23 @@ interface HangmanHeaderProps {
   maxLives: number;
   wrongLettersCount: number;
   timeLeft?: number;
+  onBackPress?: () => void;
 }
 
-export default function HangmanHeader({ category, livesLeft, maxLives, wrongLettersCount, timeLeft }: HangmanHeaderProps) {
+export default function HangmanHeader({ category, livesLeft, maxLives, wrongLettersCount, timeLeft, onBackPress }: HangmanHeaderProps) {
   const renderHearts = () => {
     const hearts = [];
     for (let i = 0; i < maxLives; i++) {
       hearts.push(
-        <View
+        <Text
           key={i}
           style={[
-            styles.heart,
+            styles.heartEmoji,
             i < livesLeft ? styles.heartFilled : styles.heartEmpty
           ]}
-        />
+        >
+          ❤️
+        </Text>
       );
     }
     return hearts;
@@ -34,6 +38,14 @@ export default function HangmanHeader({ category, livesLeft, maxLives, wrongLett
 
   return (
     <View style={styles.container}>
+      <TouchableOpacity
+        style={styles.backButton}
+        onPress={onBackPress}
+        activeOpacity={0.7}
+      >
+        <Icon name="arrow-left" size={20} color="#333" />
+      </TouchableOpacity>
+
       <View style={styles.categoryContainer}>
         <Text style={styles.categoryText}>{category}</Text>
         <Text style={styles.progressText}>
@@ -64,7 +76,16 @@ const styles = StyleSheet.create({
     backgroundColor: 'rgba(255, 255, 255, 0.3)',
     borderRadius: 15,
     marginHorizontal: 20,
+    marginTop: 10,
     marginBottom: 20,
+  },
+  backButton: {
+    padding: 8,
+    borderRadius: 20,
+    backgroundColor: 'rgba(255, 255, 255, 0.6)',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginRight: 12,
   },
   categoryContainer: {
     flex: 1,
@@ -83,21 +104,17 @@ const styles = StyleSheet.create({
   livesContainer: {
     flexDirection: 'row',
     alignItems: 'center',
-    gap: 4,
+    justifyContent: 'center',
   },
-  heart: {
-    width: 20,
-    height: 18,
-    borderRadius: 10,
-    borderTopLeftRadius: 10,
-    borderTopRightRadius: 10,
-    transform: [{ rotate: '45deg' }],
+  heartEmoji: {
+    fontSize: 20,
+    marginHorizontal: 2,
   },
   heartFilled: {
-    backgroundColor: '#FF6B6B',
+    opacity: 1,
   },
   heartEmpty: {
-    backgroundColor: '#E0E0E0',
+    opacity: 0.3,
   },
   timerContainer: {
     backgroundColor: 'rgba(255, 255, 255, 0.6)',

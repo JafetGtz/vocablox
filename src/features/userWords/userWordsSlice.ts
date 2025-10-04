@@ -12,6 +12,7 @@ export interface UserWord {
 export interface UserWordsState {
   words: UserWord[]
   isEnabled: boolean
+  frequency: number // 1: Normal, 2: Alto, 3: Muy alto
   loading: boolean
   error: string | null
 }
@@ -32,6 +33,7 @@ export interface UpdateUserWordPayload {
 const initialState: UserWordsState = {
   words: [],
   isEnabled: true,
+  frequency: 1, // Normal por defecto
   loading: false,
   error: null,
 }
@@ -80,6 +82,10 @@ const userWordsSlice = createSlice({
       state.isEnabled = action.payload
     },
 
+    setUserWordsFrequency: (state, action: PayloadAction<number>) => {
+      state.frequency = action.payload
+    },
+
     setLoading: (state, action: PayloadAction<boolean>) => {
       state.loading = action.payload
     },
@@ -100,6 +106,7 @@ export const {
   deleteUserWord,
   toggleUserWordsEnabled,
   setUserWordsEnabled,
+  setUserWordsFrequency,
   setLoading,
   setError,
   clearError,

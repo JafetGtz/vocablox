@@ -13,9 +13,7 @@ import {
   Switch
 } from 'react-native'
 import Icon from 'react-native-vector-icons/Feather'
-import { useAppSelector, useAppDispatch } from '@/store/hooks'
-import { selectUserWordsEnabled, selectUserWordsCount } from '@/features/userWords/selectors'
-import { toggleUserWordsEnabled } from '@/features/userWords/userWordsSlice'
+import { useAppDispatch } from '@/store/hooks'
 import { useNavigation } from '@react-navigation/native'
 import { NativeStackNavigationProp } from '@react-navigation/native-stack'
 import { AppStackParamList } from '@/navigation/AppStackNavigator'
@@ -43,8 +41,6 @@ interface MenuOption {
 export default function ProfileSidebar({ visible, onClose }: ProfileSidebarProps) {
   const dispatch = useAppDispatch()
   const navigation = useNavigation<ProfileSidebarNavigationProp>()
-  const userWordsEnabled = useAppSelector(selectUserWordsEnabled)
-  const userWordsCount = useAppSelector(selectUserWordsCount)
   const slideAnim = useRef(new Animated.Value(-SCREEN_WIDTH * 0.8)).current
   const fadeAnim = useRef(new Animated.Value(0)).current
 
@@ -86,22 +82,8 @@ export default function ProfileSidebar({ visible, onClose }: ProfileSidebarProps
     ]).start()
   }
 
-  const handleUserWordsToggle = (value: boolean) => {
-    dispatch(toggleUserWordsEnabled())
-  }
 
   const menuOptions: MenuOption[] = [
-    {
-      id: 'userWords',
-      title: 'Mis Palabras en Home',
-      subtitle: userWordsCount > 0
-        ? `${userWordsCount} palabras ${userWordsEnabled ? 'habilitadas' : 'deshabilitadas'}`
-        : 'No tienes palabras personales',
-      icon: 'book-open',
-      type: 'toggle',
-      value: userWordsEnabled,
-      onToggle: handleUserWordsToggle,
-    },
     {
       id: 'settings',
       title: 'Configuración',
@@ -143,7 +125,7 @@ export default function ProfileSidebar({ visible, onClose }: ProfileSidebarProps
             trackColor={{ false: '#E0E0E0', true: 'rgba(155, 89, 182, 0.3)' }}
             thumbColor={option.value ? '#9B59B6' : '#FFF'}
             ios_backgroundColor="#E0E0E0"
-            disabled={userWordsCount === 0}
+            disabled={false}
             style={styles.toggle}
           />
         ) : (

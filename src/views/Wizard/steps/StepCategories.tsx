@@ -12,19 +12,19 @@ const StepCategories: React.FC = () => {
     actions.toggleCategorySelection(categoryId)
   }
 
-  const isValid = selectedCategories.length >= 3
+  const isValid = selectedCategories.length >= 1
 
   return (
     <View style={styles.container}>
       <View style={styles.header}>
         <Text style={styles.title}>Elige tus categorías de interés</Text>
         <Text style={styles.subtitle}>
-          Selecciona al menos 3 categorías para personalizar tu vocabulario
+          Selecciona al menos 1 categoría para personalizar tu vocabulario
         </Text>
         <Text style={styles.counter}>
           {selectedCategories.length}/10 seleccionadas
-          {selectedCategories.length < 3 && (
-            <Text style={styles.minRequired}> (mínimo 3)</Text>
+          {selectedCategories.length < 1 && (
+            <Text style={styles.minRequired}> (mínimo 1)</Text>
           )}
         </Text>
       </View>

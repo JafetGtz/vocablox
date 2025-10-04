@@ -56,8 +56,8 @@ const focusSlice = createSlice({
       if (state.currentIndex < state.queue.length - 1) {
         state.currentIndex += 1;
       } else {
-        state.status = 'finished';
-        state.finishedAt = new Date().toISOString();
+        // Restart from beginning for continuous loop
+        state.currentIndex = 0;
       }
     },
 

@@ -6,6 +6,7 @@ export const selectUserWordsState = (state: RootState) => state.userWords
 
 export const selectUserWords = (state: RootState) => state.userWords.words
 export const selectUserWordsEnabled = (state: RootState) => state.userWords.isEnabled
+export const selectUserWordsFrequency = (state: RootState) => state.userWords.frequency
 export const selectUserWordsLoading = (state: RootState) => state.userWords.loading
 export const selectUserWordsError = (state: RootState) => state.userWords.error
 

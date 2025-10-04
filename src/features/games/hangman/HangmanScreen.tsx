@@ -1,9 +1,11 @@
-import React, { useEffect } from 'react';
-import { View, StyleSheet, SafeAreaView, StatusBar } from 'react-native';
+import React, { useEffect, useState, useCallback } from 'react';
+import { View, StyleSheet, StatusBar } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import { useAppDispatch, useAppSelector } from '../../../store/hooks';
-import { useNavigation } from '@react-navigation/native';
+import { useNavigation, useFocusEffect } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { AppStackParamList } from '../../../navigation/AppStackNavigator';
+import { audioService } from '@/services/audioService';
 
 import {
   initGame,
@@ -46,6 +48,28 @@ export default function HangmanScreen() {
   const availableHints = useAppSelector(selectAvailableHints);
   const gameStats = useAppSelector(selectGameStats);
 
+  // Initialize game audio
+  const initializeGameAudio = useCallback(async () => {
+    try {
+      await audioService.initialize();
+      await audioService.loadGameTrack('hangman');
+      await audioService.play();
+    } catch (error) {
+      console.error('Failed to initialize hangman audio:', error);
+    }
+  }, []);
+
+  // Stop game audio
+  const stopGameAudio = useCallback(async () => {
+    try {
+      console.log('HangmanScreen: Stopping audio...');
+      await audioService.forceStop();
+      console.log('HangmanScreen: Audio force stopped successfully');
+    } catch (error) {
+      console.error('Failed to stop hangman audio:', error);
+    }
+  }, []);
+
   useEffect(() => {
     if (hangman.status === 'idle') {
       const categories = settings.categories || [];
@@ -60,6 +84,37 @@ export default function HangmanScreen() {
       dispatch(calculateFinalScore());
     }
   }, [dispatch, won, lost, hangman.status]);
+
+  // Handle audio based on game status
+  useEffect(() => {
+    if (hangman.status === 'running') {
+      initializeGameAudio();
+    } else if (hangman.status === 'finished') {
+      stopGameAudio();
+    }
+  }, [hangman.status, initializeGameAudio, stopGameAudio]);
+
+  // Cleanup audio on component unmount
+  useEffect(() => {
+    return () => {
+      console.log('HangmanScreen: Component unmounting, force stopping audio');
+      // Don't wait for the callback, call audioService directly
+      audioService.forceStop().catch(console.error);
+    };
+  }, []);
+
+  // Ensure audio stops when screen loses focus (navigation away)
+  useFocusEffect(
+    useCallback(() => {
+      console.log('HangmanScreen: Screen focused');
+
+      // When screen loses focus, stop audio immediately
+      return () => {
+        console.log('HangmanScreen: Screen losing focus, force stopping audio...');
+        audioService.forceStop().catch(console.error);
+      };
+    }, [])
+  );
 
   const handleLetterPress = (letter: string) => {
     if (hangman.status === 'running') {
@@ -79,16 +134,28 @@ export default function HangmanScreen() {
     dispatch(useHintReveal());
   };
 
-  const handlePlayAgain = () => {
+  const handlePlayAgain = async () => {
+    console.log('HangmanScreen: handlePlayAgain called');
+    await stopGameAudio();
     const categories = settings.categories || [];
     dispatch(resetGame());
     dispatch(initGame({ categories, difficulty: 'medium' }));
   };
 
-  const handleGoHome = () => {
+  const handleGoHome = async () => {
+    console.log('HangmanScreen: handleGoHome called');
+    await stopGameAudio();
     dispatch(resetGame());
     navigation.navigate('Home');
   };
+
+  // Handle back button in header
+  const handleBackPress = useCallback(async () => {
+    console.log('HangmanScreen: handleBackPress called');
+    await stopGameAudio();
+    dispatch(resetGame());
+    navigation.goBack();
+  }, [stopGameAudio, dispatch, navigation]);
 
   const handleReviewWord = () => {
     // Llevar a detalle/notas de la palabra
@@ -98,14 +165,14 @@ export default function HangmanScreen() {
 
   if (!hangman.word) {
     return (
-      <SafeAreaView style={styles.container}>
+      <SafeAreaView style={styles.container} edges={['top', 'left', 'right']}>
         <StatusBar barStyle="dark-content" backgroundColor="#F5F5DC" />
       </SafeAreaView>
     );
   }
 
   return (
-    <SafeAreaView style={styles.container}>
+    <SafeAreaView style={styles.container} edges={['top', 'left', 'right']}>
       <StatusBar barStyle="dark-content" backgroundColor="#F5F5DC" />
 
       <HangmanHeader
@@ -114,6 +181,7 @@ export default function HangmanScreen() {
         maxLives={hangman.maxLives}
         wrongLettersCount={hangman.wrongLetters.length}
         timeLeft={hangman.secondsLeft}
+        onBackPress={handleBackPress}
       />
 
       <View style={styles.gameArea}>

@@ -4,9 +4,9 @@ import {
   Text,
   StyleSheet,
   TouchableOpacity,
-  SafeAreaView,
   ScrollView,
 } from 'react-native'
+import { SafeAreaView } from 'react-native-safe-area-context'
 import Icon from 'react-native-vector-icons/Feather'
 import { useNavigation } from '@react-navigation/native'
 import { NativeStackNavigationProp } from '@react-navigation/native-stack'
@@ -30,6 +30,13 @@ export default function SettingsScreen() {
   const [showTextCustomizationModal, setShowTextCustomizationModal] = useState(false)
 
   const settingsOptions: SettingOption[] = [
+    {
+      id: 'userWordsConfig',
+      title: 'Configuración de mis palabras',
+      subtitle: 'Controla la aparición y frecuencia de tus palabras personales',
+      icon: 'book-open',
+      onPress: () => navigation.navigate('UserWordsSettings'),
+    },
     {
       id: 'changeBackground',
       title: 'Cambiar fondo',
@@ -70,18 +77,7 @@ export default function SettingsScreen() {
   )
 
   return (
-    <SafeAreaView style={styles.container}>
-      <View style={styles.header}>
-        <TouchableOpacity
-          style={styles.backButton}
-          onPress={() => navigation.goBack()}
-        >
-          <Icon name="arrow-left" size={24} color="#333" />
-        </TouchableOpacity>
-        <Text style={styles.headerTitle}>Ajustes Generales</Text>
-        <View style={styles.headerSpacer} />
-      </View>
-
+    <SafeAreaView style={styles.container} edges={['left', 'right']}>
       <ScrollView style={styles.content} showsVerticalScrollIndicator={false}>
         <View style={styles.section}>
           <Text style={styles.sectionTitle}>Personalización</Text>
@@ -105,7 +101,7 @@ export default function SettingsScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#F8F9FA',
+    backgroundColor: '#F5F5DC',
   },
   header: {
     flexDirection: 'row',

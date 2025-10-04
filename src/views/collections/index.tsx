@@ -4,12 +4,12 @@ import {
   Text,
   StyleSheet,
   TouchableOpacity,
-  SafeAreaView,
   StatusBar,
   FlatList,
   Animated,
   Dimensions
 } from 'react-native'
+import { SafeAreaView } from 'react-native-safe-area-context'
 import Icon from 'react-native-vector-icons/Feather'
 import { useAppSelector } from '@/store/hooks'
 import { selectCollectionsWithCount } from '@/features/notes/models/selectors'
@@ -117,9 +117,6 @@ export default function CollectionsScreen() {
   const navigation = useNavigation<NavigationProp>()
   const collections = useAppSelector(selectCollectionsWithCount)
 
-  const handleBackPress = () => {
-    navigation.goBack()
-  }
 
   const handleCollectionPress = (collectionId: string, collectionName: string) => {
     navigation.navigate('CollectionDetail', {
@@ -137,16 +134,12 @@ export default function CollectionsScreen() {
   )
 
   return (
-    <SafeAreaView style={styles.container}>
+    <SafeAreaView style={styles.container} edges={['top', 'left', 'right']}>
       <StatusBar barStyle="dark-content" backgroundColor="#F5F5DC" />
 
-      {/* Header */}
-      <View style={styles.header}>
-        <TouchableOpacity onPress={handleBackPress} style={styles.backButton}>
-          <Icon name="arrow-left" size={24} color="#333" />
-        </TouchableOpacity>
-        <Text style={styles.headerTitle}>Mis Colecciones</Text>
-        <View style={styles.headerRight}>
+      {/* Header with just the add button */}
+      <View style={styles.topBar}>
+        <View style={styles.topBarRight}>
           <TouchableOpacity style={styles.addButton}>
             <Icon name="plus" size={24} color="#4ECDC4" />
           </TouchableOpacity>
@@ -185,37 +178,13 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#F5F5DC',
   },
-  header: {
+  topBar: {
     flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
+    justifyContent: 'flex-end',
     paddingHorizontal: 20,
-    paddingTop: 20,
-    paddingBottom: 24,
+    paddingBottom: 16,
   },
-  backButton: {
-    padding: 8,
-    backgroundColor: 'rgba(255, 255, 255, 0.8)',
-    borderRadius: 20,
-    elevation: 2,
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: 1,
-    },
-    shadowOpacity: 0.2,
-    shadowRadius: 2,
-  },
-  headerTitle: {
-    fontSize: 24,
-    fontWeight: '700',
-    color: '#333',
-    flex: 1,
-    textAlign: 'center',
-    marginHorizontal: 16,
-  },
-  headerRight: {
-    width: 40,
+  topBarRight: {
     alignItems: 'center',
   },
   addButton: {

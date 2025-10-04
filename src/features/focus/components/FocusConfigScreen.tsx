@@ -1,4 +1,4 @@
-import React, { useState, memo } from 'react';
+import React, { useState, memo, useEffect } from 'react';
 import {
   View,
   Text,
@@ -7,11 +7,11 @@ import {
   SafeAreaView,
   Alert,
 } from 'react-native';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { useNavigation, useRoute } from '@react-navigation/native';
 import { NativeStackNavigationProp, NativeStackScreenProps } from '@react-navigation/native-stack';
 import { AppStackParamList } from '../../../navigation/AppStackNavigator';
-import { AppDispatch } from '../../../store/store';
+import { AppDispatch, RootState } from '../../../store/store';
 import { initSession, setQueue, updateSettings } from '../focusSlice';
 import { startCountdownWithAudio } from '../audioActions';
 import { wordDataService } from '../services/wordDataService';
@@ -35,9 +35,22 @@ const FocusConfigScreen: React.FC = memo(() => {
 
   const { selection } = route.params;
 
+  // Get user words from Redux store
+  const userWords = useSelector((state: RootState) => state.userWords.words);
+  const userWordsEnabled = useSelector((state: RootState) => state.userWords.isEnabled);
+
   // Focus settings
   const [focusOrder, setFocusOrder] = useState<'random' | 'fixed'>('random');
   const [bgAnimation, setBgAnimation] = useState<BgAnimationType>('particles');
+
+  // Update wordDataService with user words when component mounts or words change
+  useEffect(() => {
+    if (userWordsEnabled) {
+      wordDataService.setUserWords(userWords);
+    } else {
+      wordDataService.setUserWords([]);
+    }
+  }, [userWords, userWordsEnabled]);
 
   const getWordCount = () => {
     if (selection.mode === 'category') {
@@ -151,7 +164,7 @@ const FocusConfigScreen: React.FC = memo(() => {
         </View>
 
         {/* Session Preview */}
-        <View style={styles.section}>
+        {/* <View style={styles.section}>
           <View style={styles.previewContainer}>
             <Text style={styles.previewTitle}>Vista Previa de la Sesión</Text>
             <View style={styles.previewGrid}>
@@ -179,7 +192,7 @@ const FocusConfigScreen: React.FC = memo(() => {
               </View>
             </View>
           </View>
-        </View>
+        </View> */}
       </View>
 
       {/* Start Button */}
@@ -196,7 +209,7 @@ const FocusConfigScreen: React.FC = memo(() => {
             styles.startButtonText,
             getWordCount() < 5 && styles.startButtonTextDisabled
           ]}>
-            🚀 Comenzar Focus ({getWordCount()} palabras)
+            🚀 Comenzar modo Focus 
           </Text>
         </TouchableOpacity>
       </View>

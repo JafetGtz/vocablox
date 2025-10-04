@@ -58,12 +58,28 @@ export interface UpdateCollectionPayload {
   emoji?: string
 }
 
+// Rich text formatting types
+export interface TextStyle {
+  bold?: boolean
+  italic?: boolean
+  underline?: boolean
+  color?: string
+  fontSize?: number
+  heading?: 'h1' | 'h2' | 'h3'
+}
+
+export interface RichTextSegment {
+  text: string
+  style?: TextStyle
+}
+
 // Personal notes (user's custom notes for words)
 export interface PersonalNote {
   id: string
   word: string // The word this note is associated with
   title: string
-  content: string
+  content: string // Plain text content (for backward compatibility and search)
+  richContent?: RichTextSegment[] // Rich text content with formatting
   createdAt: string
   updatedAt: string
   userId?: string // For future Supabase integration
@@ -79,6 +95,7 @@ export interface UpdatePersonalNotePayload {
   id: string
   title?: string
   content?: string
+  richContent?: RichTextSegment[]
 }
 
 export interface PersonalNotesState {

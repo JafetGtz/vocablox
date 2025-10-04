@@ -4,8 +4,8 @@ import { pauseWithAudio } from './audioActions';
 import { AppDispatch } from '../../store/store';
 
 export class AudioInterruptionService {
-  private appStateListener: ((state: AppStateStatus) => void) | null = null;
-  private trackPlayerListeners: (() => void)[] = [];
+  private appStateSubscription: (() => void) | null = null;
+  private trackPlayerListeners: Array<{ remove: () => void }> = [];
   private dispatch: AppDispatch | null = null;
 
   initialize(dispatch: AppDispatch) {
@@ -15,7 +15,7 @@ export class AudioInterruptionService {
   }
 
   private setupAppStateListener() {
-    this.appStateListener = (nextAppState: AppStateStatus) => {
+    const appStateListener = (nextAppState: AppStateStatus) => {
       if (nextAppState === 'background' || nextAppState === 'inactive') {
         // App going to background - pause the session
         if (this.dispatch) {
@@ -26,7 +26,7 @@ export class AudioInterruptionService {
       // The user must manually resume the session
     };
 
-    AppState.addEventListener('change', this.appStateListener);
+    this.appStateSubscription = AppState.addEventListener('change', appStateListener).remove;
   }
 
   private setupTrackPlayerListeners() {
@@ -89,14 +89,14 @@ export class AudioInterruptionService {
 
   cleanup() {
     // Remove app state listener
-    if (this.appStateListener) {
-      AppState.removeEventListener('change', this.appStateListener);
-      this.appStateListener = null;
+    if (this.appStateSubscription) {
+      this.appStateSubscription();
+      this.appStateSubscription = null;
     }
 
     // Remove track player listeners
-    this.trackPlayerListeners.forEach(removeListener => {
-      removeListener();
+    this.trackPlayerListeners.forEach(listener => {
+      listener.remove();
     });
     this.trackPlayerListeners = [];
 

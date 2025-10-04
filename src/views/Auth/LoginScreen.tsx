@@ -31,6 +31,7 @@ const LoginScreen = () => {
   const [password, setPassword] = useState('')
   const [showPass, setShowPass] = useState(false)
   const [keyboardVisible, setKeyboardVisible] = useState(false)
+  const [error, setError] = useState('')
 
   const rightRef = useRef<Animatable.View>(null)
 
@@ -63,8 +64,12 @@ const LoginScreen = () => {
 
   const onLogin = async () => {
     try {
+      setError('')
       await handleLogin(email.trim(), password)
-    } catch { }
+    } catch (err: any) {
+      setError(err.message || 'Error al iniciar sesión')
+      console.error('Login error:', err)
+    }
   }
 
   return (
@@ -123,6 +128,13 @@ const LoginScreen = () => {
             />
           </TouchableOpacity>
         </View>
+
+        {/* Error Message */}
+        {error ? (
+          <View style={styles.errorContainer}>
+            <Text style={styles.errorText}>{error}</Text>
+          </View>
+        ) : null}
 
         {/* Botón Entrar */}
         <TouchableOpacity
@@ -214,6 +226,20 @@ const styles = StyleSheet.create({
     fontFamily: 'Poppins_700Bold',
     fontSize: 18,
     color: 'black',
+  },
+  errorContainer: {
+    backgroundColor: 'rgba(220, 53, 69, 0.1)',
+    borderWidth: 1,
+    borderColor: 'rgba(220, 53, 69, 0.3)',
+    borderRadius: 8,
+    padding: 12,
+    marginVertical: 8,
+  },
+  errorText: {
+    color: '#dc3545',
+    fontSize: 14,
+    fontFamily: 'Poppins_400Regular',
+    textAlign: 'center',
   },
   socialContainer: { alignItems: 'center', marginTop: 40 },
   socialText: {

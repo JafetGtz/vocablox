@@ -20,6 +20,7 @@ import { useNavigation } from '@react-navigation/native'
 import type { NativeStackNavigationProp } from '@react-navigation/native-stack'
 import type { AppStackParamList } from '@/navigation/AppStackNavigator'
 import type { PersonalNote } from '@/features/notes/models/types'
+import RichTextDisplay from './RichTextDisplay'
 
 const { width: SCREEN_WIDTH } = Dimensions.get('window')
 
@@ -136,9 +137,13 @@ const NoteCard: React.FC<NoteCardProps> = ({ note, index, onEdit, onDelete }) =>
         )}
 
         {/* Note content */}
-        <Text style={styles.noteContent} numberOfLines={4}>
-          {note.content}
-        </Text>
+        <View style={styles.noteContentContainer}>
+          <RichTextDisplay
+            richContent={note.richContent}
+            plainContent={note.content}
+            numberOfLines={4}
+          />
+        </View>
 
         {/* Note footer */}
         <View style={styles.noteFooter}>
@@ -171,8 +176,7 @@ export default function PersonalNotesScreen() {
   }
 
   const handleEditNote = (note: PersonalNote) => {
-    // TODO: Open edit modal or navigate to edit screen
-    console.log('Edit note:', note.id)
+    navigation.navigate('NoteEditor', { note })
   }
 
   const handleDeleteNote = (noteId: string) => {
@@ -464,11 +468,15 @@ const styles = StyleSheet.create({
     marginBottom: 8,
     lineHeight: 24,
   },
+  noteContentContainer: {
+    marginBottom: 16,
+    overflow: 'hidden',
+    maxHeight: 100,
+  },
   noteContent: {
     fontSize: 16,
     color: '#444',
     lineHeight: 22,
-    marginBottom: 16,
   },
   noteFooter: {
     flexDirection: 'row',

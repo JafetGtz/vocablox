@@ -6,6 +6,8 @@ import {
   TouchableOpacity,
   ScrollView,
 } from 'react-native';
+import { useSelector } from 'react-redux';
+import { RootState } from '../../../store/store';
 import { wordDataService, AVAILABLE_CATEGORIES } from '../services/wordDataService';
 import { DEFAULT_CATEGORIES } from '../../../types/wizard';
 
@@ -24,11 +26,17 @@ const CategorySelector: React.FC<CategorySelectorProps> = memo(({
   onSelectAll,
   userCategories,
 }) => {
+  // Get user words to check if we should show "Mis Palabras" category
+  const userWords = useSelector((state: RootState) => state.userWords.words);
+  const userWordsEnabled = useSelector((state: RootState) => state.userWords.isEnabled);
+
   const getRecommendedCategories = () => {
     // Only show user's wizard-selected categories
+    const categories: any[] = [];
+
     if (userCategories.length > 0) {
       // Map the focus categories back to wizard categories for display
-      return userCategories.map(focusCategoryId => {
+      const wizardCategories = userCategories.map(focusCategoryId => {
         const focusCategory = AVAILABLE_CATEGORIES.find(cat => cat.id === focusCategoryId);
         if (focusCategory) {
           // Find the corresponding wizard category for the display name
@@ -55,10 +63,21 @@ const CategorySelector: React.FC<CategorySelectorProps> = memo(({
           };
         }
         return null;
-      }).filter(Boolean) as typeof AVAILABLE_CATEGORIES;
+      }).filter(Boolean);
+
+      categories.push(...wizardCategories);
     }
-    // If no categories selected in wizard, show empty array to force user to wizard
-    return [];
+
+    // Add "Mis Palabras" category if user has created words and it's enabled
+    if (userWordsEnabled && userWords.length > 0) {
+      categories.push({
+        id: 'mis-palabras',
+        name: 'Mis Palabras',
+        file: null
+      });
+    }
+
+    return categories as typeof AVAILABLE_CATEGORIES;
   };
 
   const getOtherCategories = () => {
@@ -87,12 +106,7 @@ const CategorySelector: React.FC<CategorySelectorProps> = memo(({
           ]}>
             {category.name}
           </Text>
-          <Text style={[
-            styles.categoryStats,
-            isSelected && styles.categoryStatsSelected
-          ]}>
-            {stats.total} palabras
-          </Text>
+          
         </View>
         <View style={[
           styles.checkbox,
@@ -120,12 +134,7 @@ const CategorySelector: React.FC<CategorySelectorProps> = memo(({
             <Text style={styles.selectAllText}>
               {selectAllCategories ? 'Deseleccionar' : 'Seleccionar todas'}
             </Text>
-            <View style={[
-              styles.checkbox,
-              selectAllCategories && styles.checkboxSelected
-            ]}>
-              {selectAllCategories && <Text style={styles.checkmark}>✓</Text>}
-            </View>
+            
           </TouchableOpacity>
         )}
       </View>
@@ -168,10 +177,10 @@ const CategorySelector: React.FC<CategorySelectorProps> = memo(({
             <Text style={styles.summaryText}>
               {selectedCategories.length} categor{selectedCategories.length !== 1 ? 'ías' : 'ía'}
             </Text>
-            <Text style={styles.summarySubtext}>
+            <Text style={styles.summarySubtext}> Más de 
               {selectedCategories.reduce((total, categoryId) => {
                 return total + wordDataService.getCategoryWords(categoryId).length;
-              }, 0)} palabras total
+              }, 0)} Aprox.
             </Text>
           </View>
           {selectedCategories.reduce((total, categoryId) => {
