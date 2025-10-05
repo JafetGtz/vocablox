@@ -41,7 +41,7 @@
           android:enabled="true"
           android:exported="false">
           <intent-filter>
-              <action android:name="com.awesome.SHOW_NOTIFICATION" />
+              <action android:name="com.vocabox.hermes.SHOW_NOTIFICATION" />
           </intent-filter>
       </receiver>
 

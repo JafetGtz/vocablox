@@ -24,7 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     window = UIWindow(frame: UIScreen.main.bounds)
 
     factory.startReactNative(
-      withModuleName: "Awesome",
+      withModuleName: "VocabloxApp",
       in: window,
       launchOptions: launchOptions
     )

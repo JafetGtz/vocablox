@@ -1,4 +1,4 @@
-package com.awesome
+package com.vocabox.hermes
 
 import android.app.Application
 import com.facebook.react.PackageList
@@ -9,8 +9,9 @@ import com.facebook.react.ReactNativeHost
 import com.facebook.react.ReactPackage
 import com.facebook.react.defaults.DefaultReactHost.getDefaultReactHost
 import com.facebook.react.defaults.DefaultReactNativeHost
-import com.awesome.notifications.NotificationModule
-import com.awesome.notifications.NotificationHelper
+import com.vocabox.hermes.notifications.NotificationModule
+import com.vocabox.hermes.notifications.NotificationHelper
+import com.vocabox.hermes.permissions.PermissionsModule
 import com.facebook.react.bridge.ReactApplicationContext
 
 class MainApplication : Application(), ReactApplication {
@@ -22,10 +23,13 @@ class MainApplication : Application(), ReactApplication {
               // Packages that cannot be autolinked yet can be added manually here, for example:
               // add(MyReactNativePackage())
 
-              // Agregar módulo de notificaciones
+              // Agregar módulos nativos
               add(object : ReactPackage {
                 override fun createNativeModules(reactContext: ReactApplicationContext) =
-                    listOf(NotificationModule(reactContext))
+                    listOf(
+                        NotificationModule(reactContext),
+                        PermissionsModule(reactContext)
+                    )
 
                 override fun createViewManagers(reactContext: ReactApplicationContext) =
                     emptyList<com.facebook.react.uimanager.ViewManager<*, *>>()

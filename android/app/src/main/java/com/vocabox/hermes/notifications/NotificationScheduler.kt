@@ -1,4 +1,4 @@
-package com.awesome.notifications
+package com.vocabox.hermes.notifications
 
 import android.app.AlarmManager
 import android.app.PendingIntent
@@ -35,7 +35,7 @@ class NotificationScheduler(private val context: Context) {
         }
 
         val intent = Intent(context, NotificationReceiver::class.java).apply {
-            action = "com.awesome.SHOW_NOTIFICATION"
+            action = "com.vocabox.hermes.SHOW_NOTIFICATION"
             putExtra("notification_id", notificationId)
             putExtra("window", window)
             putExtra("hour", hour)

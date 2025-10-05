@@ -1,4 +1,4 @@
-package com.awesome.notifications
+package com.vocabox.hermes.notifications
 
 import android.app.AlarmManager
 import android.app.PendingIntent
@@ -17,7 +17,7 @@ class NotificationReceiver : BroadcastReceiver() {
         Log.d(TAG, "onReceive triggered: ${intent.action}")
 
         when (intent.action) {
-            "com.awesome.SHOW_NOTIFICATION" -> {
+            "com.vocabox.hermes.SHOW_NOTIFICATION" -> {
                 handleShowNotification(context, intent)
             }
         }

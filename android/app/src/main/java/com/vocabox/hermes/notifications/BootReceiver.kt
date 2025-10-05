@@ -1,4 +1,4 @@
-package com.awesome.notifications
+package com.vocabox.hermes.notifications
 
 import android.content.BroadcastReceiver
 import android.content.Context

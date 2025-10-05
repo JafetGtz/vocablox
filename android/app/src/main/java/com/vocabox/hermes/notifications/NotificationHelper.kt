@@ -1,4 +1,4 @@
-package com.awesome.notifications
+package com.vocabox.hermes.notifications
 
 import android.app.NotificationChannel
 import android.app.NotificationManager
@@ -7,8 +7,8 @@ import android.content.Context
 import android.content.Intent
 import android.os.Build
 import androidx.core.app.NotificationCompat
-import com.awesome.MainActivity
-import com.awesome.R
+import com.vocabox.hermes.MainActivity
+import com.vocabox.hermes.R
 
 object NotificationHelper {
 
