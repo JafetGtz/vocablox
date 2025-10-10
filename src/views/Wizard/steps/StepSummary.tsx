@@ -35,7 +35,7 @@ const StepSummary: React.FC = React.memo(() => {
   }), [])
 
   return (
-    <ScrollView style={styles.container}>
+    <ScrollView style={styles.container} showsVerticalScrollIndicator>
       <View style={styles.header}>
         <Text style={styles.title}>¡Perfecto, {data.nickname}!</Text>
         <Text style={styles.subtitle}>
@@ -291,6 +291,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     gap: 12,
     marginBottom: 20,
+    paddingBottom: 40
   },
 })
 

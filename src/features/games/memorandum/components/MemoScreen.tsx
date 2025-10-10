@@ -124,7 +124,7 @@ export default function MemoScreen() {
         <Text style={styles.title}>Memorandum</Text>
         <View style={styles.buttonRow}>
           <TouchableOpacity style={styles.homeButton} onPress={handleGoHome}>
-            <Text style={styles.buttonText}>Home</Text>
+            <Text style={styles.buttonText}>Inicio</Text>
           </TouchableOpacity>
           <TouchableOpacity style={styles.restartButton} onPress={handleRestart}>
             <Text style={styles.buttonText}>Reiniciar</Text>
@@ -166,7 +166,7 @@ export default function MemoScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#f8f9fa',
+    backgroundColor: '#3a3b34',
   },
   loadingContainer: {
     flex: 1,
@@ -179,7 +179,7 @@ const styles = StyleSheet.create({
     color: '#666',
   },
   header: {
-    backgroundColor: '#fff',
+    backgroundColor: 'black',
     paddingHorizontal: 16,
     paddingVertical: 8,
     borderBottomWidth: 1,
@@ -191,20 +191,20 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 18,
     fontWeight: '700',
-    color: '#333',
+    color: 'white',
   },
   buttonRow: {
     flexDirection: 'row',
     gap: 8,
   },
   homeButton: {
-    backgroundColor: '#6c757d',
+    backgroundColor: '#9B59B6',
     paddingHorizontal: 12,
     paddingVertical: 6,
     borderRadius: 16,
   },
   restartButton: {
-    backgroundColor: '#007bff',
+    backgroundColor: '#9B59B6',
     paddingHorizontal: 12,
     paddingVertical: 6,
     borderRadius: 16,

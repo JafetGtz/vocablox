@@ -11,6 +11,7 @@ import {
   ScrollView,
   Image,
   Alert,
+  Platform,
 } from 'react-native'
 import Icon from 'react-native-vector-icons/Feather'
 import { launchImageLibrary, ImagePickerResponse, MediaType } from 'react-native-image-picker'
@@ -18,6 +19,8 @@ import { useAppSelector, useAppDispatch } from '@/store/hooks'
 import { updateBackground, addCustomBackground, setCustomBackgrounds } from '@/store/slices/settingsSlice'
 import AsyncStorage from '@react-native-async-storage/async-storage'
 import { DEFAULT_BACKGROUNDS } from '@/types/wizard'
+import RNFS from 'react-native-fs'
+import WidgetModule from '@/services/widgetService'
 
 const { width: SCREEN_WIDTH } = Dimensions.get('window')
 
@@ -84,8 +87,36 @@ export default function BackgroundChangeModal({ visible, onClose }: BackgroundCh
     ]).start()
   }
 
-  const handleBackgroundSelect = (backgroundId: string) => {
+  const handleBackgroundSelect = async (backgroundId: string) => {
     dispatch(updateBackground(backgroundId))
+
+    // Guardar el fondo seleccionado en AsyncStorage
+    try {
+      await AsyncStorage.setItem('selectedBackground', backgroundId)
+      console.log('Selected background saved to AsyncStorage:', backgroundId)
+
+      // Obtener la palabra actual del widget y actualizar con el nuevo fondo
+      const widgetData = await WidgetModule.getWidgetData()
+
+      // Determinar la URI del fondo
+      let backgroundUri: string | null = null
+
+      // Si es un fondo custom
+      const customBg = customBackgrounds?.find(bg => bg.id === backgroundId)
+      if (customBg && customBg.value?.uri) {
+        backgroundUri = customBg.value.uri
+      } else if (['amarillo', 'azul', 'naranja', 'negro', 'verde'].includes(backgroundId)) {
+        // Si es un fondo predefinido
+        backgroundUri = backgroundId
+      }
+
+      // Actualizar widget con el nuevo fondo
+      await WidgetModule.updateWidget(widgetData.word, widgetData.meaning, backgroundUri)
+      console.log('✅ Widget background updated to:', backgroundId)
+
+    } catch (error) {
+      console.error('Error saving selected background:', error)
+    }
     onClose()
   }
 
@@ -99,7 +130,7 @@ export default function BackgroundChangeModal({ visible, onClose }: BackgroundCh
     }
 
     launchImageLibrary(options, async (response: ImagePickerResponse) => {
-      console.log('Image picker response:', response)
+      console.log('📸 Image picker response:', response)
 
       if (response.didCancel) {
         console.log('User cancelled image picker')
@@ -121,32 +152,69 @@ export default function BackgroundChangeModal({ visible, onClose }: BackgroundCh
           return
         }
 
-        const customId = `custom_${Date.now()}`
-        const newCustomBackground = {
-          id: customId,
-          name: 'Fondo Personalizado',
-          type: 'image' as const,
-          value: { uri: asset.uri },
-          preview: { uri: asset.uri }
-        }
-
-        console.log('Selected image asset:', asset)
-        console.log('Generated custom background:', newCustomBackground)
-
-        dispatch(addCustomBackground(newCustomBackground))
-        dispatch(updateBackground(customId))
-
-        // Store custom background in persistent storage
         try {
+          // Create backgrounds directory if it doesn't exist
+          const backgroundsDir = `${RNFS.DocumentDirectoryPath}/backgrounds`
+          const dirExists = await RNFS.exists(backgroundsDir)
+          if (!dirExists) {
+            await RNFS.mkdir(backgroundsDir)
+            console.log('✅ Created backgrounds directory:', backgroundsDir)
+          }
+
+          // Generate unique filename
+          const customId = `custom_${Date.now()}`
+          const fileExtension = asset.fileName?.split('.').pop() || 'jpg'
+          const permanentFileName = `${customId}.${fileExtension}`
+          const permanentPath = `${backgroundsDir}/${permanentFileName}`
+
+          // Copy image from temporary location to permanent directory
+          console.log('📁 Copying image...')
+          console.log('   From:', asset.uri)
+          console.log('   To:', permanentPath)
+
+          // RNFS.copyFile handles both file:// and content:// URIs automatically
+          await RNFS.copyFile(asset.uri, permanentPath)
+          console.log('✅ Image copied successfully to permanent location')
+
+          // Create permanent URI
+          const permanentUri = Platform.OS === 'android'
+            ? `file://${permanentPath}`
+            : permanentPath
+
+          const newCustomBackground = {
+            id: customId,
+            name: 'Fondo Personalizado',
+            type: 'image' as const,
+            value: { uri: permanentUri },
+            preview: { uri: permanentUri }
+          }
+
+          console.log('📦 Generated custom background:', newCustomBackground)
+
+          dispatch(addCustomBackground(newCustomBackground))
+          dispatch(updateBackground(customId))
+
+          // Store custom background in AsyncStorage with permanent path
           const currentCustomBackgrounds = customBackgrounds || []
           const updatedBackgrounds = [...currentCustomBackgrounds, newCustomBackground]
           await AsyncStorage.setItem('customBackgrounds', JSON.stringify(updatedBackgrounds))
-          console.log('Custom background saved to AsyncStorage:', updatedBackgrounds)
+          await AsyncStorage.setItem('selectedBackground', customId)
+          console.log('✅ Custom background saved to AsyncStorage with permanent URI')
+
+          // Actualizar widget con el nuevo fondo personalizado
+          try {
+            const widgetData = await WidgetModule.getWidgetData()
+            await WidgetModule.updateWidget(widgetData.word, widgetData.meaning, permanentUri)
+            console.log('✅ Widget updated with custom background:', permanentUri)
+          } catch (widgetError) {
+            console.error('Error updating widget with custom background:', widgetError)
+          }
+
+          onClose()
         } catch (error) {
-          console.error('Error saving custom background:', error)
-          Alert.alert('Error', 'No se pudo guardar el fondo personalizado')
+          console.error('❌ Error saving custom background:', error)
+          Alert.alert('Error', 'No se pudo guardar el fondo personalizado: ' + (error as Error).message)
         }
-        onClose()
       } else {
         console.log('No assets in response')
         Alert.alert('Error', 'No se pudo obtener la imagen seleccionada')

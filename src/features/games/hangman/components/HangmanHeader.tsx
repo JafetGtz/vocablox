@@ -73,7 +73,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     paddingHorizontal: 20,
     paddingVertical: 15,
-    backgroundColor: 'rgba(255, 255, 255, 0.3)',
+    backgroundColor: 'gray',
     borderRadius: 15,
     marginHorizontal: 20,
     marginTop: 10,
@@ -93,12 +93,12 @@ const styles = StyleSheet.create({
   categoryText: {
     fontSize: 16,
     fontWeight: '600',
-    color: '#333',
+    color: 'white',
     textTransform: 'capitalize',
   },
   progressText: {
     fontSize: 12,
-    color: '#666',
+    color: 'white',
     marginTop: 2,
   },
   livesContainer: {

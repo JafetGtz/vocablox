@@ -166,14 +166,14 @@ export default function HangmanScreen() {
   if (!hangman.word) {
     return (
       <SafeAreaView style={styles.container} edges={['top', 'left', 'right']}>
-        <StatusBar barStyle="dark-content" backgroundColor="#F5F5DC" />
+        <StatusBar barStyle="dark-content" backgroundColor="#3a3b34" />
       </SafeAreaView>
     );
   }
 
   return (
     <SafeAreaView style={styles.container} edges={['top', 'left', 'right']}>
-      <StatusBar barStyle="dark-content" backgroundColor="#F5F5DC" />
+      <StatusBar barStyle="dark-content" backgroundColor="#3a3b34" />
 
       <HangmanHeader
         category={hangman.word.category}
@@ -225,7 +225,7 @@ export default function HangmanScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#F5F5DC',
+    backgroundColor: '#3a3b34',
   },
   gameArea: {
     flex: 1,

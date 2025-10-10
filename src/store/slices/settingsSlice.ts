@@ -163,6 +163,9 @@ const settingsSlice = createSlice({
                 state.data.categories = [...categories, category]
             }
         },
+        updateCategories: (state, action: PayloadAction<string[]>) => {
+            state.data.categories = action.payload
+        },
         updateWeeklyTarget: (state, action: PayloadAction<10 | 30 | 40 | 50>) => {
             state.data.weekly_words_target = action.payload
             // Recalculate derived values
@@ -269,6 +272,7 @@ export const {
     // Settings actions
     updateBackground,
     toggleCategory,
+    updateCategories,
     updateWeeklyTarget,
     updateBurstsAndTimes,
     updateStreakGoal,

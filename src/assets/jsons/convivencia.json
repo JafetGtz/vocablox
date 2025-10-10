@@ -1,0 +1,514 @@
+[
+  {
+    "palabra": "Empatía",
+    "significado": "Capacidad de ponerse en el lugar del otro y comprender sus sentimientos.",
+    "ejemplo": "La empatía permite construir relaciones más humanas y solidarias."
+  },
+  {
+    "palabra": "Tolerancia",
+    "significado": "Respeto hacia las ideas, creencias o actitudes diferentes a las propias.",
+    "ejemplo": "La tolerancia es clave para una convivencia pacífica."
+  },
+  {
+    "palabra": "Asertividad",
+    "significado": "Habilidad para expresar opiniones con respeto y firmeza.",
+    "ejemplo": "Practicar la asertividad evita malentendidos y conflictos innecesarios."
+  },
+  {
+    "palabra": "Diálogo",
+    "significado": "Intercambio de ideas o sentimientos entre dos o más personas.",
+    "ejemplo": "El diálogo es la herramienta más poderosa para resolver diferencias."
+  },
+  {
+    "palabra": "Escucha activa",
+    "significado": "Atención consciente a lo que el otro comunica, sin interrumpir ni juzgar.",
+    "ejemplo": "La escucha activa fortalece los lazos de confianza."
+  },
+  {
+    "palabra": "Comprensión",
+    "significado": "Actitud de apertura hacia las emociones y circunstancias ajenas.",
+    "ejemplo": "La comprensión ayuda a evitar juicios precipitados."
+  },
+  {
+    "palabra": "Paciencia",
+    "significado": "Capacidad de esperar o soportar con serenidad las dificultades.",
+    "ejemplo": "La paciencia es aliada del entendimiento mutuo."
+  },
+  {
+    "palabra": "Respeto",
+    "significado": "Reconocimiento del valor y la dignidad de los demás.",
+    "ejemplo": "Toda relación sana se basa en el respeto recíproco."
+  },
+  {
+    "palabra": "Conciliación",
+    "significado": "Acto de lograr un acuerdo o entendimiento entre partes enfrentadas.",
+    "ejemplo": "La conciliación requiere disposición a ceder y comprender."
+  },
+  {
+    "palabra": "Colaboración",
+    "significado": "Trabajo conjunto entre personas para alcanzar un objetivo común.",
+    "ejemplo": "La colaboración fomenta armonía y resultados duraderos."
+  },
+  {
+    "palabra": "Solidaridad",
+    "significado": "Apoyo mutuo entre personas que comparten un propósito o necesidad.",
+    "ejemplo": "La solidaridad nos une frente a los desafíos."
+  },
+  {
+    "palabra": "Cordialidad",
+    "significado": "Actitud amable y afectuosa en el trato con los demás.",
+    "ejemplo": "La cordialidad abre puertas incluso en situaciones tensas."
+  },
+  {
+    "palabra": "Mediación",
+    "significado": "Intervención de una persona neutral para facilitar la resolución de un conflicto.",
+    "ejemplo": "La mediación busca el equilibrio entre ambas posturas."
+  },
+  {
+    "palabra": "Compasión",
+    "significado": "Sentimiento de comprensión hacia el sufrimiento ajeno, acompañado del deseo de ayudar.",
+    "ejemplo": "La compasión humaniza nuestras relaciones."
+  },
+  {
+    "palabra": "Flexibilidad",
+    "significado": "Capacidad de adaptarse a diferentes situaciones y puntos de vista.",
+    "ejemplo": "La flexibilidad facilita la resolución de desacuerdos."
+  },
+  {
+    "palabra": "Diplomacia",
+    "significado": "Tacto y habilidad para manejar situaciones delicadas sin generar conflicto.",
+    "ejemplo": "Actuó con diplomacia para mantener el ambiente en calma."
+  },
+  {
+    "palabra": "Comprensión mutua",
+    "significado": "Reconocimiento y aceptación recíproca de las diferencias.",
+    "ejemplo": "La comprensión mutua fortalece la convivencia escolar."
+  },
+  {
+    "palabra": "Amabilidad",
+    "significado": "Trato respetuoso y considerado hacia los demás.",
+    "ejemplo": "La amabilidad desarma incluso los corazones más duros."
+  },
+  {
+    "palabra": "Reconocimiento",
+    "significado": "Valoración positiva de las cualidades o acciones de otros.",
+    "ejemplo": "El reconocimiento sincero mejora las relaciones humanas."
+  },
+  {
+    "palabra": "Cooperación",
+    "significado": "Acción conjunta de varias personas para lograr un objetivo común.",
+    "ejemplo": "La cooperación es la base de toda comunidad organizada."
+  },
+  {
+    "palabra": "Equidad",
+    "significado": "Trato justo que respeta las diferencias individuales.",
+    "ejemplo": "La equidad promueve justicia y armonía social."
+  },
+  {
+    "palabra": "Autocontrol",
+    "significado": "Dominio de las emociones y reacciones ante situaciones difíciles.",
+    "ejemplo": "El autocontrol evita respuestas impulsivas durante los conflictos."
+  },
+  {
+    "palabra": "Prudencia",
+    "significado": "Capacidad de actuar con sensatez y moderación.",
+    "ejemplo": "La prudencia es esencial en momentos de tensión."
+  },
+  {
+    "palabra": "Gratitud",
+    "significado": "Reconocimiento y aprecio por lo recibido.",
+    "ejemplo": "Expresar gratitud genera relaciones más positivas."
+  },
+  {
+    "palabra": "Humildad",
+    "significado": "Actitud de reconocer las propias limitaciones y errores.",
+    "ejemplo": "La humildad abre espacio para el aprendizaje compartido."
+  },
+  {
+    "palabra": "Confianza",
+    "significado": "Seguridad en la honestidad y capacidad de otra persona.",
+    "ejemplo": "La confianza es el cimiento de toda relación sana."
+  },
+  {
+    "palabra": "Justicia",
+    "significado": "Principio que impulsa a dar a cada quien lo que merece.",
+    "ejemplo": "Resolver un conflicto con justicia fortalece la credibilidad."
+  },
+  {
+    "palabra": "Integridad",
+    "significado": "Coherencia entre los valores, las palabras y las acciones.",
+    "ejemplo": "Actuó con integridad incluso bajo presión."
+  },
+  {
+    "palabra": "Reciprocidad",
+    "significado": "Intercambio equilibrado de apoyo o beneficios mutuos.",
+    "ejemplo": "La amistad se nutre de la reciprocidad constante."
+  },
+  {
+    "palabra": "Tacto",
+    "significado": "Sensibilidad para tratar temas o personas delicadas sin causar molestia.",
+    "ejemplo": "Habló con tacto al abordar el tema sensible."
+  },
+  {
+    "palabra": "Compromiso",
+    "significado": "Obligación asumida voluntariamente para lograr un fin común.",
+    "ejemplo": "El compromiso mutuo garantiza la solución duradera del conflicto."
+  },
+  {
+    "palabra": "Transparencia",
+    "significado": "Claridad y honestidad en la comunicación y las acciones.",
+    "ejemplo": "La transparencia evita malentendidos en los equipos de trabajo."
+  },
+  {
+    "palabra": "Respeto mutuo",
+    "significado": "Reconocimiento recíproco del valor de cada persona.",
+    "ejemplo": "El respeto mutuo disuelve cualquier enfrentamiento."
+  },
+  {
+    "palabra": "Sinceridad",
+    "significado": "Actitud de hablar con verdad y sin engaños.",
+    "ejemplo": "La sinceridad fortalece los lazos de confianza."
+  },
+  {
+    "palabra": "Compañerismo",
+    "significado": "Relación amistosa y solidaria entre personas que comparten un entorno.",
+    "ejemplo": "El compañerismo crea un clima de apoyo y colaboración."
+  },
+  {
+    "palabra": "Negociación",
+    "significado": "Diálogo para alcanzar acuerdos satisfactorios entre partes.",
+    "ejemplo": "La negociación requiere escuchar y ceder con sabiduría."
+  },
+  {
+    "palabra": "Convivencia",
+    "significado": "Relación armoniosa entre personas que comparten un espacio.",
+    "ejemplo": "La convivencia pacífica depende del respeto cotidiano."
+  },
+  {
+    "palabra": "Autenticidad",
+    "significado": "Ser sincero y actuar en coherencia con uno mismo.",
+    "ejemplo": "La autenticidad genera respeto y credibilidad."
+  },
+  {
+    "palabra": "Apreciación",
+    "significado": "Reconocimiento del valor o mérito de los demás.",
+    "ejemplo": "Mostrar apreciación mejora la autoestima ajena."
+  },
+  {
+    "palabra": "Escucha empática",
+    "significado": "Atención que busca comprender el mundo emocional del otro.",
+    "ejemplo": "La escucha empática transforma las discusiones en comprensión."
+  },
+  {
+    "palabra": "Reconcilación",
+    "significado": "Restablecimiento de la paz tras un conflicto.",
+    "ejemplo": "La reconciliación requiere humildad y perdón mutuo."
+  },
+  {
+    "palabra": "Pacificación",
+    "significado": "Acción de restablecer la calma y el orden tras una disputa.",
+    "ejemplo": "Su tono calmado ayudó en la pacificación del grupo."
+  },
+  {
+    "palabra": "Perspectiva",
+    "significado": "Punto de vista que permite entender mejor una situación.",
+    "ejemplo": "Cambiar de perspectiva ayuda a comprender la postura del otro."
+  },
+  {
+    "palabra": "Cohesión",
+    "significado": "Unión sólida entre miembros de un grupo.",
+    "ejemplo": "La cohesión del equipo fue la clave del éxito."
+  },
+  {
+    "palabra": "Simpatía",
+    "significado": "Atractivo o afinidad natural hacia otra persona.",
+    "ejemplo": "Su simpatía hacía más fácil cualquier conversación."
+  },
+  {
+    "palabra": "Concordia",
+    "significado": "Armonía y paz entre personas o grupos.",
+    "ejemplo": "Vivieron en concordia a pesar de sus diferencias."
+  },
+  {
+    "palabra": "Perdón",
+    "significado": "Acto de liberar el resentimiento hacia quien ha causado daño.",
+    "ejemplo": "El perdón no borra el pasado, pero sana el presente."
+  },
+  {
+    "palabra": "Autoconocimiento",
+    "significado": "Conciencia de los propios sentimientos, pensamientos y valores.",
+    "ejemplo": "El autoconocimiento permite responder en lugar de reaccionar."
+  },
+  {
+    "palabra": "Equilibrio emocional",
+    "significado": "Estado de armonía interior ante diversas circunstancias.",
+    "ejemplo": "El equilibrio emocional ayuda a manejar los conflictos con calma."
+  },
+  {
+    "palabra": "Resiliencia",
+    "significado": "Capacidad de superar y aprender de las dificultades.",
+    "ejemplo": "La resiliencia permite convertir los conflictos en crecimiento personal."
+  },
+  {
+    "palabra": "Unidad",
+    "significado": "Estado de armonía y cooperación entre individuos.",
+    "ejemplo": "Solo desde la unidad se construyen soluciones duraderas."
+  },
+  {
+    "palabra": "Tacto",
+    "significado": "Habilidad para tratar situaciones delicadas sin ofender.",
+    "ejemplo": "Su tacto evitó que la conversación se tornara incómoda."
+  },
+  {
+    "palabra": "Consideración",
+    "significado": "Atención y respeto hacia los sentimientos ajenos.",
+    "ejemplo": "Actuó con gran consideración al ofrecer ayuda."
+  },
+  {
+    "palabra": "Armonía",
+    "significado": "Equilibrio y buena relación entre personas o ideas.",
+    "ejemplo": "El grupo trabajaba en perfecta armonía."
+  },
+  {
+    "palabra": "Civismo",
+    "significado": "Comportamiento respetuoso hacia la comunidad y sus normas.",
+    "ejemplo": "Demostrar civismo es esencial para una sociedad ordenada."
+  },
+  {
+    "palabra": "Fraternidad",
+    "significado": "Relación de hermandad y solidaridad entre personas.",
+    "ejemplo": "La fraternidad une a las comunidades en tiempos difíciles."
+  },
+  {
+    "palabra": "Cooperación",
+    "significado": "Colaboración para lograr un objetivo común.",
+    "ejemplo": "La cooperación entre los equipos fue clave para el éxito."
+  },
+  {
+    "palabra": "Igualdad",
+    "significado": "Ausencia de discriminación y trato justo para todos.",
+    "ejemplo": "La igualdad fortalece el sentido de justicia social."
+  },
+  {
+    "palabra": "Inclusión",
+    "significado": "Integración de todas las personas sin excluir diferencias.",
+    "ejemplo": "La inclusión escolar promueve el respeto por la diversidad."
+  },
+  {
+    "palabra": "Equidad",
+    "significado": "Trato justo que reconoce las particularidades de cada persona.",
+    "ejemplo": "La equidad garantiza oportunidades reales para todos."
+  },
+  {
+    "palabra": "Humanidad",
+    "significado": "Conjunto de cualidades que distinguen al ser humano por su sensibilidad.",
+    "ejemplo": "Actuó con humanidad al comprender su dolor."
+  },
+  {
+    "palabra": "Generosidad",
+    "significado": "Actitud de compartir o ayudar sin esperar recompensa.",
+    "ejemplo": "Su generosidad inspiró a todo el grupo."
+  },
+  {
+    "palabra": "Cuidado",
+    "significado": "Atención hacia el bienestar de los demás.",
+    "ejemplo": "El cuidado mutuo fortalece la convivencia."
+  },
+  {
+    "palabra": "Pacifismo",
+    "significado": "Actitud que rechaza la violencia y busca soluciones pacíficas.",
+    "ejemplo": "El pacifismo defiende la fuerza del diálogo."
+  },
+  {
+    "palabra": "Respeto",
+    "significado": "Valoración del derecho y la dignidad de cada persona.",
+    "ejemplo": "El respeto mutuo evita conflictos innecesarios."
+  },
+  {
+    "palabra": "Compromiso",
+    "significado": "Responsabilidad asumida hacia una causa o persona.",
+    "ejemplo": "Mostró compromiso con el bienestar del grupo."
+  },
+  {
+    "palabra": "Altruismo",
+    "significado": "Preocupación desinteresada por el bien de los demás.",
+    "ejemplo": "Su altruismo lo llevó a dedicar tiempo a ayudar a otros."
+  },
+  {
+    "palabra": "Bondad",
+    "significado": "Inclinación natural a hacer el bien.",
+    "ejemplo": "La bondad transforma los ambientes hostiles."
+  },
+  {
+    "palabra": "Sinceridad",
+    "significado": "Expresión honesta y transparente de lo que se piensa o siente.",
+    "ejemplo": "La sinceridad genera confianza entre las personas."
+  },
+  {
+    "palabra": "Dialogar",
+    "significado": "Conversar para intercambiar ideas o resolver desacuerdos.",
+    "ejemplo": "Dialogar es preferible a imponer."
+  },
+  {
+    "palabra": "Reconciliación",
+    "significado": "Restablecimiento de relaciones pacíficas después de un conflicto.",
+    "ejemplo": "Buscar la reconciliación demuestra madurez emocional."
+  },
+  {
+    "palabra": "Empatizar",
+    "significado": "Comprender emocionalmente a otra persona.",
+    "ejemplo": "Empatizar con el otro abre el camino al entendimiento."
+  },
+  {
+    "palabra": "Compasión",
+    "significado": "Identificación con el sufrimiento ajeno acompañada del deseo de aliviarlo.",
+    "ejemplo": "La compasión fortalece los vínculos humanos."
+  },
+  {
+    "palabra": "Unidad",
+    "significado": "Estado de unión y cooperación entre personas o grupos.",
+    "ejemplo": "La unidad es el cimiento de toda comunidad."
+  },
+  {
+    "palabra": "Conciencia",
+    "significado": "Capacidad de reconocer el impacto de nuestras acciones.",
+    "ejemplo": "La conciencia social promueve un mundo más justo."
+  },
+  {
+    "palabra": "Apertura",
+    "significado": "Actitud receptiva ante nuevas ideas o experiencias.",
+    "ejemplo": "La apertura mental evita prejuicios y choques innecesarios."
+  },
+  {
+    "palabra": "Tolerancia",
+    "significado": "Disposición a aceptar lo diferente con respeto.",
+    "ejemplo": "La tolerancia crea puentes donde antes había muros."
+  },
+  {
+    "palabra": "Escucha",
+    "significado": "Atención real a lo que otra persona comunica.",
+    "ejemplo": "Una escucha genuina puede evitar un conflicto."
+  },
+  {
+    "palabra": "Cordialidad",
+    "significado": "Trato amable y afectuoso.",
+    "ejemplo": "La cordialidad hace más llevaderas las diferencias."
+  },
+  {
+    "palabra": "Gratitud",
+    "significado": "Agradecimiento por lo recibido o vivido.",
+    "ejemplo": "La gratitud genera bienestar y optimismo."
+  },
+  {
+    "palabra": "Colaboración",
+    "significado": "Acción de trabajar junto a otros con buena disposición.",
+    "ejemplo": "La colaboración enriquece los resultados colectivos."
+  },
+  {
+    "palabra": "Autoestima",
+    "significado": "Valoración positiva de uno mismo.",
+    "ejemplo": "Una autoestima sana favorece la empatía con los demás."
+  },
+  {
+    "palabra": "Autoconfianza",
+    "significado": "Seguridad en las propias capacidades y decisiones.",
+    "ejemplo": "La autoconfianza permite comunicarse sin temor."
+  },
+  {
+    "palabra": "Autocrítica",
+    "significado": "Capacidad de reconocer los propios errores para mejorar.",
+    "ejemplo": "La autocrítica responsable evita repetir conflictos."
+  },
+  {
+    "palabra": "Equilibrio",
+    "significado": "Estabilidad emocional o mental en las relaciones.",
+    "ejemplo": "El equilibrio interior ayuda a mantener la calma en desacuerdos."
+  },
+  {
+    "palabra": "Mediación",
+    "significado": "Intervención imparcial para facilitar acuerdos.",
+    "ejemplo": "La mediación escolar enseña a resolver disputas sin violencia."
+  },
+  {
+    "palabra": "Optimismo",
+    "significado": "Actitud positiva ante las dificultades.",
+    "ejemplo": "El optimismo contagia serenidad al grupo."
+  },
+  {
+    "palabra": "Sensibilidad",
+    "significado": "Capacidad de percibir y responder con empatía.",
+    "ejemplo": "Su sensibilidad lo hizo notar lo que nadie más percibía."
+  },
+  {
+    "palabra": "Responsabilidad",
+    "significado": "Cumplimiento de los deberes y cuidado de las consecuencias.",
+    "ejemplo": "La responsabilidad social mejora la convivencia."
+  },
+  {
+    "palabra": "Modestia",
+    "significado": "Ausencia de arrogancia o vanidad.",
+    "ejemplo": "Su modestia lo hacía aún más admirable."
+  },
+  {
+    "palabra": "Serenidad",
+    "significado": "Tranquilidad de ánimo ante situaciones adversas.",
+    "ejemplo": "La serenidad es el mejor escudo ante la discusión."
+  },
+  {
+    "palabra": "Honestidad",
+    "significado": "Actuar con rectitud y verdad en todas las circunstancias.",
+    "ejemplo": "La honestidad genera confianza duradera."
+  },
+  {
+    "palabra": "Paciencia",
+    "significado": "Capacidad de esperar y tolerar sin perder la calma.",
+    "ejemplo": "Con paciencia se pueden construir acuerdos sólidos."
+  },
+  {
+    "palabra": "Autocontrol",
+    "significado": "Dominio sobre las propias emociones y reacciones.",
+    "ejemplo": "El autocontrol evita que los desacuerdos escalen."
+  },
+  {
+    "palabra": "Comunidad",
+    "significado": "Grupo de personas unidas por intereses o valores comunes.",
+    "ejemplo": "El sentido de comunidad nace del apoyo mutuo."
+  },
+  {
+    "palabra": "Equilibrio emocional",
+    "significado": "Control interno que permite mantener la calma ante los retos.",
+    "ejemplo": "El equilibrio emocional se aprende con la práctica del respeto."
+  },
+  {
+    "palabra": "Compasivo",
+    "significado": "Que muestra compasión y comprensión ante el dolor ajeno.",
+    "ejemplo": "Fue compasivo incluso con quien lo había ofendido."
+  },
+  {
+    "palabra": "Empático",
+    "significado": "Capaz de ponerse en el lugar del otro con comprensión.",
+    "ejemplo": "Un líder empático inspira confianza y compromiso."
+  },
+  {
+    "palabra": "Conciliador",
+    "significado": "Que busca la paz y el entendimiento entre las partes.",
+    "ejemplo": "Adoptó un tono conciliador para calmar la tensión."
+  },
+  {
+    "palabra": "Unidad",
+    "significado": "Unión o vínculo que mantiene la cohesión entre las personas.",
+    "ejemplo": "La unidad del grupo superó cualquier desacuerdo."
+  },
+  {
+    "palabra": "Reflexión",
+    "significado": "Pensamiento cuidadoso antes de actuar o responder.",
+    "ejemplo": "La reflexión evita respuestas impulsivas."
+  },
+  {
+    "palabra": "Respeto mutuo",
+    "significado": "Valor recíproco entre las personas sin importar sus diferencias.",
+    "ejemplo": "El respeto mutuo es la base de toda convivencia pacífica."
+  }
+
+
+]

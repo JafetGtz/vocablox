@@ -9,6 +9,7 @@ import NoteEditorScreen from '@/views/notes/NoteEditorScreen'
 import UserWordsScreen from '@/views/userWords'
 import SettingsScreen from '@/views/settings/SettingsScreen'
 import UserWordsSettingsScreen from '@/views/settings/UserWordsSettingsScreen'
+import CategoriesSettingsScreen from '@/views/settings/CategoriesSettingsScreen'
 import QuizScreen from '@/features/games/flashQuiz/QuizScreen'
 import HangmanScreen from '@/features/games/hangman/HangmanScreen'
 import MemoScreen from '@/features/games/memorandum/components/MemoScreen'
@@ -32,6 +33,7 @@ export type AppStackParamList = {
     UserWords: undefined
     Settings: undefined
     UserWordsSettings: undefined
+    CategoriesSettings: undefined
     QuizScreen: undefined
     HangmanScreen: undefined
     MemoScreen: undefined
@@ -75,7 +77,10 @@ export default function AppStackNavigator() {
             <Stack.Screen
                 name="Collections"
                 component={CollectionsScreen}
-                options={{ title: 'Colecciones' }}
+                options={{
+                   
+                    headerShown: false
+                }}
             />
             <Stack.Screen
                 name="CollectionDetail"
@@ -95,23 +100,28 @@ export default function AppStackNavigator() {
             <Stack.Screen
                 name="UserWords"
                 component={UserWordsScreen}
-                options={{ title: 'Mis Palabras' }}
+                options={{ headerShown: false }}
             />
             <Stack.Screen
                 name="Settings"
                 component={SettingsScreen}
-                options={{ title: 'Configuración' }}
+                options={{ headerShown: false }}
             />
             <Stack.Screen
                 name="UserWordsSettings"
                 component={UserWordsSettingsScreen}
-                options={{ title: 'Configuración de Palabras' }}
+               options={{ headerShown: false }}
+            />
+            <Stack.Screen
+                name="CategoriesSettings"
+                component={CategoriesSettingsScreen}
+                options={{ headerShown: false }}
             />
             <Stack.Screen
                 name="QuizScreen"
                 component={QuizScreen}
                 options={{
-                    title: 'Quiz',
+
                     headerShown: false
                 }}
             />
@@ -119,37 +129,40 @@ export default function AppStackNavigator() {
                 name="HangmanScreen"
                 component={HangmanScreen}
                 options={{
-                    title: 'Ahorcado',
+                   
                     headerShown: false
                 }}
             />
             <Stack.Screen
                 name="MemoScreen"
                 component={MemoScreen}
-                options={{ title: 'Memorandum' }}
+                options={{
+                   
+                    headerShown: false
+                }}
             />
             <Stack.Screen
                 name="FocusScreen"
                 component={FocusScreen}
                 options={{
-                    title: 'Sesión de Enfoque',
+                   
                     headerShown: false
                 }}
             />
             <Stack.Screen
                 name="FocusSetupScreen"
                 component={FocusSetupScreen}
-                options={{ title: 'Configurar Enfoque' }}
+                options={{ headerShown: false }}
             />
             <Stack.Screen
                 name="FocusSelectionScreen"
                 component={FocusSelectionScreen}
-                options={{ title: 'Seleccionar Palabras' }}
+                options={{ headerShown: false }}
             />
             <Stack.Screen
                 name="FocusConfigScreen"
                 component={FocusConfigScreen}
-                options={{ title: 'Configurar Sesión' }}
+                options={{ headerShown: false }}
             />
         </Stack.Navigator>
     )

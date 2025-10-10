@@ -11,11 +11,13 @@ import {
 } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import Icon from 'react-native-vector-icons/Feather'
-import { useAppSelector } from '@/store/hooks'
+import { useAppSelector, useAppDispatch } from '@/store/hooks'
 import { selectCollectionsWithCount } from '@/features/notes/models/selectors'
+import { addCollection } from '@/features/notes/models/notesSlice'
 import { useNavigation } from '@react-navigation/native'
 import type { NativeStackNavigationProp } from '@react-navigation/native-stack'
 import type { AppStackParamList } from '@/navigation/AppStackNavigator'
+import CreateCollectionModal from '@/components/CreateCollectionModal'
 
 const { width: SCREEN_WIDTH } = Dimensions.get('window')
 const CARD_WIDTH = (SCREEN_WIDTH - 60) / 2
@@ -115,14 +117,20 @@ const CollectionCard: React.FC<CollectionCardProps> = ({ collection, onPress, in
 
 export default function CollectionsScreen() {
   const navigation = useNavigation<NavigationProp>()
+  const dispatch = useAppDispatch()
   const collections = useAppSelector(selectCollectionsWithCount)
-
+  const [showCreateModal, setShowCreateModal] = useState(false)
 
   const handleCollectionPress = (collectionId: string, collectionName: string) => {
     navigation.navigate('CollectionDetail', {
       collectionId,
       collectionName
     })
+  }
+
+  const handleCreateCollection = (name: string, color: string, emoji: string) => {
+    dispatch(addCollection({ name, color, emoji }))
+    setShowCreateModal(false)
   }
 
   const renderCollectionCard = ({ item, index }: { item: any; index: number }) => (
@@ -140,7 +148,7 @@ export default function CollectionsScreen() {
       {/* Header with just the add button */}
       <View style={styles.topBar}>
         <View style={styles.topBarRight}>
-          <TouchableOpacity style={styles.addButton}>
+          <TouchableOpacity style={styles.addButton} onPress={() => setShowCreateModal(true)}>
             <Icon name="plus" size={24} color="#4ECDC4" />
           </TouchableOpacity>
         </View>
@@ -169,6 +177,13 @@ export default function CollectionsScreen() {
           </Text>
         </View>
       )}
+
+      {/* Create Collection Modal */}
+      <CreateCollectionModal
+        visible={showCreateModal}
+        onClose={() => setShowCreateModal(false)}
+        onSave={handleCreateCollection}
+      />
     </SafeAreaView>
   )
 }
@@ -176,7 +191,7 @@ export default function CollectionsScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#F5F5DC',
+    backgroundColor: 'white',
   },
   topBar: {
     flexDirection: 'row',
@@ -191,14 +206,7 @@ const styles = StyleSheet.create({
     padding: 8,
     backgroundColor: 'rgba(78, 205, 196, 0.15)',
     borderRadius: 20,
-    elevation: 2,
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: 1,
-    },
-    shadowOpacity: 0.1,
-    shadowRadius: 2,
+   
   },
   gridContainer: {
     paddingHorizontal: 20,
@@ -211,20 +219,11 @@ const styles = StyleSheet.create({
     width: CARD_WIDTH,
   },
   collectionCard: {
-    backgroundColor: '#FFFFFF',
+    backgroundColor: 'black',
     borderRadius: 16,
     padding: 16,
     minHeight: 160,
-    elevation: 4,
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
-    shadowOpacity: 0.1,
-    shadowRadius: 4,
-    borderWidth: 1,
-    borderColor: 'rgba(0, 0, 0, 0.05)',
+   
   },
   cardHeader: {
     flexDirection: 'row',
@@ -238,13 +237,7 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     justifyContent: 'center',
     alignItems: 'center',
-    elevation: 2,
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: 1,
-    },
-    shadowOpacity: 0.2,
+    
     shadowRadius: 2,
   },
   emoji: {

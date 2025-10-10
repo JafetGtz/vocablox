@@ -86,7 +86,7 @@ class AudioService {
 
       await TrackPlayer.add(trackConfig);
       await TrackPlayer.setRepeatMode(RepeatMode.Queue);
-      await TrackPlayer.setVolume(0.2); // Set low volume for games
+      await TrackPlayer.setVolume(0.7); // Set low volume for games
       this.currentTrackType = gameType;
     } catch (error) {
       console.error(`Failed to load ${gameType} track:`, error);

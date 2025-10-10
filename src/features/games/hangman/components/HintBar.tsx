@@ -105,7 +105,7 @@ const styles = StyleSheet.create({
     paddingVertical: 15,
   },
   hintContainer: {
-    backgroundColor: 'rgba(255, 255, 255, 0.4)',
+    backgroundColor: '#f9f276',
     borderRadius: 12,
     padding: 15,
     marginBottom: 10,
@@ -118,7 +118,8 @@ const styles = StyleSheet.create({
   },
   hintLabel: {
     fontSize: 14,
-    fontWeight: '600',
+        fontFamily: 'Merriweather_24pt-SemiBold',
+
     color: '#666',
   },
   hintText: {
@@ -137,7 +138,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: 'rgba(255, 255, 255, 0.6)',
+    backgroundColor: 'white',
     borderRadius: 10,
     paddingVertical: 12,
     paddingHorizontal: 8,

@@ -1,10 +1,10 @@
 import React, { useState, useEffect, useRef, } from 'react'
-import { View, Text, StyleSheet, TouchableOpacity, Animated, StatusBar, PanResponder, ScrollView, Pressable, ImageBackground } from 'react-native'
+import { View, Text, StyleSheet, TouchableOpacity, Animated, StatusBar, PanResponder, ScrollView, Pressable, ImageBackground, Platform, NativeModules } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import Icon from 'react-native-vector-icons/Feather'
 import Iconicos from 'react-native-vector-icons/Ionicons'
 
-import { useNavigation } from '@react-navigation/native'
+import { useNavigation, useFocusEffect } from '@react-navigation/native'
 import { NativeStackNavigationProp } from '@react-navigation/native-stack'
 import { useAppSelector, useAppDispatch } from '@/store/hooks'
 import { selectEnabledUserWords, selectUserWordsFrequency } from '@/features/userWords/selectors'
@@ -12,46 +12,18 @@ import Speech from '@mhpdev/react-native-speech'
 import SaveWordModal from '@/components/SaveWordModal'
 import NotesModal from '@/components/NotesModal'
 import GridMenu from '@/components/GridMenu'
+import MainMenu from '@/components/MainMenu'
 import ShareModal from '@/components/ShareModal'
 import ProfileSidebar from '@/components/ProfileSidebar'
+import PermissionsModal from '@/components/PermissionsModal'
 import { AppStackParamList } from '@/navigation/AppStackNavigator'
 import { DEFAULT_BACKGROUNDS } from '@/types/wizard'
-import { setCustomBackgrounds } from '@/store/slices/settingsSlice'
+import { setCustomBackgrounds, updateBackground, updateTextColor, updateTextSize, updateTextVisibility } from '@/store/slices/settingsSlice'
 import AsyncStorage from '@react-native-async-storage/async-storage'
+import { getWordsForCategory, Word } from '@/services/categoryService'
+import { useWidgetUpdate } from '@/hooks/useWidgetUpdate'
 
-// Static imports for all JSON files
-import arteWords from '../../assets/jsons/arte.json'
-import cienciaWords from '../../assets/jsons/ciencia.json'
-import comidaWords from '../../assets/jsons/comida.json'
-import deportesWords from '../../assets/jsons/deportes.json'
-import derechoWords from '../../assets/jsons/derecho.json'
-import ingenieriaWords from '../../assets/jsons/ingenieria.json'
-import medicinaWords from '../../assets/jsons/medicina.json'
-import negociosWords from '../../assets/jsons/negocios.json'
-import tecnologiaWords from '../../assets/jsons/tecnologia.json'
-import viajeWords from '../../assets/jsons/viaje.json'
-
-interface Word {
-  palabra: string
-  significado: string
-  ejemplo?: string
-}
-
-// umbral para decidir cambio
-
-// Static word data lookup
-const CATEGORY_WORDS: Record<string, Word[]> = {
-  'technology': tecnologiaWords,
-  'business': negociosWords,
-  'science': cienciaWords,
-  'arts': arteWords,
-  'sports': deportesWords,
-  'travel': viajeWords,
-  'food': comidaWords,
-  'medicine': medicinaWords,
-  'law': derechoWords,
-  'engineering': ingenieriaWords,
-}
+const { PermissionsModule } = NativeModules
 
 const SCROLL_PAD = 600;      // punto medio “virtual”
 const SCROLL_SNAP = 40;
@@ -70,26 +42,118 @@ export default function HomeScreen() {
   const { data, customBackgrounds } = useAppSelector((s) => s.settings)
   const [backgroundsLoaded, setBackgroundsLoaded] = useState(false)
 
-  // Load custom backgrounds from AsyncStorage on component mount
-  useEffect(() => {
-    const loadCustomBackgrounds = async () => {
+  // Function to check permissions (can be called from modal when app becomes active)
+  const checkPermissions = React.useCallback(async () => {
+    console.log('🔍 Checking permissions on Home screen focus...')
+    console.log('Platform:', Platform.OS)
+    console.log('PermissionsModule available:', !!PermissionsModule)
+
+    if (Platform.OS === 'android' ) {
       try {
-        const stored = await AsyncStorage.getItem('customBackgrounds')
-        if (stored) {
-          const backgrounds = JSON.parse(stored)
-          console.log('Loaded custom backgrounds from AsyncStorage:', backgrounds)
-          dispatch(setCustomBackgrounds(backgrounds))
+        console.log('📱 Checking battery optimization...')
+        const isBatteryOptimized = await PermissionsModule.checkBatteryOptimization()
+        console.log('Battery optimization result:', isBatteryOptimized)
+        setBatteryOptimizationEnabled(!isBatteryOptimized)
+
+        console.log('🔔 Checking notifications...')
+        const areNotificationsEnabled = await PermissionsModule.checkNotificationsEnabled()
+        console.log('Notifications enabled:', areNotificationsEnabled)
+        setNotificationsEnabled(areNotificationsEnabled)
+
+        // Show modal if notifications are disabled (required for the app to work)
+        // Notifications permission is required from Android 13 (API 33) onwards
+        if (!areNotificationsEnabled) {
+          console.log('⚠️ Notifications are disabled - showing modal')
+          setShowPermissionsModal(true)
+        } else {
+          console.log('✅ Notifications are enabled - no modal needed')
+          // Close modal if permissions are now granted
+          setShowPermissionsModal(false)
+        }
+      } catch (error) {
+        console.error('❌ Error checking permissions:', error)
+      }
+    } else {
+      console.log('⏭️ Skipping permissions check - not Android or module not available')
+    }
+  }, [])
+
+  // Check permissions when screen comes into focus
+  useFocusEffect(
+    React.useCallback(() => {
+      checkPermissions()
+    }, [checkPermissions])
+  )
+
+  // Load custom backgrounds and text customizations from AsyncStorage on component mount
+  useEffect(() => {
+    const loadCustomizations = async () => {
+      try {
+        // Load custom backgrounds first
+        const storedBackgrounds = await AsyncStorage.getItem('customBackgrounds')
+        const customBgs = storedBackgrounds ? JSON.parse(storedBackgrounds) : []
+        if (customBgs.length > 0) {
+          console.log('Loaded custom backgrounds from AsyncStorage:', customBgs)
+          dispatch(setCustomBackgrounds(customBgs))
         } else {
           console.log('No custom backgrounds found in AsyncStorage')
         }
+
+        // Load selected background and validate it exists
+        const selectedBg = await AsyncStorage.getItem('selectedBackground')
+        if (selectedBg) {
+          // Verificar que el fondo seleccionado existe en los fondos disponibles
+          const allAvailableBackgrounds = [...DEFAULT_BACKGROUNDS, ...customBgs]
+          const backgroundExists = allAvailableBackgrounds.some(bg => bg.id === selectedBg)
+
+          if (backgroundExists) {
+            console.log('Loaded selected background from AsyncStorage:', selectedBg)
+            dispatch(updateBackground(selectedBg))
+          } else {
+            console.log('Selected background no longer exists, removing from storage:', selectedBg)
+            await AsyncStorage.removeItem('selectedBackground')
+          }
+        } else {
+          console.log('No selected background found in AsyncStorage')
+        }
+
+        // Load text colors
+        const storedColors = await AsyncStorage.getItem('textColors')
+        if (storedColors) {
+          const colors = JSON.parse(storedColors)
+          console.log('Loaded text colors from AsyncStorage:', colors)
+          Object.entries(colors).forEach(([element, color]) => {
+            dispatch(updateTextColor({ element: element as 'word' | 'meaning' | 'example', color: color as string }))
+          })
+        }
+
+        // Load text sizes
+        const storedSizes = await AsyncStorage.getItem('textSizes')
+        if (storedSizes) {
+          const sizes = JSON.parse(storedSizes)
+          console.log('Loaded text sizes from AsyncStorage:', sizes)
+          Object.entries(sizes).forEach(([element, size]) => {
+            dispatch(updateTextSize({ element: element as 'word' | 'meaning' | 'example', size: size as 'small' | 'medium' | 'large' }))
+          })
+        }
+
+        // Load text visibility
+        const storedVisibility = await AsyncStorage.getItem('textVisibility')
+        if (storedVisibility) {
+          const visibility = JSON.parse(storedVisibility)
+          console.log('Loaded text visibility from AsyncStorage:', visibility)
+          Object.entries(visibility).forEach(([element, visible]) => {
+            dispatch(updateTextVisibility({ element: element as 'word' | 'meaning' | 'example', visible: visible as boolean }))
+          })
+        }
       } catch (error) {
-        console.error('Error loading custom backgrounds:', error)
+        console.error('Error loading customizations:', error)
       } finally {
         setBackgroundsLoaded(true)
       }
     }
 
-    loadCustomBackgrounds()
+    loadCustomizations()
   }, [dispatch])
 
   // Get dynamic text styles based on user settings
@@ -161,8 +225,12 @@ export default function HomeScreen() {
   const [showSaveModal, setShowSaveModal] = useState(false);
   const [showNotesModal, setShowNotesModal] = useState(false);
   const [showGridMenu, setShowGridMenu] = useState(false);
+  const [showMainMenu, setShowMainMenu] = useState(false);
   const [showShareModal, setShowShareModal] = useState(false);
   const [showProfileSidebar, setShowProfileSidebar] = useState(false);
+  const [showPermissionsModal, setShowPermissionsModal] = useState(false);
+  const [batteryOptimizationEnabled, setBatteryOptimizationEnabled] = useState(false);
+  const [notificationsEnabled, setNotificationsEnabled] = useState(true);
 
   const delay = (ms: number) => new Promise(res => setTimeout(res, ms));
 
@@ -259,26 +327,9 @@ export default function HomeScreen() {
   ).current
 
   useEffect(() => {
+    console.log('🔄 Categories changed in home screen, reloading words. New categories:', data.categories)
     loadWords()
   }, [data.categories, userWords, userWordsFrequency])
-
-  useEffect(() => {
-    loadCustomBackgrounds()
-  }, [])
-
-  const loadCustomBackgrounds = async () => {
-    try {
-      const stored = await AsyncStorage.getItem('customBackgrounds')
-      console.log('Loaded from AsyncStorage:', stored)
-      if (stored) {
-        const backgrounds = JSON.parse(stored)
-        console.log('Parsed backgrounds:', backgrounds)
-        dispatch(setCustomBackgrounds(backgrounds))
-      }
-    } catch (error) {
-      console.error('Error loading custom backgrounds:', error)
-    }
-  }
 
 
   useEffect(() => {
@@ -304,11 +355,11 @@ export default function HomeScreen() {
 
       let allWords: Word[] = []
 
-      // Load words from each selected category
+      // Load words from each selected category using centralized service
       if (selectedCategories.length > 0) {
         for (const category of selectedCategories) {
-          const categoryWords = CATEGORY_WORDS[category]
-          if (!categoryWords) {
+          const categoryWords = getWordsForCategory(category)
+          if (categoryWords.length === 0) {
             console.warn(`No words found for category: ${category}`)
             continue
           }
@@ -408,7 +459,11 @@ export default function HomeScreen() {
     setShowNotesModal(true)
   }
 
-  const handleGridPress = () => {
+  const handleMainMenuPress = () => {
+    setShowMainMenu(true)
+  }
+
+  const handleGamesPress = () => {
     setShowGridMenu(true)
   }
 
@@ -424,6 +479,9 @@ export default function HomeScreen() {
   const currentWord = words[currentWordIndex]
   const currentHour = new Date().getHours().toString().padStart(2, '0')
   const currentMinute = new Date().getMinutes().toString().padStart(2, '0')
+
+  // Actualizar widget cuando cambia la palabra
+  useWidgetUpdate(currentWord || null)
 
   if (!currentWord) {
     return (
@@ -453,7 +511,7 @@ export default function HomeScreen() {
       <SafeAreaView style={styles.overlay} edges={['top', 'left', 'right']}>
 
       {/* Header */}
-      <View style={styles.header}>
+      {/* <View style={styles.header}>
         <View style={styles.headerLeft}>
           <Text style={styles.time}>{currentHour}:{currentMinute}</Text>
           <Text style={styles.infinity}>∞</Text>
@@ -467,7 +525,7 @@ export default function HomeScreen() {
         <View style={styles.headerRight}>
           <Icon name="award" size={24} color="#DAA520" />
         </View>
-      </View>
+      </View> */}
 
       {/* Swipe area container */}
       <View style={styles.swipeContainer} {...panResponder.panHandlers}>
@@ -479,8 +537,8 @@ export default function HomeScreen() {
         >
           <Icon
             name="chevron-up"
-            size={20}
-            color={currentWordIndex === 0 ? '#E0E0E0' : '#C0C0C0'}
+            size={46}
+            color={currentWordIndex === 0 ? '#C0C0C0' : '#C0C0C0'}
           />
         </TouchableOpacity>
 
@@ -535,8 +593,8 @@ export default function HomeScreen() {
         >
           <Icon
             name="chevron-down"
-            size={20}
-            color={currentWordIndex === words.length - 1 ? '#E0E0E0' : '#C0C0C0'}
+            size={46}
+            color={currentWordIndex === words.length - 1 ? '#C0C0C0' : '#C0C0C0'}
           />
         </TouchableOpacity>
 
@@ -557,15 +615,15 @@ export default function HomeScreen() {
 
       {/* Bottom navigation */}
       <View style={styles.bottomNav}>
-        <TouchableOpacity style={[styles.navButton, styles.gridButton]} onPress={handleGridPress}>
+        <TouchableOpacity style={[styles.navButton, styles.gridButton]} onPress={handleMainMenuPress}>
           <View style={styles.buttonContent}>
-            <Icon name="grid" size={22} color="#9B59B6" />
+            <Icon name="grid" size={22} color="white" />
             <Text style={styles.buttonLabel}>Menú</Text>
           </View>
         </TouchableOpacity>
         <TouchableOpacity
           style={[styles.navButton, styles.gamesButton]}
-          onPress={handleGridPress}
+          onPress={handleGamesPress}
         >
           <View style={styles.buttonContent}>
             <Iconicos name="game-controller-outline" size={22} color="#FFF" />
@@ -574,7 +632,7 @@ export default function HomeScreen() {
         </TouchableOpacity>
         <TouchableOpacity style={[styles.navButton, styles.userButton]} onPress={handleProfilePress}>
           <View style={styles.buttonContent}>
-            <Icon name="user" size={22} color="#34C759" />
+            <Icon name="user" size={22} color="white" />
             <Text style={styles.buttonLabel}>Perfil</Text>
           </View>
         </TouchableOpacity>
@@ -596,7 +654,13 @@ export default function HomeScreen() {
         word={currentWord?.palabra || ''}
       />
 
-      {/* Grid Menu */}
+      {/* Main Menu */}
+      <MainMenu
+        visible={showMainMenu}
+        onClose={() => setShowMainMenu(false)}
+      />
+
+      {/* Games Menu */}
       <GridMenu
         visible={showGridMenu}
         onClose={() => setShowGridMenu(false)}
@@ -615,6 +679,15 @@ export default function HomeScreen() {
       <ProfileSidebar
         visible={showProfileSidebar}
         onClose={() => setShowProfileSidebar(false)}
+      />
+
+      {/* Permissions Modal */}
+      <PermissionsModal
+        visible={showPermissionsModal}
+        onClose={() => setShowPermissionsModal(false)}
+        batteryOptimizationEnabled={batteryOptimizationEnabled}
+        notificationsEnabled={notificationsEnabled}
+        onPermissionsChanged={checkPermissions}
       />
       </SafeAreaView>
     </ImageBackground>
@@ -713,7 +786,7 @@ const styles = StyleSheet.create({
     color: '#333',
     textAlign: 'center',
     marginBottom: 16,
-    fontFamily: 'System',
+    fontFamily: 'Merriweather_24pt-SemiBold',
   },
   audioButton: {
     flexDirection: 'row',
@@ -737,6 +810,8 @@ const styles = StyleSheet.create({
     marginBottom: 16,
     lineHeight: 26,
     paddingHorizontal: 20,
+    fontFamily: 'Merriweather_24pt-SemiBold',
+
   },
   example: {
     fontSize: 16,
@@ -745,6 +820,8 @@ const styles = StyleSheet.create({
     fontStyle: 'italic',
     paddingHorizontal: 20,
     lineHeight: 22,
+    fontFamily: 'Quicksand-SemiBold',
+
   },
   actionsContainer: {
     flexDirection: 'row',
@@ -756,14 +833,7 @@ const styles = StyleSheet.create({
     padding: 12,
     backgroundColor: 'rgba(255, 255, 255, 0.4)',
     borderRadius: 25,
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: 1,
-    },
-    shadowOpacity: 0.1,
-    shadowRadius: 2,
-    elevation: 2,
+    
     marginHorizontal: 6,
   },
   bottomNav: {
@@ -793,32 +863,27 @@ const styles = StyleSheet.create({
   },
   buttonLabel: {
     fontSize: 12,
-    color: '#666',
-    fontWeight: '500',
+    color: 'white',
+    fontFamily: 'Quicksand-Bold',
     marginTop: 4,
   },
   gridButton: {
-    backgroundColor: 'rgba(155, 89, 182, 0.1)',
+    backgroundColor: 'rgba(1, 89, 182, 0.5)',
   },
   gamesButton: {
     backgroundColor: '#9B59B6',
     shadowColor: '#9B59B6',
-    shadowOffset: {
-      width: 0,
-      height: 3,
-    },
-    shadowOpacity: 0.3,
-    shadowRadius: 4,
-    elevation: 4,
+    
   },
   gamesText: {
     fontSize: 12,
     color: '#FFF',
-    fontWeight: '600',
+    fontFamily: 'Quicksand-Bold',
+    
     marginTop: 4,
   },
   userButton: {
-    backgroundColor: 'rgba(52, 199, 89, 0.1)',
+    backgroundColor: 'rgba(52, 199, 89, 0.5)',
   },
   gestureOverlay: {
     position: 'absolute',

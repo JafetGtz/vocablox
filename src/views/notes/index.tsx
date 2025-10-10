@@ -4,7 +4,6 @@ import {
   Text,
   StyleSheet,
   TouchableOpacity,
-  SafeAreaView,
   StatusBar,
   FlatList,
   Animated,
@@ -12,6 +11,7 @@ import {
   Alert,
   TextInput
 } from 'react-native'
+import { SafeAreaView } from 'react-native-safe-area-context'
 import Icon from 'react-native-vector-icons/Feather'
 import { useAppSelector, useAppDispatch } from '@/store/hooks'
 import { selectPersonalNotesByDateDesc, selectFilteredPersonalNotes } from '@/features/notes/models/selectors'
@@ -246,7 +246,7 @@ export default function PersonalNotesScreen() {
   }
 
   return (
-    <SafeAreaView style={styles.container}>
+    <SafeAreaView style={styles.container} edges={['top', 'left', 'right']}>
       <StatusBar barStyle="dark-content" backgroundColor="#F5F5DC" />
 
       {/* Header */}
@@ -328,15 +328,14 @@ export default function PersonalNotesScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#F5F5DC',
+    backgroundColor: 'white',
   },
   header: {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
     paddingHorizontal: 20,
-    paddingTop: 20,
-    paddingBottom: 24,
+    paddingBottom: 16,
   },
   backButton: {
     padding: 8,
@@ -367,14 +366,7 @@ const styles = StyleSheet.create({
     padding: 8,
     backgroundColor: 'rgba(155, 89, 182, 0.15)',
     borderRadius: 20,
-    elevation: 2,
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: 1,
-    },
-    shadowOpacity: 0.1,
-    shadowRadius: 2,
+   
   },
   statsContainer: {
     flexDirection: 'row',
@@ -423,7 +415,7 @@ const styles = StyleSheet.create({
     marginBottom: 4,
   },
   noteCard: {
-    backgroundColor: '#FFFEF7',
+    backgroundColor: '#f6f6f6',
     borderRadius: 16,
     padding: 20,
     position: 'relative',
@@ -504,14 +496,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'rgba(255, 255, 255, 0.9)',
     borderRadius: 2,
     transform: [{ rotate: '45deg' }],
-    elevation: 2,
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: 1,
-    },
-    shadowOpacity: 0.2,
-    shadowRadius: 2,
+    
   },
   emptyContainer: {
     flex: 1,
@@ -547,14 +532,7 @@ const styles = StyleSheet.create({
     borderRadius: 12,
     paddingHorizontal: 16,
     paddingVertical: 12,
-    elevation: 2,
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: 1,
-    },
-    shadowOpacity: 0.1,
-    shadowRadius: 2,
+   
   },
   searchIcon: {
     marginRight: 8,

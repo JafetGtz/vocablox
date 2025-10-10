@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react'
+import React, { useRef, useEffect, useState } from 'react'
 import {
   View,
   Text,
@@ -177,10 +177,6 @@ export default function CollectionDetailScreen() {
             </Text>
           </View>
         </View>
-
-        <TouchableOpacity style={styles.menuButton}>
-          <Icon name="more-vertical" size={24} color="#666" />
-        </TouchableOpacity>
       </View>
 
       {/* Words list */}
@@ -204,10 +200,6 @@ export default function CollectionDetailScreen() {
           <Text style={styles.emptySubtitle}>
             Las palabras que guardes en esta colección aparecerán aquí
           </Text>
-          <TouchableOpacity style={styles.addWordsButton}>
-            <Icon name="plus" size={20} color="white" />
-            <Text style={styles.addWordsText}>Agregar palabras</Text>
-          </TouchableOpacity>
         </View>
       )}
     </SafeAreaView>
@@ -217,7 +209,7 @@ export default function CollectionDetailScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#F5F5DC',
+    backgroundColor: 'white',
   },
   header: {
     flexDirection: 'row',

@@ -23,6 +23,19 @@ interface NotificationModuleInterface {
     meaning: string
     category: string
   }>): Promise<string>
+
+  // Verifica si necesita reprogramar y lo hace automáticamente si es necesario
+  checkAndRescheduleIfNeeded(): Promise<string>
+
+  // Obtiene las notificaciones agendadas
+  getScheduledNotifications(): Promise<Array<{
+    id: number
+    window: string
+    dayOffset: number
+    time: string
+    dateTime: string
+    timestamp: number
+  }>>
 }
 
 const { NotificationModule } = NativeModules

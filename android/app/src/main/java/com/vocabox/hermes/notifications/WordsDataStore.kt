@@ -87,4 +87,14 @@ class WordsDataStore(context: Context) {
         val type = object : TypeToken<Map<String, String>>() {}.type
         return gson.fromJson(json, type)
     }
+
+    // Guardar fecha de última programación (timestamp en millis)
+    fun saveLastScheduledDate(timestamp: Long) {
+        prefs.edit().putLong("last_scheduled_date", timestamp).apply()
+    }
+
+    // Obtener fecha de última programación
+    fun getLastScheduledDate(): Long {
+        return prefs.getLong("last_scheduled_date", 0L)
+    }
 }

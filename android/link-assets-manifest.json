@@ -2,6 +2,122 @@
   "migIndex": 1,
   "data": [
     {
+      "path": "assets/fonts/GloriaHallelujah-Regular.ttf",
+      "sha1": "f8daece907bf486d3ccf7138f34027e37583c862"
+    },
+    {
+      "path": "assets/fonts/Merriweather_24pt-Black.ttf",
+      "sha1": "2dd4b0aee2806971d26381c1541958d6725020f0"
+    },
+    {
+      "path": "assets/fonts/Merriweather_24pt-BlackItalic.ttf",
+      "sha1": "12e6a61ed88f8b8a280ec1b15357509c4c8539e2"
+    },
+    {
+      "path": "assets/fonts/Merriweather_24pt-Bold.ttf",
+      "sha1": "96846cf9c5e248997bb1a8dcf62047f2aa7c8332"
+    },
+    {
+      "path": "assets/fonts/Merriweather_24pt-BoldItalic.ttf",
+      "sha1": "cab0a5498b7be9b07bfb7aa2774551b940509f31"
+    },
+    {
+      "path": "assets/fonts/Merriweather_24pt-ExtraBold.ttf",
+      "sha1": "76ede1e5802bab84172680e5eb5db4fb784d40b0"
+    },
+    {
+      "path": "assets/fonts/Merriweather_24pt-ExtraBoldItalic.ttf",
+      "sha1": "0f35a0b7485a939dcbbef2c56502d9ce3fdebb60"
+    },
+    {
+      "path": "assets/fonts/Merriweather_24pt-Italic.ttf",
+      "sha1": "1e164e6188014239ada391c2265e4d48c5b19fd3"
+    },
+    {
+      "path": "assets/fonts/Merriweather_24pt-Light.ttf",
+      "sha1": "c9d9a8ba7bf6a931dd4a4431da7c709bb30ef6d7"
+    },
+    {
+      "path": "assets/fonts/Merriweather_24pt-LightItalic.ttf",
+      "sha1": "de1f58d9b070fe16cbcf3764b561307062aac5bf"
+    },
+    {
+      "path": "assets/fonts/Merriweather_24pt-Medium.ttf",
+      "sha1": "0edeeb3e329f999753d698316cf4d38d1a7c53a9"
+    },
+    {
+      "path": "assets/fonts/Merriweather_24pt-MediumItalic.ttf",
+      "sha1": "9cd8367733ad0a9ee2fc3b6c55a7eb25ef4a8ea6"
+    },
+    {
+      "path": "assets/fonts/Merriweather_24pt-Regular.ttf",
+      "sha1": "a9cb53e35102c374bdf34e198d62fd3505bcd4a3"
+    },
+    {
+      "path": "assets/fonts/Merriweather_24pt-SemiBold.ttf",
+      "sha1": "de7a40b1e7064e936a625cddbc2693b2d27fd1af"
+    },
+    {
+      "path": "assets/fonts/Merriweather_24pt-SemiBoldItalic.ttf",
+      "sha1": "6779b534ed1d6f351a89820746c6701d031d3c7a"
+    },
+    {
+      "path": "assets/fonts/Merriweather_24pt_SemiCondensed-Black.ttf",
+      "sha1": "720518ce78034d7334b010378947f84f4b361069"
+    },
+    {
+      "path": "assets/fonts/Merriweather_24pt_SemiCondensed-BlackItalic.ttf",
+      "sha1": "d8190f3618b7d64ba61b9a95437af0165961b410"
+    },
+    {
+      "path": "assets/fonts/Merriweather_24pt_SemiCondensed-Bold.ttf",
+      "sha1": "f8c3dbf5a7311378d67fd19b7d41293101b238df"
+    },
+    {
+      "path": "assets/fonts/Merriweather_24pt_SemiCondensed-BoldItalic.ttf",
+      "sha1": "da27a7fc900effcb333d80468467b708fa5115ad"
+    },
+    {
+      "path": "assets/fonts/Merriweather_24pt_SemiCondensed-ExtraBold.ttf",
+      "sha1": "e3cc7ea5d5904b8b0cdc432f68e61c710c87b2fd"
+    },
+    {
+      "path": "assets/fonts/Merriweather_24pt_SemiCondensed-ExtraBoldItalic.ttf",
+      "sha1": "677a050dac87b52f52c7c643b6c9ddfa62fa1da8"
+    },
+    {
+      "path": "assets/fonts/Merriweather_24pt_SemiCondensed-Italic.ttf",
+      "sha1": "9524cf250fbc9da523428a9d2271bdf1fc9d2f85"
+    },
+    {
+      "path": "assets/fonts/Merriweather_24pt_SemiCondensed-Light.ttf",
+      "sha1": "0a74f588cd23af1b62286efb3d50612ec7da0a01"
+    },
+    {
+      "path": "assets/fonts/Merriweather_24pt_SemiCondensed-LightItalic.ttf",
+      "sha1": "535b8ec61c602ce4940df589b5d8e1b874bb9d28"
+    },
+    {
+      "path": "assets/fonts/Merriweather_24pt_SemiCondensed-Medium.ttf",
+      "sha1": "3aefe68698d726f9fbc83944975050fc4460fff8"
+    },
+    {
+      "path": "assets/fonts/Merriweather_24pt_SemiCondensed-MediumItalic.ttf",
+      "sha1": "3edb5802e122949c8a74e80c3b5a1198e6ba5008"
+    },
+    {
+      "path": "assets/fonts/Merriweather_24pt_SemiCondensed-Regular.ttf",
+      "sha1": "a6e2aa52688276658d89575eddf1e978ce2f8003"
+    },
+    {
+      "path": "assets/fonts/Merriweather_24pt_SemiCondensed-SemiBold.ttf",
+      "sha1": "a5e5407568ca1be45e7f4891dfc243948c392667"
+    },
+    {
+      "path": "assets/fonts/Merriweather_24pt_SemiCondensed-SemiBoldItalic.ttf",
+      "sha1": "2ea031c0b72d3009e93fcf0bd19d2fafb53b32b1"
+    },
+    {
       "path": "assets/fonts/Poppins-Black.ttf",
       "sha1": "645e04c53c6b5b35bce654a811ebce16af8aa721"
     },
@@ -72,6 +188,26 @@
     {
       "path": "assets/fonts/Poppins-ThinItalic.ttf",
       "sha1": "fb8fccca21550e71135f92bbaf8a2e8a12c90465"
+    },
+    {
+      "path": "assets/fonts/Quicksand-Bold.ttf",
+      "sha1": "111e880f4de54ccf0a7fd14f38999b9c066e46bb"
+    },
+    {
+      "path": "assets/fonts/Quicksand-Light.ttf",
+      "sha1": "4d3b72ff1544d92ca9a435d7e34d21eda322dd76"
+    },
+    {
+      "path": "assets/fonts/Quicksand-Medium.ttf",
+      "sha1": "04b8198132a4a092b10d0631500268d6a2a0f889"
+    },
+    {
+      "path": "assets/fonts/Quicksand-Regular.ttf",
+      "sha1": "61504eaec812663121918199aac7d960229bd306"
+    },
+    {
+      "path": "assets/fonts/Quicksand-SemiBold.ttf",
+      "sha1": "339f8d3e09ad271ff12727eef33a99f7a066eee3"
     }
   ]
 }

@@ -7,16 +7,19 @@ import {
   Modal,
   Animated,
   Dimensions,
-  SafeAreaView,
   StatusBar,
   TouchableWithoutFeedback,
-  Switch
+  Switch,
+  Alert
 } from 'react-native'
+import { SafeAreaView } from 'react-native-safe-area-context'
 import Icon from 'react-native-vector-icons/Feather'
-import { useAppDispatch } from '@/store/hooks'
+import { useAppDispatch, useAppSelector } from '@/store/hooks'
 import { useNavigation } from '@react-navigation/native'
 import { NativeStackNavigationProp } from '@react-navigation/native-stack'
 import { AppStackParamList } from '@/navigation/AppStackNavigator'
+import NotificationModule from '@/services/notificationService'
+import { wordDataService, mapWizardCategoriesToFocus } from '@/features/focus/services/wordDataService'
 
 const { width: SCREEN_WIDTH, height: SCREEN_HEIGHT } = Dimensions.get('window')
 
@@ -43,6 +46,80 @@ export default function ProfileSidebar({ visible, onClose }: ProfileSidebarProps
   const navigation = useNavigation<ProfileSidebarNavigationProp>()
   const slideAnim = useRef(new Animated.Value(-SCREEN_WIDTH * 0.8)).current
   const fadeAnim = useRef(new Animated.Value(0)).current
+  const settings = useAppSelector((state) => state.settings.data)
+
+  const testNotificationNow = async () => {
+    try {
+      console.log('🔔 TEST: Disparando notificación de prueba...')
+
+      // Obtener categorías del wizard
+      const wizardCategories = settings.categories || []
+      console.log('Categorías del wizard:', wizardCategories)
+
+      if (wizardCategories.length === 0) {
+        console.warn('No hay categorías seleccionadas')
+        return
+      }
+
+      // Mapear a formato español
+      const focusCategories = mapWizardCategoriesToFocus(wizardCategories)
+      console.log('Categorías mapeadas:', focusCategories)
+
+      // Obtener palabras
+      const focusWords = wordDataService.getMultipleCategoryWords(focusCategories)
+      console.log(`Encontradas ${focusWords.length} palabras`)
+
+      if (focusWords.length === 0) {
+        console.warn('No hay palabras disponibles')
+        return
+      }
+
+      // Seleccionar palabras aleatorias
+      const wordsPerBurst = settings.words_per_burst || 2
+      const shuffled = [...focusWords].sort(() => Math.random() - 0.5)
+      const selectedWords = shuffled.slice(0, wordsPerBurst)
+
+      console.log('Palabras seleccionadas:', selectedWords.map(w => w.word))
+
+      // Guardar palabras en nativo
+      const wordsForNotifications = selectedWords.map(w => ({
+        id: w.id,
+        word: w.word,
+        meaning: w.meaning,
+        category: w.category
+      }))
+
+      await NotificationModule.saveWords(wordsForNotifications)
+
+      // Programar notificación para el SIGUIENTE MINUTO
+      const now = new Date()
+      const nextMinute = new Date(now.getTime() + 60000) // Siguiente minuto
+      const testHour = nextMinute.getHours().toString().padStart(2, '0')
+      const testMinute = nextMinute.getMinutes().toString().padStart(2, '0')
+      const testTimeStr = `${testHour}:${testMinute}`
+
+      const currentTime = `${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}`
+      console.log(`⏰ Hora actual: ${currentTime}`)
+      console.log(`⏰ Programando notificación de prueba a las ${testTimeStr}:00`)
+      console.log(`⏰ La notificación llegará en aproximadamente ${Math.ceil((nextMinute.getTime() - now.getTime()) / 1000)} segundos`)
+
+      const categoryNames = [...new Set(wordsForNotifications.map(w => w.category))]
+
+      await NotificationModule.scheduleNotifications({
+        categories: categoryNames,
+        active_windows: ['morning'],
+        window_times: { morning: testTimeStr },
+        words_per_burst: wordsPerBurst,
+        nickname: settings.nickname || 'Usuario'
+      })
+
+      console.log('✅ Notificación programada!')
+      console.log(`👀 ESPERA HASTA LAS ${testTimeStr}:00 para ver la notificación`)
+
+    } catch (error) {
+      console.error('❌ Error al probar notificación:', error)
+    }
+  }
 
   useEffect(() => {
     if (visible) {
@@ -85,9 +162,19 @@ export default function ProfileSidebar({ visible, onClose }: ProfileSidebarProps
 
   const menuOptions: MenuOption[] = [
     {
+      id: 'test-notification',
+      title: '🔔 Probar Notificación',
+      subtitle: 'Dispara una notificación ahora',
+      icon: 'bell',
+      type: 'button',
+      onPress: () => {
+        testNotificationNow()
+      },
+    },
+    {
       id: 'settings',
       title: 'Configuración',
-      subtitle: 'Ajustes de la aplicación',
+      subtitle: 'Más palabras, subcategorías y personalización',
       icon: 'settings',
       type: 'button',
       onPress: () => {
@@ -96,20 +183,25 @@ export default function ProfileSidebar({ visible, onClose }: ProfileSidebarProps
       },
     },
     {
-      id: 'about',
-      title: 'Acerca de',
-      subtitle: 'Información de la app',
-      icon: 'info',
+      id: 'coming-soon',
+      title: 'Próximamente',
+      subtitle: 'Nuevas funcionalidades y más categorías',
+      icon: 'zap',
       type: 'button',
       onPress: () => {
-        // TODO: Navigate to about
-        console.log('Navigate to about')
+        Alert.alert(
+          '🎁 Próximamente',
+          'Recuerda tu correo electrónico para que seas uno de los primeros en probar gratis las nuevas funciones y categorías, y obtener ofertas exclusivas.',
+          [
+            { text: 'Entendido', style: 'default' }
+          ]
+        )
       },
     },
   ]
 
   const renderMenuOption = (option: MenuOption) => (
-    <View key={option.id} style={styles.menuOption}>
+    <TouchableOpacity onPress={option.onPress} key={option.id} style={styles.menuOption}>
       <View style={styles.optionContent}>
         <View style={styles.optionIcon}>
           <Icon name={option.icon} size={24} color="#9B59B6" />
@@ -129,12 +221,12 @@ export default function ProfileSidebar({ visible, onClose }: ProfileSidebarProps
             style={styles.toggle}
           />
         ) : (
-          <TouchableOpacity onPress={option.onPress} style={styles.optionButton}>
+          <View  style={styles.optionButton}>
             <Icon name="chevron-right" size={20} color="#CCC" />
-          </TouchableOpacity>
+          </View>
         )}
       </View>
-    </View>
+    </TouchableOpacity>
   )
 
   return (
@@ -163,7 +255,7 @@ export default function ProfileSidebar({ visible, onClose }: ProfileSidebarProps
                 },
               ]}
             >
-              <SafeAreaView style={styles.container}>
+              <SafeAreaView style={styles.container} edges={['top', 'left']}>
                 <StatusBar barStyle="dark-content" backgroundColor="#FFF" />
 
                 {/* Header */}
@@ -209,7 +301,7 @@ const styles = StyleSheet.create({
   },
   sidebar: {
     width: SCREEN_WIDTH * 0.8,
-    height: SCREEN_HEIGHT,
+    height: '100%',
     backgroundColor: '#FFF',
     elevation: 16,
     shadowColor: '#000',
@@ -228,7 +320,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between',
     paddingHorizontal: 20,
-    paddingTop: 20,
     paddingBottom: 24,
     borderBottomWidth: 1,
     borderBottomColor: '#F0F0F0',

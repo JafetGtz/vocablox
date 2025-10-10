@@ -62,8 +62,8 @@ const styles = StyleSheet.create({
   },
   letter: {
     fontSize: 32,
-    fontWeight: '600',
-    color: '#333',
+    fontFamily:'GloriaHallelujah-Regular',
+    color: 'white',
     textAlign: 'center',
     marginBottom: 4,
   },

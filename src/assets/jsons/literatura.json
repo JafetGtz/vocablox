@@ -1,0 +1,504 @@
+[
+  {
+    "palabra": "Metáfora",
+    "significado": "Figura que consiste en trasladar el sentido de una palabra a otra por semejanza.",
+    "ejemplo": "El tiempo es un río que nos arrastra sin retorno."
+  },
+  {
+    "palabra": "Epifanía",
+    "significado": "Revelación súbita o comprensión profunda de algo esencial.",
+    "ejemplo": "Tuvo una epifanía al contemplar el mar en silencio."
+  },
+  {
+    "palabra": "Melancolía",
+    "significado": "Tristeza suave y reflexiva que surge sin causa aparente.",
+    "ejemplo": "El atardecer llenó su corazón de melancolía."
+  },
+  {
+    "palabra": "Albor",
+    "significado": "Luz del amanecer o principio de algo.",
+    "ejemplo": "Recordaba con ternura los albores de su infancia."
+  },
+  {
+    "palabra": "Eufonía",
+    "significado": "Sonoridad agradable que resulta de la combinación armónica de sonidos.",
+    "ejemplo": "El poema fluía con una eufonía hipnótica."
+  },
+  {
+    "palabra": "Efímero",
+    "significado": "Que dura poco tiempo o es pasajero.",
+    "ejemplo": "La belleza de una flor es tan efímera como intensa."
+  },
+  {
+    "palabra": "Susurro",
+    "significado": "Sonido suave y bajo producido al hablar o por el viento.",
+    "ejemplo": "El susurro de las hojas lo arrullaba mientras leía."
+  },
+  {
+    "palabra": "Ocaso",
+    "significado": "Puesta del sol o final de una etapa.",
+    "ejemplo": "El ocaso tiñó el horizonte de tonos dorados."
+  },
+  {
+    "palabra": "Inmarcesible",
+    "significado": "Que no se marchita ni pierde su frescura.",
+    "ejemplo": "Guardaba un amor inmarcesible en su memoria."
+  },
+  {
+    "palabra": "Amanecer",
+    "significado": "Momento en que comienza el día; símbolo de renovación.",
+    "ejemplo": "Esperó el amanecer como quien aguarda una promesa."
+  },
+  {
+    "palabra": "Somnolencia",
+    "significado": "Estado entre la vigilia y el sueño.",
+    "ejemplo": "La somnolencia lo envolvía mientras el tren avanzaba."
+  },
+  {
+    "palabra": "Luminiscencia",
+    "significado": "Emisión de luz suave sin calor perceptible.",
+    "ejemplo": "Las luciérnagas dibujaban destellos de luminiscencia en la noche."
+  },
+  {
+    "palabra": "Inquietud",
+    "significado": "Falta de calma o serenidad, deseo de movimiento o conocimiento.",
+    "ejemplo": "La inquietud lo impulsó a escribir aquella carta."
+  },
+  {
+    "palabra": "Destello",
+    "significado": "Luz breve y brillante; indicio de una emoción o idea.",
+    "ejemplo": "En su mirada se percibía un destello de esperanza."
+  },
+  {
+    "palabra": "Crepúsculo",
+    "significado": "Luz que queda en el cielo después de ponerse el sol.",
+    "ejemplo": "El crepúsculo teñía la ciudad de tonos púrpura."
+  },
+  {
+    "palabra": "Infinito",
+    "significado": "Que no tiene fin o límite; vasto e inmensurable.",
+    "ejemplo": "Sus pensamientos se perdían en el infinito del cielo nocturno."
+  },
+  {
+    "palabra": "Verso",
+    "significado": "Cada una de las líneas que forman un poema.",
+    "ejemplo": "Cada verso de su obra resonaba con profunda emoción."
+  },
+  {
+    "palabra": "Onírico",
+    "significado": "Relacionado con los sueños o lo imaginario.",
+    "ejemplo": "El relato tenía un tono onírico y surrealista."
+  },
+  {
+    "palabra": "Silencio",
+    "significado": "Ausencia de sonido, usada literariamente para expresar paz o vacío.",
+    "ejemplo": "El silencio de la noche era más elocuente que mil palabras."
+  },
+  {
+    "palabra": "Nácar",
+    "significado": "Sustancia brillante que recubre el interior de algunas conchas.",
+    "ejemplo": "El collar brillaba con reflejos de nácar bajo la luna."
+  },
+  {
+    "palabra": "Áureo",
+    "significado": "De oro o semejante al oro; brillante o excelente.",
+    "ejemplo": "Vivió su juventud en una época áurea de esperanza."
+  },
+  {
+    "palabra": "Lánguido",
+    "significado": "Que carece de energía o muestra suavidad melancólica.",
+    "ejemplo": "Dibujó una sonrisa lánguida al despedirse."
+  },
+  {
+    "palabra": "Preludio",
+    "significado": "Aquello que precede y prepara algo importante.",
+    "ejemplo": "Sus palabras fueron el preludio de una gran revelación."
+  },
+  {
+    "palabra": "Fragancia",
+    "significado": "Aroma suave y agradable.",
+    "ejemplo": "El aire estaba impregnado de la fragancia de los jazmines."
+  },
+  {
+    "palabra": "Ecos",
+    "significado": "Repetición del sonido o resonancia de algo pasado.",
+    "ejemplo": "Los ecos de su voz aún vibraban en la memoria."
+  },
+  {
+    "palabra": "Aurora",
+    "significado": "Luz del alba o símbolo del inicio de algo nuevo.",
+    "ejemplo": "La aurora anunció un día lleno de promesas."
+  },
+  {
+    "palabra": "Abismo",
+    "significado": "Profundidad insondable o situación extrema.",
+    "ejemplo": "Su alma se asomó al abismo del recuerdo."
+  },
+  {
+    "palabra": "Suspiro",
+    "significado": "Aire que se exhala por emoción o alivio.",
+    "ejemplo": "Soltó un suspiro al recordar aquel amor perdido."
+  },
+  {
+    "palabra": "Anhelo",
+    "significado": "Deseo intenso de conseguir algo.",
+    "ejemplo": "Vivía con el anhelo de volver a verla algún día."
+  },
+  {
+    "palabra": "Vastedad",
+    "significado": "Grandeza o extensión sin límites.",
+    "ejemplo": "La vastedad del desierto le recordó su pequeñez."
+  },
+  {
+    "palabra": "Penumbra",
+    "significado": "Sombra suave entre la luz y la oscuridad.",
+    "ejemplo": "En la penumbra del cuarto, escribió sus últimos versos."
+  },
+  {
+    "palabra": "Soledad",
+    "significado": "Estado de estar solo, buscado o impuesto.",
+    "ejemplo": "Halló paz en la soledad de su retiro."
+  },
+  {
+    "palabra": "Bruma",
+    "significado": "Niebla ligera que oscurece el horizonte.",
+    "ejemplo": "El puerto despertaba entre la bruma del amanecer."
+  },
+  {
+    "palabra": "Aletargado",
+    "significado": "Sumido en un sueño profundo o inactividad.",
+    "ejemplo": "El pueblo parecía aletargado por el calor del verano."
+  },
+  {
+    "palabra": "Ráfaga",
+    "significado": "Soplo breve y fuerte de viento o emoción repentina.",
+    "ejemplo": "Una ráfaga de nostalgia le atravesó el pecho."
+  },
+  {
+    "palabra": "Inasible",
+    "significado": "Que no puede ser atrapado o comprendido del todo.",
+    "ejemplo": "La felicidad le parecía un sueño inasible."
+  },
+  {
+    "palabra": "Efervescencia",
+    "significado": "Agitación o entusiasmo intenso.",
+    "ejemplo": "El público vivía la efervescencia de la victoria."
+  },
+  {
+    "palabra": "Fulgor",
+    "significado": "Resplandor intenso y breve.",
+    "ejemplo": "El fulgor del relámpago iluminó su rostro por un instante."
+  },
+  {
+    "palabra": "Rastro",
+    "significado": "Señal o huella que queda de algo.",
+    "ejemplo": "No quedó rastro de su paso por el bosque."
+  },
+  {
+    "palabra": "Nostalgia",
+    "significado": "Tristeza por la ausencia de algo querido.",
+    "ejemplo": "Sintió una dulce nostalgia al ver las fotos antiguas."
+  },
+  {
+    "palabra": "Trémulo",
+    "significado": "Que tiembla levemente, especialmente por emoción.",
+    "ejemplo": "Su voz trémula revelaba la intensidad del momento."
+  },
+  {
+    "palabra": "Ensueño",
+    "significado": "Estado de imaginación o fantasía idealizada.",
+    "ejemplo": "Vivía entre los hilos dorados de un perpetuo ensueño."
+  },
+  {
+    "palabra": "Serendipia",
+    "significado": "Hallazgo afortunado e inesperado.",
+    "ejemplo": "Encontrarla aquella tarde fue pura serendipia."
+  },
+  {
+    "palabra": "Ígneo",
+    "significado": "De fuego o semejante a él.",
+    "ejemplo": "El cielo se tornó ígneo durante el ocaso."
+  },
+  {
+    "palabra": "Susceptible",
+    "significado": "Que puede recibir influencia o impresión con facilidad.",
+    "ejemplo": "Era susceptible a la belleza de las pequeñas cosas."
+  },
+  {
+    "palabra": "Espectro",
+    "significado": "Imagen o aparición fantasmal.",
+    "ejemplo": "El espectro de su pasado lo perseguía en sueños."
+  },
+  {
+    "palabra": "Perpetuo",
+    "significado": "Que dura o se mantiene sin interrupción.",
+    "ejemplo": "Guardó un amor perpetuo en el rincón de su alma."
+  },
+  {
+    "palabra": "Resplandor",
+    "significado": "Luz viva que brilla con intensidad.",
+    "ejemplo": "El resplandor del fuego iluminaba su rostro."
+  },
+  {
+    "palabra": "Íntimo",
+    "significado": "Profundamente personal, reservado o afectivo.",
+    "ejemplo": "Le confió sus pensamientos más íntimos."
+  },
+  {
+    "palabra": "Devoción",
+    "significado": "Amor profundo o dedicación sincera hacia algo o alguien.",
+    "ejemplo": "Escribía cada palabra con devoción absoluta al arte."
+  },
+  {
+    "palabra": "Estío",
+    "significado": "Verano; época de calor y plenitud natural.",
+    "ejemplo": "En pleno estío, el campo se doraba bajo el sol inclemente."
+  },
+  {
+    "palabra": "Letargo",
+    "significado": "Sueño profundo o estado de inactividad prolongada.",
+    "ejemplo": "El bosque parecía sumido en un letargo misterioso."
+  },
+  {
+    "palabra": "Absorto",
+    "significado": "Totalmente concentrado o maravillado por algo.",
+    "ejemplo": "Permaneció absorto contemplando el fuego."
+  },
+  {
+    "palabra": "Fugaz",
+    "significado": "De corta duración; que pasa rápidamente.",
+    "ejemplo": "Fue una sonrisa fugaz, pero suficiente para iluminar la noche."
+  },
+  {
+    "palabra": "Arrebol",
+    "significado": "Color rojizo de las nubes al amanecer o al anochecer.",
+    "ejemplo": "El cielo se encendía con arreboles de fuego."
+  },
+  {
+    "palabra": "Susurrante",
+    "significado": "Que produce un sonido suave y continuo.",
+    "ejemplo": "El mar susurrante arrullaba sus pensamientos."
+  },
+  {
+    "palabra": "Insondable",
+    "significado": "Tan profundo o misterioso que no puede medirse ni entenderse del todo.",
+    "ejemplo": "Sus ojos tenían una tristeza insondable."
+  },
+  {
+    "palabra": "Rocío",
+    "significado": "Pequeñas gotas de agua formadas por la condensación durante la madrugada.",
+    "ejemplo": "El rocío perlaba los pétalos de las rosas."
+  },
+  {
+    "palabra": "Inerme",
+    "significado": "Desarmado o indefenso.",
+    "ejemplo": "Permanecía inerme ante la fuerza de sus recuerdos."
+  },
+  {
+    "palabra": "Errante",
+    "significado": "Que anda de un lugar a otro sin rumbo fijo.",
+    "ejemplo": "Vagaba errante bajo la luna solitaria."
+  },
+  {
+    "palabra": "Crisálida",
+    "significado": "Estado de transformación de una oruga en mariposa; símbolo de cambio.",
+    "ejemplo": "Su alma se hallaba en crisálida, esperando renacer."
+  },
+  {
+    "palabra": "Tersura",
+    "significado": "Suavidad o delicadeza de una superficie.",
+    "ejemplo": "La tersura de su piel recordaba la porcelana."
+  },
+  {
+    "palabra": "Ímpetu",
+    "significado": "Fuerza o energía con que algo se mueve o actúa.",
+    "ejemplo": "Corrió con el ímpetu de quien persigue un sueño."
+  },
+  {
+    "palabra": "Nítido",
+    "significado": "Claro, preciso y limpio en forma o sonido.",
+    "ejemplo": "El canto del ave resonó nítido en la distancia."
+  },
+  {
+    "palabra": "Etereo",
+    "significado": "Ligero, sutil o casi celestial.",
+    "ejemplo": "Su voz tenía una cualidad etérea, como un suspiro del viento."
+  },
+  {
+    "palabra": "Inexorable",
+    "significado": "Que no puede ser detenido o evitado.",
+    "ejemplo": "El paso del tiempo es inexorable incluso para los héroes."
+  },
+  {
+    "palabra": "Peregrino",
+    "significado": "Viajero o persona que recorre tierras lejanas; también, extraordinario.",
+    "ejemplo": "Era un pensamiento peregrino, hermoso y ajeno a la razón."
+  },
+  {
+    "palabra": "Tenue",
+    "significado": "Débil, delicado o de poca intensidad.",
+    "ejemplo": "Una luz tenue iluminaba la habitación vacía."
+  },
+  {
+    "palabra": "Presto",
+    "significado": "Rápido, diligente o preparado para actuar.",
+    "ejemplo": "Estaba presto para defender su honor."
+  },
+  {
+    "palabra": "Voraz",
+    "significado": "Que devora con ansia o deseo intenso.",
+    "ejemplo": "El fuego voraz consumía la vieja casa."
+  },
+  {
+    "palabra": "Opalescente",
+    "significado": "Que presenta reflejos semejantes al nácar o al ópalo.",
+    "ejemplo": "El cielo mostraba tonos opalescentes tras la tormenta."
+  },
+  {
+    "palabra": "Trascender",
+    "significado": "Ir más allá de los límites materiales o convencionales.",
+    "ejemplo": "Su obra logró trascender el tiempo y las fronteras."
+  },
+  {
+    "palabra": "Ínclito",
+    "significado": "Ilustre, famoso por su virtud o hazañas.",
+    "ejemplo": "El poeta fue un ínclito defensor de la libertad."
+  },
+  {
+    "palabra": "Ardid",
+    "significado": "Astucia o medio ingenioso para lograr algo.",
+    "ejemplo": "Con un sutil ardid, consiguió ganarse su confianza."
+  },
+  {
+    "palabra": "Evanescente",
+    "significado": "Que se desvanece o desaparece lentamente.",
+    "ejemplo": "Su silueta evanescente se perdió entre la niebla."
+  },
+  {
+    "palabra": "Inexhausto",
+    "significado": "Que no se agota ni se cansa.",
+    "ejemplo": "Tenía un espíritu inexhausto para la creación artística."
+  },
+  {
+    "palabra": "Estupor",
+    "significado": "Asombro o sorpresa profunda ante algo inesperado.",
+    "ejemplo": "Quedó en estupor al ver la magnitud del hallazgo."
+  },
+  {
+    "palabra": "Altruista",
+    "significado": "Que actúa en beneficio de los demás sin esperar recompensa.",
+    "ejemplo": "Su gesto altruista conmovió a toda la comunidad."
+  },
+  {
+    "palabra": "Enigma",
+    "significado": "Aquello que resulta difícil de entender o descifrar.",
+    "ejemplo": "El origen de aquella melodía seguía siendo un enigma."
+  },
+  {
+    "palabra": "Inquebrantable",
+    "significado": "Que no se puede romper ni destruir.",
+    "ejemplo": "Conservó una fe inquebrantable hasta el final."
+  },
+  {
+    "palabra": "Candente",
+    "significado": "Que arde o está muy caliente; también, de gran actualidad o intensidad.",
+    "ejemplo": "El tema político era tan candente como el sol del mediodía."
+  },
+  {
+    "palabra": "Perenne",
+    "significado": "Que dura eternamente o se renueva constantemente.",
+    "ejemplo": "El manantial brotaba con fuerza perenne entre las rocas."
+  },
+  {
+    "palabra": "Verosímil",
+    "significado": "Que parece verdadero o creíble.",
+    "ejemplo": "Su relato era tan verosímil que nadie lo puso en duda."
+  },
+  {
+    "palabra": "Sinuoso",
+    "significado": "Que tiene curvas suaves o caminos torcidos.",
+    "ejemplo": "El sendero sinuoso se perdía entre los árboles."
+  },
+  {
+    "palabra": "Diluirse",
+    "significado": "Desvanecerse o perder intensidad.",
+    "ejemplo": "Su voz se diluyó entre el murmullo del público."
+  },
+  {
+    "palabra": "Misterio",
+    "significado": "Cosa oculta o difícil de comprender.",
+    "ejemplo": "El misterio de la casa abandonada fascinaba al pueblo."
+  },
+  {
+    "palabra": "Sempiterno",
+    "significado": "Que dura para siempre; eterno.",
+    "ejemplo": "Prometieron un amor sempiterno bajo las estrellas."
+  },
+  {
+    "palabra": "Lúgubre",
+    "significado": "Triste, sombrío o relacionado con la muerte.",
+    "ejemplo": "Una melodía lúgubre sonaba en el viejo órgano."
+  },
+  {
+    "palabra": "Desvelo",
+    "significado": "Vigilia causada por preocupación o amor.",
+    "ejemplo": "Pasó la noche en desvelo, aguardando su regreso."
+  },
+  {
+    "palabra": "Crispar",
+    "significado": "Tensar o irritar; provocar emoción intensa.",
+    "ejemplo": "Sus palabras crisparon el ambiente."
+  },
+  {
+    "palabra": "Indeleble",
+    "significado": "Que no puede borrarse ni olvidarse.",
+    "ejemplo": "Aquel beso dejó una huella indeleble en su alma."
+  },
+  {
+    "palabra": "Abisal",
+    "significado": "Relativo a las profundidades del mar o a lo insondable.",
+    "ejemplo": "El silencio abisal del océano lo sobrecogió."
+  },
+  {
+    "palabra": "Inconmensurable",
+    "significado": "Tan grande que no puede medirse.",
+    "ejemplo": "Sintió un amor inconmensurable por su tierra natal."
+  },
+  {
+    "palabra": "Vaho",
+    "significado": "Vapor o aliento que se condensa al contacto con el frío.",
+    "ejemplo": "El vaho de su respiración empañaba el cristal."
+  },
+  {
+    "palabra": "Soliloquio",
+    "significado": "Discurso de una persona consigo misma.",
+    "ejemplo": "El poeta escribió su obra como un largo soliloquio interior."
+  },
+  {
+    "palabra": "Efusión",
+    "significado": "Manifestación intensa y espontánea de afecto o emoción.",
+    "ejemplo": "Lo abrazó con una efusión que desbordaba gratitud."
+  },
+  {
+    "palabra": "Marejada",
+    "significado": "Oleaje agitado del mar o tumulto emocional.",
+    "ejemplo": "Una marejada de recuerdos lo invadió sin aviso."
+  },
+  {
+    "palabra": "Evanecer",
+    "significado": "Desaparecer lentamente o perder claridad.",
+    "ejemplo": "El arcoíris se evanecía en la lluvia del atardecer."
+  },
+  {
+    "palabra": "Amalgama",
+    "significado": "Mezcla o combinación de elementos diferentes.",
+    "ejemplo": "Su estilo era una amalgama de tradición y modernidad."
+  },
+  {
+    "palabra": "Resquicio",
+    "significado": "Abertura pequeña o posibilidad mínima.",
+    "ejemplo": "Encontró un resquicio de esperanza en medio del dolor."
+  }
+
+
+]

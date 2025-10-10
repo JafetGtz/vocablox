@@ -71,6 +71,40 @@
 		<string>Poppins-SemiBoldItalic.ttf</string>
 		<string>Poppins-Thin.ttf</string>
 		<string>Poppins-ThinItalic.ttf</string>
+		<string>Quicksand-Bold.ttf</string>
+		<string>Quicksand-Light.ttf</string>
+		<string>Quicksand-Medium.ttf</string>
+		<string>Quicksand-Regular.ttf</string>
+		<string>Quicksand-SemiBold.ttf</string>
+		<string>Merriweather_24pt-Black.ttf</string>
+		<string>Merriweather_24pt-BlackItalic.ttf</string>
+		<string>Merriweather_24pt-Bold.ttf</string>
+		<string>Merriweather_24pt-BoldItalic.ttf</string>
+		<string>Merriweather_24pt-ExtraBold.ttf</string>
+		<string>Merriweather_24pt-ExtraBoldItalic.ttf</string>
+		<string>Merriweather_24pt-Italic.ttf</string>
+		<string>Merriweather_24pt-Light.ttf</string>
+		<string>Merriweather_24pt-LightItalic.ttf</string>
+		<string>Merriweather_24pt-Medium.ttf</string>
+		<string>Merriweather_24pt-MediumItalic.ttf</string>
+		<string>Merriweather_24pt-Regular.ttf</string>
+		<string>Merriweather_24pt-SemiBold.ttf</string>
+		<string>Merriweather_24pt-SemiBoldItalic.ttf</string>
+		<string>Merriweather_24pt_SemiCondensed-Black.ttf</string>
+		<string>Merriweather_24pt_SemiCondensed-BlackItalic.ttf</string>
+		<string>Merriweather_24pt_SemiCondensed-Bold.ttf</string>
+		<string>Merriweather_24pt_SemiCondensed-BoldItalic.ttf</string>
+		<string>Merriweather_24pt_SemiCondensed-ExtraBold.ttf</string>
+		<string>Merriweather_24pt_SemiCondensed-ExtraBoldItalic.ttf</string>
+		<string>Merriweather_24pt_SemiCondensed-Italic.ttf</string>
+		<string>Merriweather_24pt_SemiCondensed-Light.ttf</string>
+		<string>Merriweather_24pt_SemiCondensed-LightItalic.ttf</string>
+		<string>Merriweather_24pt_SemiCondensed-Medium.ttf</string>
+		<string>Merriweather_24pt_SemiCondensed-MediumItalic.ttf</string>
+		<string>Merriweather_24pt_SemiCondensed-Regular.ttf</string>
+		<string>Merriweather_24pt_SemiCondensed-SemiBold.ttf</string>
+		<string>Merriweather_24pt_SemiCondensed-SemiBoldItalic.ttf</string>
+		<string>GloriaHallelujah-Regular.ttf</string>
 	</array>
 </dict>
 </plist>

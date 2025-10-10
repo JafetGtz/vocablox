@@ -5,6 +5,7 @@ import {
   StyleSheet,
   TouchableOpacity,
   ScrollView,
+  Alert,
 } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import Icon from 'react-native-vector-icons/Feather'
@@ -13,6 +14,9 @@ import { NativeStackNavigationProp } from '@react-navigation/native-stack'
 import { AppStackParamList } from '@/navigation/AppStackNavigator'
 import BackgroundChangeModal from '@/components/BackgroundChangeModal'
 import TextCustomizationModal from '@/components/TextCustomizationModal'
+import ScheduledNotificationsModal from '@/components/ScheduledNotificationsModal'
+import WidgetModule from '@/services/widgetService'
+import { useAppSelector } from '@/store/hooks'
 
 type SettingsScreenNavigationProp = NativeStackNavigationProp<AppStackParamList, 'Settings'>
 
@@ -28,8 +32,42 @@ export default function SettingsScreen() {
   const navigation = useNavigation<SettingsScreenNavigationProp>()
   const [showBackgroundModal, setShowBackgroundModal] = useState(false)
   const [showTextCustomizationModal, setShowTextCustomizationModal] = useState(false)
+  const [showScheduledNotificationsModal, setShowScheduledNotificationsModal] = useState(false)
+  const { data, customBackgrounds } = useAppSelector((s) => s.settings)
+
+  const testWidgetUpdate = async () => {
+    try {
+      const currentData = await WidgetModule.getWidgetData()
+      const testWord = `Test ${new Date().getSeconds()}`
+      const testMeaning = 'Prueba de actualización'
+
+      let backgroundUri: string | null = null
+      const customBg = customBackgrounds?.find(bg => bg.id === data.background)
+      if (customBg?.value?.uri) {
+        backgroundUri = customBg.value.uri
+      } else if (['amarillo', 'azul', 'naranja', 'negro', 'verde'].includes(data.background)) {
+        backgroundUri = data.background
+      }
+
+      await WidgetModule.updateWidget(testWord, testMeaning, backgroundUri)
+
+      Alert.alert(
+        'Widget Test',
+        `✅ Widget actualizado\n\nPalabra: ${testWord}\nSignificado: ${testMeaning}\nFondo: ${backgroundUri || 'none'}\n\nRevisa el widget`
+      )
+    } catch (error) {
+      Alert.alert('Error', `${error}`)
+    }
+  }
 
   const settingsOptions: SettingOption[] = [
+    {
+      id: 'categories',
+      title: 'Categorías de vocabulario',
+      subtitle: 'Selecciona las categorías que quieres estudiar',
+      icon: 'grid',
+      onPress: () => navigation.navigate('CategoriesSettings'),
+    },
     {
       id: 'userWordsConfig',
       title: 'Configuración de mis palabras',
@@ -54,7 +92,20 @@ export default function SettingsScreen() {
         setShowTextCustomizationModal(true)
       },
     },
-    // Más opciones se pueden agregar aquí en el futuro
+    // {
+    //   id: 'scheduledNotifications',
+    //   title: 'Ver notificaciones programadas',
+    //   subtitle: 'Lista de todas las notificaciones agendadas (2 semanas)',
+    //   icon: 'calendar',
+    //   onPress: () => setShowScheduledNotificationsModal(true),
+    // },
+    // {
+    //   id: 'testWidget',
+    //   title: '🧪 Probar Widget',
+    //   subtitle: 'Actualizar widget con palabra de prueba y fondo actual',
+    //   icon: 'activity',
+    //   onPress: testWidgetUpdate,
+    // },
   ]
 
   const renderSettingOption = (option: SettingOption) => (
@@ -93,6 +144,11 @@ export default function SettingsScreen() {
       <TextCustomizationModal
         visible={showTextCustomizationModal}
         onClose={() => setShowTextCustomizationModal(false)}
+      />
+
+      <ScheduledNotificationsModal
+        visible={showScheduledNotificationsModal}
+        onClose={() => setShowScheduledNotificationsModal(false)}
       />
     </SafeAreaView>
   )

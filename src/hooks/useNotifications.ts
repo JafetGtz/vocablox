@@ -2,67 +2,71 @@ import { useEffect } from 'react'
 import { useSelector } from 'react-redux'
 import { RootState } from '@/store/store'
 import NotificationModule from '@/services/notificationService'
-import { supabase } from '@/services/supebase'
 
 export function useNotifications() {
   const settings = useSelector((state: RootState) => state.settings.data)
   const wizardCompleted = settings.wizard_completed
 
+  // ELIMINADO: No agendar automáticamente en cada mount
+  // Solo verificar si necesita reprogramar cuando ya se completó el wizard antes
   useEffect(() => {
     if (wizardCompleted) {
-      setupNotifications()
+      checkAndReschedule()
     }
   }, [wizardCompleted])
 
-  const setupNotifications = async () => {
+  const checkAndReschedule = async () => {
     try {
-      console.log('Setting up notifications with settings:', settings)
+      console.log('Checking if notifications need rescheduling...')
+      const result = await NotificationModule.checkAndRescheduleIfNeeded()
+      console.log('Reschedule check result:', result)
 
-      // 1. Verificar permisos de alarmas exactas (Android 12+)
-      const canSchedule = await NotificationModule.checkExactAlarmPermission()
-      if (!canSchedule) {
-        console.log('Requesting exact alarm permission...')
-        await NotificationModule.requestExactAlarmPermission()
-        return
+      // Si se reprogramó, actualizar las palabras también
+      if (result.includes('Rescheduled')) {
+        await updateWordsIfNeeded()
       }
-
-      // 2. Solicitar ignorar optimización de batería
-      await NotificationModule.requestIgnoreBatteryOptimization()
-
-      // 3. Obtener palabras de Supabase filtradas por categorías
-      const { data: words, error } = await supabase
-        .from('words')
-        .select('*')
-        .in('category', settings.categories || [])
-        .limit(100)
-
-      if (error) {
-        console.error('Error fetching words:', error)
-        return
-      }
-
-      // 4. Guardar palabras en almacenamiento nativo
-      if (words && words.length > 0) {
-        await NotificationModule.saveWords(words)
-        console.log(`Saved ${words.length} words to native storage`)
-      }
-
-      // 5. Programar notificaciones con configuración del wizard
-      const result = await NotificationModule.scheduleNotifications({
-        categories: settings.categories || [],
-        active_windows: settings.active_windows || ['morning'],
-        window_times: settings.window_times || { morning: '08:00' },
-        words_per_burst: settings.words_per_burst || 2,
-        nickname: settings.nickname || 'Usuario'
-      })
-
-      console.log('Notifications scheduled:', result)
     } catch (error) {
-      console.error('Error setting up notifications:', error)
+      console.error('Error checking reschedule:', error)
+    }
+  }
+
+  const updateWordsIfNeeded = async () => {
+    try {
+      // Obtener palabras de archivos JSON locales (igual que en el wizard)
+      const { wordDataService, mapWizardCategoriesToFocus } = await import('@/features/focus/services/wordDataService')
+
+      const wizardCategories = settings.categories || []
+      console.log('Wizard categories:', wizardCategories)
+
+      // Mapear categorías del wizard a formato de archivos JSON
+      const focusCategories = mapWizardCategoriesToFocus(wizardCategories)
+      console.log('Mapped to focus categories:', focusCategories)
+
+      // Obtener palabras de las categorías seleccionadas
+      const focusWords = wordDataService.getMultipleCategoryWords(focusCategories)
+      console.log(`Found ${focusWords.length} words from categories`)
+
+      // Convertir al formato que espera el módulo de notificaciones
+      const wordsForNotifications = focusWords.slice(0, 100).map(focusWord => ({
+        id: focusWord.id,
+        word: focusWord.word,
+        meaning: focusWord.meaning,
+        category: focusWord.category
+      }))
+
+      if (wordsForNotifications.length > 0) {
+        await NotificationModule.saveWords(wordsForNotifications)
+        console.log(`Updated ${wordsForNotifications.length} words in native storage`)
+      } else {
+        console.warn('No words found for selected categories')
+      }
+    } catch (error) {
+      console.error('Error updating words:', error)
     }
   }
 
   return {
-    setupNotifications
+    checkAndReschedule,
+    updateWordsIfNeeded
   }
 }

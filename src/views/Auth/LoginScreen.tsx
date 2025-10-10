@@ -151,7 +151,7 @@ const LoginScreen = () => {
       </View>
 
       {/* Social Login */}
-      <View style={styles.socialContainer}>
+      {/* <View style={styles.socialContainer}>
         <Text style={styles.socialText}>
           O regístrate con una cuenta social
         </Text>
@@ -171,7 +171,7 @@ const LoginScreen = () => {
             <Text style={styles.socialLabel}>Google</Text>
           </TouchableOpacity>
         </View>
-      </View>
+      </View> */}
     </SafeAreaView>
   )
 }

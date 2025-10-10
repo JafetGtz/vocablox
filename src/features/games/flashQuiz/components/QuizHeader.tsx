@@ -33,13 +33,7 @@ export default function QuizHeader({
   return (
     <View style={styles.container}>
       <View style={styles.topRow}>
-        <TouchableOpacity
-          style={styles.backButton}
-          onPress={onBackPress}
-          activeOpacity={0.7}
-        >
-          <Icon name="arrow-left" size={20} color="#666" />
-        </TouchableOpacity>
+       
 
         <View style={styles.categoryContainer}>
           {category && (
@@ -85,7 +79,7 @@ export default function QuizHeader({
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: '#fff',
+    backgroundColor: '#3d1f7a',
     paddingHorizontal: 20,
     paddingVertical: 16,
     borderBottomWidth: 1,
@@ -110,7 +104,7 @@ const styles = StyleSheet.create({
   },
   categoryText: {
     fontSize: 14,
-    color: '#666',
+    color: 'white',
     marginLeft: 6,
     textTransform: 'capitalize',
   },
@@ -135,7 +129,7 @@ const styles = StyleSheet.create({
   },
   progressText: {
     fontSize: 12,
-    color: '#666',
+    color: 'white',
     marginBottom: 6,
   },
   progressBar: {
@@ -146,7 +140,7 @@ const styles = StyleSheet.create({
   },
   progressFill: {
     height: '100%',
-    backgroundColor: '#007bff',
+    backgroundColor: '#9B59B6',
     borderRadius: 2,
   },
   timerContainer: {

@@ -5,6 +5,7 @@ import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { useAppDispatch, useAppSelector } from '@/store/hooks';
 import { AppStackParamList } from '@/navigation/AppStackNavigator';
 import { audioService } from '@/services/audioService';
+import LinearGradient from 'react-native-linear-gradient';
 
 import {
   initGame,
@@ -71,7 +72,7 @@ export default function QuizScreen() {
       dispatch(initGame({
         categories,
         count: 10,
-        secondsPerQ: 10
+        secondsPerQ: 13
       }));
     }
   }, [dispatch, status, userSettings]);
@@ -129,7 +130,7 @@ export default function QuizScreen() {
     dispatch(initGame({
       categories,
       count: 10,
-      secondsPerQ: 10
+      secondsPerQ: 13
     }));
   }, [dispatch, userSettings]);
 
@@ -192,49 +193,59 @@ export default function QuizScreen() {
   }
 
   return (
-    <SafeAreaView style={styles.container}>
-      <QuizHeader
-        category={currentQuestion?.category}
-        progress={progress}
-        timeLeft={timeLeft}
-        score={score}
-        onBackPress={handleBackPress}
-      />
+    <LinearGradient
+      colors={['#3d1f7a', '#3d1f7a', '#4a0a6e']}
+      start={{ x: 0, y: 0 }}
+      end={{ x: 1, y: 1 }}
+      style={styles.gradient}
+    >
+      <SafeAreaView style={styles.container}>
+        <QuizHeader
+          category={currentQuestion?.category}
+          progress={progress}
+          timeLeft={timeLeft}
+          score={score}
+          onBackPress={handleBackPress}
+        />
 
-      <View style={styles.content}>
-        {currentQuestion && (
-          <>
-            <QuestionCard question={currentQuestion} />
+        <View style={styles.content}>
+          {currentQuestion && (
+            <>
+              <QuestionCard question={currentQuestion} />
 
-            <View style={styles.optionsContainer}>
-              {currentQuestion.options.map((option) => (
-                <OptionButton
-                  key={option.id}
-                  option={option}
-                  onPress={handleAnswerPress}
-                  disabled={isAnswering}
-                  feedbackState={feedbackState}
-                />
-              ))}
-            </View>
-          </>
-        )}
-      </View>
+              <View style={styles.optionsContainer}>
+                {currentQuestion.options.map((option) => (
+                  <OptionButton
+                    key={option.id}
+                    option={option}
+                    onPress={handleAnswerPress}
+                    disabled={isAnswering}
+                    feedbackState={feedbackState}
+                  />
+                ))}
+              </View>
+            </>
+          )}
+        </View>
 
-      <ResultSheet
-        visible={status === 'finished'}
-        quizState={quizState}
-        onRestart={handleRestart}
-        onExit={handleExit}
-      />
-    </SafeAreaView>
+        <ResultSheet
+          visible={status === 'finished'}
+          quizState={quizState}
+          onRestart={handleRestart}
+          onExit={handleExit}
+        />
+      </SafeAreaView>
+    </LinearGradient>
   );
 }
 
 const styles = StyleSheet.create({
+  gradient: {
+    flex: 1,
+  },
   container: {
     flex: 1,
-    backgroundColor: '#f8f9fa',
+    backgroundColor: 'transparent',
   },
   content: {
     flex: 1,

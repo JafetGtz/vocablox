@@ -22,7 +22,7 @@ import {
 import { upsertSettings } from '@/services/auth/settingsServices'
 import { useAuth } from './useAuthViewModel'
 import NotificationModule from '@/services/notificationService'
-import { supabase } from '@/services/supebase'
+import { wordDataService, mapWizardCategoriesToFocus } from '@/features/focus/services/wordDataService'
 
 export const useWizardViewModel = () => {
   const dispatch = useDispatch()
@@ -163,21 +163,40 @@ export const useWizardViewModel = () => {
         // Solicitar ignorar optimización de batería
         await NotificationModule.requestIgnoreBatteryOptimization()
 
-        // Obtener palabras de Supabase
-        const { data: words, error: wordsError } = await supabase
-          .from('words')
-          .select('*')
-          .in('category', result.categories || [])
-          .limit(100)
+        // Obtener palabras de archivos JSON locales usando wordDataService
+        const wizardCategories = result.categories || []
+        console.log('Wizard categories:', wizardCategories)
 
-        if (!wordsError && words && words.length > 0) {
-          await NotificationModule.saveWords(words)
-          console.log(`Saved ${words.length} words to native storage`)
+        // Mapear categorías del wizard (inglés) a formato de archivos JSON (español)
+        const focusCategories = mapWizardCategoriesToFocus(wizardCategories)
+        console.log('Mapped to focus categories:', focusCategories)
+
+        // Obtener palabras de las categorías seleccionadas
+        const focusWords = wordDataService.getMultipleCategoryWords(focusCategories)
+        console.log(`Found ${focusWords.length} words from categories`)
+
+        // Convertir al formato que espera el módulo de notificaciones
+        const wordsForNotifications = focusWords.slice(0, 100).map(focusWord => ({
+          id: focusWord.id,
+          word: focusWord.word,
+          meaning: focusWord.meaning,
+          category: focusWord.category
+        }))
+
+        if (wordsForNotifications.length > 0) {
+          await NotificationModule.saveWords(wordsForNotifications)
+          console.log(`Saved ${wordsForNotifications.length} words to native storage`)
+        } else {
+          console.warn('No words found for selected categories:', wizardCategories)
         }
 
-        // Programar notificaciones
+        // Programar notificaciones con categorías en formato español (nombres de categorías)
+        // Extraer los nombres únicos de categorías de las palabras guardadas
+        const categoryNames = [...new Set(wordsForNotifications.map(w => w.category))]
+        console.log('Category names for filtering:', categoryNames)
+
         const notifResult = await NotificationModule.scheduleNotifications({
-          categories: result.categories || [],
+          categories: categoryNames, // Usar nombres en español: ["Negocios", "Viaje", "Derecho"]
           active_windows: result.active_windows || ['morning'],
           window_times: result.window_times || { morning: '08:00' },
           words_per_burst: result.words_per_burst || 2,

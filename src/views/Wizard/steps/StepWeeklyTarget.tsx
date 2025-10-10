@@ -1,13 +1,13 @@
 import React, { useState } from 'react'
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native'
+import { View, Text, StyleSheet, TouchableOpacity, ScrollView } from 'react-native'
 import { useWizardViewModel } from '@/viewmodels/useWizardViewModel'
 import WizardButton from '@/components/WizardButton'
 
 const weeklyTargetOptions = [
-  { value: 10, label: '10 palabras', description: 'Ritmo relajado - ideal para comenzar', dailyWords: 2 },
-  { value: 30, label: '30 palabras', description: 'Ritmo moderado - crecimiento constante', dailyWords: 5 },
-  { value: 40, label: '40 palabras', description: 'Ritmo intenso - progreso acelerado', dailyWords: 6 },
-  { value: 50, label: '50 palabras', description: 'Ritmo desafiante - máximo crecimiento', dailyWords: 8 },
+  { value: 10, label: '14 palabras', description: 'Ritmo relajado - ideal para comenzar', dailyWords: 2 },
+  { value: 30, label: '35 palabras', description: 'Ritmo moderado - crecimiento constante', dailyWords: 5 },
+  { value: 40, label: '42 palabras', description: 'Ritmo intenso - progreso acelerado', dailyWords: 6 },
+  { value: 50, label: '56 palabras', description: 'Ritmo desafiante - máximo crecimiento', dailyWords: 8 },
 ] as const
 
 const StepWeeklyTarget: React.FC = () => {
@@ -32,7 +32,7 @@ const StepWeeklyTarget: React.FC = () => {
         </Text>
       </View>
 
-      <View style={styles.content}>
+      <ScrollView style={styles.content} showsVerticalScrollIndicator={false}>
         {weeklyTargetOptions.map((option) => (
           <TouchableOpacity
             key={option.value}
@@ -76,19 +76,19 @@ const StepWeeklyTarget: React.FC = () => {
             <View style={styles.previewCard}>
               <View style={styles.previewRow}>
                 <Text style={styles.previewLabel}>Palabras por semana:</Text>
-                <Text style={styles.previewValue}>{selectedOption.value}</Text>
+                <Text style={styles.previewValue}>{selectedOption.dailyWords * 7}</Text>
               </View>
               <View style={styles.previewRow}>
                 <Text style={styles.previewLabel}>Palabras por día:</Text>
-                <Text style={styles.previewValue}>~{selectedOption.dailyWords}</Text>
+                <Text style={styles.previewValue}>{selectedOption.dailyWords}</Text>
               </View>
               <Text style={styles.previewNote}>
-                📅 Basado en 7 días de estudio por semana
+                📅 Basado en 7 días de estudio constante
               </Text>
             </View>
           </View>
         )}
-      </View>
+      </ScrollView>
 
       <View style={styles.buttonContainer}>
         <WizardButton

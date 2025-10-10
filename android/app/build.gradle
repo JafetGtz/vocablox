@@ -1,5 +1,6 @@
 apply plugin: "com.android.application"
 apply plugin: "org.jetbrains.kotlin.android"
+apply plugin: "org.jetbrains.kotlin.plugin.compose"
 apply plugin: "com.facebook.react"
 
 /**
@@ -85,6 +86,14 @@ android {
         versionCode 1
         versionName "1.0"
     }
+
+    buildFeatures {
+        compose true
+    }
+
+    kotlinOptions {
+        jvmTarget = "17"
+    }
     signingConfigs {
         release {
         if (project.hasProperty("MYAPP_UPLOAD_STORE_FILE")) {
@@ -127,6 +136,21 @@ dependencies {
 
     // Gson para serialización JSON de palabras
     implementation 'com.google.code.gson:gson:2.10.1'
+
+    // Jetpack Compose para widgets
+    def composeBom = platform('androidx.compose:compose-bom:2024.02.00')
+    implementation composeBom
+    implementation 'androidx.compose.ui:ui'
+    implementation 'androidx.compose.ui:ui-tooling-preview'
+    implementation 'androidx.compose.material3:material3'
+    implementation 'androidx.glance:glance:1.0.0'
+    implementation 'androidx.glance:glance-appwidget:1.0.0'
+
+    // WorkManager para actualizaciones periódicas del widget
+    implementation 'androidx.work:work-runtime-ktx:2.9.0'
+
+    // Kotlin Coroutines
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3'
 }
 apply from: project(':react-native-config').projectDir.getPath() + "/dotenv.gradle"
 apply from: "../../node_modules/react-native-vector-icons/fonts.gradle"

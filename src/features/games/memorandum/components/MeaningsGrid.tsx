@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
     fontWeight: '700',
     textAlign: 'center',
     marginBottom: 16,
-    color: '#333',
+    color: 'white',
   },
   grid: {
     flexDirection: 'row',

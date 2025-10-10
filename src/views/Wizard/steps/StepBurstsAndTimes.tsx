@@ -11,15 +11,27 @@ const burstOptions = [
 ] as const
 
 const timeWindows = [
-  { id: 'morning' as TimeWindowId, name: 'Mañana', icon: '🌅', defaultTime: '08:00' },
-  { id: 'afternoon' as TimeWindowId, name: 'Tarde', icon: '☀️', defaultTime: '14:00' },
-  { id: 'evening' as TimeWindowId, name: 'Noche', icon: '🌙', defaultTime: '20:00' },
-]
-
-const timeSlots = [
-  '06:00', '07:00', '08:00', '09:00', '10:00', '11:00',
-  '12:00', '13:00', '14:00', '15:00', '16:00', '17:00',
-  '18:00', '19:00', '20:00', '21:00', '22:00', '23:00'
+  {
+    id: 'morning' as TimeWindowId,
+    name: 'Mañana',
+    icon: '🌅',
+    defaultTime: '08:00',
+    availableSlots: ['06:00', '07:00', '08:00', '09:00', '10:00', '11:00']
+  },
+  {
+    id: 'afternoon' as TimeWindowId,
+    name: 'Tarde',
+    icon: '☀️',
+    defaultTime: '14:00',
+    availableSlots: ['12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00']
+  },
+  {
+    id: 'evening' as TimeWindowId,
+    name: 'Noche',
+    icon: '🌙',
+    defaultTime: '20:00',
+    availableSlots: ['19:00', '20:00', '21:00', '22:00', '23:00']
+  },
 ]
 
 const StepBurstsAndTimes: React.FC = () => {
@@ -87,14 +99,14 @@ const StepBurstsAndTimes: React.FC = () => {
   const wordsPerBurst = Math.ceil((data.weekly_words_target || 10) / 7 / burstsPerDay)
 
   return (
-    <ScrollView style={styles.container}>
+    <View style={styles.container}>
       <View style={styles.header}>
         <Text style={styles.title}>¿Cuándo prefieres estudiar?</Text>
         <Text style={styles.subtitle}>
           Configura tus sesiones de estudio y horarios preferidos
         </Text>
       </View>
-
+    <ScrollView showsVerticalScrollIndicator={false}>
       <View style={styles.section}>
         <Text style={styles.sectionTitle}>Sesiones por día</Text>
         {burstOptions.map((option) => (
@@ -143,13 +155,13 @@ const StepBurstsAndTimes: React.FC = () => {
                 <Text style={styles.timeWindowIcon}>{window.icon}</Text>
                 <Text style={styles.timeWindowName}>{window.name}</Text>
               </View>
-              
-              <ScrollView 
-                horizontal 
+
+              <ScrollView
+                horizontal
                 showsHorizontalScrollIndicator={false}
                 style={styles.timeSlotScroll}
               >
-                {timeSlots.map((time) => (
+                {window.availableSlots.map((time) => (
                   <TouchableOpacity
                     key={time}
                     style={[
@@ -197,6 +209,7 @@ const StepBurstsAndTimes: React.FC = () => {
         </View>
       </View>
 
+</ScrollView>
       <View style={styles.buttonContainer}>
         <WizardButton
           title="Atrás"
@@ -209,7 +222,7 @@ const StepBurstsAndTimes: React.FC = () => {
           variant="primary"
         />
       </View>
-    </ScrollView>
+    </View>
   )
 }
 

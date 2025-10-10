@@ -1,36 +1,10 @@
 import { NormalizedWord } from './types';
+import { getWordsForCategory } from '@/services/categoryService';
 
-// Static imports for all JSON files
-import arteWords from '../../../assets/jsons/arte.json';
-import cienciaWords from '../../../assets/jsons/ciencia.json';
-import comidaWords from '../../../assets/jsons/comida.json';
-import deportesWords from '../../../assets/jsons/deportes.json';
-import derechoWords from '../../../assets/jsons/derecho.json';
-import ingenieriaWords from '../../../assets/jsons/ingenieria.json';
-import medicinaWords from '../../../assets/jsons/medicina.json';
-import negociosWords from '../../../assets/jsons/negocios.json';
-import tecnologiaWords from '../../../assets/jsons/tecnologia.json';
-import viajeWords from '../../../assets/jsons/viaje.json';
-
-interface Word {
-  palabra: string;
-  significado: string;
-  ejemplo?: string;
-}
-
-// Static word data lookup
-const CATEGORY_WORDS: Record<string, Word[]> = {
-  'technology': tecnologiaWords,
-  'business': negociosWords,
-  'science': cienciaWords,
-  'arts': arteWords,
-  'sports': deportesWords,
-  'travel': viajeWords,
-  'food': comidaWords,
-  'medicine': medicinaWords,
-  'law': derechoWords,
-  'engineering': ingenieriaWords,
-};
+/**
+ * Adaptadores para convertir palabras del servicio centralizado al formato del quiz
+ * Ahora usa el servicio centralizado - no necesita imports estáticos
+ */
 
 // input: ['technology', 'business', ...]
 export function getWordsPoolFromCategories(categories: string[]): NormalizedWord[] {
@@ -46,8 +20,11 @@ export function getWordsPoolFromCategories(categories: string[]): NormalizedWord
 
 // input: 'technology'
 export function getWordsPoolForCategory(category: string): NormalizedWord[] {
-  const words = CATEGORY_WORDS[category];
-  if (!words) return [];
+  const words = getWordsForCategory(category);
+  if (!words || words.length === 0) {
+    console.warn(`⚠️ No se encontraron palabras para la categoría: ${category}`);
+    return [];
+  }
 
   return words.map(word => ({
     id: `${category}::${word.palabra.trim()}`,

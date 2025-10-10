@@ -1,27 +1,36 @@
 import { FocusWordItem } from '../types';
 import { UserWord } from '../../userWords/userWordsSlice';
+import { getWordsForCategory } from '@/services/categoryService';
+import { DEFAULT_CATEGORIES } from '@/types/wizard';
 
-interface WordData {
-  palabra: string;
-  significado: string;
-  ejemplo?: string;
-}
+/**
+ * Focus usa el servicio centralizado de categorías
+ * Las categorías disponibles se obtienen dinámicamente de DEFAULT_CATEGORIES
+ */
 
-// Available categories and their JSON files
-export const AVAILABLE_CATEGORIES = [
-  { id: 'medicina', name: 'Medicina', file: require('../../../assets/jsons/medicina.json') },
-  { id: 'negocios', name: 'Negocios', file: require('../../../assets/jsons/negocios.json') },
-  { id: 'ciencia', name: 'Ciencia', file: require('../../../assets/jsons/ciencia.json') },
-  { id: 'arte', name: 'Arte', file: require('../../../assets/jsons/arte.json') },
-  { id: 'deportes', name: 'Deportes', file: require('../../../assets/jsons/deportes.json') },
-  { id: 'viaje', name: 'Viaje', file: require('../../../assets/jsons/viaje.json') },
-  { id: 'comida', name: 'Comida', file: require('../../../assets/jsons/comida.json') },
-  { id: 'derecho', name: 'Derecho', file: require('../../../assets/jsons/derecho.json') },
-  { id: 'tecnologia', name: 'Tecnología', file: require('../../../assets/jsons/tecnologia.json') },
-  { id: 'ingenieria', name: 'Ingeniería', file: require('../../../assets/jsons/ingenieria.json') },
-] as const;
+// Category ID mapping from wizard format to focus format
+export const CATEGORY_ID_MAPPING: Record<string, string> = {
+  // Wizard ID -> Focus ID (Focus usa español)
+  'technology': 'tecnologia',
+  'business': 'negocios',
+  'science': 'ciencia',
+  'arts': 'arte',
+  'sports': 'deportes',
+  'travel': 'viaje',
+  'food': 'comida',
+  'medicine': 'medicina',
+  'law': 'derecho',
+  'engineering': 'ingenieria',
+};
 
-export type CategoryId = typeof AVAILABLE_CATEGORIES[number]['id'];
+// Construir AVAILABLE_CATEGORIES dinámicamente desde DEFAULT_CATEGORIES
+export const AVAILABLE_CATEGORIES = DEFAULT_CATEGORIES.map(cat => ({
+  id: cat.id, // Usar el ID del wizard directamente
+  name: cat.name,
+  icon: cat.icon,
+}));
+
+export type CategoryId = string;
 
 class WordDataService {
   private categoryData: Record<string, FocusWordItem[]> = {};
@@ -34,7 +43,8 @@ class WordDataService {
 
   private loadCategoryData() {
     AVAILABLE_CATEGORIES.forEach(category => {
-      const words = category.file as WordData[];
+      // Usar el servicio centralizado para obtener las palabras
+      const words = getWordsForCategory(category.id);
       const focusWords: FocusWordItem[] = words.map((word, index) => ({
         id: `${category.id}_${index}`,
         word: word.palabra,
@@ -135,32 +145,14 @@ class WordDataService {
   }
 }
 
-// Category ID mapping from wizard format to focus format
-export const CATEGORY_ID_MAPPING: Record<string, string> = {
-  // Wizard ID -> Focus ID
-  'technology': 'tecnologia',
-  'business': 'negocios',
-  'science': 'ciencia',
-  'arts': 'arte',
-  'sports': 'deportes',
-  'travel': 'viaje',
-  'food': 'comida',
-  'medicine': 'medicina',
-  'law': 'derecho',
-  'engineering': 'ingenieria',
-};
-
-// Helper function to convert wizard category IDs to focus category IDs
+// Helper functions ya no son necesarios - Focus y Wizard usan los mismos IDs ahora
+// Mantenemos por compatibilidad pero retornan los mismos valores
 export const mapWizardCategoriesToFocus = (wizardCategories: string[]): string[] => {
-  return wizardCategories.map(wizardId => CATEGORY_ID_MAPPING[wizardId] || wizardId);
+  return wizardCategories; // Ya no necesitamos mapear, usan los mismos IDs
 };
 
-// Helper function to convert focus category IDs to wizard category IDs
 export const mapFocusCategoriesToWizard = (focusCategories: string[]): string[] => {
-  const reverseMapping = Object.fromEntries(
-    Object.entries(CATEGORY_ID_MAPPING).map(([wizard, focus]) => [focus, wizard])
-  );
-  return focusCategories.map(focusId => reverseMapping[focusId] || focusId);
+  return focusCategories; // Ya no necesitamos mapear, usan los mismos IDs
 };
 
 export const wordDataService = new WordDataService();

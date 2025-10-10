@@ -12,6 +12,7 @@ import {
   Switch,
 } from 'react-native'
 import Icon from 'react-native-vector-icons/Feather'
+import AsyncStorage from '@react-native-async-storage/async-storage'
 import { useAppSelector, useAppDispatch } from '@/store/hooks'
 import { updateTextColor, updateTextSize, updateTextVisibility } from '@/store/slices/settingsSlice'
 
@@ -92,21 +93,52 @@ export default function TextCustomizationModal({ visible, onClose }: TextCustomi
     ]).start()
   }
 
-  const handleColorChange = (color: string) => {
+  const handleColorChange = async (color: string) => {
     if (!selectedElement) return
     console.log(`Changing ${selectedElement} color to:`, color)
     dispatch(updateTextColor({ element: selectedElement, color }))
+
+    // Guardar en AsyncStorage
+    try {
+      const currentColors = data.text_colors || {}
+      const updatedColors = { ...currentColors, [selectedElement]: color }
+      await AsyncStorage.setItem('textColors', JSON.stringify(updatedColors))
+      console.log('Text colors saved to AsyncStorage:', updatedColors)
+    } catch (error) {
+      console.error('Error saving text colors:', error)
+    }
+
     setSelectedElement(null) // Close color picker after selection
   }
 
-  const handleSizeChange = (element: 'word' | 'meaning' | 'example', size: 'small' | 'medium' | 'large') => {
+  const handleSizeChange = async (element: 'word' | 'meaning' | 'example', size: 'small' | 'medium' | 'large') => {
     console.log(`Changing ${element} size to:`, size)
     dispatch(updateTextSize({ element, size }))
+
+    // Guardar en AsyncStorage
+    try {
+      const currentSizes = data.text_sizes || {}
+      const updatedSizes = { ...currentSizes, [element]: size }
+      await AsyncStorage.setItem('textSizes', JSON.stringify(updatedSizes))
+      console.log('Text sizes saved to AsyncStorage:', updatedSizes)
+    } catch (error) {
+      console.error('Error saving text sizes:', error)
+    }
   }
 
-  const handleVisibilityChange = (element: 'word' | 'meaning' | 'example', visible: boolean) => {
+  const handleVisibilityChange = async (element: 'word' | 'meaning' | 'example', visible: boolean) => {
     console.log(`Changing ${element} visibility to:`, visible)
     dispatch(updateTextVisibility({ element, visible }))
+
+    // Guardar en AsyncStorage
+    try {
+      const currentVisibility = data.text_visibility || {}
+      const updatedVisibility = { ...currentVisibility, [element]: visible }
+      await AsyncStorage.setItem('textVisibility', JSON.stringify(updatedVisibility))
+      console.log('Text visibility saved to AsyncStorage:', updatedVisibility)
+    } catch (error) {
+      console.error('Error saving text visibility:', error)
+    }
   }
 
 

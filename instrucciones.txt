@@ -1,49 +1,284 @@
 
 
 
+Especificación UI – Pantalla “Resultados del Quiz” (React Native)
+1) Fundamentos
 
-Problemas detectados
+Plataforma: React Native.
 
-Falta de botón de regreso
+Orientación: vertical (portrait).
 
-Pantallas como QuizScreen y HangmanScreen no tienen botón de back.
+Safe area: respetar márgenes superiores/inferiores del dispositivo.
 
-Esto afecta la navegación del usuario.
+Layout base: columna (Flexbox).
 
-StatusBar y header mal posicionados
+Responsivo: usar ancho del dispositivo para escalar paddings, radios y tamaños de tipografía.
 
-El StatusBar no respeta el límite superior de la pantalla.
+Define W = anchoPantalla y H = altoPantalla.
 
-Actualmente, el header se superpone sobre la cámara frontal y los íconos del sistema (WiFi, batería, hora, etc.), lo cual no debe ocurrir.
+Escala recomendada:
 
-Color del StatusBar
+espacioBase = max(16px, min(24px, 0.055 * W)) → (≈16–24 px según ancho).
 
-El color del StatusBar no se adapta correctamente:
+Tipografías: escalar ±2 px según W (ver tamaños abajo).
 
-En el Home (index), donde hay imágenes dinámicas, el StatusBar debería aproximarse al color dominante de la imagen, pero siempre respetando el límite de la pantalla.
+Ancho máximo de contenido: 92% de W (centrado).
 
-En otras pantallas, el StatusBar debería tomar el color principal de la vista.
+2) Paleta de colores (HEX exactos)
 
-Encimamiento de headers
+Fondo global oscuro: #0B0433
 
-Ejemplo claro en: src/views/collections/index.tsx.
+Tarjeta morada – degradado:
 
-El header se corta y los botones no son visibles correctamente.
+Superior: #7A66FF
 
-Requisitos de corrección
+Inferior: #5B49D9
 
-Botón de regreso obligatorio
+Título “Resultados”: #39FFB6
 
-Todas las pantallas deben incluir un back button en su header, salvo que explícitamente se decida lo contrario (ej. Home principal).
+Texto principal (blanco): #FFFFFF
 
-StatusBar seguro
+Texto secundario (blanco 80%): rgba(255,255,255,0.8)
 
-El StatusBar debe tomar el color de la pantalla (o imagen en Home), pero sin sobrepasar ni invadir el área del sistema.
+Verde acento para números: #39FFB6
 
-Usar react-native-safe-area-context o estilos con SafeAreaView para garantizar que el header quede debajo del StatusBar del sistema.
+Círculo de puntaje (amarillo): #F7C948
 
-Headers consistentes
+Botón primario (morado brillante): #6A5AE0
 
-Ningún header debe “encimarse” sobre el área reservada al sistema.
+Botón primario (estado presionado): #5848C8
 
-Los botones del header deben ser visibles y bien alineados en todas las pantallas.
+Sombra negra translúcida: rgba(0,0,0,0.35)
+
+Confeti – paleta de bolitas (todas opacas):
+
+Rojo #FF5252
+
+Verde #4CD964
+
+Azul #5AC8FA
+
+Amarillo #FFCC00
+
+Rosa #FF6BD6
+
+Morado #9B59B6
+
+Blanco #FFFFFF
+
+3) Tipografía (peso y tamaños)
+
+Familia: Inter (o Poppins / Nunito si Inter no está).
+
+Tamaños base (ajustar ±2 px según W):
+
+Título “Resultados”: 20 px, peso 700, color #39FFB6, interletraje 0.2 px.
+
+Texto “Respuestas correctas totales”: 14 px, peso 500, color blanco 80%.
+
+Texto “6 de 10 preguntas”: 15 px, peso 600, color #39FFB6.
+
+Texto “Tu puntaje final es”: 18 px, peso 700, color blanco 100%.
+
+Número de puntaje (en el círculo): 48 px, peso 800, color blanco 100%.
+
+Botón “Intentar de nuevo”: 16 px, peso 700, color blanco 100%.
+
+Altura de línea:
+
+Pequeños (14–16 px): lineHeight ~ 1.35× (ej. 16 px → 22 px).
+
+“Tu puntaje final es”: lineHeight ~ 1.25×.
+
+Número de puntaje: lineHeight ~ 1.0× (centrado verticalmente en el círculo).
+
+4) Estructura y posiciones (medidas precisas)
+4.1 Contenedor principal
+
+Fondo: #0B0433.
+
+Alinear contenido al centro horizontal.
+
+Padding horizontal: paddingHorizontal = 0.04 * W (≈4% de ancho).
+
+Padding top: safeTop + (0.03 * H) (o mínimo 24 px).
+
+Espacio entre bloques: usar múltiplos de espacioBase.
+
+4.2 Header / Encabezado
+
+Altura visual: 56 px.
+
+Layout: fila, centrada vertical.
+
+Botón volver (izquierda):
+
+Contenedor circular de 40 px x 40 px.
+
+Fondo: mismo fondo global (sin borde).
+
+Ícono de flecha ← en blanco, centrado (tamaño ícono 18 px).
+
+Área activa mínima 44 px (tocar cómodo).
+
+Título centrado: texto “Resultados” (color #39FFB6, 20 px, negrita).
+
+El título debe quedar centrado visualmente en el header.
+
+El botón volver NO desplaza el título: usar un contenedor con “tres columnas” (izq: 40 px, centro: flex, der: 40 px vacíos) para lograr centrado perfecto.
+
+Separación inferior del header al bloque de métricas: espacioBase * 1.5.
+
+4.3 Bloque de métricas (dos líneas)
+
+Ancho: 92% de W, centrado.
+
+Línea 1: “Respuestas correctas totales”
+
+Tamaño 14 px, color blanco 80%, peso 500.
+
+MarginBottom: espacioBase * 0.5.
+
+Línea 2: “6 de 10 preguntas”
+
+Tamaño 15 px, color #39FFB6, peso 600.
+
+Separación después de métricas hacia la tarjeta: espacioBase * 1.25.
+
+Nota: Si deseas mostrar precisión y/o incorrectas, agrégalas debajo de la segunda línea, mismo ancho, con:
+
+“Precisión: 60%” → 14 px, blanco 80%, peso 600, marginTop: espacioBase * 0.5.
+
+“Incorrectas: 4” → 14 px, blanco 80%, peso 600, marginTop: 4 px.
+
+4.4 Tarjeta central (score card)
+
+Ancho: 92% de W.
+
+Relación de aspecto: alto = 0.80 × ancho (para lograr proporción visual de la imagen).
+
+Bordes: radio 24 px.
+
+Relleno interno: padding = espacioBase * 1.25.
+
+Fondo: degradado vertical de #7A66FF (arriba) a #5B49D9 (abajo).
+
+Sombra (Android elevation 8 / iOS shadow):
+
+shadowColor: rgba(0,0,0,0.35)
+
+shadowOffset: {width: 0, height: 12}
+
+shadowOpacity: 0.35
+
+shadowRadius: 18
+
+Contenido interno (centrado):
+
+Texto superior: “Tu puntaje final es”
+
+Color blanco 100%, 18 px, peso 700, centrado.
+
+MarginTop: espacioBase * 0.25
+
+MarginBottom: espacioBase * 1.25
+
+Círculo del puntaje (centrado):
+
+Diámetro: min(0.42 * W, 220 px) (mantener entre 140–220 px).
+
+Fondo: #F7C948.
+
+Sombreado suave (igual que tarjeta pero con shadowRadius 10).
+
+Texto número (ej. 60): centrado absoluto dentro del círculo, 48 px, peso 800, color blanco 100%.
+
+Confeti (bolitas de colores)
+
+Cantidad total: 18–24 bolitas.
+
+Tamaños: 4 px, 6 px y 8 px (repartidos).
+
+Forma: círculo perfecto.
+
+Colores: usar la paleta indicada (rojo, verde, azul, amarillo, rosa, morado, blanco).
+
+Distribución: alrededor del círculo y dentro del área de la tarjeta, sin superponer el texto.
+
+Posiciones relativas (ejemplo exacto, porcentajes respecto al ancho/alto de la tarjeta):
+
+(8%, 22%) 6 px, #FF5252
+
+(18%, 35%) 4 px, #4CD964
+
+(30%, 18%) 8 px, #5AC8FA
+
+(44%, 10%) 4 px, #FFCC00
+
+(60%, 16%) 6 px, #FF6BD6
+
+(74%, 28%) 6 px, #9B59B6
+
+(86%, 22%) 4 px, #FFFFFF
+
+(12%, 64%) 6 px, #4CD964
+
+(26%, 72%) 4 px, #FF5252
+
+(38%, 84%) 8 px, #FFCC00
+
+(52%, 78%) 6 px, #5AC8FA
+
+(68%, 86%) 4 px, #FFFFFF
+
+(82%, 68%) 6 px, #FF6BD6
+
+(90%, 46%) 4 px, #9B59B6
+
+(6%, 48%) 4 px, #FFFFFF
+
+(20%, 56%) 6 px, #5AC8FA
+
+(58%, 32%) 4 px, #FF5252
+
+(72%, 52%) 8 px, #4CD964
+
+Z-index: bolitas detrás del círculo y el texto; delante del degradado de la tarjeta.
+
+Separación de la tarjeta al botón: espacioBase * 1.75.
+
+4.5 Botón inferior “Intentar de nuevo”
+
+Ancho: 92% de W.
+
+Altura: 52 px (mínimo táctil).
+
+Borde: radio 16 px.
+
+Color de fondo: #6A5AE0 (normal), #5848C8 (presionado/activo).
+
+Sombra (ligera): elevation 4 / shadowOpacity 0.25.
+
+Contenido: fila centrada → ícono recargar a la izquierda + texto.
+
+Ícono recargar: 18 px, color blanco, margen derecho 10 px.
+
+Texto: “Intentar de nuevo” (exacto), 16 px, peso 700, color blanco 100%.
+
+Espacio inferior: respetar safe area + espacioBase.
+
+5) Textos EXACTOS en español
+
+Header: “Resultados”
+
+Métrica línea 1: “Respuestas correctas totales”
+
+Métrica línea 2: “6 de 10 preguntas” (dinámico: “{correctas} de {total} preguntas”)
+
+Tarjeta (encabezado): “Tu puntaje final es”
+
+Puntaje grande: “60” (dinámico: número entero)
+
+Botón: “Intentar de nuevo”
+
+(Si agregas precisión/incorrectas: “Precisión: 60%” y “Incorrectas: 4” debajo de las métricas.)

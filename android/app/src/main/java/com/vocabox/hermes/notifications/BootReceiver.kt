@@ -13,7 +13,7 @@ class BootReceiver : BroadcastReceiver() {
         if (intent.action == Intent.ACTION_BOOT_COMPLETED ||
             intent.action == "android.intent.action.QUICKBOOT_POWERON") {
 
-            Log.d(TAG, "Device booted, rescheduling notifications")
+            Log.d(TAG, "Device booted, rescheduling notifications for 14 days")
 
             // Leer configuración guardada y reprogramar
             val wordsStore = WordsDataStore(context)
@@ -26,26 +26,16 @@ class BootReceiver : BroadcastReceiver() {
             val nickname = wordsStore.getNickname()
 
             if (activeWindows.isNotEmpty() && categories.isNotEmpty()) {
-                // Reprogramar cada ventana
-                activeWindows.forEach { window ->
-                    val timeStr = windowTimes[window]
-                    if (timeStr != null) {
-                        val (hour, minute) = timeStr.split(":").map { it.toInt() }
-                        val notificationId = window.hashCode()
+                // Reprogramar 14 días completos
+                scheduler.scheduleTwoWeeksNotifications(
+                    activeWindows = activeWindows,
+                    windowTimes = windowTimes,
+                    categories = categories,
+                    wordsPerBurst = wordsPerBurst,
+                    nickname = nickname
+                )
 
-                        scheduler.scheduleExactAlarm(
-                            notificationId = notificationId,
-                            window = window,
-                            hour = hour,
-                            minute = minute,
-                            categories = categories,
-                            wordsPerBurst = wordsPerBurst,
-                            nickname = nickname
-                        )
-
-                        Log.d(TAG, "Rescheduled alarm for $window at $hour:$minute")
-                    }
-                }
+                Log.d(TAG, "Successfully rescheduled 14 days of notifications after boot")
             } else {
                 Log.w(TAG, "No notification configuration found")
             }

@@ -115,22 +115,6 @@ export default function GridMenu({ visible, onClose }: GridMenuProps) {
 
   const gridItems: GridMenuItem[] = [
     {
-      id: 'collections',
-      title: 'Colecciones',
-      subtitle: `${collections.length} colecciones`,
-      icon: 'folder',
-      color: '#9B59B6',
-      onPress: handleCollectionsPress,
-    },
-    {
-      id: 'notes',
-      title: 'Notas',
-      subtitle: `${notesCount} notas personales`,
-      icon: 'edit-3',
-      color: '#FF6B6B',
-      onPress: handleNotesPress,
-    },
-    {
       id: 'quiz',
       title: 'Quiz',
       subtitle: 'Preguntas y respuestas',
@@ -153,14 +137,6 @@ export default function GridMenu({ visible, onClose }: GridMenuProps) {
       icon: 'grid',
       color: '#FF8C00',
       onPress: handleMemorandumPress,
-    },
-    {
-      id: 'focus',
-      title: 'Focus',
-      subtitle: 'Sesión de concentración',
-      icon: 'eye',
-      color: '#6C63FF',
-      onPress: handleFocusPress,
     },
   ]
 
@@ -217,7 +193,7 @@ export default function GridMenu({ visible, onClose }: GridMenuProps) {
 
             {/* Header */}
             <View style={styles.header}>
-              <Text style={styles.headerTitle}>Menú Principal</Text>
+              <Text style={styles.headerTitle}></Text>
               <TouchableOpacity onPress={onClose} style={styles.closeButton}>
                 <Icon name="x" size={24} color="white" />
               </TouchableOpacity>
@@ -271,6 +247,7 @@ const styles = StyleSheet.create({
     padding: 8,
     backgroundColor: 'rgba(255, 255, 255, 0.2)',
     borderRadius: 20,
+    marginTop: 20
   },
   gridContainer: {
     flex: 1,

@@ -31,32 +31,28 @@ export default function QuestionCard({ question }: QuestionCardProps) {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: '#fff',
+    backgroundColor: '#3d1f7a',
     margin: 20,
     borderRadius: 16,
     padding: 24,
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
-    shadowOpacity: 0.1,
-    shadowRadius: 8,
-    elevation: 4,
+    borderColor: 'white',
+    borderWidth: 1
+    
   },
   wordContainer: {
     alignItems: 'center',
     marginBottom: 20,
+    borderColor: 'white'
   },
   wordText: {
     fontSize: 32,
     fontWeight: '700',
-    color: '#333',
+    color: 'white',
     textAlign: 'center',
     lineHeight: 40,
   },
   exampleContainer: {
-    backgroundColor: '#f8f9fa',
+    backgroundColor: '#1a0a4e',
     borderRadius: 12,
     padding: 16,
     marginBottom: 20,
@@ -64,14 +60,14 @@ const styles = StyleSheet.create({
   exampleLabel: {
     fontSize: 12,
     fontWeight: '600',
-    color: '#666',
+    color: 'white',
     marginBottom: 6,
     textTransform: 'uppercase',
     letterSpacing: 0.5,
   },
   exampleText: {
     fontSize: 16,
-    color: '#495057',
+    color: 'white',
     fontStyle: 'italic',
     lineHeight: 22,
   },
@@ -80,7 +76,7 @@ const styles = StyleSheet.create({
   },
   instructionText: {
     fontSize: 16,
-    color: '#666',
+    color: 'white',
     fontWeight: '500',
   },
 });

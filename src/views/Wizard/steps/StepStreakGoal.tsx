@@ -100,7 +100,7 @@ const StepStreakGoal: React.FC = () => {
           ))}
         </View>
 
-        <View style={styles.divider}>
+        {/* <View style={styles.divider}>
           <View style={styles.dividerLine} />
           <Text style={styles.dividerText}>o personaliza</Text>
           <View style={styles.dividerLine} />
@@ -150,7 +150,7 @@ const StepStreakGoal: React.FC = () => {
               : "¡Ambicioso! Recuerda que la consistencia es más importante que la perfección. Puedes ajustar tu meta en cualquier momento."
             }
           </Text>
-        </View>
+        </View> */}
       </View>
 
       <View style={styles.buttonContainer}>

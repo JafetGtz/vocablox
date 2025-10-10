@@ -1,0 +1,505 @@
+[
+  {
+    "palabra": "Discreción",
+    "significado": "Capacidad para actuar con prudencia, evitando ofender o revelar lo innecesario.",
+    "ejemplo": "Manejaba los asuntos delicados con admirable discreción."
+  },
+  {
+    "palabra": "Sofisticación",
+    "significado": "Refinamiento en gustos, modales o estilo.",
+    "ejemplo": "La decoración del salón reflejaba una exquisita sofisticación."
+  },
+  {
+    "palabra": "Cortesía",
+    "significado": "Amabilidad y respeto en el trato hacia los demás.",
+    "ejemplo": "Su cortesía conquistó la simpatía de todos."
+  },
+  {
+    "palabra": "Distinción",
+    "significado": "Elegancia o calidad superior que destaca a alguien o algo.",
+    "ejemplo": "Caminaba con la distinción propia de su porte."
+  },
+  {
+    "palabra": "Comedimiento",
+    "significado": "Moderación y respeto en el comportamiento o en las palabras.",
+    "ejemplo": "Respondió con comedimiento ante la crítica."
+  },
+  {
+    "palabra": "Decoro",
+    "significado": "Conducta adecuada a las normas de respeto y buena educación.",
+    "ejemplo": "Mantuvo el decoro incluso en circunstancias difíciles."
+  },
+  {
+    "palabra": "Mesura",
+    "significado": "Moderación o templanza en la conducta o el habla.",
+    "ejemplo": "Se expresó con mesura y elegancia."
+  },
+  {
+    "palabra": "Delicadeza",
+    "significado": "Sensibilidad y cuidado en las acciones o palabras.",
+    "ejemplo": "Tuvo la delicadeza de disculparse personalmente."
+  },
+  {
+    "palabra": "Protocolo",
+    "significado": "Conjunto de normas de etiqueta y comportamiento social.",
+    "ejemplo": "Cumplió cada regla del protocolo con naturalidad impecable."
+  },
+  {
+    "palabra": "Sutileza",
+    "significado": "Finura o agudeza en la percepción o el pensamiento.",
+    "ejemplo": "Su sutileza para tratar el tema fue admirable."
+  },
+  {
+    "palabra": "Eloquencia",
+    "significado": "Habilidad para expresarse con fluidez, elegancia y persuasión.",
+    "ejemplo": "Su discurso rebosaba de elocuencia y sabiduría."
+  },
+  {
+    "palabra": "Templanza",
+    "significado": "Moderación en los apetitos y emociones.",
+    "ejemplo": "La templanza era su mayor virtud en momentos de crisis."
+  },
+  {
+    "palabra": "Gratitud",
+    "significado": "Reconocimiento y aprecio por un beneficio recibido.",
+    "ejemplo": "Expresó su gratitud con una carta escrita a mano."
+  },
+  {
+    "palabra": "Pulcritud",
+    "significado": "Cuidado extremo en la presentación y limpieza.",
+    "ejemplo": "Su escritorio estaba dispuesto con pulcritud impecable."
+  },
+  {
+    "palabra": "Erudición",
+    "significado": "Conocimiento profundo adquirido mediante el estudio.",
+    "ejemplo": "Su erudición en historia clásica era impresionante."
+  },
+  {
+    "palabra": "Cautela",
+    "significado": "Precaución y reserva al actuar o hablar.",
+    "ejemplo": "Actuó con cautela antes de emitir una opinión."
+  },
+  {
+    "palabra": "Urbanidad",
+    "significado": "Cortesía y refinamiento en el trato social.",
+    "ejemplo": "Su urbanidad lo distinguía en cualquier reunión."
+  },
+  {
+    "palabra": "Presteza",
+    "significado": "Rapidez y eficacia al ejecutar una acción.",
+    "ejemplo": "Atendió la solicitud con presteza y amabilidad."
+  },
+  {
+    "palabra": "Sensatez",
+    "significado": "Juicio y prudencia en las decisiones.",
+    "ejemplo": "La sensatez de sus palabras calmó el ambiente."
+  },
+  {
+    "palabra": "Clemencia",
+    "significado": "Compasión y suavidad en la forma de juzgar o castigar.",
+    "ejemplo": "Pidió clemencia para quien había cometido un error menor."
+  },
+  {
+    "palabra": "Discrepancia",
+    "significado": "Diferencia de opiniones expresada con respeto.",
+    "ejemplo": "Manifestó su discrepancia con serenidad y argumentos sólidos."
+  },
+  {
+    "palabra": "Perspicacia",
+    "significado": "Agudeza para comprender las cosas más allá de lo evidente.",
+    "ejemplo": "Su perspicacia lo llevó a descubrir la verdad oculta."
+  },
+  {
+    "palabra": "Magnanimidad",
+    "significado": "Grandeza de ánimo para perdonar o ser generoso.",
+    "ejemplo": "Aceptó las disculpas con magnanimidad y sin rencor."
+  },
+  {
+    "palabra": "Proeza",
+    "significado": "Acción heroica o admirable.",
+    "ejemplo": "Lograr ese acuerdo fue una auténtica proeza diplomática."
+  },
+  {
+    "palabra": "Ecuanimidad",
+    "significado": "Imparcialidad y equilibrio al juzgar.",
+    "ejemplo": "Su ecuanimidad fue esencial para resolver el conflicto."
+  },
+  {
+    "palabra": "Cautivar",
+    "significado": "Atraer o seducir mediante encanto o gracia.",
+    "ejemplo": "Su sonrisa lograba cautivar a todos a su alrededor."
+  },
+  {
+    "palabra": "Galante",
+    "significado": "Atento y cortés, especialmente con las mujeres.",
+    "ejemplo": "El caballero fue galante al ofrecerle su abrigo."
+  },
+  {
+    "palabra": "Sobriedad",
+    "significado": "Ausencia de excesos o adornos; elegancia simple.",
+    "ejemplo": "La sobriedad del traje resaltaba su porte distinguido."
+  },
+  {
+    "palabra": "Prudencia",
+    "significado": "Capacidad de actuar con sensatez y moderación.",
+    "ejemplo": "Contestó con prudencia ante la provocación."
+  },
+  {
+    "palabra": "Nobleza",
+    "significado": "Rectitud de ánimo y grandeza de espíritu.",
+    "ejemplo": "Demostró nobleza al reconocer su error."
+  },
+  {
+    "palabra": "Condescendencia",
+    "significado": "Actitud de quien trata con amabilidad a los demás, sin superioridad.",
+    "ejemplo": "Escuchó con condescendencia y respeto las opiniones ajenas."
+  },
+  {
+    "palabra": "Refinamiento",
+    "significado": "Perfección y elegancia en modales, gustos o costumbres.",
+    "ejemplo": "Sus modales reflejaban un refinamiento poco común."
+  },
+  {
+    "palabra": "Persuasión",
+    "significado": "Capacidad de convencer con argumentos o encanto.",
+    "ejemplo": "Su tono sereno estaba lleno de persuasión."
+  },
+  {
+    "palabra": "Gravitas",
+    "significado": "Seriedad y dignidad en la conducta o el porte.",
+    "ejemplo": "Se dirigía al público con una gravitas imponente."
+  },
+  {
+    "palabra": "Abnegación",
+    "significado": "Entrega desinteresada al bienestar de los demás.",
+    "ejemplo": "Su vida estuvo marcada por la abnegación y el servicio."
+  },
+  {
+    "palabra": "Decisión",
+    "significado": "Determinación firme ante una elección difícil.",
+    "ejemplo": "Tomó la decisión con serenidad y convicción."
+  },
+  {
+    "palabra": "Serenidad",
+    "significado": "Tranquilidad y dominio de las emociones.",
+    "ejemplo": "Afrontó la tormenta con serenidad inquebrantable."
+  },
+  {
+    "palabra": "Distinguido",
+    "significado": "Que se comporta o luce con elegancia y respeto.",
+    "ejemplo": "Era un hombre distinguido, de modales irreprochables."
+  },
+  {
+    "palabra": "Concordia",
+    "significado": "Armonía y acuerdo entre las personas.",
+    "ejemplo": "El evento transcurrió en un ambiente de cordial concordia."
+  },
+  {
+    "palabra": "Decadencia",
+    "significado": "Pérdida de la fuerza, elegancia o esplendor original.",
+    "ejemplo": "Aun en su decadencia, conservaba una belleza melancólica."
+  },
+  {
+    "palabra": "Esplendor",
+    "significado": "Brillo o magnificencia extraordinaria.",
+    "ejemplo": "El salón brillaba con el esplendor de una época pasada."
+  },
+  {
+    "palabra": "Reverencia",
+    "significado": "Respeto profundo y solemne.",
+    "ejemplo": "Se inclinó en reverencia ante la memoria del maestro."
+  },
+  {
+    "palabra": "Aplomo",
+    "significado": "Seguridad y calma en la manera de actuar o hablar.",
+    "ejemplo": "Respondió con aplomo ante las preguntas difíciles."
+  },
+  {
+    "palabra": "Sagacidad",
+    "significado": "Habilidad para percibir y prever con acierto.",
+    "ejemplo": "Su sagacidad le permitió anticipar el resultado."
+  },
+  {
+    "palabra": "Eminencia",
+    "significado": "Persona de gran prestigio o autoridad en un campo.",
+    "ejemplo": "El doctor es una eminencia en su especialidad."
+  },
+  {
+    "palabra": "Gentileza",
+    "significado": "Amabilidad o atención cortés hacia los demás.",
+    "ejemplo": "Tuvo la gentileza de acompañarme hasta la puerta."
+  },
+  {
+    "palabra": "Complacencia",
+    "significado": "Satisfacción o agrado por algo realizado o recibido.",
+    "ejemplo": "Observó su obra terminada con discreta complacencia."
+  },
+  {
+    "palabra": "Pulidez",
+    "significado": "Limpieza, perfección o esmero en los modales o el lenguaje.",
+    "ejemplo": "Su pulidez al hablar denotaba una educación exquisita."
+  },
+  {
+    "palabra": "Sencillez",
+    "significado": "Naturalidad y ausencia de afectación o artificio.",
+    "ejemplo": "Su sencillez aumentaba el encanto de su presencia."
+  },
+  {
+    "palabra": "Opulencia",
+    "significado": "Riqueza o lujo excesivo y ostentoso.",
+    "ejemplo": "El banquete fue una muestra de opulencia refinada."
+  },
+  
+  {
+    "palabra": "Apacible",
+    "significado": "Tranquilo, sereno y agradable al ánimo.",
+    "ejemplo": "El jardín tenía un ambiente apacible que invitaba al descanso."
+  },
+  {
+    "palabra": "Benigno",
+    "significado": "Dulce, suave y de carácter bondadoso.",
+    "ejemplo": "Su mirada benigna inspiraba confianza y respeto."
+  },
+  {
+    "palabra": "Circunspección",
+    "significado": "Actitud de prudencia y seriedad al actuar o hablar.",
+    "ejemplo": "Escuchó las quejas con circunspección antes de responder."
+  },
+  {
+    "palabra": "Deferencia",
+    "significado": "Respeto o cortesía hacia una persona por su mérito o edad.",
+    "ejemplo": "Le cedió el asiento por pura deferencia."
+  },
+  {
+    "palabra": "Prolijo",
+    "significado": "Detallado o cuidadoso hasta el extremo.",
+    "ejemplo": "Su explicación fue tan prolija que no dejó dudas."
+  },
+  {
+    "palabra": "Encomiable",
+    "significado": "Digno de ser elogiado o alabado.",
+    "ejemplo": "Su actitud solidaria fue verdaderamente encomiable."
+  },
+  {
+    "palabra": "Contemplativo",
+    "significado": "Dedicado a la reflexión o la observación serena.",
+    "ejemplo": "Su espíritu contemplativo lo hacía disfrutar de los pequeños detalles."
+  },
+  {
+    "palabra": "Candor",
+    "significado": "Sinceridad y pureza en la manera de ser o hablar.",
+    "ejemplo": "Respondió con el candor propio de su juventud."
+  },
+  {
+    "palabra": "Plácido",
+    "significado": "Que transmite calma, serenidad y sosiego.",
+    "ejemplo": "El lago reflejaba un cielo plácido y azul."
+  },
+  {
+    "palabra": "Lúcido",
+    "significado": "Que piensa o se expresa con claridad y brillantez.",
+    "ejemplo": "Su análisis fue lúcido y certero."
+  },
+  {
+    "palabra": "Solaz",
+    "significado": "Descanso o recreo del espíritu.",
+    "ejemplo": "Encontró solaz en la lectura de un buen libro."
+  },
+  {
+    "palabra": "Disertar",
+    "significado": "Hablar con elegancia sobre un tema determinado.",
+    "ejemplo": "Le encantaba disertar sobre filosofía y arte."
+  },
+  {
+    "palabra": "Moderación",
+    "significado": "Actitud equilibrada, sin caer en excesos.",
+    "ejemplo": "Actuó con moderación ante las provocaciones."
+  },
+  {
+    "palabra": "Decadente",
+    "significado": "Que conserva belleza o elegancia a pesar de su deterioro.",
+    "ejemplo": "El teatro tenía un aire decadente pero encantador."
+  },
+  {
+    "palabra": "Asequible",
+    "significado": "Que se puede alcanzar o conseguir con facilidad razonable.",
+    "ejemplo": "Siempre se mostraba asequible a las inquietudes de los demás."
+  },
+  {
+    "palabra": "Exquisitez",
+    "significado": "Calidad de ser refinado, selecto o de gusto perfecto.",
+    "ejemplo": "La cena fue una muestra de exquisitez culinaria."
+  },
+  {
+    "palabra": "Esmero",
+    "significado": "Cuidado y atención minuciosa al realizar algo.",
+    "ejemplo": "Preparó cada detalle del evento con esmero admirable."
+  },
+  {
+    "palabra": "Ponderación",
+    "significado": "Cualidad de actuar con equilibrio y reflexión.",
+    "ejemplo": "Sus palabras fueron elegidas con gran ponderación."
+  },
+  {
+    "palabra": "Complaciente",
+    "significado": "Que procura agradar o complacer a los demás con amabilidad.",
+    "ejemplo": "Era tan complaciente que nunca rehusaba una petición razonable."
+  },
+  {
+    "palabra": "Nítido",
+    "significado": "Claro, limpio y bien definido.",
+    "ejemplo": "Su voz sonaba nítida en la sala silenciosa."
+  },
+  {
+    "palabra": "Perspicuo",
+    "significado": "Claro y fácil de entender.",
+    "ejemplo": "Su estilo literario es perspicuo y elegante."
+  },
+  {
+    "palabra": "Afable",
+    "significado": "Agradable y de trato cordial.",
+    "ejemplo": "El anfitrión fue sumamente afable con todos los invitados."
+  },
+  {
+    "palabra": "Conspicuo",
+    "significado": "Que sobresale o destaca por su excelencia.",
+    "ejemplo": "Es un conspicuo representante de la nueva generación artística."
+  },
+  {
+    "palabra": "Sagaz",
+    "significado": "Perspicaz o inteligente para resolver con acierto.",
+    "ejemplo": "El detective resultó tan sagaz como amable."
+  },
+  {
+    "palabra": "Armonía",
+    "significado": "Equilibrio y proporción entre las partes de un todo.",
+    "ejemplo": "El conjunto de colores creaba una atmósfera de perfecta armonía."
+  },
+  {
+    "palabra": "Inmaculado",
+    "significado": "Limpio, puro o sin mancha.",
+    "ejemplo": "Su reputación permanecía inmaculada a lo largo de los años."
+  },
+  {
+    "palabra": "Solícito",
+    "significado": "Que demuestra interés y cuidado por los demás.",
+    "ejemplo": "Fue solícito al ofrecer ayuda a quien la necesitaba."
+  },
+  {
+    "palabra": "Circunscrito",
+    "significado": "Limitado a un ámbito o contexto determinado.",
+    "ejemplo": "Su comentario se mantuvo circunscrito al tema principal."
+  },
+  {
+    "palabra": "Dócil",
+    "significado": "Fácil de guiar o educar; amable y obediente.",
+    "ejemplo": "El joven era dócil ante las enseñanzas de su maestro."
+  },
+  {
+    "palabra": "Respetuoso",
+    "significado": "Que actúa con consideración hacia los demás.",
+    "ejemplo": "Fue siempre respetuoso con quienes no compartían su opinión."
+  },
+  {
+    "palabra": "Concordante",
+    "significado": "Que guarda armonía o coherencia con algo.",
+    "ejemplo": "Sus acciones fueron concordantes con sus principios."
+  },
+  {
+    "palabra": "Desenfado",
+    "significado": "Naturalidad y soltura en el comportamiento o el hablar.",
+    "ejemplo": "Contestó con un desenfado encantador."
+  },
+  {
+    "palabra": "Ecuánime",
+    "significado": "Justo e imparcial, que no se deja llevar por las emociones.",
+    "ejemplo": "El juez fue ecuánime en su veredicto."
+  },
+  {
+    "palabra": "Gallardía",
+    "significado": "Elegancia, nobleza o valor en el comportamiento.",
+    "ejemplo": "Saludó con gallardía a todos los presentes."
+  },
+  {
+    "palabra": "Deliberación",
+    "significado": "Acto de reflexionar antes de tomar una decisión.",
+    "ejemplo": "Tras larga deliberación, llegaron a un acuerdo sensato."
+  },
+  {
+    "palabra": "Acierto",
+    "significado": "Capacidad de hacer o decidir algo correctamente.",
+    "ejemplo": "Mostró gran acierto al elegir las palabras adecuadas."
+  },
+  {
+    "palabra": "Parquedad",
+    "significado": "Moderación o sobriedad en el hablar o actuar.",
+    "ejemplo": "Su parquedad no era frialdad, sino prudencia."
+  },
+  {
+    "palabra": "Minucioso",
+    "significado": "Que presta atención a los detalles más pequeños.",
+    "ejemplo": "El informe fue elaborado de manera minuciosa."
+  },
+  {
+    "palabra": "Sensibilidad",
+    "significado": "Capacidad de percibir o reaccionar ante lo sutil o emocional.",
+    "ejemplo": "Demostró gran sensibilidad ante el sufrimiento ajeno."
+  },
+  {
+    "palabra": "Prístino",
+    "significado": "Antiguo, puro o inalterado desde su origen.",
+    "ejemplo": "Conservaba el prístino encanto de la arquitectura colonial."
+  },
+  {
+    "palabra": "Estética",
+    "significado": "Ciencia o apreciación de la belleza.",
+    "ejemplo": "El jardín estaba diseñado con una notable sensibilidad estética."
+  },
+  {
+    "palabra": "Comedido",
+    "significado": "Que actúa con mesura, discreción y moderación.",
+    "ejemplo": "Fue comedido en sus palabras para no herir a nadie."
+  },
+  {
+    "palabra": "Ponderado",
+    "significado": "Que sopesa con cuidado los pros y los contras antes de actuar.",
+    "ejemplo": "Era un hombre ponderado, nunca tomaba decisiones impulsivas."
+  },
+  {
+    "palabra": "Trascendente",
+    "significado": "De gran importancia o significado.",
+    "ejemplo": "El encuentro tuvo un efecto trascendente en su vida."
+  },
+  {
+    "palabra": "Cohesión",
+    "significado": "Unión y relación armónica entre las partes de un conjunto.",
+    "ejemplo": "El grupo mantenía una cohesión admirable."
+  },
+  {
+    "palabra": "Perseverancia",
+    "significado": "Constancia y firmeza en los propósitos.",
+    "ejemplo": "Su perseverancia lo condujo al éxito."
+  },
+  {
+    "palabra": "Sapiencia",
+    "significado": "Sabiduría profunda o conocimiento extenso.",
+    "ejemplo": "Escuchaban sus consejos con respeto por su sapiencia."
+  },
+  {
+    "palabra": "Disfrute",
+    "significado": "Placer o goce al experimentar algo agradable.",
+    "ejemplo": "Leyó la novela con un disfrute sereno y prolongado."
+  },
+  {
+    "palabra": "Equilibrio",
+    "significado": "Estabilidad entre diferentes aspectos de la vida o el carácter.",
+    "ejemplo": "Mantenía un admirable equilibrio entre razón y emoción."
+  },
+  {
+    "palabra": "Vocación",
+    "significado": "Inclinación o llamado hacia una profesión o actividad.",
+    "ejemplo": "Desde joven sintió vocación por la enseñanza."
+  }
+
+
+]

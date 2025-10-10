@@ -118,7 +118,7 @@ const styles = StyleSheet.create({
   },
   topHUD: {
     paddingHorizontal: 20,
-    paddingTop: 10,
+    paddingTop: 40,
   },
   progressContainer: {
     alignItems: 'center',
@@ -142,8 +142,8 @@ const styles = StyleSheet.create({
     borderRadius: 2,
   },
   bottomHUD: {
-    paddingHorizontal: 20,
-    paddingBottom: 20,
+    paddingHorizontal: 10,
+    paddingBottom: 35,
     alignItems: 'center',
   },
   controlsContainer: {

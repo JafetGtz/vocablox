@@ -12,6 +12,7 @@ import com.facebook.react.defaults.DefaultReactNativeHost
 import com.vocabox.hermes.notifications.NotificationModule
 import com.vocabox.hermes.notifications.NotificationHelper
 import com.vocabox.hermes.permissions.PermissionsModule
+import com.vocabox.hermes.widget.WidgetModule
 import com.facebook.react.bridge.ReactApplicationContext
 
 class MainApplication : Application(), ReactApplication {
@@ -28,7 +29,8 @@ class MainApplication : Application(), ReactApplication {
                 override fun createNativeModules(reactContext: ReactApplicationContext) =
                     listOf(
                         NotificationModule(reactContext),
-                        PermissionsModule(reactContext)
+                        PermissionsModule(reactContext),
+                        WidgetModule(reactContext)
                     )
 
                 override fun createViewManagers(reactContext: ReactApplicationContext) =

@@ -7,6 +7,7 @@ import android.content.Context
 import android.content.Intent
 import android.os.Build
 import android.util.Log
+import com.vocabox.hermes.widget.WordWidgetReceiver
 import java.util.*
 
 class NotificationReceiver : BroadcastReceiver() {
@@ -31,8 +32,9 @@ class NotificationReceiver : BroadcastReceiver() {
         val categories = intent.getStringArrayExtra("categories")?.toList() ?: emptyList()
         val wordsPerBurst = intent.getIntExtra("words_per_burst", 2)
         val nickname = intent.getStringExtra("nickname") ?: "Usuario"
+        val dayOffset = intent.getIntExtra("day_offset", 0)
 
-        Log.d(TAG, "Showing notification for window: $window at $hour:$minute")
+        Log.d(TAG, "Showing notification for window: $window at $hour:$minute (Day: $dayOffset)")
 
         // Obtener palabras del almacenamiento local
         val wordsStore = WordsDataStore(context)
@@ -54,6 +56,10 @@ class NotificationReceiver : BroadcastReceiver() {
                 meaning = "vocabulario",
                 allWords = emptyList()
             )
+
+            // Actualizar widget con palabra de notificación
+            val (_, _, currentBackground) = WordWidgetReceiver.getWidgetData(context)
+            WordWidgetReceiver.updateWidgetData(context, "vocabulary", "vocabulario", currentBackground)
         } else {
             val firstWord = selectedWords[0]
             NotificationHelper.showNotification(
@@ -65,52 +71,14 @@ class NotificationReceiver : BroadcastReceiver() {
                 meaning = firstWord.meaning,
                 allWords = selectedWords
             )
+
+            // Actualizar widget con la palabra de la notificación
+            val (_, _, currentBackground) = WordWidgetReceiver.getWidgetData(context)
+            WordWidgetReceiver.updateWidgetData(context, firstWord.word, firstWord.meaning, currentBackground)
+            Log.d(TAG, "Widget updated with notification word: ${firstWord.word}")
         }
 
-        // RE-PROGRAMAR la alarma para mañana
-        reprogramAlarmForTomorrow(context, intent, notificationId, hour, minute)
-    }
-
-    private fun reprogramAlarmForTomorrow(
-        context: Context,
-        originalIntent: Intent,
-        notificationId: Int,
-        hour: Int,
-        minute: Int
-    ) {
-        val calendar = Calendar.getInstance().apply {
-            add(Calendar.DAY_OF_YEAR, 1)
-            set(Calendar.HOUR_OF_DAY, hour)
-            set(Calendar.MINUTE, minute)
-            set(Calendar.SECOND, 0)
-            set(Calendar.MILLISECOND, 0)
-        }
-
-        val newIntent = Intent(originalIntent)
-
-        val pendingIntent = PendingIntent.getBroadcast(
-            context,
-            notificationId,
-            newIntent,
-            PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
-        )
-
-        val alarmManager = context.getSystemService(Context.ALARM_SERVICE) as AlarmManager
-
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            alarmManager.setExactAndAllowWhileIdle(
-                AlarmManager.RTC_WAKEUP,
-                calendar.timeInMillis,
-                pendingIntent
-            )
-        } else {
-            alarmManager.setExact(
-                AlarmManager.RTC_WAKEUP,
-                calendar.timeInMillis,
-                pendingIntent
-            )
-        }
-
-        Log.d(TAG, "Rescheduled alarm for tomorrow at $hour:$minute")
+        // NO reprogramar aquí - las notificaciones ya están agendadas para 14 días
+        Log.d(TAG, "Notification shown. No rescheduling needed (already scheduled for 14 days)")
     }
 }

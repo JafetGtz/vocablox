@@ -17,8 +17,6 @@ class NotificationModule(reactContext: ReactApplicationContext) :
     @ReactMethod
     fun scheduleNotifications(settings: ReadableMap, promise: Promise) {
         try {
-            scheduler.cancelAllNotifications()
-
             val categories = settings.getArray("categories")?.toArrayList() as? List<String>
                 ?: emptyList()
             val activeWindows = settings.getArray("active_windows")?.toArrayList() as? List<String>
@@ -42,30 +40,47 @@ class NotificationModule(reactContext: ReactApplicationContext) :
             }
             wordsStore.saveScheduleConfig(activeWindows, windowTimesMap)
 
-            var scheduledCount = 0
-            activeWindows.forEach { window ->
-                val timeStr = windowTimes?.getString(window)
-                if (timeStr != null) {
-                    val (hour, minute) = timeStr.split(":").map { it.toInt() }
-                    val notificationId = window.hashCode()
+            // Programar 14 días de notificaciones
+            scheduler.scheduleTwoWeeksNotifications(
+                activeWindows = activeWindows,
+                windowTimes = windowTimesMap,
+                categories = categories,
+                wordsPerBurst = wordsPerBurst,
+                nickname = nickname
+            )
 
-                    scheduler.scheduleExactAlarm(
-                        notificationId = notificationId,
-                        window = window,
-                        hour = hour,
-                        minute = minute,
-                        categories = categories,
-                        wordsPerBurst = wordsPerBurst,
-                        nickname = nickname
-                    )
-
-                    scheduledCount++
-                }
-            }
-
-            promise.resolve("Scheduled $scheduledCount notifications")
+            promise.resolve("Scheduled notifications for 14 days")
         } catch (e: Exception) {
             promise.reject("SCHEDULE_ERROR", e.message, e)
+        }
+    }
+
+    @ReactMethod
+    fun checkAndRescheduleIfNeeded(promise: Promise) {
+        try {
+            if (scheduler.needsRescheduling()) {
+                // Obtener configuración guardada
+                val categories = wordsStore.getCategories()
+                val activeWindows = wordsStore.getActiveWindows()
+                val windowTimes = wordsStore.getWindowTimes()
+                val wordsPerBurst = wordsStore.getWordsPerBurst()
+                val nickname = wordsStore.getNickname()
+
+                // Reprogramar 14 días
+                scheduler.scheduleTwoWeeksNotifications(
+                    activeWindows = activeWindows,
+                    windowTimes = windowTimes,
+                    categories = categories,
+                    wordsPerBurst = wordsPerBurst,
+                    nickname = nickname
+                )
+
+                promise.resolve("Rescheduled notifications for 14 more days")
+            } else {
+                promise.resolve("Notifications still valid, no rescheduling needed")
+            }
+        } catch (e: Exception) {
+            promise.reject("RESCHEDULE_ERROR", e.message, e)
         }
     }
 
@@ -155,6 +170,16 @@ class NotificationModule(reactContext: ReactApplicationContext) :
             promise.resolve("Saved ${words.size} words")
         } catch (e: Exception) {
             promise.reject("SAVE_WORDS_ERROR", e.message, e)
+        }
+    }
+
+    @ReactMethod
+    fun getScheduledNotifications(promise: Promise) {
+        try {
+            val scheduledList = scheduler.getScheduledNotifications()
+            promise.resolve(scheduledList)
+        } catch (e: Exception) {
+            promise.reject("GET_SCHEDULED_ERROR", e.message, e)
         }
     }
 }

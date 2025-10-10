@@ -27,7 +27,7 @@ interface ShareOption {
   name: string
   icon: string
   color: string
-  action: (content: string) => void
+  action: (content: string) => void | Promise<void>
 }
 
 export default function ShareModal({ visible, onClose, word, definition, example }: ShareModalProps) {
@@ -47,15 +47,20 @@ export default function ShareModal({ visible, onClose, word, definition, example
       name: 'WhatsApp',
       icon: 'message-circle',
       color: '#25D366',
-      action: (content: string) => {
-        const url = `whatsapp://send?text=${encodeURIComponent(content)}`
-        Linking.canOpenURL(url).then(supported => {
-          if (supported) {
-            Linking.openURL(url)
-          } else {
-            Alert.alert('Error', 'WhatsApp no está instalado en tu dispositivo')
+      action: async (content: string) => {
+        try {
+          // Intentar primero con el URL scheme oficial web (más confiable)
+          const webUrl = `https://wa.me/?text=${encodeURIComponent(content)}`
+          await Linking.openURL(webUrl)
+        } catch (error) {
+          // Si falla, intentar con el scheme nativo
+          try {
+            const nativeUrl = `whatsapp://send?text=${encodeURIComponent(content)}`
+            await Linking.openURL(nativeUrl)
+          } catch {
+            Alert.alert('Error', 'No se pudo abrir WhatsApp. Asegúrate de que esté instalado.')
           }
-        })
+        }
       }
     },
     {
@@ -111,15 +116,22 @@ export default function ShareModal({ visible, onClose, word, definition, example
       name: 'Messenger',
       icon: 'send',
       color: '#0084FF',
-      action: (content: string) => {
-        const url = `fb-messenger://share?text=${encodeURIComponent(content)}`
-        Linking.canOpenURL(url).then(supported => {
-          if (supported) {
-            Linking.openURL(url)
-          } else {
-            Alert.alert('Error', 'Messenger no está instalado en tu dispositivo')
+      action: async (content: string) => {
+        try {
+          // Messenger deep link puede fallar, así que usamos Share API como fallback
+          const url = `fb-messenger://share?link=${encodeURIComponent('https://awesome-app.com')}`
+          try {
+            await Linking.openURL(url)
+          } catch {
+            // Si el deep link falla, usar Share API nativo
+            await Share.share({
+              message: content,
+              title: 'Compartir en Messenger',
+            })
           }
-        })
+        } catch (error) {
+          Alert.alert('Error', 'No se pudo compartir en Messenger. Prueba con "Más opciones".')
+        }
       }
     },
     {

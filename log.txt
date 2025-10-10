@@ -1,0 +1,100 @@
+10-04 16:34:11.121   544   654 I ImeTracker: com.vocabox.hermes:85ba817: onRequestHide at ORIGIN_SERVER_HIDE_INPUT reason HIDE_SAME_WINDOW_FOCUSED_WITHOUT_EDITOR
+10-04 16:34:11.121   544   654 I ImeTracker: com.vocabox.hermes:85ba817: onCancelled at PHASE_SERVER_SHOULD_HIDE
+10-04 16:34:11.124  1508  1508 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():2057 
+10-04 16:34:11.125  1508  1508 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():100 repeatCheckTimes = 0, locked = false
+10-04 16:34:11.126  1508  1508 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1318 onStartInput(EditorInfo{EditorInfo{packageName=com.vocabox.hermes, inputType=0, inputTypeString=NULL, enableLearning=false, autoCorrection=false, autoComplete=false, imeOptions=0, privateImeOptions=null, actionName=UNSPECIFIED, actionLabel=null, initialSelStart=-1, initialSelEnd=-1, initialCapsMode=0, label=null, fieldId=0, fieldName=null, extras=null, hintText=null, hintLocales=[]}}, false)
+10-04 16:34:11.128  1508  1508 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():100 repeatCheckTimes = 1, locked = false
+10-04 16:34:11.130   544   752 W PackageConfigPersister: App-specific configuration not found for packageName: com.vocabox.hermes and userId: 0
+10-04 16:34:11.169  1329  1329 D CentralSurfaces: Received new disable state: enaihbcrso.qingr (unchanged)
+10-04 16:34:11.190  1329  1353 D ControlsListingControllerImpl: Unsubscribing callback
+10-04 16:34:11.191  1329  1329 D DLObserver: remove listener: com.android.systemui.dock.DockManagerExtensionsKt$retrieveIsDocked$1$callback$1@d238c5f
+10-04 16:34:11.191  1329  1329 D DLObserver: remove listener: com.android.systemui.dock.DockManagerExtensionsKt$retrieveIsDocked$1$callback$1@d61e6ac
+10-04 16:34:11.191  1329  1353 D ControlsListingControllerImpl: Unsubscribing callback
+10-04 16:34:11.191  1329  1329 D DLObserver: remove listener: com.android.systemui.dock.DockManagerExtensionsKt$retrieveIsDocked$1$callback$1@bffcf75
+10-04 16:34:11.191  1329  1329 D DLObserver: remove listener: com.android.systemui.dock.DockManagerExtensionsKt$retrieveIsDocked$1$callback$1@69f2b0a
+10-04 16:34:11.191  1329  1353 D ControlsListingControllerImpl: Unsubscribing callback
+10-04 16:34:11.192  1329  1329 D DLObserver: remove listener: com.android.systemui.dock.DockManagerExtensionsKt$retrieveIsDocked$1$callback$1@49e8f7b
+10-04 16:34:11.192  1329  1329 D DLObserver: remove listener: com.android.systemui.dock.DockManagerExtensionsKt$retrieveIsDocked$1$callback$1@b5cc198
+10-04 16:34:13.537  1508  1939 I PhenotypeProcessReaper: Memory state is: 200
+10-04 16:34:19.167  1045 22226 I NearbyMediums: No BLE Fast/GATT advertisements found in the latest cycle.
+10-04 16:34:19.167  1045 22226 I NearbyMediums: Current Tracked Scanning Clients are : {NearbyConnections.EnvironmentMonitor, NearbySharing, NearbyConnections.TxAdvertisement}
+10-04 16:34:20.173  1329  1329 D StatusBarIconController: ignoring old pipeline callbacks, because the new mobile icons are enabled
+10-04 16:34:20.195  1329  1355 D EGL_emulation: app_time_stats: avg=9101.91ms min=9101.91ms max=9101.91ms count=1
+10-04 16:34:27.291   544   629 D ActivityManager: freezing 1537 com.google.android.gms
+10-04 16:34:29.171  1045 22227 I NearbyMediums: No BLE Fast/GATT advertisements found in the latest cycle.
+10-04 16:34:29.171  1045 22227 I NearbyMediums: Current Tracked Scanning Clients are : {NearbyConnections.EnvironmentMonitor, NearbySharing, NearbyConnections.TxAdvertisement}
+10-04 16:34:30.170  1329  1329 D StatusBarIconController: ignoring old pipeline callbacks, because the new mobile icons are enabled
+10-04 16:34:30.318   544   654 D WifiNl80211Manager: Scan result ready event
+10-04 16:34:30.318   544   654 D WifiNative: Scan result ready event
+10-04 16:34:30.320  1045  1780 I WifiScanner: onFullResults
+10-04 16:34:30.323   544   674 I HalDevMgr: bestIfaceCreationProposal is null, requestIface=STA, existingIface=[name=wlan0 type=STA]
+10-04 16:34:39.173  1045 22227 I NearbyMediums: No BLE Fast/GATT advertisements found in the latest cycle.
+10-04 16:34:39.173  1045 22227 I NearbyMediums: Current Tracked Scanning Clients are : {NearbyConnections.EnvironmentMonitor, NearbySharing, NearbyConnections.TxAdvertisement}
+10-04 16:34:40.177  1329  1329 D StatusBarIconController: ignoring old pipeline callbacks, because the new mobile icons are enabled
+10-04 16:34:47.207   544   654 W BatteryExternalStatsWorker: error reading Bluetooth stats: 11
+10-04 16:34:49.175  1045 22227 I NearbyMediums: No BLE Fast/GATT advertisements found in the latest cycle.
+10-04 16:34:49.175  1045 22227 I NearbyMediums: Current Tracked Scanning Clients are : {NearbyConnections.EnvironmentMonitor, NearbySharing, NearbyConnections.TxAdvertisement}
+10-04 16:34:50.182  1329  1329 D StatusBarIconController: ignoring old pipeline callbacks, because the new mobile icons are enabled
+10-04 16:34:56.371  1045  1045 D BoundBrokerSvc: onRebind: Intent { act=com.google.android.gms.auth.aang.events.services.START dat=chimera-action:/... cmp=com.google.android.gms/.chimera.PersistentApiService }
+10-04 16:34:57.373  1045  1045 D BoundBrokerSvc: onRebind: Intent { act=com.google.android.gms.libs.gmscorelogger.service.START dat=chimera-action:/... cmp=com.google.android.gms/.chimera.PersistentDirectBootAwareApiService }
+10-04 16:34:59.176  1045 22231 I NearbyMediums: No BLE Fast/GATT advertisements found in the latest cycle.
+10-04 16:34:59.176  1045 22231 I NearbyMediums: Current Tracked Scanning Clients are : {NearbyConnections.EnvironmentMonitor, NearbySharing, NearbyConnections.TxAdvertisement}
+10-04 16:35:00.007  1623  2041 I AiAiEcho: Predicting[0]: 
+10-04 16:35:00.007  1623  2041 I AiAiEcho: EchoTargets: 
+10-04 16:35:00.007  1623  2041 I AiAiEcho: Filtered by AiAi flag check: 
+10-04 16:35:00.007  1623  2041 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata: 
+10-04 16:35:00.009  1623  2041 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface lockscreen with targets# 0 (types=[])
+10-04 16:35:00.022  1329  1329 W PageIndicator: Total number of pages invalid: 0. Assuming 1 page.
+10-04 16:35:00.026  1329  1355 D EGL_emulation: app_time_stats: avg=39831.56ms min=39831.56ms max=39831.56ms count=1
+10-04 16:35:00.185  1329  1329 D StatusBarIconController: ignoring old pipeline callbacks, because the new mobile icons are enabled
+10-04 16:35:00.438  1045  2120 W Settings: Setting airplane_mode_on has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+10-04 16:35:00.439  1045 22235 W SystemServiceRegistry: No service published for: wifirtt
+10-04 16:35:01.233   544   752 D WifiNl80211Manager: Scan result ready event
+10-04 16:35:01.233   544   752 D WifiNative: Scan result ready event
+10-04 16:35:01.235  1045  1780 I WifiScanner: onFullResults
+10-04 16:35:01.235  1045  2659 I WifiScanner: onFullResults
+10-04 16:35:01.237   544   674 I HalDevMgr: bestIfaceCreationProposal is null, requestIface=STA, existingIface=[name=wlan0 type=STA]
+10-04 16:35:01.240  1045  2120 I ActivityScheduler: nextTriggerTime: 34411260, in 120997ms, detectorType: 39, FULL_TYPE alarmWindowMillis: 80000
+10-04 16:35:01.244  1045 22235 I FrewleTileCacheManagerV: (REDACTED) Fetched %d AP models from cache
+10-04 16:35:01.247  1045 22235 I FrewleTileCacheManagerV: (REDACTED) Fetched %d AP models from cache
+10-04 16:35:01.247  1045 22235 I FrewleTileCacheManagerV: (REDACTED) Fetched %d AP models from cache
+10-04 16:35:01.247  1045 22235 I FrewleTileCacheManagerV: (REDACTED) Fetched %d AP models from cache
+10-04 16:35:01.247  1045 22235 I FrewleTileCacheManagerV: (REDACTED) Fetched %d AP models from cache
+10-04 16:35:01.259  1045  2053 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-04 16:35:01.259  1045  2053 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-04 16:35:01.259  1045  2053 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-04 16:35:01.259  1045  2053 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-04 16:35:01.259  1045  2053 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-04 16:35:01.281  1045 22229 I TFLite-in-PlayServices: Created interpreter.
+10-04 16:35:01.286  1045 22229 I TFLite-in-PlayServices: Created interpreter.
+10-04 16:35:01.288  1045 22229 I SemanticLocation: (REDACTED) [Inferrer] %s%s
+10-04 16:35:05.860  7704  7818 I bluetooth: packages/modules/Bluetooth/system/gd/hci/le_advertising_manager.cc:1518 on_set_advertising_set_random_address_complete: update random address for advertising set 0 : xx:xx:xx:xx:a9:75
+10-04 16:35:09.178  1045 22233 I NearbyMediums: No BLE Fast/GATT advertisements found in the latest cycle.
+10-04 16:35:09.178  1045 22233 I NearbyMediums: Current Tracked Scanning Clients are : {NearbyConnections.EnvironmentMonitor, NearbySharing, NearbyConnections.TxAdvertisement}
+10-04 16:35:10.184  1329  1329 D StatusBarIconController: ignoring old pipeline callbacks, because the new mobile icons are enabled
+10-04 16:35:11.419  1045  1045 D BoundBrokerSvc: onUnbind: Intent { act=com.google.android.gms.auth.aang.events.services.START dat=chimera-action:/... cmp=com.google.android.gms/.chimera.PersistentApiService }
+10-04 16:35:17.295  1045  1045 D BoundBrokerSvc: onUnbind: Intent { act=com.google.android.gms.libs.gmscorelogger.service.START dat=chimera-action:/... cmp=com.google.android.gms/.chimera.PersistentDirectBootAwareApiService }
+10-04 16:35:19.179  1045 22238 I NearbyMediums: No BLE Fast/GATT advertisements found in the latest cycle.
+10-04 16:35:19.180  1045 22238 I NearbyMediums: Current Tracked Scanning Clients are : {NearbyConnections.EnvironmentMonitor, NearbySharing, NearbyConnections.TxAdvertisement}
+10-04 16:35:20.189  1329  1329 D StatusBarIconController: ignoring old pipeline callbacks, because the new mobile icons are enabled
+10-04 16:35:29.181  1045 22238 I NearbyMediums: No BLE Fast/GATT advertisements found in the latest cycle.
+10-04 16:35:29.181  1045 22238 I NearbyMediums: Current Tracked Scanning Clients are : {NearbyConnections.EnvironmentMonitor, NearbySharing, NearbyConnections.TxAdvertisement}
+10-04 16:35:30.190  1329  1329 D StatusBarIconController: ignoring old pipeline callbacks, because the new mobile icons are enabled
+10-04 16:35:39.185  1045 22239 I NearbyMediums: No BLE Fast/GATT advertisements found in the latest cycle.
+10-04 16:35:39.185  1045 22239 I NearbyMediums: Current Tracked Scanning Clients are : {NearbyConnections.EnvironmentMonitor, NearbySharing, NearbyConnections.TxAdvertisement}
+10-04 16:35:40.191  1329  1329 D StatusBarIconController: ignoring old pipeline callbacks, because the new mobile icons are enabled
+10-04 16:35:40.210  1329  1355 D EGL_emulation: app_time_stats: avg=20091.77ms min=179.64ms max=40003.90ms count=2
+10-04 16:35:49.187  1045 22240 I NearbyMediums: No BLE Fast/GATT advertisements found in the latest cycle.
+10-04 16:35:49.187  1045 22240 I NearbyMediums: Current Tracked Scanning Clients are : {NearbyConnections.EnvironmentMonitor, NearbySharing, NearbyConnections.TxAdvertisement}
+10-04 16:35:50.193  1329  1329 D StatusBarIconController: ignoring old pipeline callbacks, because the new mobile icons are enabled
+10-04 16:35:55.713 13126 22242 W BugleRcsEngine: Unable to send diagnostic log [CONTEXT thread_id=99 ]
+10-04 16:35:59.188  1045 22240 I NearbyMediums: No BLE Fast/GATT advertisements found in the latest cycle.
+10-04 16:35:59.188  1045 22240 I NearbyMediums: Current Tracked Scanning Clients are : {NearbyConnections.EnvironmentMonitor, NearbySharing, NearbyConnections.TxAdvertisement}
+10-04 16:36:00.006  1623  2041 I AiAiEcho: Predicting[0]: 
+10-04 16:36:00.006  1623  2041 I AiAiEcho: EchoTargets: 
+10-04 16:36:00.006  1623  2041 I AiAiEcho: Filtered by AiAi flag check: 
+10-04 16:36:00.006  1623  2041 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata: 
+10-04 16:36:00.006  1623  2041 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface lockscreen with targets# 0 (types=[])
+10-04 16:36:00.021  1329  1329 W PageIndicator: Total number of pages invalid: 0. Assuming 1 page.
+10-04 16:36:00.025  1329  1355 D EGL_emulation: app_time_stats: avg=19814.90ms min=19814.90ms max=19814.90ms count=1
+10-04 16:36:00.194  1329  1329 D StatusBarIconController: ignoring old pipeline callbacks, because the new mobile icons are enabled
